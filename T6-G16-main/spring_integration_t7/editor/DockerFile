@@ -1,0 +1,11 @@
+# Usa un'immagine di Tomcat come base
+FROM tomcat:9-jdk11
+
+# Copia il file JAR del backend Spring nella directory webapps di Tomcat
+COPY C:\Users\avarr\OneDrive\Desktop\UNINA\SOFTWARE ARCHITECTURE DESIGN seguito\progetto\T6-G16-newmain\T6-G16-main\spring\editor\target\editor-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/
+
+# Esponi la porta su cui Tomcat ascolterà
+EXPOSE 8080
+
+# Comando da eseguire quando il container viene avviato
+CMD ["catalina.sh", "run"]

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Code-Editor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/dialog.css">
+    <link rel="stylesheet" href="css/foldgutter.css">
+    <link rel="stylesheet" href="css/error-mark.css">
+    <link rel="stylesheet" href="css/style-editor.css">
+    <link rel="stylesheet" href="css/show-hint.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/codemirror.js"></script>
+    <script src="js/show-hint.js"></script>
+    <script src="js/java.js"></script>
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/closebrackets.js"></script>
+    <script src="js/lint.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/theme/ayu-mirage.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://codemirror.net/theme/monokai.css">
+    <link href=https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js rel="stylesheet" />
+    <link rel="stylesheet" href="http://codemirror.net/theme/base16-light.css">
+    <script src="js/foldcode.js"></script>
+    <script src="js/brace-fold.js"></script>
+    <script src="js/comment-fold.js"></script>
+    <script src="js/foldgutter.js"></script>
+    <script src="js/clike.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/searchcursor.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/jump-to-line.js"></script>
+    <script src="js/match-highlighter.js"></script>
+    <script src="/java-hint.js"></script>
+
+
+    <!-- ICONE -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+    <!---TEMI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/3024-day.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/3024-night.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/ambiance.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/theme/ayu-mirage.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <div id="errorDisplay"></div>
+    <div class="header">
+        <h1>CODE-EDITOR</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="javascript:saveFile()" class="button" title="Save as Java Class">
+            <span class="material-symbols-outlined">
+                save
+            </span>
+        </a>
+        <a class="button" title="New Test Class" id="templ" onclick="showPopup()">
+            <span class="material-symbols-outlined">
+                feed
+            </span>
+            <div id="popupSave" class="popup">
+                <div style="display: flex;">
+                    <div>
+                        <h2>Saving before creating a new file</h2>
+                    </div>
+                    <div> <button onclick="hidePopup()" title="Close" style="position:relative">
+                            <span class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <p>Do you want to save your file before creating a new one?</p>
+                <button onclick="saveFile(); newFile(); hidePopup()">Yes, SAVE!</button>
+                <button onclick="newFile(); hidePopup()">NO, I have already saved!</button>
+            </div>
+        </a>
+        <a>
+            <button id="generateButton" style="background-color: #008CBA;">Generate Getter, Setter and toString</button>
+        </a>
+        <a>
+            <input type="text" id="searchInput" name="searchInput_randomValue" autocomplete="off">
+            <button id="searchButton" style="background-color: #008CBA;">Search</button>
+            <button id="resetButton" style="background-color: #008CBA;">Reset</button>
+        </a>
+
+        <div class="select">
+            <select name="theme" id="themeSelect">
+                <option selected disabled>Choose a theme...</option>
+                <option value="default">Default</option>
+                <option value="3024-day">3024 Day</option>
+                <option value="3024-night">3024 Night</option>
+                <option value="ambiance">Ambiance</option>
+                <option value="ayu-mirage">Ayu-mirage</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    </div>
+    <div class="code-codentainer">
+        <div class="editor" style="height: 700px;">
+            <div id="testClass" class="code pa" style="background-color: rgba(245, 245, 220, 0.14);">
+                <h2 style="color:#ffffff;">Class to Test</h2>
+                <div class="class-test"></div>
+            </div>
+
+
+            <div id="codeClass" class="code a" style="background-color: rgba(245, 245, 220, 0.14);">
+                <h2 style="color:#ffffff">Test Class</h2>
+                <div class="java-code"></div>
+
+                <button type="button" class="btn btn-success" onclick="runJava()" title="Run Code">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                </button>
+                <button type="button" class="btn btn-success" onclick="compileJava()" title="Compile Code">
+                    <span class="material-symbols-outlined">
+                        construction
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <section class="output">
+        <ul class="nav nav-tabs" style="background-color:#333;">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="background-color:#ffffff;">
+                    <h4>Output</h4>
+                </a>
+            <li class="nav-link active" aria-current="page" style="background-color:#ffffff;">
+                <button class="button" onclick="clearErrors()">Clear Errors</button>
+            </li>
+            </li>
+
+        </ul>
+        <div id="error-console"></div>
+
+    </section>
+    <!-- 
+        <div style="background-color: black;">
+            <textarea id="output" name="output" class="w-100" rows="15" style="background-color: grey">
+            </textarea>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+    -->
+
+
+
+</body>
+
+<script>
+    var codeInput = document.getElementById("codeInput");
+    var errorDisplay = document.getElementById("errorDisplay");
+    Split(['.a', '.pa'])
+
+    var themeSelect = document.getElementById("themeSelect");
+
+    const queryString = window.location.search;
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParamValue = urlParams.get('myParam');
+
+    //editor per visualizzare classe di test
+
+    var testClass = `    package pacchetto;
+
+public class calcolatrice {
+    
+    public int add(int a, int b) {
+        return a+b;
+    }
+    
+    public int sub(int a, int b) {
+        return a-b;
+    }
+    
+    public int multiply(int a, int b) {
+        return a*b;
+    }
+    
+}
+`;
+
+    var testEditor = CodeMirror(document.querySelector(".editor .code .class-test"), {
+        mode: "text/x-java",
+        value: testClass, // Utilizza il valore di default inizialmente
+        tabSize: 4,
+        lineNumbers: true,
+        autoCloseBrackets: true,
+        theme: "themeSelect.value",
+        readOnly: true,
+    });
+
+    testEditor.setSize("100%", "450px");
+
+    //caricamento classe
+    function localLoad(files) {
+        if (files.length == 1) {
+            document.title = escape(files[0].name);
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                testEditor.setValue(e.target.result);
+            };
+            reader.readAsText(files[0]);
+        }
+    }
+
+
+    //editor per scrivere classe di test
+
+    //template
+    var javaClass = `public class testClass {
+    
+    private testClass c;
+
+
+    public void setUp() throws Exception { 
+        c = new testClass();
+        assertNotNull(c);
+        } 
+
+    
+    public void tearDown() throws Exception { 
+        c=null;
+        assertNull(c);
+    } 
+
+  // TEST
+  // Write your test class here
+        
+}
+`;
+
+    var javaEditor = CodeMirror(document.querySelector(".editor .code .java-code"), {
+        mode: "text/x-java",
+        value: javaClass,
+        tabSize: 4,
+        lineNumbers: true,
+        autoCloseBrackets: true,
+        theme: "themeSelect.value",
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+        lint: true,
+        foldGutter: true,
+        foldOptions: {
+            rangeFinder: new CodeMirror.fold.combine(CodeMirror.fold.brace, CodeMirror.fold.comment)
+        },
+        extraKeys: {
+            "Ctrl-Q": function (cm) {
+                cm.foldCode(cm.getCursor());
+            }
+        }
+    });
+
+    // Funzione per abilitare l'autocompletamento Java
+    function enableJavaAutocomplete() {
+        CodeMirror.commands.autocomplete = function (cm) {
+            cm.showHint({ hint: CodeMirror.hint.java });
+        };
+    }
+
+    // Abilita l'autocompletamento Java
+    enableJavaAutocomplete();
+
+    //AutoComplete
+    javaEditor.on("keydown", function (cm, event) {
+        if (!(event.ctrlKey) &&
+            (event.keyCode >= 65 && event.keyCode <= 90) ||
+            (event.keyCode >= 97 && event.keyCode <= 122) ||
+            (event.keyCode >= 46 && event.keyCode <= 57)
+        ) {
+            CodeMirror.commands.autocomplete(cm, null, { completeSingle: false });
+        }
+    });
+
+    // javaEditor.getDoc().setValue("console.log('Hello CodeMirror')");
+    javaEditor.setSize("100%", "450px");
+
+    CodeMirror.commands["selectAll"](javaEditor);
+
+    changeTheme()
+    //select theme
+    function changeTheme() {
+        themeSelect.addEventListener("change", function () {
+            var selectedTheme = themeSelect.value;
+            testEditor.setOption("theme", selectedTheme);
+            javaEditor.setOption("theme", selectedTheme);
+        });
+    }
+
+
+    async function runJava() {
+        //Run test
+        // Leggi il contenuto del file HTML di report Jacoco
+        fetch('calcolatrice.java.html')
+            .then(response => response.text())
+            .then(html => {
+                // Parsing del contenuto HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Trova l'elemento <pre> che contiene il codice sorgente Java
+                const preElement = doc.querySelector('pre.source.lang-java.linenums');
+
+                // Recupera tutte le righe di codice
+                const codeLines = preElement.querySelectorAll('span');
+
+                // Inizializza due array per le righe coperte e non coperte
+                const coveredLines = [];
+                const notCoveredLines = [];
+
+                // Itera sulle righe di codice e identifica quelle coperte e non coperte
+                codeLines.forEach(line => {
+                    const lineId = line.getAttribute('id');
+                    const lineNumber = parseInt(lineId.substring(1));
+
+                    if (line.classList.contains('fc')) {
+                        coveredLines.push(lineNumber);
+                    } else if (line.classList.contains('nc')) {
+                        notCoveredLines.push(lineNumber);
+                    }
+                });
+
+                // Evidenzia le righe coperte nell'editor CodeMirror
+                coveredLines.forEach(lineNumber => {
+                    testEditor.addLineClass(lineNumber - 1, 'background', 'covered-line');
+                });
+
+                // Evidenzia le righe non coperte nell'editor CodeMirror
+                notCoveredLines.forEach(lineNumber => {
+                    testEditor.addLineClass(lineNumber - 1, 'background', 'not-covered-line');
+                });
+            })
+            .catch(error => {
+                console.error('Si è verificato un errore durante il recupero del file HTML:', error);
+            });
+    }
+
+    function compileJava() {
+        // Recupera l'elemento della console di errori
+        const errorConsole = document.getElementById('error-console');
+
+        fetch('ex_res.txt')
+            .then(response => response.text())
+            .then(text => {
+                // Visualizza un messaggio di errore nella console
+                const errorElement = document.createElement('div');
+                errorElement.textContent = text;
+                errorConsole.appendChild(errorElement);
+            })
+            .catch(error => {
+                console.error('Si è verificato un errore durante il recupero del file TXT:', error);
+            });
+
+
+
+    }
+
+
+
+
+
+
+
+    function clearErrors() {
+        const errorConsole = document.getElementById('error-console');
+        errorConsole.innerHTML = '';
+    }
+
+
+
+
+    //Salvataggio classe java
+    function saveFile() {
+        var textToWrite = javaEditor.getValue();
+        var textFileAsBlob = new Blob([textToWrite], {
+            type: "text/plain;charset=utf-8"
+        });
+        var currentdate = new Date();
+        var datetime = "testClass" + currentdate.getDate() + "_"
+            + (currentdate.getMonth() + 1) + "_"
+            + currentdate.getFullYear() + "@"
+            + currentdate.getHours() + "_"
+            + currentdate.getMinutes() + "_"
+            + currentdate.getSeconds();
+
+        var fileNameToSaveAs = datetime + ".java";
+
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null) {
+            // Chrome allows the link to be clicked
+            // without actually adding it to the DOM.
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        } else {
+            // Firefox requires the link to be added to the DOM
+            // before it can be clicked.
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+
+        downloadLink.click();
+    }
+
+
+    //Autosalvataggio (ogni 30s)
+    var timer;
+    javaEditor.on("change", function () {
+        // Debounce the save function to avoid frequent saving
+        clearTimeout(timer);
+        timer = setTimeout(saveFile, 30000);
+    });
+
+    //pop-up per salvataggio prima di chiudere
+    window.addEventListener('beforeunload', function (e) {
+        // Cancel the event
+        e.preventDefault();
+        // Chrome requires returnValue to be set
+        e.returnValue = '';
+
+        // Custom message to display in the popup
+        var message = 'Are you sure you want to leave? Make sure to save your changes before closing.';
+
+        // Display the popup
+        if (typeof e === 'undefined') {
+            // Legacy browsers (IE 6-9)
+            alert(message);
+        } else {
+            // Modern browsers
+            e.returnValue = message;
+            return message;
+        }
+    });
+
+
+    //popup su creazione nuovo file
+    function showPopup() {
+        var popup = document.getElementById("popupSave");
+        popup.classList.toggle("show");
+
+    }
+
+    function hidePopup() {
+        var popup = document.getElementById("popupSave");
+        popup.style.display = "none";
+    }
+
+
+    //create a new file
+    function newFile() {
+        javaEditor.getDoc().setValue(javaClass);
+    }
+
+    //cerca parola
+    var searchInput = document.getElementById("searchInput");
+    var searchButton = document.getElementById("searchButton");
+    var resetButton = document.getElementById("resetButton");
+    var searchOverlay = null;
+
+    searchButton.addEventListener("click", function () {
+        performSearch();
+    });
+
+    resetButton.addEventListener("click", function () {
+        resetSearch();
+    });
+
+    function performSearch() {
+        var searchTerm = searchInput.value;
+        javaEditor.focus();
+        testEditor.focus();
+
+
+        if (searchOverlay) {
+            javaEditor.removeOverlay(searchOverlay);
+            testEditor.removeOverlay(searchOverlay);
+            searchOverlay = null;
+        }
+
+        if (searchTerm) {
+            searchOverlay = {
+                token: function (stream) {
+                    if (stream.match(searchTerm)) return "searching";
+                    while (stream.next() && !stream.match(searchTerm, false)) { }
+                }
+            };
+
+            javaEditor.addOverlay(searchOverlay, { opaque: true });
+            testEditor.addOverlay(searchOverlay, { opaque: true });
+        }
+    }
+
+    function resetSearch() {
+        javaEditor.focus();
+        testEditor.focus();
+        javaEditor.removeOverlay("search");
+        testEditor.removeOverlay("search");
+        searchInput.value = "";
+        if (searchOverlay) {
+            javaEditor.removeOverlay(searchOverlay);
+            testEditor.removeOverlay(searchOverlay);
+            searchOverlay = null;
+        }
+    }
+
+    //generazione getter e setter
+    var generateButton = document.getElementById("generateButton");
+    generateButton.addEventListener("click", function () {
+        generateMethods();
+    });
+
+    function generateMethods() {
+        var value = javaEditor.getValue();
+
+        var lines = value.split("\n");
+        var generatedCode = "";
+
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            if (line !== "") {
+                var parts = line.split(" ");
+                if (parts.length === 2) {
+                    var variableName = parts[1].replace(";", "");
+                    var capitalizedVariableName = variableName.charAt(0).toUpperCase() + variableName.slice(1);
+
+                    var getterCode = "public get" + capitalizedVariableName + "() {\n  return " + variableName + ";\n}";
+                    var setterCode = "public void set" + capitalizedVariableName + "(" + parts[0] + " " + variableName + ") {\n  this." + variableName + " = " + variableName + ";\n}";
+
+                    generatedCode += getterCode + "\n\n" + setterCode + "\n\n";
+                }
+            }
+        }
+
+        generatedCode += "public String toString() {\n";
+        generatedCode += "  return \"here is the string to print\";\n";
+        generatedCode += "}";
+
+        var currentCode = javaEditor.getValue();
+        javaEditor.setValue(currentCode + "\n\n" + generatedCode);
+    }
+
+</script>
+
+</html>

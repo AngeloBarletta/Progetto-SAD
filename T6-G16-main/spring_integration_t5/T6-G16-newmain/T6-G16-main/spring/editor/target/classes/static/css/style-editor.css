@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change color on hover */
+  .topnav a:hover{
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav .button:hover {
+    background: #008CBA;
+  }
+  .topnav .button:active {
+    background: #9fa1a0;
+  }
+  .topnav button:invalid+span {
+    color: #000000;
+  }
+  .topnav button:valid+span {
+    color: #ffffff;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .button{
+    cursor: pointer;
+    padding: 5px 15px;
+    float: left;
+    background: #008CBA;
+    display: inline-block;
+  } /* Blue */
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+ 
+  label.label input[type="file"] {
+    position: absolute;
+    top: -100px;
+  }
+  
+  .label {
+    background: rgba(93,184,91,255);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  div.upload {
+    width: 157px;
+    height: 42px;
+    background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
+    overflow: hidden;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+/*Style for select button */
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  background: #A0A0A0;
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  color:#ffffff;
+  cursor:pointer;
+  font-size: 5em;
+  font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #008CBA;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background:#008CBA;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #ffffff;
+}
+
+/* style for popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 2px solid #008CBA;
+  border-radius: 4px;
+  z-index: 9999;
+}
+
+.highlighted-yellow {
+  background-color: #ffff00; /* Customize the background color as needed */
+}
+
+.highlighted-red {
+  background-color: #ff0000; /* Customize the background color as needed */
+}
+
+.highlighted-green {
+  background-color: #80ff00; /* Customize the background color as needed */
+}
+
+#buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.covered-line {
+  background-color: #cfc;
+}
+
+.not-covered-line {
+  background-color: #fdd;
+}
+
+#error-console {
+  background-color: #808080;
+  height: 200px; /* Altezza desiderata */
+  overflow-y: auto; /* Scrolling verticale quando necessario */
+}
