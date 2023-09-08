@@ -19,37 +19,18 @@ const urlCoverageController = "http://localhost:8080/editor/getCoverage";
 const urlClassController = "http://localhost:8080/editor/getCodiceClasse";
 const urlTestsController = "http://localhost:8080/editor/saveTest";
 const urlCodeController = "http://localhost:8080/editor/updateCode";
-const fileNameDefault = "test.java";
+const fileNameDefault = "AppTest.java";
 
 // Definizione del template da mostrare all'avvio dell'editor
 const template = `
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class AppTest{
-  @After
-  public void tearDown(){
-
-  }
-
-  @AfterClass
-  public static void tearDownClass(){
-
-  }
-
-  @Before
-  public void setUp(){
-
-  }
-
-  @BeforeClass
-  public static void setUpClass(){
-
-  }
-
   @Test
   public void test(){
-    assertEquals(2,1+1);
+    ClassUnderTest cut = new ClassUnderTest();
+    assertEquals(2,cut.add(1,1));
   }
 }
 `;

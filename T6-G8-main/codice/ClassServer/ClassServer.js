@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
         const combinedData = {
           idGiocatore: 1,
           idPartita: 1,
-          nomeClasse: "cut.java",
+          nomeClasse: "ClassUnderTest.java",
           codiceClasse: data,
           idRobot: 1,
           codiceTest: "",

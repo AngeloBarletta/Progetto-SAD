@@ -38,32 +38,15 @@ public class EditorAppController {
 
     private String template(){
         return """
-        import static org.junit.Assert.assertEquals;
-        import org.junit.Test;
+        import static org.junit.jupiter.api.Assertions.assertEquals;
+        import org.junit.jupiter.api.Test;
+        
         public class AppTest{
-        @After
-        public void tearDown(){
-
-        }
-
-        @AfterClass
-        public static void tearDownClass(){
-
-        }
-
-        @Before
-        public void setUp(){
-
-        }
-
-        @BeforeClass
-        public static void setUpClass(){
-
-        }
-
-        @Test
-        public void test(){
-            assertEquals(2,1+1);
+            @Test
+            public void test(){
+            ClassUnderTest cut = new ClassUnderTest();
+            assertEquals(2,cut.add(1,1));
+            }
         }
         """;
     }
@@ -82,8 +65,12 @@ public class EditorAppController {
 
 
             if (partitaJson != null) {
+                System.out.println("Partita JSON is OK!!!!!!!!!!!\n\n\n\n");
+                System.out.println(partitaJson.getCodiceClasse());
                 partita = new Partita(partitaJson.getIdGiocatore(), partitaJson.getIdPartita(), partitaJson.getNomeClasse(),
                         partitaJson.getCodiceClasse(), partitaJson.getIdRobot(), template());
+            } else {
+                System.out.println("Partita JSON is NULL!!!!!!!!!!!\n\n\n\n");
             }
         } catch (JsonMappingException e) {
             e.printStackTrace();
@@ -157,13 +144,17 @@ public class EditorAppController {
 
         Test testToSend = new Test(msg.getMsg(), partita.getCodiceTest(), partita.getIdGiocatore(), partita.getIdPartita(), 
                                     partita.getNomeClasse(), partita.getCodiceClasse(), partita.getIdRobot());
+        
+        RequestDTO reqToSend = new RequestDTO(msg.getMsg(), partita.getCodiceTest(), partita.getNomeClasse(), partita.getCodiceClasse());
 
         // Trasformiamo l'oggetto in una stringa json
         ObjectMapper objectMapper = new ObjectMapper();
         String json;
 
         try {
-            json = objectMapper.writeValueAsString(testToSend);
+            json = objectMapper.writeValueAsString(reqToSend);
+
+            // System.out.println(json);
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);

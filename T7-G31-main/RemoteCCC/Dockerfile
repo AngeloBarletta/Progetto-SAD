@@ -32,7 +32,7 @@ RUN mvn verify --fail-never
 ADD . $HOME
 RUN mvn package
 
-FROM maven:3.8.5-openjdk-17
+FROM maven:3.8.7-openjdk-18
 
 WORKDIR /app
 
