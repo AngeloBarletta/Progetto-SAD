@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,8 +52,13 @@ public class App {
 
         String underTestClassName = request.getUnderTestClassName();
         String underTestClassCode = request.getUnderTestClassCode();
+
+        System.out.println(testingClassName + "\n" + testingClassCode + "\n" + underTestClassName + "\n" + underTestClassCode);
         
         // Salvataggio dei due file su disco: occorre specificare il nome della classe, per la corretta compilazione
+        System.out.println(Config.getTestingClassPath());
+        System.out.println(Config.getUnderTestClassPath());
+        System.out.println(Config.getpathCompiler());
         saveCodeToFile(testingClassName, testingClassCode, Config.getTestingClassPath());
         saveCodeToFile(underTestClassName, underTestClassCode, Config.getUnderTestClassPath());
 
@@ -69,6 +75,7 @@ public class App {
 
         
         if(compileExecuteCovarageWithMaven(output_maven)){
+            System.out.println("SONO ARRIVATO DENTRO l'IF");
             String retXmlJacoco = readFileToString(Config.getCoverageFolder());//zipSiteFolderToJSON(Config.getzipSiteFolderJSON()).toString();
             response.setError(false);
             response.setoutCompile(output_maven[0]);
@@ -76,6 +83,7 @@ public class App {
 
         }else
         {
+            System.out.println("SONO ARRIVATO FUORI l'IF");
             response.setError(true);
             response.setoutCompile(output_maven[0]);
             response.setCoverage(null);            
@@ -134,7 +142,21 @@ public class App {
         processBuilder.directory(new File(Config.getpathCompiler()));
     
         Process process = processBuilder.start();
+
+
+        // try(InputStreamReader isr = new InputStreamReader(process.getInputStream())) {
+        //     int c;
+        //     while((c = isr.read()) >= 0) {
+        //         System.out.print((char) c);
+        //         System.out.flush();
+        //     }
+        // } catch (Exception e){
+        //     System.out.println("Ho finito di scrivere roba");
+        // }
+    
         int exitCode = process.waitFor();
+
+        System.out.println("HO FINITO IL PROCESSO");
        
         // Legge il contenuto del buffer del terminale
         InputStream inputStream = process.getInputStream();
