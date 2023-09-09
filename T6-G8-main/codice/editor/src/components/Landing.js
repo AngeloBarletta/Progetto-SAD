@@ -247,7 +247,7 @@ const Landing = () => {
           var instructionNotCovered = line.getAttribute('mi') != '0';
           var branchNotCovered = line.getAttribute('mb') != '0';
 
-          const range = new Range(lineNumber, 1, lineNumber+1, 1);
+          const range = new Range(lineNumber-1, 1, lineNumber+1-1, 1);
           if (instructionNotCovered){
             decs.push({
               range: range,

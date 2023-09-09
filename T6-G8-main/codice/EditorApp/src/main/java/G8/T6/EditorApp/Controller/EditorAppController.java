@@ -169,11 +169,13 @@ public class EditorAppController {
             Coverage coverageJson;
             try {
                 coverageJson = objectMapper.readValue(responseBody, Coverage.class);
-
+//                coverageJson.parseCoverage();
 
                 if (coverageJson != null) {
-                    coverageResult = new Coverage(coverageJson.getError(), coverageJson.getOutCompile(), coverageJson.getCoverage());
-                    return ResponseEntity.ok(responseBody);
+                    // wtf
+                    // coverageResult = new Coverage(coverageJson.getError(), coverageJson.getOutCompile(), coverageJson.getCoverage());
+                    json = objectMapper.writeValueAsString(coverageJson);
+                    return ResponseEntity.ok(json);
                 }
 
             } catch (JsonMappingException e) {

@@ -14,7 +14,6 @@ public class Coverage {
         this.outCompile = outCompile;
         this.Coverage = Coverage;
     }
-
     public void setOutCompile(String outCompile){
         this.outCompile=outCompile;
     }
