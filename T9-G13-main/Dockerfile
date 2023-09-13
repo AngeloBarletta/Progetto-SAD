@@ -7,7 +7,7 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Maven
-ARG MAVEN_VERSION=3.9.2
+ARG MAVEN_VERSION=3.9.4
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
 RUN wget ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
@@ -19,18 +19,24 @@ ENV MAVEN_HOME /opt/apache-maven-${MAVEN_VERSION}
 ENV PATH="$MAVEN_HOME/bin:$PATH"
  
 
-WORKDIR .
+WORKDIR /app
 
 ADD ./RandoopManager ./RandoopManager
-ADD ./T9_repo_test ./T9_repo_test
-ADD ./esempio	./esempio
+
+ADD ./esempio ./esempio
 ADD ./randoop-all-4.3.2.jar .
 ADD generateRandoopProjects.sh .
-RUN chmod -+x /generateRandoopProjects.sh
+RUN chmod +x ./generateRandoopProjects.sh
 
 ADD install.sh .
-RUN chmod -+x /install.sh
+RUN chmod +x ./install.sh
 RUN ./install.sh
 
+ADD ./T9_repo_test /root/.T9_repo_test
 
+WORKDIR /app/esempio
 
+# RUN mvn compile
+# RUN mvn exec:java -Dexec.mainClass="org.example.Main"
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

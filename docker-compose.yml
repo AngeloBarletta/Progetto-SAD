@@ -44,6 +44,10 @@ services:
     networks:
       - my-network
 
+  randoop-server:
+    build: ./T9-G19-main/Progetto-SAD-G19-master
+    volumes:
+      - ./repository:/app/FolderTree
 
 networks:
   my-network:
