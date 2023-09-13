@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.File;
+import java.io.BufferedReader;
 
 import java.io.FileWriter;
 
@@ -154,15 +155,19 @@ public class App {
         //     System.out.println("Ho finito di scrivere roba");
         // }
     
+        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null)
+            ret[0] += line += "\n";
         int exitCode = process.waitFor();
 
         System.out.println("HO FINITO IL PROCESSO");
        
         // Legge il contenuto del buffer del terminale
-        InputStream inputStream = process.getInputStream();
-        byte[] buffer = new byte[inputStream.available()];
-        inputStream.read(buffer);
-        ret[0] = new String(buffer, StandardCharsets.UTF_8);
+        // InputStream inputStream = process.getInputStream();
+        // byte[] buffer = new byte[inputStream.available()];
+        // inputStream.read(buffer);
+        // ret[0] = new String(buffer, StandardCharsets.UTF_8);
         if (exitCode == 0) {
             System.out.println("Maven clean compile executed successfully.");
             return true;
