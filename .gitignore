@@ -1,5 +1,4 @@
 repository/
-target/
 .idea/
 pom.xml.tag
 pom.xml.releaseBackup
