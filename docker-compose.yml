@@ -2,6 +2,8 @@ version: '3'
 services:
   backend:
     build: ./T6-G8-main/codice/EditorApp
+    volumes:
+      - ./repository:/app/TestsResults
     ports:
       - 8080:8080
     depends_on:

@@ -35,6 +35,7 @@ public class AppTest{
 }
 `;
 
+
 const Landing = () => {
   const [code, setCode] = useState(template);
   const [classCode, setClassCode] = useState('');
@@ -105,7 +106,7 @@ const Landing = () => {
     const ids = monacoEditor.deltaDecorations([],decorations);
 
     return () => monacoEditor.deltaDecorations(ids, []);
-  }, [monacoEditor, monaco]);
+  }, [monacoEditor, monaco, decorations]);
 
   useEffect(() => {
     if (enterPress && ctrlPress) {
@@ -191,6 +192,9 @@ const Landing = () => {
     setProcessingSaveAs(false);
   };
 
+
+  var userCoverage = 0;
+
   const handleCompile = () => {
     setProcessing(true);
     
@@ -216,7 +220,20 @@ const Landing = () => {
         var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
         console.log(xmlDoc);
         parseJacocoCoverage(xmlDoc);
+        setOutputString(data.outCompile + "\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
         setCoverageDisplay(true);
+
+        // pop-up per mostrare il vincitore
+        if(data.robotCoverage > userCoverage){
+          alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        }
+        else if(data.robotCoverage < userCoverage){
+          alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        }
+        else{
+          alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        }
+
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi
       }
     })
@@ -229,6 +246,10 @@ const Landing = () => {
     // Funzione per analizzare il file XML di copertura Jacoco
     function parseJacocoCoverage(xml) {
       var coverageData = [];
+
+      //variabili per linee coperte dal test
+      var totalLines = 0;
+      var coveredLines = 0;
 
       // Esempio di iterazione su tutti gli elementi "<sourcefile>"
       var classElements = xml.getElementsByTagName("sourcefile");
@@ -246,6 +267,12 @@ const Landing = () => {
           var lineNumber = parseInt(line.getAttribute('nr'));
           var instructionNotCovered = line.getAttribute('mi') != '0';
           var branchNotCovered = line.getAttribute('mb') != '0';
+
+          //istruzioni per calcolare linee di codice coperte dalla nostra classe di test
+          totalLines++;       // Aggiorna il conteggio delle linee coperte se necessario      
+          if (!instructionNotCovered && !branchNotCovered) {         
+            coveredLines++;       
+          }
 
           const range = new Range(lineNumber-1, 1, lineNumber+1-1, 1);
           if (instructionNotCovered){
@@ -266,9 +293,12 @@ const Landing = () => {
               options: { inlineClassName: "line.covered" }
             });
           }
+          
         }
 
+        userCoverage = (coveredLines/totalLines)*100;
         setDecorations(decs);
+
       }
     };
 

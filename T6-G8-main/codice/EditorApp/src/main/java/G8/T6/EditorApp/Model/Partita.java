@@ -5,20 +5,26 @@ public class Partita {
     private Long IdPartita;
     private String NomeClasse;
     private String CodiceClasse;
-    private Long IdRobot;
+    private Long IdRobot;               //ha probabilmente lo stesso significato di robot, quindi potremmo cancellarlo
     private String CodiceTest;
+
+    //aggiungo livello e robot, queste informazioni servono per il confronto della coverage
+    private Long Livello;
+    private String Robot;
 
     public Partita(){
 
     }
 
-    public Partita(Long idGiocatore, Long idPartita, String nomeClasse, String codiceClasse, Long idRobot, String codiceTest) {
+    public Partita(Long idGiocatore, Long idPartita, String nomeClasse, String codiceClasse, Long idRobot, String codiceTest, Long livello, String robot) {
         IdGiocatore = idGiocatore;
         NomeClasse = nomeClasse;
         CodiceClasse = codiceClasse;
         IdRobot = idRobot;
         IdPartita = idPartita;
-        CodiceTest = codiceTest; 
+        CodiceTest = codiceTest;
+        Livello = livello;
+        Robot = robot;
     }
 
     public Long getIdGiocatore() {
@@ -68,4 +74,23 @@ public class Partita {
     public void setCodiceTest(String codiceTest) {
         CodiceTest = codiceTest;
     }
+
+    public Long getLivello() {
+        return Livello;
+    }
+
+    public void setLivello(Long livello) {
+        Livello = livello;
+    }
+
+    public String getRobot() {
+        return Robot;
+    }
+
+    public void setRobot(String robot) {
+        Robot = robot;
+    }
+    
 }
+
+

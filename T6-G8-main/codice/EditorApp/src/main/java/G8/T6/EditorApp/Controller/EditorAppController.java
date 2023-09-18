@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import G8.T6.EditorApp.Model.*;
+
  
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -68,7 +69,7 @@ public class EditorAppController {
                 System.out.println("Partita JSON is OK!!!!!!!!!!!\n\n\n\n");
                 System.out.println(partitaJson.getCodiceClasse());
                 partita = new Partita(partitaJson.getIdGiocatore(), partitaJson.getIdPartita(), partitaJson.getNomeClasse(),
-                        partitaJson.getCodiceClasse(), partitaJson.getIdRobot(), template());
+                        partitaJson.getCodiceClasse(), partitaJson.getIdRobot(), template(), partitaJson.getLivello(), partitaJson.getRobot());
             } else {
                 System.out.println("Partita JSON is NULL!!!!!!!!!!!\n\n\n\n");
             }
@@ -142,6 +143,7 @@ public class EditorAppController {
     public ResponseEntity<String> getCoverage(@RequestBody Messaggio msg) {
         System.out.println(msg.getMsg());
 
+
         Test testToSend = new Test(msg.getMsg(), partita.getCodiceTest(), partita.getIdGiocatore(), partita.getIdPartita(), 
                                     partita.getNomeClasse(), partita.getCodiceClasse(), partita.getIdRobot());
         
@@ -172,9 +174,24 @@ public class EditorAppController {
 //                coverageJson.parseCoverage();
 
                 if (coverageJson != null) {
+
+                    String className = partita.getNomeClasse().replace(".java","");
+                    String robot = partita.getRobot();
+                    String robotLevel = ""+partita.getLivello();
+                    if(partita.getLivello() <= 9){
+                        robotLevel = "0"+partita.getLivello();
+                    }
+
+                    String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
+                    Coverage parser = new Coverage();
+                    System.out.println("Coverage: " +  parser.getLineCoverage(filePath, partita.getNomeClasse()));
+
+                    coverageJson.setRobotCoverage(parser.getLineCoverage(filePath, partita.getNomeClasse()));
+
                     // wtf
                     // coverageResult = new Coverage(coverageJson.getError(), coverageJson.getOutCompile(), coverageJson.getCoverage());
                     json = objectMapper.writeValueAsString(coverageJson);
+                    System.out.println("\n\nDEBUG: " + json);
                     return ResponseEntity.ok(json);
                 }
 

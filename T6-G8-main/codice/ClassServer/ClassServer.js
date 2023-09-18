@@ -19,6 +19,8 @@ const server = http.createServer((req, res) => {
           codiceClasse: data,
           idRobot: 1,
           codiceTest: "",
+          livello: 1,
+          robot: "Randoop",
         };
 
         res.statusCode = 200;
