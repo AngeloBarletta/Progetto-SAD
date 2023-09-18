@@ -10,16 +10,13 @@ services:
       - class-server
       - tests-server
       - coverage-server
-    networks:
-      - my-network
     env_file:
       .env
   frontend:
     build: ./T6-G8-main/codice/editor
     ports:
       - 3000:3000
-    networks:
-      - my-network
+
   # coverage-server:
   #   build: ./T6-G8-main/codice/CoverageServer
   #   ports:
@@ -30,26 +27,24 @@ services:
     build: ./T6-G8-main/codice/ClassServer
     ports:
       - 3002:3002
-    networks:
-      - my-network
+
   tests-server:
     build: ./T6-G8-main/codice/TestsServer
     ports:
       - 3003:3003
-    networks:
-      - my-network
 
   coverage-server:
     build: ./T7-G31-main/RemoteCCC
     ports:
       - 1234:1234
-    networks:
-      - my-network
 
   randoop-server:
     build: ./T9-G19-main/Progetto-SAD-G19-master
     volumes:
       - ./repository:/app/FolderTree
 
-networks:
-  my-network:
+  evosuite-server:
+    build: ./T8-G21-main/Progetto_SAD_GRUPPO21_TASK8
+    volumes:
+      - ./repository:/repository
+

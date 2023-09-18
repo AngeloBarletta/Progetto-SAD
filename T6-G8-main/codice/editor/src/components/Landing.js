@@ -64,7 +64,7 @@ const Landing = () => {
   const [parsedXml, setParsedXml] = useState('');
 
   const [outputString, setOutputString] = useState('Compila per avere un output.');
-  const [errorCompile, setErrorCompile] = useState(false);
+  // const [errorCompile, setErrorCompile] = useState(false);
 
   async function handleEditorDidMount(monacoEditor, monaco) {
     setVars({ monacoEditor, monaco });
@@ -211,10 +211,12 @@ const Landing = () => {
         body: JSON.stringify(msg),
     }).then(response => response.json())
     .then(data => {
-      setErrorCompile(data.error);
+      // setErrorCompile(data.error);
       setOutputString(data.outCompile);
+      
+      // console.log(errorCompile);
 
-      if(!errorCompile){
+      if(!data.error){
       
         var parser = new DOMParser();
         var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
@@ -235,6 +237,10 @@ const Landing = () => {
         }
 
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi
+      } else {
+        alert("Errore nel test.");
+        var decs = [];
+        setDecorations(decs);
       }
     })
     .catch(error => {

@@ -182,12 +182,24 @@ public class EditorAppController {
                         robotLevel = "0"+partita.getLivello();
                     }
 
-                    String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
-                    Coverage parser = new Coverage();
-                    System.out.println("Coverage: " +  parser.getLineCoverage(filePath, partita.getNomeClasse()));
+                    int coverage = 0;
 
-                    coverageJson.setRobotCoverage(parser.getLineCoverage(filePath, partita.getNomeClasse()));
+                    if (robot.equals("Randoop")) {
+                        String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
+                        coverage = Parser.parseXMLCoverage(filePath, partita.getNomeClasse());
+                        // System.out.println("Coverage: " +  parser.getLineCoverage(filePath, partita.getNomeClasse()));
 
+                    } else if (robot.equals("EvoSuite")) {
+                        String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/TestReport/statistics.csv";
+                        coverage = Parser.parseCSVCoverage(filePath);
+                    }
+
+                    if (coverage != -1) {
+                        coverageJson.setRobotCoverage(coverage);
+                    } else {
+                        // TBD
+                    }
+                        
                     // wtf
                     // coverageResult = new Coverage(coverageJson.getError(), coverageJson.getOutCompile(), coverageJson.getCoverage());
                     json = objectMapper.writeValueAsString(coverageJson);
