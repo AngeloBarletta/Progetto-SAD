@@ -194,13 +194,8 @@ public class EditorAppController {
                         coverage = Parser.parseCSVCoverage(filePath);
                     }
 
-                    if (coverage != -1) {
-                        coverageJson.setRobotCoverage(coverage);
-                    } else {
-                        // TBD
-                    }
+                    coverageJson.setRobotCoverage(coverage);
                         
-                    // wtf
                     // coverageResult = new Coverage(coverageJson.getError(), coverageJson.getOutCompile(), coverageJson.getCoverage());
                     json = objectMapper.writeValueAsString(coverageJson);
                     System.out.println("\n\nDEBUG: " + json);

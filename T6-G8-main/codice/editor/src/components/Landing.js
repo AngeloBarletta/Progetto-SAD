@@ -216,7 +216,7 @@ const Landing = () => {
       
       // console.log(errorCompile);
 
-      if(!data.error){
+      if(!data.error && data.robotCoverage!= -1){
       
         var parser = new DOMParser();
         var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
@@ -237,10 +237,22 @@ const Landing = () => {
         }
 
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi
-      } else {
-        alert("Errore nel test.");
-        var decs = [];
-        setDecorations(decs);
+      } 
+      else {
+        if(data.error){
+          alert("Errore nel test dell'utente");
+          setOutputString("ERROR");
+          var decs = [];
+          setDecorations(decs);
+          setCoverageDisplay(true);
+        }
+        if(data.robotCoverage == -1){
+          alert("Errore robot");
+          setOutputString("ERROR");
+          var decs = [];
+          setDecorations(decs);
+          setCoverageDisplay(true);
+        }
       }
     })
     .catch(error => {
