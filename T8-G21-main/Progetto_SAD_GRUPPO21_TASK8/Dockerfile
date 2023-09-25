@@ -11,6 +11,8 @@ RUN apt-get install git unzip wget -y
 WORKDIR /app
 
 COPY ./opt_livelli/Prototipo2.0/installazione.sh ./installazione.sh
+COPY ./opt_livelli/Prototipo2.0/evosuite-1.0.6.jar ./evosuite-1.0.6.jar
+COPY ./opt_livelli/Prototipo2.0/evosuite-standalone-runtime-1.0.6.jar ./evosuite-standalone-runtime-1.0.6.jar
 
 RUN ./installazione.sh
 
