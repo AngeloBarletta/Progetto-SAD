@@ -1,3 +1,4 @@
+#!/bin/bash
 PERCORSO="$(cd "$(dirname "$0")" && pwd)"
 NOME_CLASSE=$1
 NOME_PACKAGE=$2
