@@ -173,6 +173,7 @@ public class App {
             return true;
         } else {
             System.out.println("Error executing Maven clean compile.");
+            System.out.println(ret[0]);
             return false;
         }
 

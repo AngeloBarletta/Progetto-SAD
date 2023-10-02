@@ -18,6 +18,8 @@ ENV EVOSUITE="java -jar /app/evosuite-1.0.6.jar"
 
 COPY ./opt_livelli .
 
+COPY ./opt/Prototipo2 ./misurazione
+
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 

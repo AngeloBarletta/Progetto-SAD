@@ -23,8 +23,8 @@ const fileNameDefault = "AppTest.java";
 
 // Definizione del template da mostrare all'avvio dell'editor
 const template = `
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class AppTest{
   @Test
@@ -222,7 +222,7 @@ const Landing = () => {
         var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
         console.log(xmlDoc);
         parseJacocoCoverage(xmlDoc);
-        setOutputString(data.outCompile + "\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
         setCoverageDisplay(true);
 
         // pop-up per mostrare il vincitore
@@ -241,7 +241,7 @@ const Landing = () => {
       else {
         if(data.error){
           alert("Errore nel test dell'utente");
-          setOutputString("ERROR");
+          // setOutputString("ERROR");
           var decs = [];
           setDecorations(decs);
           setCoverageDisplay(true);

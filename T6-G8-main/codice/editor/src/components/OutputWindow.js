@@ -12,34 +12,22 @@ const OutputNull = ({}) => {
   ); 
 }
 
-const OutputCoverage = ({outputString}) => {
-  /*class MyComponent extends React.Component {  render() {    
-    // HTML da parsare    
-    //const html = '<div><h1>Title</h1><p>Paragraph</p></div>';    
-    // Effettua il parsing dell'HTML in componenti React    
-    const parsedHTML = parse(html);    
-    return <div>{parsedHTML}</div>;  }}*/
-    //var myDiv = document.getElementById("output");
-    //myDiv.innerHTML = outputString;
-    return (
-      <>
-        <h1 className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 mb-2">
-            Output
-        </h1>
-        <div className="w-full h-56 bg-[#1e293b] rounded-md text-white font-normal text-sm overflow-y-auto"
-        dangerouslySetInnerHTML={{ __html: outputString }}></div>
-      </>
-    );
-  /*return (
+const OutputCoverage = ({ outputString }) => {
+  // Sostituisci i caratteri di ritorno a capo con tag <br>
+  const formattedOutput = outputString.replace(/\n/g, "<br>");
+
+  return (
     <>
       <h1 className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 mb-2">
-          Output
+        Output
       </h1>
-      <div className="w-full h-56 bg-[#1e293b] rounded-md text-white font-normal text-sm overflow-y-auto"
-      dangerouslySetInnerHTML={{ __html: html }}></div>
+      <div
+        className="w-full h-56 bg-[#1e293b] rounded-md text-white font-normal text-sm overflow-y-auto"
+        dangerouslySetInnerHTML={{ __html: formattedOutput }}
+      ></div>
     </>
-    );//*/
-}
+  );
+};
 
 
 const OutputWindow = ({outputString, coverageDisplay}) => {
