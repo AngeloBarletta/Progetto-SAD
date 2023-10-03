@@ -14,6 +14,8 @@ ENV EVOSUITE="java -jar /app/robot/evosuite-1.0.6.jar"
 WORKDIR /app/utente
 
 RUN python3 -m pip install -r requirements.txt
+ENV PYTHONUNBUFFERED 1
+
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
 ENTRYPOINT ["./gunicorn.sh"]

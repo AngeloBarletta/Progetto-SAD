@@ -5,9 +5,11 @@ import subprocess
 
 app = Flask(__name__)
 
-TEST_PATH = "."
-CLASS_PATH = "."
-SCRIPT_PATH = "./scriptscemo.sh"
+TEST_PATH = "./test/java/mypackage"
+CLASS_PATH = "./src/main/java/mypackage"
+CSV_PATH = "./results/statistics.csv"
+SCRIPT_COMPILE_PATH = "./compilazione_test.sh"
+SCRIPT_MEASURE_PATH = "./robot_misurazione_utente.sh"
 
 @dataclass
 class Request:
@@ -49,19 +51,40 @@ def evosuite():
         f.write(req.underTestClassCode)
 
     try:
-        process = subprocess.Popen(["bash", SCRIPT_PATH, CLASS_PATH, req.underTestClassName, TEST_PATH, req.testingClassName, "."], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["bash", SCRIPT_COMPILE_PATH, req.underTestClassName, req.testingClassName], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
 
         return_code = process.returncode
 
+        if return_code == 0:
+            # Capture the standard output in a string variable
+            output_str = stdout.decode('utf-8')
+            lines = output_str.splitlines()
+            lines = [line for line in lines if line.startswith("[")]
+            output_str = "\n".join(lines)
+            print(output_str)
+        else:
+            return 'Error during compilation', 500
         
+        process = subprocess.Popen(["bash", SCRIPT_MEASURE_PATH, req.underTestClassName, req.testingClassName], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = process.communicate()
+
+        return_code = process.returncode
 
         if return_code == 0:
             # Capture the standard output in a string variable
             output_str = stdout.decode('utf-8')
             print(output_str)
         else:
-            return 'error', 500
+            output_str = stdout.decode('utf-8')
+            error_str = stderr.decode('utf-8')
+            print(output_str, error_str)
+            return 'Error during measure', 500
+        
+        with open(CSV_PATH, "r") as f:
+            csv = f.read()
+        os.remove(CSV_PATH)
+        return csv, 200
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return 'error', 500

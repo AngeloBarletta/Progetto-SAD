@@ -7,11 +7,11 @@ PERCORSO="$(cd "$(dirname "$0")" && pwd)"
 # PERCORSO_TEST=$5
 # PERCORSO_CSV=$6
 NOME_PACKAGE="mypackage"
-PERCORSO_CLASSE=$1  # ./prova/ClassUnderTest.java
-NOME_CLASSE=$2      # ClassUnderTest
-PERCORSO_TEST=$3    # ./prova/AppTest.java
-NOME_TEST=$4        # AppTest
-PERCORSO_CSV=$5     # ./provacsv
+# PERCORSO_CLASSE=$1  # ./prova/ClassUnderTest.java
+NOME_CLASSE=$1      # ClassUnderTest
+# PERCORSO_TEST=$3    # ./prova/AppTest.java
+NOME_TEST=$2        # AppTest
+PERCORSO_CSV="results"     # ./provacsv
 
 
 # echo "percorso package :$PERCORSO_PACKAGE \n"
@@ -21,8 +21,8 @@ PERCORSO_CSV=$5     # ./provacsv
 # echo "percorso csv :$PERCORSO_CSV\n"
 # echo "PERCORSO  :$PERCORSO\n"
 
-cp $PERCORSO_CLASSE $PERCORSO/src/main/java/$NOME_PACKAGE
-cp $PERCORSO_TEST $PERCORSO/test/java/$NOME_PACKAGE
+# cp $PERCORSO_CLASSE $PERCORSO/src/main/java/$NOME_PACKAGE
+# cp $PERCORSO_TEST $PERCORSO/test/java/$NOME_PACKAGE
 
 # cp -n -r $PERCORSO_PACKAGE $PERCORSO/src/main/java
 # cd $PERCORSO/test
@@ -43,7 +43,7 @@ cp $PERCORSO_TEST $PERCORSO/test/java/$NOME_PACKAGE
 
 # java -jar evosuite-1.2.0.jar
 
-cat  >>pom.xml << EOF
+cat  > pom.xml << EOF
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>

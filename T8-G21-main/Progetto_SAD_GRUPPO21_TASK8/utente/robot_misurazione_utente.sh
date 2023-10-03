@@ -1,19 +1,15 @@
 #!/bin/sh
 PERCORSO="$(cd "$(dirname "$0")" && pwd)"
-# PERCORSO_PACKAGE=$1
-# NOME_PACKAGE=$2
-# NOME_CLASSE=$3
-# NOME_TEST=$4
-# PERCORSO_TEST=$5
-# PERCORSO_CSV=$6
+
 NOME_PACKAGE="mypackage"
-PERCORSO_CLASSE=$1  # ./prova/ClassUnderTest.java
-NOME_CLASSE=$2      # ClassUnderTest
-PERCORSO_TEST=$3    # ./prova/AppTest.java
-NOME_TEST=$4        # AppTest
-PERCORSO_CSV=$5     # ./provacsv
+# PERCORSO_CLASSE=$1  # ./prova/ClassUnderTest.java
+NOME_CLASSE=$1      # ClassUnderTest
+# PERCORSO_TEST=$3    # ./prova/AppTest.java
+NOME_TEST=$2        # AppTest
+PERCORSO_CSV="results"     # ./provacsv
 
 # java org.junit.runner.JUnitCore $NOME_PACKAGE.${NOME_TEST}
+
 
 sleep 2
 
@@ -44,4 +40,4 @@ rm -r $PERCORSO/src/main/java/*
 rm -r $PERCORSO/target
 rm -r $PERCORSO/evosuite-report
 rm $PERCORSO/pom.xml
-rm $PERCORSO/index.html
+# rm $PERCORSO/index.html
