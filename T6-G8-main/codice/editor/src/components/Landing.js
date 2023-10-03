@@ -397,7 +397,7 @@ const Landing = () => {
             !code ? "opacity-50" : ""
           )}
         >
-          {processing? "Processing..." : "Compile and Execute"}
+          {processing? "Processing..." : "Play"}
         </button>
       </div>
       <div className="flex flex-row space-x-4 items-start px-4 py-0">
