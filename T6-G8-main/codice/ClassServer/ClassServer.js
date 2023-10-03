@@ -21,6 +21,7 @@ const server = http.createServer((req, res) => {
           codiceTest: "",
           livello: 1,
           robot: "EvoSuite",
+          coverageMethod: "JaCoCo"
         };
 
         res.statusCode = 200;

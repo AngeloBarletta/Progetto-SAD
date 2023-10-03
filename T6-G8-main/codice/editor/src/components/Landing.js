@@ -217,23 +217,27 @@ const Landing = () => {
       // console.log(errorCompile);
 
       if(!data.error && data.robotCoverage!= -1){
-      
-        var parser = new DOMParser();
-        var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
-        console.log(xmlDoc);
-        parseJacocoCoverage(xmlDoc);
-        setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
-        setCoverageDisplay(true);
+        if (data.coverageMethod == "EvoSuite") {
+          setOutputString(data.coverage + "\n\n" + data.outCompile);
+          setCoverageDisplay(true);
+        } else {
+          var parser = new DOMParser();
+          var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
+          console.log(xmlDoc);
+          parseJacocoCoverage(xmlDoc);
+          setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
+          setCoverageDisplay(true);
 
-        // pop-up per mostrare il vincitore
-        if(data.robotCoverage > userCoverage){
-          alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
-        }
-        else if(data.robotCoverage < userCoverage){
-          alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
-        }
-        else{
-          alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+          // pop-up per mostrare il vincitore
+          if(data.robotCoverage > userCoverage){
+            alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+          }
+          else if(data.robotCoverage < userCoverage){
+            alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+          }
+          else{
+            alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+          }
         }
 
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi

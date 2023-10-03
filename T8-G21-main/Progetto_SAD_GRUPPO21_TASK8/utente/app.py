@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from werkzeug.utils import secure_filename
 from dataclasses import dataclass
 import os
 import subprocess
@@ -57,10 +58,16 @@ def evosuite():
     except:
         return 'bad request!', 400
     
-    with open(os.path.join(TEST_PATH, req.testingClassName+".java"), "w") as f:
+    req.testingClassCode = "package mypackage;\n" + req.testingClassCode
+    req.underTestClassCode = "package mypackage;\n" + req.underTestClassCode
+
+    with open(os.path.join(TEST_PATH, secure_filename(req.testingClassName)), "w") as f:
         f.write(req.testingClassCode)
-    with open(os.path.join(CLASS_PATH, req.underTestClassName+".java"), "w") as f:
+    with open(os.path.join(CLASS_PATH, secure_filename(req.underTestClassName)), "w") as f:
         f.write(req.underTestClassCode)
+
+    req.testingClassName = req.testingClassName.split(".java")[0]
+    req.underTestClassName = req.underTestClassName.split(".java")[0]
 
     try:
         process = subprocess.Popen(["bash", SCRIPT_COMPILE_PATH, req.underTestClassName, req.testingClassName], stdout=subprocess.PIPE, stderr=subprocess.PIPE)

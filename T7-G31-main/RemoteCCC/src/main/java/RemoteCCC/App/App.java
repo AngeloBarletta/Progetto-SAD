@@ -158,7 +158,9 @@ public class App {
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line;
         while ((line = reader.readLine()) != null)
-            ret[0] += line += "\n";
+            if (line.startsWith("[")) {
+                ret[0] += line += "\n";
+            }
         int exitCode = process.waitFor();
 
         System.out.println("HO FINITO IL PROCESSO");

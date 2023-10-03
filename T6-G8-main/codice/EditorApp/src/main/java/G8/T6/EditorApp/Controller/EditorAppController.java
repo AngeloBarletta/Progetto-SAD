@@ -26,8 +26,11 @@ public class EditorAppController {
     private Partita partita;
     private Coverage coverageResult; 
 
-    @Value("${COVERAGE_SERVER_URL}")
-    private String urlCoverageServer; 
+    @Value("${JACOCO_COVERAGE_SERVER_URL}")
+    private String jacocoUrlCoverageServer; 
+
+    @Value("${EVOSUITE_COVERAGE_SERVER_URL}")
+    private String evosuiteUrlCoverageServer; 
 
     @Value("${CLASS_SERVER_URL}")
     private String urlClassServer; 
@@ -66,12 +69,12 @@ public class EditorAppController {
 
 
             if (partitaJson != null) {
-                System.out.println("Partita JSON is OK!!!!!!!!!!!\n\n\n\n");
+                System.out.println("Partita JSON is OK!\n\n\n\n");
                 System.out.println(partitaJson.getCodiceClasse());
                 partita = new Partita(partitaJson.getIdGiocatore(), partitaJson.getIdPartita(), partitaJson.getNomeClasse(),
-                        partitaJson.getCodiceClasse(), partitaJson.getIdRobot(), template(), partitaJson.getLivello(), partitaJson.getRobot());
+                        partitaJson.getCodiceClasse(), partitaJson.getIdRobot(), template(), partitaJson.getLivello(), partitaJson.getRobot(), partitaJson.getCoverageMethod());
             } else {
-                System.out.println("Partita JSON is NULL!!!!!!!!!!!\n\n\n\n");
+                System.out.println("Partita JSON is NULL!\n\n\n\n");
             }
         } catch (JsonMappingException e) {
             e.printStackTrace();
@@ -163,7 +166,15 @@ public class EditorAppController {
 
 
             HttpEntity<String> requestEntity = new HttpEntity<>(json, headers);
-            ResponseEntity<String> responseEntity = restTemplate.postForEntity(urlCoverageServer, requestEntity, String.class);
+            
+            
+            String urlCoverage = "";
+            if (partita.getCoverageMethod().equals("JaCoCo")) {
+                urlCoverage = jacocoUrlCoverageServer;
+            } else {
+                urlCoverage = evosuiteUrlCoverageServer;
+            }
+            ResponseEntity<String> responseEntity = restTemplate.postForEntity(urlCoverage, requestEntity, String.class);
 
             String responseBody = responseEntity.getBody();
             
@@ -174,7 +185,11 @@ public class EditorAppController {
 //                coverageJson.parseCoverage();
 
                 if (coverageJson != null) {
-
+                    if (partita.getCoverageMethod().equals("EvoSuite")) {
+                        coverageJson.setCoverageMethod("EvoSuite");
+                    } else {
+                        coverageJson.setCoverageMethod("JaCoCo");
+                    }
                     String className = partita.getNomeClasse().replace(".java","");
                     String robot = partita.getRobot();
                     String robotLevel = ""+partita.getLivello();

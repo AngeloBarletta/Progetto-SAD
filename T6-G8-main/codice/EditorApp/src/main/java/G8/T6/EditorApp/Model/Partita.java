@@ -11,12 +11,13 @@ public class Partita {
     //aggiungo livello e robot, queste informazioni servono per il confronto della coverage
     private Long Livello;
     private String Robot;
+    private String CoverageMethod;
 
     public Partita(){
 
     }
 
-    public Partita(Long idGiocatore, Long idPartita, String nomeClasse, String codiceClasse, Long idRobot, String codiceTest, Long livello, String robot) {
+    public Partita(Long idGiocatore, Long idPartita, String nomeClasse, String codiceClasse, Long idRobot, String codiceTest, Long livello, String robot, String coverageMethod) {
         IdGiocatore = idGiocatore;
         NomeClasse = nomeClasse;
         CodiceClasse = codiceClasse;
@@ -25,6 +26,7 @@ public class Partita {
         CodiceTest = codiceTest;
         Livello = livello;
         Robot = robot;
+        CoverageMethod = coverageMethod;
     }
 
     public Long getIdGiocatore() {
@@ -89,6 +91,14 @@ public class Partita {
 
     public void setRobot(String robot) {
         Robot = robot;
+    }
+
+    public String getCoverageMethod() {
+        return CoverageMethod;
+    }
+
+    public void setCoverageMethod(String coverageMethod) {
+        CoverageMethod = coverageMethod;
     }
     
 }

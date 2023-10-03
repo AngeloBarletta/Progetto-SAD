@@ -7,16 +7,18 @@ public class Coverage {
 
     // coverage del robot (valore percentuale)
     private int RobotCoverage;
+    private String CoverageMethod;
 
     public Coverage(){
         
     }
 
-    public Coverage(boolean Error, String outCompile, String Coverage, int robotCoverage){
+    public Coverage(boolean Error, String outCompile, String Coverage, int robotCoverage, String coverageMethod){
         this.Error = Error;
         this.outCompile = outCompile;
         this.Coverage = Coverage;
         this.RobotCoverage = robotCoverage;
+        this.CoverageMethod = coverageMethod;
     }
     public void setOutCompile(String outCompile){
         this.outCompile=outCompile;
@@ -49,6 +51,14 @@ public class Coverage {
 
     public int getRobotCoverage(){
         return RobotCoverage;
+    }
+
+    public String getCoverageMethod() {
+        return CoverageMethod;
+    }
+
+    public void setCoverageMethod(String coverageMethod) {
+        this.CoverageMethod = coverageMethod;
     }
 
 }
