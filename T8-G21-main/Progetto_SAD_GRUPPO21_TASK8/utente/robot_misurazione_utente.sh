@@ -35,8 +35,8 @@ mv -f evosuite-report/statistics.csv $PERCORSO_CSV
 
 # wget http://localhost:3001/api/
 
-rm -r $PERCORSO/test/java/*
-rm -r $PERCORSO/src/main/java/*
+rm -r $PERCORSO/test/java/mypackage/*
+rm -r $PERCORSO/src/main/java/mypackage/*
 rm -r $PERCORSO/target
 rm -r $PERCORSO/evosuite-report
 rm $PERCORSO/pom.xml
