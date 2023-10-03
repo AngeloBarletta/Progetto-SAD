@@ -45,6 +45,8 @@ services:
 
   evosuite-server:
     build: ./T8-G21-main/Progetto_SAD_GRUPPO21_TASK8
+    ports:
+      - 5000:5000
     volumes:
       - ./repository:/repository
 
