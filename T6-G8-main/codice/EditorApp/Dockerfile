@@ -43,7 +43,7 @@ COPY --from=build /usr/app/target/EditorApp-0.0.1-SNAPSHOT.jar app.jar
 # Definiamo le variabili d'ambiente
 ARG JACOCO_COVERAGE_SERVER_URL=http://coverage-server:1234/compile-and-codecoverage
 ENV JACOCO_COVERAGE_SERVER_URL=$JACOCO_COVERAGE_SERVER_URL
-ARG EVOSUITE_COVERAGE_SERVER_URL=http://evosuite-server:5000/evosuite_coverage
+ARG EVOSUITE_COVERAGE_SERVER_URL=http://evosuite-server:5000/compile-and-codecoverage
 ENV EVOSUITE_COVERAGE_SERVER_URL=$EVOSUITE_COVERAGE_SERVER_URL
 ARG CLASS_SERVER_URL==http://class-server:3002/
 ENV CLASS_SERVER_URL=$CLASS_SERVER_URL

@@ -25,7 +25,7 @@ public class AppTest{
     """
 }
 
-URL = "http://localhost:5000/evosuite_coverage"
+URL = "http://localhost:5000/compile-and-codecoverage"
 
 x = requests.post(URL, json = data).text
 res = json.loads(x)

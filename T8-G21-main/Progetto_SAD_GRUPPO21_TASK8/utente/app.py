@@ -45,7 +45,7 @@ def cleanup():
 def hello():
     return "It's working"
 
-@app.route('/evosuite_coverage', methods=["POST"])
+@app.route('/compile-and-codecoverage', methods=["POST"])
 def evosuite():
     
     if not request.is_json:

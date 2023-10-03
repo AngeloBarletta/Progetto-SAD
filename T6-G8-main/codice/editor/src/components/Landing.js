@@ -15,10 +15,15 @@ import OutputWindow from "./OutputWindow";
 import ThemeDropdown from "./ThemeDropdown";
 
 // Definizione di alcune costanti utili
-const urlCoverageController = "http://localhost:8080/editor/getCoverage";
-const urlClassController = "http://localhost:8080/editor/getCodiceClasse";
-const urlTestsController = "http://localhost:8080/editor/saveTest";
-const urlCodeController = "http://localhost:8080/editor/updateCode";
+// const urlCoverageController = "http://localhost:8080/editor/getCoverage";
+// const urlClassController = "http://localhost:8080/editor/getCodiceClasse";
+// const urlTestsController = "http://localhost:8080/editor/saveTest";
+// const urlCodeController = "http://localhost:8080/editor/updateCode";
+const DOMAIN_NAME = "localhost";
+const urlCoverageController = `http://${DOMAIN_NAME}/api/editor/getCoverage`;
+const urlClassController = `http://${DOMAIN_NAME}/api/editor/getCodiceClasse`;
+const urlTestsController = `http://${DOMAIN_NAME}/api/editor/saveTest`;
+const urlCodeController = `http://${DOMAIN_NAME}/api/editor/updateCode`;
 const fileNameDefault = "AppTest.java";
 
 // Definizione del template da mostrare all'avvio dell'editor

@@ -20,7 +20,7 @@ import G8.T6.EditorApp.Model.*;
 
  
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+// @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/editor")
 public class EditorAppController {
     private Partita partita;
