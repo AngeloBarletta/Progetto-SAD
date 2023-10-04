@@ -203,6 +203,12 @@ const Landing = () => {
   const handleCompile = () => {
     setProcessing(true);
     
+    const notificationId = toast.success("Compilazione in corso...", {
+      position: "bottom-left",
+      autoClose: false, // Imposta autoClose su false per impedire la chiusura automatica
+    });
+  
+
     // Invia il codice al controller
     const msg={
         msg:fileNameDefault,
@@ -223,26 +229,29 @@ const Landing = () => {
 
       if(!data.error && data.robotCoverage!= -1){
         if (data.coverageMethod == "EvoSuite") {
-          setOutputString(data.coverage + "\n\n" + data.outCompile);
+          userCoverage = parseEvoSuiteCoverage(data.coverage);
+          setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n\n" + data.outCompile);
+          //Per mostrare in output window tutto il csv decommentare questa stringa:
+          //setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n" + data.coverage + "\n\n" + data.outCompile);
           setCoverageDisplay(true);
-        } else {
+        } 
+        else {
           var parser = new DOMParser();
           var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
           console.log(xmlDoc);
           parseJacocoCoverage(xmlDoc);
           setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
           setCoverageDisplay(true);
-
-          // pop-up per mostrare il vincitore
-          if(data.robotCoverage > userCoverage){
-            alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
-          }
-          else if(data.robotCoverage < userCoverage){
-            alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
-          }
-          else{
-            alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
-          }
+        }
+        // pop-up per mostrare il vincitore
+        if(data.robotCoverage > userCoverage){
+          alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        }
+        else if(data.robotCoverage < userCoverage){
+          alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        }
+        else{
+          alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
         }
 
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi
@@ -263,12 +272,17 @@ const Landing = () => {
           setCoverageDisplay(true);
         }
       }
+
+      setProcessing(false);
+      toast.dismiss(notificationId);
     })
     .catch(error => {
         console.error('Errore durante l\'invio della richiesta al server:', error);
+        setProcessing(false);
+        toast.dismiss(notificationId);
     });
 
-    setProcessing(false);
+    //setProcessing(false);
 
     // Funzione per analizzare il file XML di copertura Jacoco
     function parseJacocoCoverage(xml) {
@@ -327,6 +341,29 @@ const Landing = () => {
         setDecorations(decs);
 
       }
+    };
+
+    function parseEvoSuiteCoverage(inputString) {
+      // Dividi la stringa in righe
+      const lines = inputString.split('\n');
+    
+      // Itera attraverso le righe per trovare il valore di copertura LINE
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line) {
+          // Divide la riga in campi utilizzando la virgola come separatore
+          const fields = line.split(',');
+    
+          // Verifica se il criterion è LINE
+          if (fields[1] === 'LINE') {
+            // Restituisci il valore di copertura LINE
+            return parseFloat(fields[2]) * 100;
+          }
+        }
+      }
+    
+      // Restituisci un valore predefinito se non trovi la riga corrispondente a LINE
+      return null;
     };
 
   // Funzione per ottenere l'output dal file XML di copertura Jacoco
