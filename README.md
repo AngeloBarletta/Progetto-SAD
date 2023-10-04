@@ -12,7 +12,7 @@ Il frontend sarà accessibile su http://localhost/.
 
 ## Aggiunta nuove classi di test
 - l’admin deve inserire il file .java nel repository rispettando la struttura del Filesystem specificata in `repository/FolderTree_v1.txt`
-- Rilanciare il comando: `docker compose up –build -d`
+- Rilanciare il comando: `docker compose up --build -d`
 - I test del robot Randoop saranno automaticamente generati
 - Per la generazione dei test EvoSuite, recarsi nel terminale del container evosuite-server
 - Recarsi nella cartella `/app/robot`
