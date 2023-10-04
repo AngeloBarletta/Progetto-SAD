@@ -22,6 +22,8 @@ services:
 
   class-server:
     build: ./T6-G8-main/codice/ClassServer
+    volumes:
+      - ./repository:/repository
     # ports:
     #   - 3002:3002
 

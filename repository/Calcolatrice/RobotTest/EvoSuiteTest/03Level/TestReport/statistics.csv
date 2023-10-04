@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+CalcolatriceSourceCode.Calcolatrice,LINE,1.0,15,15
+CalcolatriceSourceCode.Calcolatrice,BRANCH,1.0,14,14
+CalcolatriceSourceCode.Calcolatrice,EXCEPTION,1.0,0,0
+CalcolatriceSourceCode.Calcolatrice,WEAKMUTATION,0.9908256880733946,109,108
+CalcolatriceSourceCode.Calcolatrice,OUTPUT,0.0,15,0
+CalcolatriceSourceCode.Calcolatrice,METHOD,0.0,6,0
+CalcolatriceSourceCode.Calcolatrice,METHODNOEXCEPTION,0.0,6,0
+CalcolatriceSourceCode.Calcolatrice,CBRANCH,1.0,14,14

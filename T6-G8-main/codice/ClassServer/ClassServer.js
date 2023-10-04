@@ -3,10 +3,10 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
   //res.setHeader('Access-Control-Allow-Origin', '*');
-  
+  var CLASS_NAME = "Calcolatrice"
   if (req.method === 'GET') {
     // Gestione della richiesta GET
-    fs.readFile('./classes/ClassTest.java', 'utf8', (err, data) => {
+    fs.readFile(`/repository/${CLASS_NAME}/${CLASS_NAME}SourceCode/${CLASS_NAME}.java`, 'utf8', (err, data) => {
       if (err) {
         console.error(err);
         res.statusCode = 500;
@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
         const combinedData = {
           idGiocatore: 1,
           idPartita: 1,
-          nomeClasse: "ClassUnderTest.java",
+          nomeClasse: `${CLASS_NAME}.java`,
           codiceClasse: data,
           idRobot: 1,
           codiceTest: "",

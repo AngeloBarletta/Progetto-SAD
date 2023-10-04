@@ -5,7 +5,7 @@ FROM node:latest
 WORKDIR /app
 
 # Copiamo i file del progetto nella directory /app del container
-COPY classes /app/classes
+# COPY classes /app/classes
 COPY ClassServer.js /app/ClassServer.js
 
 # Esponiamo la porta 3002
