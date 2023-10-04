@@ -16,5 +16,8 @@ Il frontend sarà accessibile su http://localhost/.
 - I test del robot Randoop saranno automaticamente generati
 - Per la generazione dei test EvoSuite, recarsi nel terminale del container evosuite-server
 - Recarsi nella cartella `/app/robot`
-- Digitare il seguente comando per la generazione dei test EvoSuite: 
-```./robot_generazione.sh “NomeClasse” "NomePackage” “PercorsoPackage” “NumeroLivelli”```
+- Digitare i seguente comandi per la generazione dei test EvoSuite: 
+```sh
+CLASS_NAME=nomeclasse
+./robot_generazione.sh $CLASS_NAME ${CLASS_NAME}SourceCode /repository/${CLASS_NAME}/${CLASS_NAME}SourceCode <numero livelli>
+```
