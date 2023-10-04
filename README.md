@@ -18,6 +18,6 @@ Il frontend sarà accessibile su http://localhost/.
 - Recarsi nella cartella `/app/robot`
 - Digitare i seguente comandi per la generazione dei test EvoSuite: 
 ```sh
-CLASS_NAME=nomeclasse
+CLASS_NAME=<nomeclasse>
 ./robot_generazione.sh $CLASS_NAME ${CLASS_NAME}SourceCode /repository/${CLASS_NAME}/${CLASS_NAME}SourceCode <numero livelli>
 ```
