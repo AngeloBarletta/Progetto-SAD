@@ -358,7 +358,7 @@ const Landing = () => {
           
         }
 
-        userCoverage = (coveredLines/totalLines)*100;
+        userCoverage = parseInt((coveredLines/totalLines)*100);
         setDecorations(decs);
 
       }
@@ -378,7 +378,7 @@ const Landing = () => {
           // Verifica se il criterion è LINE
           if (fields[1] === 'LINE') {
             // Restituisci il valore di copertura LINE
-            return parseFloat(fields[2]*100).toFixed(2);
+            return parseInt(fields[2]*100);
           }
         }
       }
