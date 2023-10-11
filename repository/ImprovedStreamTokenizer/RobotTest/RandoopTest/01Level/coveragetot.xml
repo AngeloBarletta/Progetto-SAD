@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:28:32 GMT 2023 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="16"/>
+    <srcfiles value="1"/>
+    <srclines value="95"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (1/1)"/>
+      <coverage type="method, %" value="12%  (2/16)"/>
+      <coverage type="block, %" value="17%  (52/308)"/>
+      <coverage type="line, %" value="13%  (12/95)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="12%  (2/16)"/>
+        <coverage type="block, %" value="17%  (52/308)"/>
+        <coverage type="line, %" value="13%  (12/95)"/>
+
+        <srcfile name="ImprovedStreamTokenizer.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="12%  (2/16)"/>
+          <coverage type="block, %" value="17%  (52/308)"/>
+          <coverage type="line, %" value="13%  (12/95)"/>
+
+          <class name="ImprovedStreamTokenizer">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="12%  (2/16)"/>
+            <coverage type="block, %" value="17%  (52/308)"/>
+            <coverage type="line, %" value="13%  (12/95)"/>
+
+            <method name="ImprovedStreamTokenizer (Reader): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/12)"/>
+              <coverage type="line, %" value="0%   (0/5)"/>
+            </method>
+            <method name="ImprovedStreamTokenizer (Reader, String, String, boolean): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/9)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="initializeSyntax (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/32)"/>
+              <coverage type="line, %" value="0%   (0/10)"/>
+            </method>
+            <method name="initializeSyntax (String, String, boolean): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/24)"/>
+              <coverage type="line, %" value="0%   (0/8)"/>
+            </method>
+            <method name="nextBool (): boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/4)"/>
+            </method>
+            <method name="nextBoolean (): Boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/42)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
+            </method>
+            <method name="nextByte (): byte">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/6)"/>
+              <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="nextByteObject (): Byte">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/23)"/>
+              <coverage type="line, %" value="0%   (0/8)"/>
+            </method>
+            <method name="nextInt (): int">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/4)"/>
+            </method>
+            <method name="nextInteger (): Integer">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/25)"/>
+              <coverage type="line, %" value="0%   (0/9)"/>
+            </method>
+            <method name="nextWord (): String">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/22)"/>
+              <coverage type="line, %" value="0%   (0/9)"/>
+            </method>
+            <method name="quoteCharacters (String): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="whiteSpaceCharacter (int): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/5)"/>
+              <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="whiteSpaceCharacters (String): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="charToHex (char): byte">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (24/24)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="parseByte (String): byte">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (28/28)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

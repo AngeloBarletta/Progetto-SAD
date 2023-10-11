@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:18:48 GMT 2023 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="11"/>
+    <srcfiles value="1"/>
+    <srclines value="113"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (1/1)"/>
+      <coverage type="method, %" value="82%  (9/11)"/>
+      <coverage type="block, %" value="60%  (340/562)"/>
+      <coverage type="line, %" value="63%  (71/113)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="82%  (9/11)"/>
+        <coverage type="block, %" value="60%  (340/562)"/>
+        <coverage type="line, %" value="63%  (71/113)"/>
+
+        <srcfile name="ByteVector.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="82%  (9/11)"/>
+          <coverage type="block, %" value="60%  (340/562)"/>
+          <coverage type="line, %" value="63%  (71/113)"/>
+
+          <class name="ByteVector">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="82%  (9/11)"/>
+            <coverage type="block, %" value="60%  (340/562)"/>
+            <coverage type="line, %" value="63%  (71/113)"/>
+
+            <method name="put11 (int, int): ByteVector">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/33)"/>
+              <coverage type="line, %" value="0%   (0/8)"/>
+            </method>
+            <method name="put12 (int, int): ByteVector">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/41)"/>
+              <coverage type="line, %" value="0%   (0/9)"/>
+            </method>
+            <method name="putUTF8 (String): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="31%  (66/214)"/>
+              <coverage type="line, %" value="34%  (13/38)"/>
+            </method>
+            <method name="ByteVector (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="ByteVector (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="enlarge (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (31/31)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="putByte (int): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (25/25)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="putByteArray (byte [], int, int): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (29/29)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="putInt (int): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (51/51)"/>
+              <coverage type="line, %" value="100% (10/10)"/>
+            </method>
+            <method name="putLong (long): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (89/89)"/>
+              <coverage type="line, %" value="100% (16/16)"/>
+            </method>
+            <method name="putShort (int): ByteVector">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (35/35)"/>
+              <coverage type="line, %" value="100% (8/8)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

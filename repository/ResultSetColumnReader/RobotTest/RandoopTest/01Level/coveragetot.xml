@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:43:02 GMT 2023 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="12"/>
+    <srcfiles value="1"/>
+    <srclines value="75"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (1/1)"/>
+      <coverage type="method, %" value="17%  (2/12)"/>
+      <coverage type="block, %" value="6%   (16/265)"/>
+      <coverage type="line, %" value="7%   (5/75)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="17%  (2/12)"/>
+        <coverage type="block, %" value="6%   (16/265)"/>
+        <coverage type="line, %" value="7%   (5/75)"/>
+
+        <srcfile name="ResultSetColumnReader.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="17%  (2/12)"/>
+          <coverage type="block, %" value="6%   (16/265)"/>
+          <coverage type="line, %" value="7%   (5/75)"/>
+
+          <class name="ResultSetColumnReader">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="17%  (2/12)"/>
+            <coverage type="block, %" value="6%   (16/265)"/>
+            <coverage type="line, %" value="7%   (5/75)"/>
+
+            <method name="getBoolean (int): Boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/55)"/>
+              <coverage type="line, %" value="0%   (0/18)"/>
+            </method>
+            <method name="getDate (int): Date">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="getDouble (int): Double">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/48)"/>
+              <coverage type="line, %" value="0%   (0/14)"/>
+            </method>
+            <method name="getLong (int): Long">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/61)"/>
+              <coverage type="line, %" value="0%   (0/18)"/>
+            </method>
+            <method name="getObject (int): Object">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="getString (int): String">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="getTime (int): Time">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="getTimeStamp (int): Timestamp">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/3)"/>
+            </method>
+            <method name="next (): boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/4)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="wasNull (): boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="ResultSetColumnReader (ResultSet): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="53%  (9/17)"/>
+              <coverage type="line, %" value="50%  (3/6)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:25:54 GMT 2023 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="3"/>
+    <methods value="33"/>
+    <srcfiles value="1"/>
+    <srclines value="240"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="67%  (2/3)"/>
+      <coverage type="method, %" value="97%  (32/33)"/>
+      <coverage type="block, %" value="45%  (546/1206)"/>
+      <coverage type="line, %" value="55%  (131.4/240)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="67%  (2/3)"/>
+        <coverage type="method, %" value="97%  (32/33)"/>
+        <coverage type="block, %" value="45%  (546/1206)"/>
+        <coverage type="line, %" value="55%  (131.4/240)"/>
+
+        <srcfile name="HierarchyPropertyParser.java">
+          <coverage type="class, %" value="67%  (2/3)"/>
+          <coverage type="method, %" value="97%  (32/33)"/>
+          <coverage type="block, %" value="45%  (546/1206)"/>
+          <coverage type="line, %" value="55%  (131.4/240)"/>
+
+          <class name="HierarchyPropertyParser">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="97%  (30/31)"/>
+            <coverage type="block, %" value="44%  (521/1181)"/>
+            <coverage type="line, %" value="54%  (125.4/234)"/>
+
+            <method name="main (String []): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/372)"/>
+              <coverage type="line, %" value="0%   (0/55)"/>
+            </method>
+            <method name="isContained (HierarchyPropertyParser$TreeNode, String [], int): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="15%  (6/40)"/>
+              <coverage type="line, %" value="20%  (2/10)"/>
+            </method>
+            <method name="fullValue (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="36%  (9/25)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="showNode (HierarchyPropertyParser$TreeNode, boolean []): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="41%  (50/122)"/>
+              <coverage type="line, %" value="31%  (6.2/20)"/>
+            </method>
+            <method name="goDown (String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="48%  (38/80)"/>
+              <coverage type="line, %" value="53%  (9/17)"/>
+            </method>
+            <method name="goToParent (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="50%  (5/10)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="search (Vector, String): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="50%  (12/24)"/>
+              <coverage type="line, %" value="62%  (3.8/6)"/>
+            </method>
+            <method name="goTo (String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="55%  (42/77)"/>
+              <coverage type="line, %" value="61%  (11/18)"/>
+            </method>
+            <method name="parentValue (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="55%  (6/11)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="goToChild (String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="64%  (18/28)"/>
+              <coverage type="line, %" value="71%  (5/7)"/>
+            </method>
+            <method name="goToChild (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="65%  (17/26)"/>
+              <coverage type="line, %" value="60%  (3/5)"/>
+            </method>
+            <method name="buildBranch (HierarchyPropertyParser$TreeNode, String [], int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="66%  (73/110)"/>
+              <coverage type="line, %" value="75%  (18/24)"/>
+            </method>
+            <method name="childrenValues (): String []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="69%  (22/32)"/>
+              <coverage type="line, %" value="80%  (5.6/7)"/>
+            </method>
+            <method name="isRootReached (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="88%  (7/8)"/>
+              <coverage type="line, %" value="87%  (0.9/1)"/>
+            </method>
+            <method name="HierarchyPropertyParser (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (28/28)"/>
+              <coverage type="line, %" value="100% (8/8)"/>
+            </method>
+            <method name="HierarchyPropertyParser (String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="add (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (21/21)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="build (String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (29/29)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="contains (String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (21/21)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="context (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="depth (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getLevel (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getSeperator (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getValue (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="goToRoot (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="isHierachic (String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (18/18)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="isLeafReached (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (8/8)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="numChildren (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (11/11)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="setSeperator (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="showTree (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="tokenize (String): String []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (40/40)"/>
+              <coverage type="line, %" value="100% (8/8)"/>
+            </method>
+          </class>
+          <class name="HierarchyPropertyParser$1">
+            <coverage type="class, %" value="0%   (0/1)"/>
+            <coverage type="method, %" value="100% (0/0)"/>
+            <coverage type="block, %" value="100% (0/0)"/>
+            <coverage type="line, %" value="100% (0/0)"/>
+          </class>
+          <class name="HierarchyPropertyParser$TreeNode">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (25/25)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="HierarchyPropertyParser$TreeNode (HierarchyPropertyParser): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (21/21)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="HierarchyPropertyParser$TreeNode (HierarchyPropertyParser, HierarchyPropertyParser$1): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>
