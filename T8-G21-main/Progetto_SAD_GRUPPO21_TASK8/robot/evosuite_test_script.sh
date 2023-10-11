@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# To be executed inside the container in the directory of robot_generazione.sh
 N_LEVELS=3
 
-for CLASS_NAME in /repository/*;
+for FILE in /repository/*; do
+    CLASS_NAME=$(basename "$FILE")
     if [ "$CLASS_NAME" == "ClassUnderTest" ] || [ "$CLASS_NAME" == "Calcolatrice" ] || [ "$CLASS_NAME" == "FolderTree_v1.txt" ]; then
         continue
     fi

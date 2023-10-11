@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+ByteArrayHashMapSourceCode.ByteArrayHashMap,LINE,0.9864864864864865,148,146
+ByteArrayHashMapSourceCode.ByteArrayHashMap,BRANCH,0.9397590361445783,83,78
+ByteArrayHashMapSourceCode.ByteArrayHashMap,EXCEPTION,1.0,0,0
+ByteArrayHashMapSourceCode.ByteArrayHashMap,WEAKMUTATION,0.9181446111869032,733,673
+ByteArrayHashMapSourceCode.ByteArrayHashMap,OUTPUT,0.0,35,0
+ByteArrayHashMapSourceCode.ByteArrayHashMap,METHOD,0.0,22,0
+ByteArrayHashMapSourceCode.ByteArrayHashMap,METHODNOEXCEPTION,0.0,22,0
+ByteArrayHashMapSourceCode.ByteArrayHashMap,CBRANCH,0.9156626506024096,83,76

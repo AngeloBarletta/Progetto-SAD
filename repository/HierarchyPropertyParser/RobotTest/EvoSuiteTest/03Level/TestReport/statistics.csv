@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,LINE,0.975,240,234
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,BRANCH,0.9818181818181818,110,108
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,EXCEPTION,1.0,0,0
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,WEAKMUTATION,0.9410377358490566,424,399
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,OUTPUT,0.0,50,0
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,METHOD,0.0,28,0
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,METHODNOEXCEPTION,0.0,28,0
+HierarchyPropertyParserSourceCode.HierarchyPropertyParser,CBRANCH,0.8727272727272727,110,96
