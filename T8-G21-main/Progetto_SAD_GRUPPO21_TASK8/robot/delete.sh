@@ -8,7 +8,7 @@ rm -r $PERCORSO/evosuite-report
 rm $PERCORSO/pom.xml
 rm $PERCORSO/livelli.txt
 rm $PERCORSO/output.txt
-
+rm $PERCORSO/invio.txt
 for (( i=0; i<=12; i++ ));
 do
     rm -r $PERCORSO/I${i}/*
