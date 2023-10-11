@@ -15,34 +15,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add((int)(short)-1, 151);
-    int i21 = classUnderTest0.add(258, 512);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(69, 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 770);
+    org.junit.Assert.assertTrue(i12 == 132);
 
   }
 
@@ -53,34 +41,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(267, 368);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)10, 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 635);
+    org.junit.Assert.assertTrue(i6 == 108);
 
   }
 
@@ -91,42 +59,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(635, 348);
-    int i24 = classUnderTest0.add(898, 105);
-    int i27 = classUnderTest0.add(35, (int)(byte)100);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)-1, (int)(byte)10);
+    int i9 = classUnderTest0.add((int)(byte)1, 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 9);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 983);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1003);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 135);
+    org.junit.Assert.assertTrue(i9 == 33);
 
   }
 
@@ -137,26 +81,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(1, 101);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add((int)(byte)1, 32);
+    int i18 = classUnderTest0.add((-1), (int)' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 102);
+    org.junit.Assert.assertTrue(i15 == 33);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 31);
 
   }
 
@@ -167,18 +115,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(0, 347);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add(10, (int)(short)0);
+    int i21 = classUnderTest0.add(107, 42);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 347);
+    org.junit.Assert.assertTrue(i9 == 34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 149);
 
   }
 
@@ -189,38 +153,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(206, 1223);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(byte)0, (int)' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1429);
+    org.junit.Assert.assertTrue(i9 == 32);
 
   }
 
@@ -231,30 +175,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(118, 450);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(265, 42);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 568);
+    org.junit.Assert.assertTrue(i9 == 307);
 
   }
 
@@ -265,38 +197,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(118, 1052);
-    int i21 = classUnderTest0.add((int)(byte)100, 314);
-    int i24 = classUnderTest0.add(100, 95);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(184, 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1170);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 414);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 195);
+    org.junit.Assert.assertTrue(i15 == 185);
 
   }
 
@@ -307,26 +227,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(1052, 101);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(33, 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1153);
+    org.junit.Assert.assertTrue(i15 == 133);
 
   }
 
@@ -337,26 +257,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(533, 100);
-    int i15 = classUnderTest0.add((int)(short)0, 241);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(167, 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 633);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 241);
+    org.junit.Assert.assertTrue(i12 == 235);
 
   }
 
@@ -367,14 +283,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(1260, 1312);
-    int i6 = classUnderTest0.add(665, 270);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(132, (int)(byte)100);
+    int i15 = classUnderTest0.add(35, 119);
+    int i18 = classUnderTest0.add(189, (int)(byte)100);
+    int i21 = classUnderTest0.add(296, 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 2572);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 935);
+    org.junit.Assert.assertTrue(i6 == 32);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i9 == 32);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 232);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 154);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 289);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 452);
 
   }
 
@@ -385,38 +321,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add((int)(short)-1, 150);
-    int i24 = classUnderTest0.add(3030, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(67, 218);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3030);
+    org.junit.Assert.assertTrue(i12 == 285);
 
   }
 
@@ -427,34 +347,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add(1153, 303);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add((int)(short)10, 0);
+    int i12 = classUnderTest0.add(221, (int)(byte)1);
+    int i15 = classUnderTest0.add((int)'a', 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 222);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1456);
+    org.junit.Assert.assertTrue(i15 == 281);
 
   }
 
@@ -465,30 +377,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(552, 2308);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(165, 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2860);
+    org.junit.Assert.assertTrue(i6 == 196);
 
   }
 
@@ -499,30 +395,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(208, (int)(byte)10);
-    int i18 = classUnderTest0.add(0, 449);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(10, 99);
+    int i15 = classUnderTest0.add(404, 149);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 449);
+    org.junit.Assert.assertTrue(i15 == 553);
 
   }
 
@@ -533,38 +425,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(215, 233);
-    int i21 = classUnderTest0.add(236, 215);
-    int i24 = classUnderTest0.add(154, 420);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(109, 876);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 448);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 451);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 574);
+    org.junit.Assert.assertTrue(i12 == 985);
 
   }
 
@@ -575,34 +451,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(short)1, 269);
-    int i15 = classUnderTest0.add(100, 298);
-    int i18 = classUnderTest0.add(0, 513);
-    int i21 = classUnderTest0.add((int)(byte)1, 179);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add(985, 440);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 270);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 398);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 513);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 180);
+    org.junit.Assert.assertTrue(i18 == 1425);
 
   }
 
@@ -613,30 +485,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)1, 237);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(84, 67);
+    int i18 = classUnderTest0.add(1425, 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
+    org.junit.Assert.assertTrue(i15 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 238);
+    org.junit.Assert.assertTrue(i18 == 1578);
 
   }
 
@@ -647,42 +519,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add((int)(byte)100, 53);
-    int i24 = classUnderTest0.add(217, 366);
-    int i27 = classUnderTest0.add(2338, 403);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(9, 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 583);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2741);
+    org.junit.Assert.assertTrue(i6 == 345);
 
   }
 
@@ -693,26 +537,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(1554, 208);
-    int i15 = classUnderTest0.add(398, 3808);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'4', (int)(short)0);
+    int i24 = classUnderTest0.add(184, 35);
+    int i27 = classUnderTest0.add(339, 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1762);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 4206);
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 69);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 52);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 219);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 528);
 
   }
 
@@ -723,26 +583,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(898, 503);
-    int i15 = classUnderTest0.add(583, 1518);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'4', (int)(short)0);
+    int i24 = classUnderTest0.add((int)(short)100, 149);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1401);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2101);
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 69);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 52);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 249);
 
   }
 
@@ -753,42 +625,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add((int)'#', 565);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(10, 99);
+    int i15 = classUnderTest0.add(68, 62);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 600);
+    org.junit.Assert.assertTrue(i15 == 130);
 
   }
 
@@ -799,30 +655,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(700, 147);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(124, 9);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 847);
+    org.junit.Assert.assertTrue(i6 == 133);
 
   }
 
@@ -833,46 +673,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(517, 1791);
-    int i24 = classUnderTest0.add(420, 0);
-    int i27 = classUnderTest0.add(1762, 940);
-    int i30 = classUnderTest0.add(738, 503);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'#', 0);
+    int i24 = classUnderTest0.add((int)(byte)1, 674);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
+    org.junit.Assert.assertTrue(i18 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2308);
+    org.junit.Assert.assertTrue(i21 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 420);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2702);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1241);
+    org.junit.Assert.assertTrue(i24 == 675);
 
   }
 
@@ -883,34 +715,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)-1, 197);
-    int i18 = classUnderTest0.add((int)(byte)0, 549);
-    int i21 = classUnderTest0.add(403, 820);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(9, (int)(byte)100);
+    int i9 = classUnderTest0.add(345, 438);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 196);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 549);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1223);
+    org.junit.Assert.assertTrue(i9 == 783);
 
   }
 
@@ -921,30 +737,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 635);
-    int i15 = classUnderTest0.add(772, 36);
-    int i18 = classUnderTest0.add(84, 1906);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((int)'#', 119);
+    int i18 = classUnderTest0.add(53, 72);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 940);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 808);
+    org.junit.Assert.assertTrue(i15 == 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1990);
+    org.junit.Assert.assertTrue(i18 == 125);
 
   }
 
@@ -955,50 +771,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(10, (int)(byte)10);
-    int i30 = classUnderTest0.add(205, 347);
-    int i33 = classUnderTest0.add(1629, 300);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(151, 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 552);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1929);
+    org.junit.Assert.assertTrue(i24 == 248);
 
   }
 
@@ -1009,30 +813,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(1314, 1717);
-    int i18 = classUnderTest0.add(227, 2873);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(216, 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3031);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3100);
+    org.junit.Assert.assertTrue(i15 == 340);
 
   }
 
@@ -1043,30 +843,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(52, 206);
-    int i18 = classUnderTest0.add(603, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(262, (int)(short)0);
+    int i12 = classUnderTest0.add(307, 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 262);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 258);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 603);
+    org.junit.Assert.assertTrue(i12 == 770);
 
   }
 
@@ -1077,30 +869,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(651, 301);
-    int i12 = classUnderTest0.add(331, 117);
-    int i15 = classUnderTest0.add(0, 1003);
-    int i18 = classUnderTest0.add(644, 510);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(69, 687);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 952);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 448);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1003);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1154);
+    org.junit.Assert.assertTrue(i18 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 156);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 756);
 
   }
 
@@ -1111,42 +915,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(348, (int)(short)10);
-    int i21 = classUnderTest0.add(533, 314);
-    int i24 = classUnderTest0.add(151, 603);
-    int i27 = classUnderTest0.add(209, 479);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add((int)(short)0, 69);
+    int i9 = classUnderTest0.add(521, 34);
+    int i12 = classUnderTest0.add(834, 30);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 358);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 847);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 754);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 688);
+    org.junit.Assert.assertTrue(i12 == 864);
 
   }
 
@@ -1157,38 +941,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add(173, 470);
-    int i21 = classUnderTest0.add(348, 711);
-    int i24 = classUnderTest0.add(1059, 2228);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(97, (int)(short)10);
+    int i9 = classUnderTest0.add((int)(byte)10, (int)' ');
+    int i12 = classUnderTest0.add(154, 413);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 42);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 643);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1059);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3287);
+    org.junit.Assert.assertTrue(i12 == 567);
 
   }
 
@@ -1199,50 +967,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
     int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(736, 0);
-    int i27 = classUnderTest0.add(138, 996);
-    int i30 = classUnderTest0.add(728, 1220);
-    int i33 = classUnderTest0.add(1925, 4155);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 736);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1134);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1948);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 6080);
 
   }
 
@@ -1253,42 +993,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(236, 517);
-    int i24 = classUnderTest0.add(586, 3062);
-    int i27 = classUnderTest0.add(1109, 6752);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(261, 248);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 753);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3648);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7861);
+    org.junit.Assert.assertTrue(i12 == 509);
 
   }
 
@@ -1299,42 +1019,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(992, 118);
-    int i27 = classUnderTest0.add(2143, 1142);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(438, 265);
+    int i18 = classUnderTest0.add(222, 218);
+    int i21 = classUnderTest0.add(440, 756);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 703);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 440);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1110);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3285);
+    org.junit.Assert.assertTrue(i21 == 1196);
 
   }
 
@@ -1345,38 +1057,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(4283, 218);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add((int)(short)0, 69);
+    int i9 = classUnderTest0.add(94, 68);
+    int i12 = classUnderTest0.add((int)(short)100, 567);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 162);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4501);
+    org.junit.Assert.assertTrue(i12 == 667);
 
   }
 
@@ -1387,46 +1083,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(513, 34);
-    int i27 = classUnderTest0.add(547, 1453);
-    int i30 = classUnderTest0.add(2427, 117);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(232, (-1));
+    int i12 = classUnderTest0.add(0, 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 231);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 547);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2544);
+    org.junit.Assert.assertTrue(i12 == 164);
 
   }
 
@@ -1437,38 +1109,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(697, 138);
-    int i24 = classUnderTest0.add(2511, 1045);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(0, 0);
+    int i9 = classUnderTest0.add(185, 336);
+    int i12 = classUnderTest0.add(185, 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 521);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 835);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3556);
+    org.junit.Assert.assertTrue(i12 == 283);
 
   }
 
@@ -1479,38 +1135,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add(2927, 1402);
+    int i3 = classUnderTest0.add(131, 985);
+    int i6 = classUnderTest0.add(749, 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 1116);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4329);
+    org.junit.Assert.assertTrue(i6 == 780);
 
   }
 
@@ -1521,30 +1153,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(35, 270);
-    int i18 = classUnderTest0.add(1567, 2374);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add(0, 34);
+    int i18 = classUnderTest0.add(531, 429);
+    int i21 = classUnderTest0.add(1425, 1425);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 305);
+    org.junit.Assert.assertTrue(i15 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3941);
+    org.junit.Assert.assertTrue(i18 == 960);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 2850);
 
   }
 
@@ -1555,42 +1191,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(179, 549);
-    int i21 = classUnderTest0.add(1443, 448);
-    int i24 = classUnderTest0.add(1563, 451);
-    int i27 = classUnderTest0.add(533, 2014);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add(675, 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i18 == 728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1891);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2014);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2547);
 
   }
 
@@ -1601,38 +1225,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(34, 309);
-    int i21 = classUnderTest0.add(512, 248);
-    int i24 = classUnderTest0.add((int)(byte)-1, 323);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(9, (int)(byte)100);
+    int i9 = classUnderTest0.add(337, 404);
+    int i12 = classUnderTest0.add(41, 674);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 741);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 760);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 322);
+    org.junit.Assert.assertTrue(i12 == 715);
 
   }
 
@@ -1643,38 +1251,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 552);
-    int i15 = classUnderTest0.add(118, 84);
-    int i18 = classUnderTest0.add(1110, 343);
-    int i21 = classUnderTest0.add(42, 7363);
-    int i24 = classUnderTest0.add(87, 95);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(468, 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 202);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1453);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7405);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 182);
+    org.junit.Assert.assertTrue(i12 == 622);
 
   }
 
@@ -1685,26 +1277,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(479, 433);
-    int i15 = classUnderTest0.add(52, 1059);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(261, 232);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 912);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1111);
+    org.junit.Assert.assertTrue(i12 == 493);
 
   }
 
@@ -1715,46 +1303,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(0, 1586);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(0, 161);
+    int i15 = classUnderTest0.add(429, 108);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1586);
+    org.junit.Assert.assertTrue(i15 == 537);
 
   }
 
@@ -1765,46 +1333,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(992, 118);
-    int i27 = classUnderTest0.add(793, 1762);
-    int i30 = classUnderTest0.add(1137, 2887);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(9, (int)(byte)100);
+    int i9 = classUnderTest0.add(1041, 1084);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1110);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2555);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4024);
+    org.junit.Assert.assertTrue(i9 == 2125);
 
   }
 
@@ -1815,42 +1355,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(0, (int)(byte)-1);
-    int i27 = classUnderTest0.add(3399, 609);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(9, 63);
+    int i18 = classUnderTest0.add(149, 922);
+    int i21 = classUnderTest0.add((int)'#', 216);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 72);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 1071);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4008);
+    org.junit.Assert.assertTrue(i21 == 251);
 
   }
 
@@ -1861,38 +1393,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 552);
-    int i15 = classUnderTest0.add(118, 84);
-    int i18 = classUnderTest0.add(1110, 343);
-    int i21 = classUnderTest0.add(512, 300);
-    int i24 = classUnderTest0.add(218, 847);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)-1, (int)(byte)10);
+    int i9 = classUnderTest0.add(12, 265);
+    int i12 = classUnderTest0.add(0, 130);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 9);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 277);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 202);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1453);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 812);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1065);
+    org.junit.Assert.assertTrue(i12 == 130);
 
   }
 
@@ -1903,50 +1419,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add((int)(byte)1, 695);
-    int i27 = classUnderTest0.add(32, 3652);
-    int i30 = classUnderTest0.add(796, 53);
-    int i33 = classUnderTest0.add(1249, 915);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(97, 122);
+    int i21 = classUnderTest0.add(884, 216);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
+    org.junit.Assert.assertTrue(i18 == 219);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 696);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3684);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 849);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2164);
+    org.junit.Assert.assertTrue(i21 == 1100);
 
   }
 
@@ -1957,18 +1457,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(3177, 502);
-    int i9 = classUnderTest0.add(3145, 4650);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(2, 175);
+    int i9 = classUnderTest0.add((int)(byte)0, 339);
+    int i12 = classUnderTest0.add(438, (int)(byte)10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 3679);
+    org.junit.Assert.assertTrue(i6 == 177);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 7795);
+    org.junit.Assert.assertTrue(i9 == 339);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 448);
 
   }
 
@@ -1979,46 +1483,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(665, 1052);
-    int i27 = classUnderTest0.add(907, 1068);
-    int i30 = classUnderTest0.add(1940, 1026);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(161, 394);
+    int i15 = classUnderTest0.add(542, 41);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1975);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2966);
+    org.junit.Assert.assertTrue(i15 == 583);
 
   }
 
@@ -2029,38 +1513,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(100, 53);
-    int i21 = classUnderTest0.add(611, 100);
-    int i24 = classUnderTest0.add(952, 0);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(42, 41);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 711);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 952);
+    org.junit.Assert.assertTrue(i6 == 83);
 
   }
 
@@ -2071,42 +1531,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add(3150, 502);
-    int i27 = classUnderTest0.add(5518, 208);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add(394, (int)(short)10);
+    int i18 = classUnderTest0.add(261, 703);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 404);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3652);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5726);
+    org.junit.Assert.assertTrue(i18 == 964);
 
   }
 
@@ -2117,38 +1565,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(952, 139);
-    int i24 = classUnderTest0.add(533, 728);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(67, 94);
+    int i15 = classUnderTest0.add(336, (int)' ');
+    int i18 = classUnderTest0.add((int)(byte)100, 2850);
+    int i21 = classUnderTest0.add(219, 756);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
+    org.junit.Assert.assertTrue(i15 == 368);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
+    org.junit.Assert.assertTrue(i18 == 2950);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1261);
+    org.junit.Assert.assertTrue(i21 == 975);
 
   }
 
@@ -2159,34 +1603,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add(4283, 486);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(97, (int)(short)10);
+    int i9 = classUnderTest0.add(31, (int)(short)-1);
+    int i12 = classUnderTest0.add(189, 337);
+    int i15 = classUnderTest0.add(482, (int)'4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 30);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 526);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4769);
+    org.junit.Assert.assertTrue(i15 == 534);
 
   }
 
@@ -2197,34 +1633,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(269, 233);
-    int i21 = classUnderTest0.add(1567, 1250);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(394, 0);
+    int i9 = classUnderTest0.add(1071, (int)(short)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 502);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2817);
+    org.junit.Assert.assertTrue(i9 == 1171);
 
   }
 
@@ -2235,46 +1655,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(2424, 917);
-    int i27 = classUnderTest0.add(270, 6116);
-    int i30 = classUnderTest0.add(4060, 2219);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add(130, 619);
+    int i21 = classUnderTest0.add(2850, 452);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 749);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3341);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6386);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6279);
+    org.junit.Assert.assertTrue(i21 == 3302);
 
   }
 
@@ -2285,30 +1693,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(1314, 1717);
-    int i18 = classUnderTest0.add(3285, 0);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(84, 67);
+    int i9 = classUnderTest0.add(101, 34);
+    int i12 = classUnderTest0.add((int)(short)0, 1204);
+    int i15 = classUnderTest0.add((-1), 341);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 135);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 1204);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3031);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3285);
+    org.junit.Assert.assertTrue(i15 == 340);
 
   }
 
@@ -2319,46 +1723,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(448, 720);
-    int i30 = classUnderTest0.add(635, 280);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add((int)'#', 32);
+    int i24 = classUnderTest0.add(94, 62);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
+    org.junit.Assert.assertTrue(i21 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1168);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 915);
+    org.junit.Assert.assertTrue(i24 == 156);
 
   }
 
@@ -2369,34 +1765,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add(173, 470);
-    int i21 = classUnderTest0.add(51, 9395);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(42, (int)(byte)10);
+    int i15 = classUnderTest0.add(336, 98);
+    int i18 = classUnderTest0.add(99, 985);
+    int i21 = classUnderTest0.add(52, 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
+    org.junit.Assert.assertTrue(i15 == 434);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 643);
+    org.junit.Assert.assertTrue(i18 == 1084);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9446);
+    org.junit.Assert.assertTrue(i21 == 154);
 
   }
 
@@ -2407,50 +1803,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(217, 486);
-    int i27 = classUnderTest0.add(1763, 1110);
-    int i30 = classUnderTest0.add(1137, 820);
-    int i33 = classUnderTest0.add(1940, 2101);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(528, 296);
+    int i9 = classUnderTest0.add(221, 1084);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 824);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 703);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2873);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1957);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4041);
+    org.junit.Assert.assertTrue(i9 == 1305);
 
   }
 
@@ -2461,34 +1825,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(3000, 139);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1221, 109);
+    int i30 = classUnderTest0.add((int)(byte)-1, 33);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3139);
+    org.junit.Assert.assertTrue(i21 == 132);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 482);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 1330);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 32);
 
   }
 
@@ -2499,42 +1875,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(1717, 2741);
-    int i27 = classUnderTest0.add(2718, 912);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(452, 124);
+    int i18 = classUnderTest0.add(219, 703);
+    int i21 = classUnderTest0.add((int)(byte)100, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 576);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
+    org.junit.Assert.assertTrue(i18 == 922);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4458);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3630);
+    org.junit.Assert.assertTrue(i21 == 100);
 
   }
 
@@ -2545,34 +1913,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(269, 233);
-    int i21 = classUnderTest0.add(196, 1052);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)10, 52);
+    int i12 = classUnderTest0.add(1196, 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 62);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 502);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1248);
+    org.junit.Assert.assertTrue(i12 == 1357);
 
   }
 
@@ -2583,38 +1939,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add(34, 298);
-    int i24 = classUnderTest0.add(398, 4671);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(10, 99);
+    int i15 = classUnderTest0.add(549, 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5069);
+    org.junit.Assert.assertTrue(i15 == 886);
 
   }
 
@@ -2625,26 +1969,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(7363, 238);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(0, 0);
+    int i9 = classUnderTest0.add(587, 634);
+    int i12 = classUnderTest0.add(221, 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 1221);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 7601);
+    org.junit.Assert.assertTrue(i12 == 396);
 
   }
 
@@ -2655,34 +1995,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(94, (int)(short)1);
-    int i18 = classUnderTest0.add(145, 1795);
-    int i21 = classUnderTest0.add(489, 796);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(0, 63);
+    int i15 = classUnderTest0.add(780, 67);
+    int i18 = classUnderTest0.add(1300, 1580);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 95);
+    org.junit.Assert.assertTrue(i15 == 847);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1285);
+    org.junit.Assert.assertTrue(i18 == 2880);
 
   }
 
@@ -2693,26 +2029,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(34, 3116);
-    int i15 = classUnderTest0.add(348, 2999);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(52, 62);
+    int i18 = classUnderTest0.add((int)(short)1, 468);
+    int i21 = classUnderTest0.add(687, 260);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 3150);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3347);
+    org.junit.Assert.assertTrue(i15 == 114);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 469);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 947);
 
   }
 
@@ -2723,42 +2067,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 568);
-    int i24 = classUnderTest0.add(0, 793);
-    int i27 = classUnderTest0.add(2563, 1295);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(53, 0);
+    int i18 = classUnderTest0.add(312, 219);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 793);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3858);
+    org.junit.Assert.assertTrue(i18 == 531);
 
   }
 
@@ -2769,22 +2101,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(0, 820);
-    int i12 = classUnderTest0.add(102, 303);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(1171, 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 820);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 405);
+    org.junit.Assert.assertTrue(i12 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 1336);
 
   }
 
@@ -2795,54 +2139,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add((int)(short)10, 205);
-    int i27 = classUnderTest0.add(1077, 173);
-    int i30 = classUnderTest0.add(968, 0);
-    int i33 = classUnderTest0.add(234, 0);
-    int i36 = classUnderTest0.add(614, 2108);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add(622, 33);
+    int i21 = classUnderTest0.add(1578, 151);
+    int i24 = classUnderTest0.add(119, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
+    org.junit.Assert.assertTrue(i18 == 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
+    org.junit.Assert.assertTrue(i21 == 1729);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 968);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2722);
+    org.junit.Assert.assertTrue(i24 == 119);
 
   }
 
@@ -2853,18 +2181,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(20, 153);
-    int i6 = classUnderTest0.add(786, 695);
-    int i9 = classUnderTest0.add(1241, 3185);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(452, 124);
+    int i18 = classUnderTest0.add(534, 567);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 173);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 1481);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 4426);
+    org.junit.Assert.assertTrue(i9 == 32);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 102);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 576);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 1101);
 
   }
 
@@ -2875,38 +2215,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add((int)(byte)-1, (int)(short)1);
-    int i21 = classUnderTest0.add(101, 4545);
-    int i24 = classUnderTest0.add(6525, 3963);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(42, (int)(byte)10);
+    int i15 = classUnderTest0.add(336, 98);
+    int i18 = classUnderTest0.add(99, 985);
+    int i21 = classUnderTest0.add((-1), 219);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
+    org.junit.Assert.assertTrue(i15 == 434);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 1084);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4646);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 10488);
+    org.junit.Assert.assertTrue(i21 == 218);
 
   }
 
@@ -2917,46 +2253,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(323, 2104);
-    int i24 = classUnderTest0.add(145, 97);
-    int i27 = classUnderTest0.add(3160, 0);
-    int i30 = classUnderTest0.add(816, 9446);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add((int)'#', 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2427);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3160);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 10262);
+    org.junit.Assert.assertTrue(i18 == 690);
 
   }
 
@@ -2967,42 +2287,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(2180, 154);
-    int i24 = classUnderTest0.add(154, 97);
-    int i27 = classUnderTest0.add(1942, 2718);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(67, 52);
+    int i12 = classUnderTest0.add(152, 542);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 119);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 251);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4660);
+    org.junit.Assert.assertTrue(i12 == 694);
 
   }
 
@@ -3013,30 +2313,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(2187, 700);
-    int i18 = classUnderTest0.add(3195, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(122, 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2887);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3195);
+    org.junit.Assert.assertTrue(i15 == 124);
 
   }
 
@@ -3047,46 +2343,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(736, 0);
-    int i27 = classUnderTest0.add(138, 996);
-    int i30 = classUnderTest0.add(0, 3890);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(438, 265);
+    int i18 = classUnderTest0.add(222, 218);
+    int i21 = classUnderTest0.add(567, 12);
+    int i24 = classUnderTest0.add(53, 0);
+    int i27 = classUnderTest0.add(501, 1305);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
+    org.junit.Assert.assertTrue(i15 == 703);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
+    org.junit.Assert.assertTrue(i18 == 440);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
+    org.junit.Assert.assertTrue(i21 == 579);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 736);
+    org.junit.Assert.assertTrue(i24 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1134);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3890);
+    org.junit.Assert.assertTrue(i27 == 1806);
 
   }
 
@@ -3097,50 +2389,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add((int)(short)10, 331);
-    int i27 = classUnderTest0.add(197, 2980);
-    int i30 = classUnderTest0.add(3357, 3285);
-    int i33 = classUnderTest0.add((int)(short)-1, 4384);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(339, 185);
+    int i30 = classUnderTest0.add(824, 549);
+    int i33 = classUnderTest0.add(1204, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 341);
+    org.junit.Assert.assertTrue(i24 == 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3177);
+    org.junit.Assert.assertTrue(i27 == 524);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6642);
+    org.junit.Assert.assertTrue(i30 == 1373);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4383);
+    org.junit.Assert.assertTrue(i33 == 1204);
 
   }
 
@@ -3151,46 +2443,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(154, 512);
-    int i24 = classUnderTest0.add(234, 645);
-    int i27 = classUnderTest0.add(9, 42);
-    int i30 = classUnderTest0.add(2120, 3139);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(438, 265);
+    int i18 = classUnderTest0.add(222, 218);
+    int i21 = classUnderTest0.add(567, 12);
+    int i24 = classUnderTest0.add(149, (int)(byte)-1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 703);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 440);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 666);
+    org.junit.Assert.assertTrue(i21 == 579);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 879);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 51);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5259);
+    org.junit.Assert.assertTrue(i24 == 148);
 
   }
 
@@ -3201,34 +2485,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(9446, 1364);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(69, (-1));
+    int i12 = classUnderTest0.add(482, 133);
+    int i15 = classUnderTest0.add(2125, 493);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 615);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10810);
+    org.junit.Assert.assertTrue(i15 == 2618);
 
   }
 
@@ -3239,30 +2515,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(898, 503);
-    int i15 = classUnderTest0.add(720, 348);
-    int i18 = classUnderTest0.add(2081, 17245);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(281, (int)(short)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1401);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1068);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 19326);
+    org.junit.Assert.assertTrue(i18 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 381);
 
   }
 
@@ -3273,30 +2553,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(200, 101);
-    int i15 = classUnderTest0.add(20, 612);
-    int i18 = classUnderTest0.add(0, 227);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(52, 62);
+    int i18 = classUnderTest0.add((int)(short)1, 468);
+    int i21 = classUnderTest0.add(122, 678);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 301);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 632);
+    org.junit.Assert.assertTrue(i15 == 114);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 227);
+    org.junit.Assert.assertTrue(i18 == 469);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 800);
 
   }
 
@@ -3307,42 +2591,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(549, 1594);
-    int i24 = classUnderTest0.add(3983, (int)(short)10);
-    int i27 = classUnderTest0.add(11552, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(0, 161);
+    int i15 = classUnderTest0.add(553, 281);
+    int i18 = classUnderTest0.add(41, 114);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 834);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2143);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3993);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 11552);
+    org.junit.Assert.assertTrue(i18 == 155);
 
   }
 
@@ -3353,14 +2625,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(20, 153);
-    int i6 = classUnderTest0.add(449, 3341);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add((int)(byte)100, 52);
+    int i15 = classUnderTest0.add(218, 720);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 173);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 3790);
+    org.junit.Assert.assertTrue(i6 == 53);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i9 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 152);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 938);
 
   }
 
@@ -3371,38 +2655,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(205, 10);
-    int i18 = classUnderTest0.add(1, 791);
-    int i21 = classUnderTest0.add(1626, 533);
-    int i24 = classUnderTest0.add(2719, 5077);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(67, 0);
+    int i15 = classUnderTest0.add((int)(short)0, 67);
+    int i18 = classUnderTest0.add((int)(short)0, 587);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
+    org.junit.Assert.assertTrue(i12 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 215);
+    org.junit.Assert.assertTrue(i15 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 792);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2159);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7796);
+    org.junit.Assert.assertTrue(i18 == 587);
 
   }
 
@@ -3413,58 +2689,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(403, 107);
-    int i33 = classUnderTest0.add(2074, 643);
-    int i36 = classUnderTest0.add(1629, 1298);
-    int i39 = classUnderTest0.add(208, 801);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(339, 185);
+    int i30 = classUnderTest0.add(824, 549);
+    int i33 = classUnderTest0.add(10, 960);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
+    org.junit.Assert.assertTrue(i24 == 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
+    org.junit.Assert.assertTrue(i27 == 524);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 510);
+    org.junit.Assert.assertTrue(i30 == 1373);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2927);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 1009);
+    org.junit.Assert.assertTrue(i33 == 970);
 
   }
 
@@ -3475,26 +2743,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add(950, 517);
-    int i15 = classUnderTest0.add(2290, 466);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(53, 0);
+    int i18 = classUnderTest0.add(133, 30);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1467);
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2756);
+    org.junit.Assert.assertTrue(i15 == 53);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 163);
 
   }
 
@@ -3505,42 +2777,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(198, 100);
-    int i21 = classUnderTest0.add(1037, 0);
-    int i24 = classUnderTest0.add(1429, 3116);
-    int i27 = classUnderTest0.add(4155, 414);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(296, 285);
+    int i9 = classUnderTest0.add(1580, 109);
+    int i12 = classUnderTest0.add(619, 265);
+    int i15 = classUnderTest0.add(1758, 800);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 581);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 1689);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 884);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 298);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4545);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4569);
+    org.junit.Assert.assertTrue(i15 == 2558);
 
   }
 
@@ -3551,54 +2807,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1401, 479);
-    int i30 = classUnderTest0.add(1940, 1220);
-    int i33 = classUnderTest0.add(0, 568);
-    int i36 = classUnderTest0.add(4366, 3287);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(0, 3302);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1880);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3160);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 7653);
+    org.junit.Assert.assertTrue(i12 == 3302);
 
   }
 
@@ -3609,38 +2833,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)(byte)10, 197);
-    int i24 = classUnderTest0.add(414, 547);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(132, (int)(byte)100);
+    int i15 = classUnderTest0.add(35, 119);
+    int i18 = classUnderTest0.add(189, (int)(byte)100);
+    int i21 = classUnderTest0.add(154, 1101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 232);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 289);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 961);
+    org.junit.Assert.assertTrue(i21 == 1255);
 
   }
 
@@ -3651,50 +2871,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(952, 139);
-    int i24 = classUnderTest0.add(533, 202);
-    int i27 = classUnderTest0.add(1476, 1554);
-    int i30 = classUnderTest0.add(1429, 2718);
-    int i33 = classUnderTest0.add(928, 772);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add((int)(byte)100, 31);
+    int i15 = classUnderTest0.add(749, 487);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 131);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 735);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3030);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1700);
+    org.junit.Assert.assertTrue(i15 == 1236);
 
   }
 
@@ -3705,30 +2901,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(95, (int)(short)-1);
-    int i15 = classUnderTest0.add(210, 635);
-    int i18 = classUnderTest0.add(2429, 1013);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(1101, 249);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 94);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 845);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3442);
+    org.junit.Assert.assertTrue(i15 == 1350);
 
   }
 
@@ -3739,18 +2931,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(35, (int)(short)0);
-    int i9 = classUnderTest0.add(9395, 347);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(69, 1689);
+    int i18 = classUnderTest0.add(32, 511);
+    int i21 = classUnderTest0.add(1100, 847);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 35);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 9742);
+    org.junit.Assert.assertTrue(i9 == 97);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 63);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 1758);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 543);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 1947);
 
   }
 
@@ -3761,46 +2969,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(517, 1791);
-    int i24 = classUnderTest0.add(420, 0);
-    int i27 = classUnderTest0.add(1762, 940);
-    int i30 = classUnderTest0.add(1052, 1250);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(97, (int)(short)10);
+    int i9 = classUnderTest0.add(0, 463);
+    int i12 = classUnderTest0.add(0, 749);
+    int i15 = classUnderTest0.add(735, (int)(byte)1);
+    int i18 = classUnderTest0.add((int)'a', 1116);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 749);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
+    org.junit.Assert.assertTrue(i15 == 736);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2308);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 420);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2702);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2302);
+    org.junit.Assert.assertTrue(i18 == 1213);
 
   }
 
@@ -3811,38 +3003,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(808, 269);
-    int i24 = classUnderTest0.add(2867, 2219);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(501, 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1077);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5086);
+    org.junit.Assert.assertTrue(i15 == 662);
 
   }
 
@@ -3853,62 +3033,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(403, 107);
-    int i33 = classUnderTest0.add(2074, 643);
-    int i36 = classUnderTest0.add(1629, 1298);
-    int i39 = classUnderTest0.add(1609, 820);
-    int i42 = classUnderTest0.add(1261, 370);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(339, 185);
+    int i30 = classUnderTest0.add(824, 549);
+    int i33 = classUnderTest0.add(99, 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
+    org.junit.Assert.assertTrue(i24 == 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
+    org.junit.Assert.assertTrue(i27 == 524);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 510);
+    org.junit.Assert.assertTrue(i30 == 1373);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2927);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 2429);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 1631);
+    org.junit.Assert.assertTrue(i33 == 151);
 
   }
 
@@ -3919,42 +3087,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(549, 1594);
-    int i24 = classUnderTest0.add(770, 1223);
-    int i27 = classUnderTest0.add(5069, 1506);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(122, 99);
+    int i9 = classUnderTest0.add(401, 401);
+    int i12 = classUnderTest0.add(1100, 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 221);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 802);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2143);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1993);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6575);
+    org.junit.Assert.assertTrue(i12 == 1135);
 
   }
 
@@ -3965,50 +3113,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(118, 207);
-    int i27 = classUnderTest0.add(512, (int)(short)100);
-    int i30 = classUnderTest0.add(298, 6752);
-    int i33 = classUnderTest0.add(3220, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(33, 509);
+    int i12 = classUnderTest0.add(339, 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 542);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 325);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 612);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7050);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3220);
+    org.junit.Assert.assertTrue(i12 == 407);
 
   }
 
@@ -4019,42 +3139,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(100, 53);
-    int i21 = classUnderTest0.add(611, 100);
-    int i24 = classUnderTest0.add(898, 348);
-    int i27 = classUnderTest0.add(214, 2343);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(232, (-1));
+    int i12 = classUnderTest0.add(401, 277);
+    int i15 = classUnderTest0.add(102, 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 231);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 678);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 711);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1246);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2557);
+    org.junit.Assert.assertTrue(i15 == 757);
 
   }
 
@@ -4065,42 +3169,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)'4', 643);
-    int i18 = classUnderTest0.add(0, 1091);
-    int i21 = classUnderTest0.add(135, 227);
-    int i24 = classUnderTest0.add(2267, 451);
-    int i27 = classUnderTest0.add(95, 2459);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(101, 0);
+    int i18 = classUnderTest0.add(0, 108);
+    int i21 = classUnderTest0.add(196, 802);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 695);
+    org.junit.Assert.assertTrue(i15 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1091);
+    org.junit.Assert.assertTrue(i18 == 108);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 362);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2718);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2554);
+    org.junit.Assert.assertTrue(i21 == 998);
 
   }
 
@@ -4111,62 +3207,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(108, 206);
-    int i30 = classUnderTest0.add(857, 517);
-    int i33 = classUnderTest0.add(200, 332);
-    int i36 = classUnderTest0.add(3150, 2343);
-    int i39 = classUnderTest0.add(0, 410);
-    int i42 = classUnderTest0.add(0, 3808);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(884, 33);
+    int i18 = classUnderTest0.add(847, 800);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
+    org.junit.Assert.assertTrue(i15 == 917);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1374);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 532);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 5493);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 410);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 3808);
+    org.junit.Assert.assertTrue(i18 == 1647);
 
   }
 
@@ -4177,26 +3241,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(6752, 611);
-    int i15 = classUnderTest0.add(1196, 95);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(67, 94);
+    int i15 = classUnderTest0.add(0, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 7363);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1291);
+    org.junit.Assert.assertTrue(i15 == 0);
 
   }
 
@@ -4207,46 +3271,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(150, 300);
-    int i27 = classUnderTest0.add(938, 303);
-    int i30 = classUnderTest0.add(366, 666);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(161, (int)(short)100);
+    int i15 = classUnderTest0.add(222, 1241);
+    int i18 = classUnderTest0.add(2618, 1255);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 261);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 1463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 450);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1032);
+    org.junit.Assert.assertTrue(i18 == 3873);
 
   }
 
@@ -4257,26 +3305,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(946, 196);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(98, (int)(byte)1);
+    int i9 = classUnderTest0.add(468, 119);
+    int i12 = classUnderTest0.add(32, (int)(byte)-1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 99);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 587);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1142);
+    org.junit.Assert.assertTrue(i12 == 31);
 
   }
 
@@ -4287,42 +3331,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add((int)'#', (int)(byte)-1);
-    int i21 = classUnderTest0.add(786, 206);
-    int i24 = classUnderTest0.add(0, 147);
-    int i27 = classUnderTest0.add(2187, 2554);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(655, 567);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4741);
+    org.junit.Assert.assertTrue(i12 == 1222);
 
   }
 
@@ -4333,34 +3357,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(1593, 323);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(69, 1689);
+    int i18 = classUnderTest0.add(583, 511);
+    int i21 = classUnderTest0.add(756, 401);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
+    org.junit.Assert.assertTrue(i15 == 1758);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
+    org.junit.Assert.assertTrue(i18 == 1094);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1916);
+    org.junit.Assert.assertTrue(i21 == 1157);
 
   }
 
@@ -4371,46 +3395,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(108, 206);
-    int i30 = classUnderTest0.add(300, 248);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(0, 151);
+    int i18 = classUnderTest0.add(34, 149);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
+    org.junit.Assert.assertTrue(i15 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 548);
+    org.junit.Assert.assertTrue(i18 == 183);
 
   }
 
@@ -4421,30 +3429,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(1163, 366);
-    int i15 = classUnderTest0.add(267, 0);
-    int i18 = classUnderTest0.add(2483, 1054);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1221, 109);
+    int i30 = classUnderTest0.add(0, 759);
+    int i33 = classUnderTest0.add(834, 413);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1529);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 267);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3537);
+    org.junit.Assert.assertTrue(i18 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 132);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 482);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 1330);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 759);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i33 == 1247);
 
   }
 
@@ -4455,38 +3483,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(150, 3160);
-    int i24 = classUnderTest0.add(4306, 3652);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(84, 100);
+    int i21 = classUnderTest0.add(189, 0);
+    int i24 = classUnderTest0.add((int)'#', 161);
+    int i27 = classUnderTest0.add(63, 876);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
+    org.junit.Assert.assertTrue(i18 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3310);
+    org.junit.Assert.assertTrue(i21 == 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7958);
+    org.junit.Assert.assertTrue(i24 == 196);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 939);
 
   }
 
@@ -4497,38 +3529,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(2511, 3009);
-    int i24 = classUnderTest0.add(816, 899);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(3409, 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5520);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1715);
+    org.junit.Assert.assertTrue(i6 == 3872);
 
   }
 
@@ -4539,34 +3547,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add((int)(short)10, 97);
-    int i21 = classUnderTest0.add(1629, 6112);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(84, (int)(byte)10);
+    int i9 = classUnderTest0.add(67, (int)(byte)100);
+    int i12 = classUnderTest0.add(184, 32);
+    int i15 = classUnderTest0.add(97, (int)'#');
+    int i18 = classUnderTest0.add(678, 72);
+    int i21 = classUnderTest0.add(222, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 94);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 167);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 216);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
+    org.junit.Assert.assertTrue(i18 == 750);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7741);
+    org.junit.Assert.assertTrue(i21 == 222);
 
   }
 
@@ -4577,34 +3585,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(4019, 347);
-    int i21 = classUnderTest0.add(1629, 1761);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(165, (int)(byte)100);
+    int i15 = classUnderTest0.add(307, 94);
+    int i18 = classUnderTest0.add(524, (int)(short)10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 265);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 401);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3390);
+    org.junit.Assert.assertTrue(i18 == 534);
 
   }
 
@@ -4615,38 +3619,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(574, 1534);
-    int i24 = classUnderTest0.add(772, 233);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add((int)(short)-1, 131);
+    int i18 = classUnderTest0.add(487, 221);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
+    org.junit.Assert.assertTrue(i15 == 130);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1005);
+    org.junit.Assert.assertTrue(i18 == 708);
 
   }
 
@@ -4657,26 +3653,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(135, 1467);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(84, 100);
+    int i21 = classUnderTest0.add(99, 756);
+    int i24 = classUnderTest0.add(1084, 265);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1602);
+    org.junit.Assert.assertTrue(i15 == 153);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 184);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 855);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1349);
 
   }
 
@@ -4687,38 +3695,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(2511, 3009);
-    int i24 = classUnderTest0.add(869, 898);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(164, 132);
+    int i9 = classUnderTest0.add(1947, 1463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 296);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5520);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1767);
+    org.junit.Assert.assertTrue(i9 == 3410);
 
   }
 
@@ -4729,46 +3717,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(95, 643);
-    int i30 = classUnderTest0.add(0, 3421);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(33, 615);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 738);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3421);
+    org.junit.Assert.assertTrue(i15 == 648);
 
   }
 
@@ -4779,34 +3747,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(793, 135);
-    int i18 = classUnderTest0.add(218, 1077);
-    int i21 = classUnderTest0.add(2227, 4569);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(0, 0);
+    int i9 = classUnderTest0.add(587, 634);
+    int i12 = classUnderTest0.add(1373, 824);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 1221);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 928);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1295);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6796);
+    org.junit.Assert.assertTrue(i12 == 2197);
 
   }
 
@@ -4817,46 +3773,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(549, 1594);
-    int i24 = classUnderTest0.add(3983, (int)(short)10);
-    int i27 = classUnderTest0.add(1363, 3287);
-    int i30 = classUnderTest0.add(420, 4060);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(884, 33);
+    int i18 = classUnderTest0.add(368, 511);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 917);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2143);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3993);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4650);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4480);
+    org.junit.Assert.assertTrue(i18 == 879);
 
   }
 
@@ -4867,30 +3807,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(118, 118);
-    int i18 = classUnderTest0.add(238, 2793);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(783, 2850);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 236);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3031);
+    org.junit.Assert.assertTrue(i15 == 3633);
 
   }
 
@@ -4901,46 +3837,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(147, 1296);
-    int i24 = classUnderTest0.add(300, 796);
-    int i27 = classUnderTest0.add(3083, 681);
-    int i30 = classUnderTest0.add(7363, 1532);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add((int)(short)0, 69);
+    int i9 = classUnderTest0.add(94, 68);
+    int i12 = classUnderTest0.add(35, (int)(short)0);
+    int i15 = classUnderTest0.add(381, 12);
+    int i18 = classUnderTest0.add(3015, 381);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 162);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
+    org.junit.Assert.assertTrue(i15 == 393);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1443);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1096);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3764);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 8895);
+    org.junit.Assert.assertTrue(i18 == 3396);
 
   }
 
@@ -4951,50 +3871,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(331, 138);
-    int i30 = classUnderTest0.add(4479, 0);
-    int i33 = classUnderTest0.add(151, 1906);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(1022, (int)'#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 469);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2057);
+    org.junit.Assert.assertTrue(i15 == 1057);
 
   }
 
@@ -5005,50 +3901,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add((int)(byte)1, 695);
-    int i27 = classUnderTest0.add(32, 3652);
-    int i30 = classUnderTest0.add(796, 53);
-    int i33 = classUnderTest0.add(196, 982);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(42, (int)(byte)10);
+    int i15 = classUnderTest0.add(336, 98);
+    int i18 = classUnderTest0.add(9, 283);
+    int i21 = classUnderTest0.add((int)'4', 662);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 434);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
+    org.junit.Assert.assertTrue(i18 == 292);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 696);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3684);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 849);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1178);
+    org.junit.Assert.assertTrue(i21 == 714);
 
   }
 
@@ -5059,50 +3939,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(10, (int)(byte)10);
-    int i30 = classUnderTest0.add(205, 347);
-    int i33 = classUnderTest0.add(2821, 356);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(67, 94);
+    int i15 = classUnderTest0.add(336, (int)' ');
+    int i18 = classUnderTest0.add(1722, 1463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 368);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 552);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3177);
+    org.junit.Assert.assertTrue(i18 == 3185);
 
   }
 
@@ -5113,34 +3973,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(42, 1350);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(84, 67);
+    int i9 = classUnderTest0.add(101, 34);
+    int i12 = classUnderTest0.add(528, 413);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 135);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1392);
+    org.junit.Assert.assertTrue(i12 == 941);
 
   }
 
@@ -5151,38 +3999,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(808, 237);
-    int i24 = classUnderTest0.add(848, 2486);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'4', (int)(short)0);
+    int i24 = classUnderTest0.add(175, 509);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
+    org.junit.Assert.assertTrue(i18 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1045);
+    org.junit.Assert.assertTrue(i21 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3334);
+    org.junit.Assert.assertTrue(i24 == 684);
 
   }
 
@@ -5193,42 +4041,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(35, 206);
-    int i27 = classUnderTest0.add(1593, 84);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add(161, 876);
+    int i18 = classUnderTest0.add(30, 114);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 1037);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1677);
+    org.junit.Assert.assertTrue(i18 == 144);
 
   }
 
@@ -5239,50 +4075,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)(byte)10, 197);
-    int i24 = classUnderTest0.add(105, 34);
-    int i27 = classUnderTest0.add(98, 150);
-    int i30 = classUnderTest0.add(770, 564);
-    int i33 = classUnderTest0.add(668, 1285);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(401, 12);
+    int i24 = classUnderTest0.add(985, 219);
+    int i27 = classUnderTest0.add(917, 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
+    org.junit.Assert.assertTrue(i21 == 413);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 139);
+    org.junit.Assert.assertTrue(i24 == 1204);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 248);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1953);
+    org.junit.Assert.assertTrue(i27 == 1071);
 
   }
 
@@ -5293,38 +4121,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(34, 309);
-    int i21 = classUnderTest0.add(2572, 6752);
-    int i24 = classUnderTest0.add(3390, 2999);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(31, 0);
+    int i21 = classUnderTest0.add(811, 440);
+    int i24 = classUnderTest0.add(281, 667);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 343);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9324);
+    org.junit.Assert.assertTrue(i21 == 1251);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6389);
+    org.junit.Assert.assertTrue(i24 == 948);
 
   }
 
@@ -5335,26 +4163,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(34, 3116);
-    int i15 = classUnderTest0.add(227, 2219);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(9, (int)(byte)100);
+    int i9 = classUnderTest0.add(63, 521);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 3150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2446);
+    org.junit.Assert.assertTrue(i9 == 584);
 
   }
 
@@ -5365,46 +4185,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(0, (int)(byte)-1);
-    int i27 = classUnderTest0.add(2093, 179);
-    int i30 = classUnderTest0.add(1415, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(67, 0);
+    int i15 = classUnderTest0.add((int)(short)0, 67);
+    int i18 = classUnderTest0.add(2125, 619);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2272);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1415);
+    org.junit.Assert.assertTrue(i18 == 2744);
 
   }
 
@@ -5415,26 +4219,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(1629, 2531);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1, 864);
+    int i30 = classUnderTest0.add(122, 2558);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 4160);
+    org.junit.Assert.assertTrue(i15 == 153);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 132);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 482);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 865);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 2680);
 
   }
 
@@ -5445,46 +4269,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(108, 206);
-    int i30 = classUnderTest0.add(2057, 1777);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(289, 1578);
+    int i18 = classUnderTest0.add(678, 924);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
+    org.junit.Assert.assertTrue(i15 == 1867);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3834);
+    org.junit.Assert.assertTrue(i18 == 1602);
 
   }
 
@@ -5495,26 +4303,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(996, (int)(short)0);
-    int i15 = classUnderTest0.add(870, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(9, 32);
+    int i21 = classUnderTest0.add(1647, 3396);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 996);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 870);
+    org.junit.Assert.assertTrue(i15 == 153);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 41);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 5043);
 
   }
 
@@ -5525,46 +4341,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(1077, 486);
-    int i30 = classUnderTest0.add(322, 11552);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(232, (-1));
+    int i12 = classUnderTest0.add(132, 864);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 231);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 11874);
+    org.junit.Assert.assertTrue(i12 == 996);
 
   }
 
@@ -5575,38 +4367,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add(97, 323);
-    int i24 = classUnderTest0.add(1492, 3287);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(53, 0);
+    int i18 = classUnderTest0.add(251, 296);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 420);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4779);
+    org.junit.Assert.assertTrue(i18 == 547);
 
   }
 
@@ -5617,42 +4401,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)(byte)10, 197);
-    int i24 = classUnderTest0.add(105, 34);
-    int i27 = classUnderTest0.add(2338, 1561);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add(622, 33);
+    int i21 = classUnderTest0.add(35, 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 139);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3899);
+    org.junit.Assert.assertTrue(i21 == 186);
 
   }
 
@@ -5663,30 +4439,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(6336, 2607);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add(0, 34);
+    int i18 = classUnderTest0.add(531, 429);
+    int i21 = classUnderTest0.add(124, 687);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
+    org.junit.Assert.assertTrue(i15 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 8943);
+    org.junit.Assert.assertTrue(i18 == 960);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 811);
 
   }
 
@@ -5697,18 +4477,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(6499, 10262);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add(0, (int)(byte)100);
+    int i15 = classUnderTest0.add(800, 1578);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 16761);
+    org.junit.Assert.assertTrue(i9 == 34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 2378);
 
   }
 
@@ -5719,38 +4507,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(298, 0);
-    int i24 = classUnderTest0.add(675, 907);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1221, 109);
+    int i30 = classUnderTest0.add(2850, 1300);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 298);
+    org.junit.Assert.assertTrue(i21 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1582);
+    org.junit.Assert.assertTrue(i24 == 482);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 1330);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 4150);
 
   }
 
@@ -5761,50 +4557,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(1077, 486);
-    int i30 = classUnderTest0.add(0, 2180);
-    int i33 = classUnderTest0.add(9446, 1532);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)10, 52);
+    int i12 = classUnderTest0.add(155, 735);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 62);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2180);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 10978);
+    org.junit.Assert.assertTrue(i12 == 890);
 
   }
 
@@ -5815,42 +4583,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add((int)(byte)100, 53);
-    int i24 = classUnderTest0.add(217, 366);
-    int i27 = classUnderTest0.add(480, 4418);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(10, 99);
+    int i15 = classUnderTest0.add(3873, 823);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 583);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4898);
+    org.junit.Assert.assertTrue(i15 == 4696);
 
   }
 
@@ -5861,42 +4613,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(215, 108);
-    int i24 = classUnderTest0.add(787, 205);
-    int i27 = classUnderTest0.add(5223, 2693);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add((int)(short)0, 534);
+    int i27 = classUnderTest0.add(1100, 2378);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 323);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 992);
+    org.junit.Assert.assertTrue(i24 == 534);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7916);
+    org.junit.Assert.assertTrue(i27 == 3478);
 
   }
 
@@ -5907,34 +4659,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(1677, 4479);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(84, (int)(byte)10);
+    int i9 = classUnderTest0.add(67, (int)(byte)100);
+    int i12 = classUnderTest0.add(307, 175);
+    int i15 = classUnderTest0.add(1037, 674);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 94);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 167);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 482);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6156);
+    org.junit.Assert.assertTrue(i15 == 1711);
 
   }
 
@@ -5945,30 +4689,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(35, 270);
-    int i18 = classUnderTest0.add((int)(short)0, 2374);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(542, 448);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 305);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2374);
+    org.junit.Assert.assertTrue(i12 == 990);
 
   }
 
@@ -5979,50 +4715,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(2330, 700);
-    int i27 = classUnderTest0.add(4501, 1903);
-    int i30 = classUnderTest0.add(1262, 3471);
-    int i33 = classUnderTest0.add(0, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(339, 185);
+    int i30 = classUnderTest0.add(824, 549);
+    int i33 = classUnderTest0.add(144, 72);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3030);
+    org.junit.Assert.assertTrue(i24 == 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6404);
+    org.junit.Assert.assertTrue(i27 == 524);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4733);
+    org.junit.Assert.assertTrue(i30 == 1373);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 0);
+    org.junit.Assert.assertTrue(i33 == 216);
 
   }
 
@@ -6033,54 +4769,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add((int)(short)10, 205);
-    int i27 = classUnderTest0.add(1077, 173);
-    int i30 = classUnderTest0.add(968, 0);
-    int i33 = classUnderTest0.add(3652, 632);
-    int i36 = classUnderTest0.add(8951, 4704);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add((int)(short)0, 69);
+    int i9 = classUnderTest0.add(521, 34);
+    int i12 = classUnderTest0.add(1042, 1722);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 968);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4284);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 13655);
+    org.junit.Assert.assertTrue(i12 == 2764);
 
   }
 
@@ -6091,42 +4795,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add((int)(byte)1, 695);
-    int i27 = classUnderTest0.add(0, 3245);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(69, (-1));
+    int i12 = classUnderTest0.add(1347, 715);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 696);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3245);
+    org.junit.Assert.assertTrue(i12 == 2062);
 
   }
 
@@ -6137,30 +4821,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(996, 300);
-    int i15 = classUnderTest0.add(1140, 489);
-    int i18 = classUnderTest0.add(3630, 154);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(307, 1241);
+    int i18 = classUnderTest0.add(543, 222);
+    int i21 = classUnderTest0.add(879, 468);
+    int i24 = classUnderTest0.add(185, 381);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1296);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1629);
+    org.junit.Assert.assertTrue(i15 == 1548);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3784);
+    org.junit.Assert.assertTrue(i18 == 765);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 1347);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 566);
 
   }
 
@@ -6171,34 +4863,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(703, 1260);
-    int i18 = classUnderTest0.add(3421, 1660);
-    int i21 = classUnderTest0.add(786, 2465);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(42, (int)(byte)10);
+    int i15 = classUnderTest0.add(336, 98);
+    int i18 = classUnderTest0.add(9, 283);
+    int i21 = classUnderTest0.add(175, 667);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1963);
+    org.junit.Assert.assertTrue(i15 == 434);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5081);
+    org.junit.Assert.assertTrue(i18 == 292);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3251);
+    org.junit.Assert.assertTrue(i21 == 842);
 
   }
 
@@ -6209,26 +4901,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(197, 611);
-    int i15 = classUnderTest0.add(1506, 9446);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)'a', 0);
+    int i9 = classUnderTest0.add(531, 265);
+    int i12 = classUnderTest0.add(184, 262);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
+    org.junit.Assert.assertTrue(i9 == 796);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 10952);
+    org.junit.Assert.assertTrue(i12 == 446);
 
   }
 
@@ -6239,58 +4927,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(35, 206);
-    int i27 = classUnderTest0.add(547, 1940);
-    int i30 = classUnderTest0.add((int)' ', 1363);
-    int i33 = classUnderTest0.add(2247, 1032);
-    int i36 = classUnderTest0.add(1423, 6116);
-    int i39 = classUnderTest0.add(7861, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(307, 1241);
+    int i18 = classUnderTest0.add(543, 222);
+    int i21 = classUnderTest0.add(879, 468);
+    int i24 = classUnderTest0.add(501, 2680);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 1548);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 765);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
+    org.junit.Assert.assertTrue(i21 == 1347);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2487);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1395);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3279);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 7539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 7861);
+    org.junit.Assert.assertTrue(i24 == 3181);
 
   }
 
@@ -6301,50 +4969,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add((int)(byte)1, 695);
-    int i27 = classUnderTest0.add(32, 3652);
-    int i30 = classUnderTest0.add(796, 53);
-    int i33 = classUnderTest0.add(633, 4324);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(101, 337);
+    int i15 = classUnderTest0.add(452, 97);
+    int i18 = classUnderTest0.add(292, 292);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 438);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 549);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 696);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3684);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 849);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4957);
+    org.junit.Assert.assertTrue(i18 == 584);
 
   }
 
@@ -6355,34 +5003,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)-1, 197);
-    int i18 = classUnderTest0.add(996, 151);
-    int i21 = classUnderTest0.add(1315, 996);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(132, (int)(byte)100);
+    int i15 = classUnderTest0.add(0, 222);
+    int i18 = classUnderTest0.add(985, 1548);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 232);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 196);
+    org.junit.Assert.assertTrue(i15 == 222);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2311);
+    org.junit.Assert.assertTrue(i18 == 2533);
 
   }
 
@@ -6393,34 +5037,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add((int)' ', 205);
-    int i18 = classUnderTest0.add(847, 2179);
-    int i21 = classUnderTest0.add(5620, 600);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add((int)(byte)1, 32);
+    int i18 = classUnderTest0.add(165, 53);
+    int i21 = classUnderTest0.add(2454, 662);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 237);
+    org.junit.Assert.assertTrue(i15 == 33);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3026);
+    org.junit.Assert.assertTrue(i18 == 218);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6220);
+    org.junit.Assert.assertTrue(i21 == 3116);
 
   }
 
@@ -6431,34 +5075,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(565, 448);
-    int i21 = classUnderTest0.add(250, 1009);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(161, (int)(short)100);
+    int i15 = classUnderTest0.add(741, 281);
+    int i18 = classUnderTest0.add(434, 1711);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 261);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 1022);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1013);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1259);
+    org.junit.Assert.assertTrue(i18 == 2145);
 
   }
 
@@ -6469,42 +5109,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1147, 1476);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(84, 100);
+    int i21 = classUnderTest0.add(189, 0);
+    int i24 = classUnderTest0.add(715, 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
+    org.junit.Assert.assertTrue(i18 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
+    org.junit.Assert.assertTrue(i21 == 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2623);
+    org.junit.Assert.assertTrue(i24 == 1054);
 
   }
 
@@ -6515,50 +5151,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(635, 303);
-    int i18 = classUnderTest0.add(4019, 760);
-    int i21 = classUnderTest0.add(486, 2104);
-    int i24 = classUnderTest0.add(3277, 4140);
-    int i27 = classUnderTest0.add(420, 314);
-    int i30 = classUnderTest0.add(138, 218);
-    int i33 = classUnderTest0.add(7417, 983);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(2764, 543);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 938);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4779);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2590);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7417);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 734);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 356);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 8400);
+    org.junit.Assert.assertTrue(i12 == 3307);
 
   }
 
@@ -6569,46 +5177,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(348, 1246);
-    int i24 = classUnderTest0.add(2693, 0);
-    int i27 = classUnderTest0.add(438, 1068);
-    int i30 = classUnderTest0.add(12799, 3195);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(1357, 1041);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1594);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2693);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1506);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 15994);
+    org.junit.Assert.assertTrue(i9 == 2398);
 
   }
 
@@ -6619,34 +5199,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(1212, 3100);
-    int i21 = classUnderTest0.add(6220, 1761);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(84, 67);
+    int i18 = classUnderTest0.add(119, 922);
+    int i21 = classUnderTest0.add(100, 4696);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4312);
+    org.junit.Assert.assertTrue(i18 == 1041);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7981);
+    org.junit.Assert.assertTrue(i21 == 4796);
 
   }
 
@@ -6657,54 +5237,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(10, (int)(byte)10);
-    int i30 = classUnderTest0.add(205, 347);
-    int i33 = classUnderTest0.add(666, 34);
-    int i36 = classUnderTest0.add(1733, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1221, 109);
+    int i30 = classUnderTest0.add(0, 759);
+    int i33 = classUnderTest0.add(1101, 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
+    org.junit.Assert.assertTrue(i21 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
+    org.junit.Assert.assertTrue(i24 == 482);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20);
+    org.junit.Assert.assertTrue(i27 == 1330);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 552);
+    org.junit.Assert.assertTrue(i30 == 759);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 700);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1733);
+    org.junit.Assert.assertTrue(i33 == 1111);
 
   }
 
@@ -6715,54 +5291,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(138, 332);
-    int i24 = classUnderTest0.add(1940, 438);
-    int i27 = classUnderTest0.add(2179, 2980);
-    int i30 = classUnderTest0.add(2290, 118);
-    int i33 = classUnderTest0.add(1529, 728);
-    int i36 = classUnderTest0.add(180, 6116);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(2850, 165);
+    int i24 = classUnderTest0.add(1689, 94);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 470);
+    org.junit.Assert.assertTrue(i21 == 3015);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2378);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5159);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2408);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2257);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6296);
+    org.junit.Assert.assertTrue(i24 == 1783);
 
   }
 
@@ -6773,26 +5333,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(5791, 760);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'#', 0);
+    int i24 = classUnderTest0.add(0, 68);
+    int i27 = classUnderTest0.add(0, 720);
+    int i30 = classUnderTest0.add(341, 667);
+    int i33 = classUnderTest0.add(281, 543);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6551);
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 69);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 68);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 720);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 1008);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i33 == 824);
 
   }
 
@@ -6803,46 +5387,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(992, 3009);
-    int i30 = classUnderTest0.add(4941, 1392);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(97, (int)(short)10);
+    int i9 = classUnderTest0.add(31, (int)(short)-1);
+    int i12 = classUnderTest0.add(189, 337);
+    int i15 = classUnderTest0.add(542, 1236);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 30);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 526);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6333);
+    org.junit.Assert.assertTrue(i15 == 1778);
 
   }
 
@@ -6853,46 +5417,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(517, 5726);
-    int i27 = classUnderTest0.add(2104, 6379);
-    int i30 = classUnderTest0.add(1178, 3160);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1, 864);
+    int i30 = classUnderTest0.add(1241, 1157);
+    int i33 = classUnderTest0.add(985, 547);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
+    org.junit.Assert.assertTrue(i21 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6243);
+    org.junit.Assert.assertTrue(i24 == 482);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8483);
+    org.junit.Assert.assertTrue(i27 == 865);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4338);
+    org.junit.Assert.assertTrue(i30 == 2398);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i33 == 1532);
 
   }
 
@@ -6903,38 +5471,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(305, 486);
-    int i21 = classUnderTest0.add(98, 898);
-    int i24 = classUnderTest0.add((int)'a', 1382);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(97, 122);
+    int i21 = classUnderTest0.add(97, 404);
+    int i24 = classUnderTest0.add(674, 281);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 791);
+    org.junit.Assert.assertTrue(i18 == 219);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 996);
+    org.junit.Assert.assertTrue(i21 == 501);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1479);
+    org.junit.Assert.assertTrue(i24 == 955);
 
   }
 
@@ -6945,34 +5513,50 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(0, 820);
-    int i12 = classUnderTest0.add(1673, 786);
-    int i15 = classUnderTest0.add(1578, 479);
-    int i18 = classUnderTest0.add(195, 697);
-    int i21 = classUnderTest0.add(154, 0);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(553, 167);
+    int i30 = classUnderTest0.add(667, 68);
+    int i33 = classUnderTest0.add(285, 1081);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 820);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 2459);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2057);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 892);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 154);
+    org.junit.Assert.assertTrue(i21 == 132);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 482);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 720);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 735);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i33 == 1366);
 
   }
 
@@ -6983,42 +5567,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(118, 207);
-    int i27 = classUnderTest0.add(3083, 2483);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add((-1), 130);
+    int i18 = classUnderTest0.add(452, 694);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 129);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 325);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5566);
+    org.junit.Assert.assertTrue(i18 == 1146);
 
   }
 
@@ -7029,38 +5601,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(348, (int)(short)10);
-    int i21 = classUnderTest0.add(533, 314);
-    int i24 = classUnderTest0.add(10488, 1096);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(1108, 114);
+    int i9 = classUnderTest0.add(1729, 345);
+    int i12 = classUnderTest0.add(35, 667);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 1222);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2074);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 358);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 847);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11584);
+    org.junit.Assert.assertTrue(i12 == 702);
 
   }
 
@@ -7071,30 +5627,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add((int)(byte)100, 98);
-    int i18 = classUnderTest0.add(914, 996);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(0, 922);
+    int i18 = classUnderTest0.add(834, 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 198);
+    org.junit.Assert.assertTrue(i15 == 922);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1910);
+    org.junit.Assert.assertTrue(i18 == 995);
 
   }
 
@@ -7105,46 +5661,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add(3150, 502);
-    int i27 = classUnderTest0.add(914, 510);
-    int i30 = classUnderTest0.add(6525, 3279);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(67, 94);
+    int i15 = classUnderTest0.add(122, 67);
+    int i18 = classUnderTest0.add((int)(short)10, 2);
+    int i21 = classUnderTest0.add(703, 108);
+    int i24 = classUnderTest0.add(0, 216);
+    int i27 = classUnderTest0.add(662, 970);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
+    org.junit.Assert.assertTrue(i18 == 12);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
+    org.junit.Assert.assertTrue(i21 == 811);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3652);
+    org.junit.Assert.assertTrue(i24 == 216);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 9804);
+    org.junit.Assert.assertTrue(i27 == 1632);
 
   }
 
@@ -7155,42 +5707,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(635, 348);
-    int i24 = classUnderTest0.add(2427, 4098);
-    int i27 = classUnderTest0.add(5159, 1761);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(84, 67);
+    int i9 = classUnderTest0.add(101, 34);
+    int i12 = classUnderTest0.add(31, 1350);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 135);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 983);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6525);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6920);
+    org.junit.Assert.assertTrue(i12 == 1381);
 
   }
 
@@ -7201,30 +5733,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(1453, 398);
-    int i18 = classUnderTest0.add(209, 267);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(1196, 886);
+    int i30 = classUnderTest0.add(196, 765);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1851);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 476);
+    org.junit.Assert.assertTrue(i18 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 156);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 2082);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 961);
 
   }
 
@@ -7235,38 +5783,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(2015, 4284);
-    int i24 = classUnderTest0.add(3083, 3263);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(69, (-1));
+    int i12 = classUnderTest0.add(296, 289);
+    int i15 = classUnderTest0.add(584, 2680);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 585);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6299);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6346);
+    org.junit.Assert.assertTrue(i15 == 3264);
 
   }
 
@@ -7277,42 +5813,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add((int)(short)10, 331);
-    int i27 = classUnderTest0.add(1481, 946);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(340, (int)(byte)1);
+    int i15 = classUnderTest0.add(2680, 581);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 341);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 341);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2427);
+    org.junit.Assert.assertTrue(i15 == 3261);
 
   }
 
@@ -7323,26 +5843,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(5176, 195);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(401, 12);
+    int i24 = classUnderTest0.add(985, 219);
+    int i27 = classUnderTest0.add(307, 757);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 5371);
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 413);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1204);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 1064);
 
   }
 
@@ -7353,38 +5889,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(323, 703);
-    int i15 = classUnderTest0.add(1314, 10488);
-    int i18 = classUnderTest0.add(1315, 3150);
-    int i21 = classUnderTest0.add(0, 13101);
-    int i24 = classUnderTest0.add(2074, 9726);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(165, (int)(byte)100);
+    int i15 = classUnderTest0.add(307, 94);
+    int i18 = classUnderTest0.add(0, 251);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1026);
+    org.junit.Assert.assertTrue(i12 == 265);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 11802);
+    org.junit.Assert.assertTrue(i15 == 401);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4465);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 13101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11800);
+    org.junit.Assert.assertTrue(i18 == 251);
 
   }
 
@@ -7395,26 +5923,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(10720, 1060);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(97, (int)(short)10);
+    int i9 = classUnderTest0.add(0, 463);
+    int i12 = classUnderTest0.add(151, 0);
+    int i15 = classUnderTest0.add(260, (int)'4');
+    int i18 = classUnderTest0.add(1100, 1357);
+    int i21 = classUnderTest0.add(3409, 2744);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
+    org.junit.Assert.assertTrue(i12 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 11780);
+    org.junit.Assert.assertTrue(i15 == 312);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 2457);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 6153);
 
   }
 
@@ -7425,38 +5961,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(206, 101);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(285, 119);
+    int i18 = classUnderTest0.add(834, 526);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 404);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 307);
+    org.junit.Assert.assertTrue(i18 == 1360);
 
   }
 
@@ -7467,46 +5995,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(940, 42);
-    int i27 = classUnderTest0.add(605, 2340);
-    int i30 = classUnderTest0.add(1037, 4661);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(84, 100);
+    int i21 = classUnderTest0.add(501, 10);
+    int i24 = classUnderTest0.add(2850, 4150);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
+    org.junit.Assert.assertTrue(i18 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
+    org.junit.Assert.assertTrue(i21 == 511);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 982);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2945);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5698);
+    org.junit.Assert.assertTrue(i24 == 7000);
 
   }
 
@@ -7517,34 +6037,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(703, 1260);
-    int i18 = classUnderTest0.add(3421, 1660);
-    int i21 = classUnderTest0.add(1431, 3310);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'4', (int)(short)0);
+    int i24 = classUnderTest0.add(2618, 292);
+    int i27 = classUnderTest0.add(42, 2082);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1963);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5081);
+    org.junit.Assert.assertTrue(i18 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4741);
+    org.junit.Assert.assertTrue(i21 == 52);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 2910);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 2124);
 
   }
 
@@ -7555,46 +6083,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(503, 217);
-    int i24 = classUnderTest0.add(983, 914);
-    int i27 = classUnderTest0.add(0, 1109);
-    int i30 = classUnderTest0.add(756, 2299);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(67, 52);
+    int i12 = classUnderTest0.add(84, 5043);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 119);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 720);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1897);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1109);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3055);
+    org.junit.Assert.assertTrue(i12 == 5127);
 
   }
 
@@ -7605,26 +6109,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(1395, 9324);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(67, 94);
+    int i15 = classUnderTest0.add(336, (int)' ');
+    int i18 = classUnderTest0.add((int)(byte)100, 2850);
+    int i21 = classUnderTest0.add(542, 281);
+    int i24 = classUnderTest0.add(800, 960);
+    int i27 = classUnderTest0.add(1783, 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 10719);
+    org.junit.Assert.assertTrue(i15 == 368);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 2950);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 823);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1760);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 2122);
 
   }
 
@@ -7635,46 +6155,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(209, (int)(byte)100);
-    int i21 = classUnderTest0.add(214, 700);
-    int i24 = classUnderTest0.add(532, 1154);
-    int i27 = classUnderTest0.add(1626, 633);
-    int i30 = classUnderTest0.add(3937, 2458);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(164, 132);
+    int i9 = classUnderTest0.add(413, 567);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 296);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 309);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 914);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1686);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2259);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6395);
+    org.junit.Assert.assertTrue(i9 == 980);
 
   }
 
@@ -7685,46 +6177,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(992, 118);
-    int i27 = classUnderTest0.add(2572, 3347);
-    int i30 = classUnderTest0.add(0, 2429);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add(802, 2074);
+    int i15 = classUnderTest0.add(0, 811);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 2876);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1110);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5919);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2429);
+    org.junit.Assert.assertTrue(i15 == 811);
 
   }
 
@@ -7735,42 +6207,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(2330, 700);
-    int i27 = classUnderTest0.add(1476, 20);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(2, 175);
+    int i9 = classUnderTest0.add(890, 1806);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 177);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3030);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1496);
+    org.junit.Assert.assertTrue(i9 == 2696);
 
   }
 
@@ -7781,26 +6229,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(2821, 9446);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(995, 756);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 12267);
+    org.junit.Assert.assertTrue(i12 == 1751);
 
   }
 
@@ -7811,46 +6255,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(697, 138);
-    int i24 = classUnderTest0.add(5726, 4001);
-    int i27 = classUnderTest0.add(1374, 1007);
-    int i30 = classUnderTest0.add(2588, 2179);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(31, 0);
+    int i21 = classUnderTest0.add(97, 879);
+    int i24 = classUnderTest0.add(336, 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 835);
+    org.junit.Assert.assertTrue(i21 == 976);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9727);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2381);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4767);
+    org.junit.Assert.assertTrue(i24 == 346);
 
   }
 
@@ -7861,38 +6297,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add((int)(byte)100, 98);
-    int i18 = classUnderTest0.add(206, 97);
-    int i21 = classUnderTest0.add(343, 564);
-    int i24 = classUnderTest0.add(2557, 2219);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(101, 0);
+    int i18 = classUnderTest0.add(0, 108);
+    int i21 = classUnderTest0.add(756, 824);
+    int i24 = classUnderTest0.add(567, 750);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 198);
+    org.junit.Assert.assertTrue(i15 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 303);
+    org.junit.Assert.assertTrue(i18 == 108);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 907);
+    org.junit.Assert.assertTrue(i21 == 1580);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4776);
+    org.junit.Assert.assertTrue(i24 == 1317);
 
   }
 
@@ -7903,42 +6339,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add((int)' ', 3983);
-    int i24 = classUnderTest0.add(1423, 1456);
-    int i27 = classUnderTest0.add(7958, 898);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add(72, 84);
+    int i27 = classUnderTest0.add(1196, 886);
+    int i30 = classUnderTest0.add(186, 690);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4015);
+    org.junit.Assert.assertTrue(i21 == 100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2879);
+    org.junit.Assert.assertTrue(i24 == 156);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8856);
+    org.junit.Assert.assertTrue(i27 == 2082);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 876);
 
   }
 
@@ -7949,34 +6389,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(479, 135);
-    int i21 = classUnderTest0.add(1857, 12799);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(0, 189);
+    int i15 = classUnderTest0.add(615, 970);
+    int i18 = classUnderTest0.add(1729, 2082);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 1585);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 614);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 14656);
+    org.junit.Assert.assertTrue(i18 == 3811);
 
   }
 
@@ -7987,34 +6423,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(816, 6393);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(84, (int)(byte)10);
+    int i9 = classUnderTest0.add(67, (int)(byte)100);
+    int i12 = classUnderTest0.add(184, 32);
+    int i15 = classUnderTest0.add(97, (int)'#');
+    int i18 = classUnderTest0.add(678, 72);
+    int i21 = classUnderTest0.add(487, 1135);
+    int i24 = classUnderTest0.add(1778, 1360);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 94);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 167);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 216);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
+    org.junit.Assert.assertTrue(i18 == 750);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7209);
+    org.junit.Assert.assertTrue(i21 == 1622);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 3138);
 
   }
 
@@ -8025,46 +6465,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(2180, 154);
-    int i24 = classUnderTest0.add(154, 97);
-    int i27 = classUnderTest0.add(3220, 298);
-    int i30 = classUnderTest0.add(22759, 4496);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add(9, 32);
+    int i21 = classUnderTest0.add(855, 1111);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
+    org.junit.Assert.assertTrue(i18 == 41);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 251);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 27255);
+    org.junit.Assert.assertTrue(i21 == 1966);
 
   }
 
@@ -8075,34 +6503,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(6081, 98);
-    int i21 = classUnderTest0.add(12803, 2101);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add((-1), 130);
+    int i18 = classUnderTest0.add(434, 2680);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 129);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 6179);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 14904);
+    org.junit.Assert.assertTrue(i18 == 3114);
 
   }
 
@@ -8113,34 +6537,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(280, 940);
-    int i18 = classUnderTest0.add(645, 309);
-    int i21 = classUnderTest0.add(1009, 2247);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(549, 1071);
+    int i15 = classUnderTest0.add(534, 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 1620);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1220);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 954);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3256);
+    org.junit.Assert.assertTrue(i15 == 695);
 
   }
 
@@ -8151,42 +6567,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(331, 6421);
-    int i27 = classUnderTest0.add(4206, 3094);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add((int)(byte)1, 32);
+    int i18 = classUnderTest0.add(463, 296);
+    int i21 = classUnderTest0.add(1330, 1350);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 33);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
+    org.junit.Assert.assertTrue(i18 == 759);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7300);
+    org.junit.Assert.assertTrue(i21 == 2680);
 
   }
 
@@ -8197,26 +6605,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(205, 298);
-    int i12 = classUnderTest0.add(243, 0);
-    int i15 = classUnderTest0.add(4543, 1196);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add((int)(short)0, 534);
+    int i27 = classUnderTest0.add(865, 1221);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 503);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 243);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 5739);
+    org.junit.Assert.assertTrue(i15 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 534);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 2086);
 
   }
 
@@ -8227,50 +6651,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(118, 207);
-    int i27 = classUnderTest0.add(512, (int)(short)100);
-    int i30 = classUnderTest0.add(907, 202);
-    int i33 = classUnderTest0.add(8665, 1083);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add((int)(short)-1, 131);
+    int i18 = classUnderTest0.add(534, 5127);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 130);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 325);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 612);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1109);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 9748);
+    org.junit.Assert.assertTrue(i18 == 5661);
 
   }
 
@@ -8281,38 +6685,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 3399);
-    int i24 = classUnderTest0.add(1792, 7927);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)'#', 34);
+    int i21 = classUnderTest0.add((int)'#', 0);
+    int i24 = classUnderTest0.add(0, 68);
+    int i27 = classUnderTest0.add(757, 2850);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3399);
+    org.junit.Assert.assertTrue(i21 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9719);
+    org.junit.Assert.assertTrue(i24 == 68);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 3607);
 
   }
 
@@ -8323,38 +6731,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add(52, 209);
-    int i21 = classUnderTest0.add(1880, 347);
-    int i24 = classUnderTest0.add(791, 5620);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(0, 151);
+    int i18 = classUnderTest0.add(1008, 100);
+    int i21 = classUnderTest0.add(1729, 947);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
+    org.junit.Assert.assertTrue(i15 == 151);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 261);
+    org.junit.Assert.assertTrue(i18 == 1108);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6411);
+    org.junit.Assert.assertTrue(i21 == 2676);
 
   }
 
@@ -8365,46 +6769,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add((int)(short)100, (int)(byte)0);
-    int i21 = classUnderTest0.add(410, (int)(byte)0);
-    int i24 = classUnderTest0.add(2272, 2632);
-    int i27 = classUnderTest0.add(2005, 150);
-    int i30 = classUnderTest0.add(4501, 8539);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(132, (int)(byte)100);
+    int i15 = classUnderTest0.add(35, 119);
+    int i18 = classUnderTest0.add(648, 1094);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 232);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
+    org.junit.Assert.assertTrue(i15 == 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 410);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4904);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2155);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13040);
+    org.junit.Assert.assertTrue(i18 == 1742);
 
   }
 
@@ -8415,38 +6803,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add((int)(short)10, 97);
-    int i21 = classUnderTest0.add(51, 848);
-    int i24 = classUnderTest0.add(7284, 1975);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(2850, 165);
+    int i24 = classUnderTest0.add(1022, (int)' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 899);
+    org.junit.Assert.assertTrue(i21 == 3015);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9259);
+    org.junit.Assert.assertTrue(i24 == 1054);
 
   }
 
@@ -8457,22 +6845,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(7985, 1332);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(101, 0);
+    int i18 = classUnderTest0.add((int)(short)100, 63);
+    int i21 = classUnderTest0.add(1373, 1602);
+    int i24 = classUnderTest0.add(1457, 2062);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 9317);
+    org.junit.Assert.assertTrue(i12 == 102);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 163);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 2975);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 3519);
 
   }
 
@@ -8483,30 +6887,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(118, 118);
-    int i18 = classUnderTest0.add(202, 1995);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(579, 32);
+    int i12 = classUnderTest0.add(581, 133);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 611);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 236);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2197);
+    org.junit.Assert.assertTrue(i12 == 714);
 
   }
 
@@ -8517,46 +6913,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(118, 207);
-    int i27 = classUnderTest0.add(42, 258);
-    int i30 = classUnderTest0.add(588, 11968);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(2, 175);
+    int i9 = classUnderTest0.add((int)(byte)0, 339);
+    int i12 = classUnderTest0.add(655, 2910);
+    int i15 = classUnderTest0.add(2197, 648);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 177);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 3565);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 325);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 300);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 12556);
+    org.junit.Assert.assertTrue(i15 == 2845);
 
   }
 
@@ -8567,34 +6943,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)' ', 106);
-    int i18 = classUnderTest0.add(845, 5548);
-    int i21 = classUnderTest0.add(5564, 334);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(3015, 3338);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 138);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 6393);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5898);
+    org.junit.Assert.assertTrue(i9 == 6353);
 
   }
 
@@ -8605,54 +6965,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(1110, 796);
-    int i33 = classUnderTest0.add(2726, 1334);
-    int i36 = classUnderTest0.add(2693, 2076);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(393, 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1906);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4060);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 4769);
+    org.junit.Assert.assertTrue(i12 == 490);
 
   }
 
@@ -8663,54 +6991,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(1110, 796);
-    int i33 = classUnderTest0.add(1003, 4545);
-    int i36 = classUnderTest0.add(314, 1948);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(728, 995);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1906);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5548);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2262);
+    org.junit.Assert.assertTrue(i15 == 1723);
 
   }
 
@@ -8721,50 +7021,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(0, (int)(byte)-1);
-    int i27 = classUnderTest0.add(2093, 179);
-    int i30 = classUnderTest0.add(3651, 1469);
-    int i33 = classUnderTest0.add(0, 3753);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(97, 122);
+    int i21 = classUnderTest0.add(219, 249);
+    int i24 = classUnderTest0.add(938, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 219);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
+    org.junit.Assert.assertTrue(i21 == 468);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2272);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5120);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3753);
+    org.junit.Assert.assertTrue(i24 == 938);
 
   }
 
@@ -8775,38 +7063,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(0, 84);
-    int i21 = classUnderTest0.add(9324, 2025);
-    int i24 = classUnderTest0.add(2104, 503);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(0, 152);
+    int i18 = classUnderTest0.add(521, (int)(short)10);
+    int i21 = classUnderTest0.add(434, 53);
+    int i24 = classUnderTest0.add(1221, 1111);
+    int i27 = classUnderTest0.add(232, 583);
+    int i30 = classUnderTest0.add(2533, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
+    org.junit.Assert.assertTrue(i15 == 152);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 84);
+    org.junit.Assert.assertTrue(i18 == 531);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11349);
+    org.junit.Assert.assertTrue(i21 == 487);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2607);
+    org.junit.Assert.assertTrue(i24 == 2332);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 815);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 2533);
 
   }
 
@@ -8817,50 +7113,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(35, 206);
-    int i27 = classUnderTest0.add(547, 1940);
-    int i30 = classUnderTest0.add(4155, 341);
-    int i33 = classUnderTest0.add(0, 781);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(865, 1022);
+    int i15 = classUnderTest0.add(345, 531);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 1887);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2487);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4496);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 781);
+    org.junit.Assert.assertTrue(i15 == 876);
 
   }
 
@@ -8871,34 +7143,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(4019, 347);
-    int i21 = classUnderTest0.add(15412, 8400);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(101, 0);
+    int i18 = classUnderTest0.add(0, 108);
+    int i21 = classUnderTest0.add(261, 135);
+    int i24 = classUnderTest0.add(98, 1758);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4366);
+    org.junit.Assert.assertTrue(i18 == 108);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 23812);
+    org.junit.Assert.assertTrue(i21 == 396);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1856);
 
   }
 
@@ -8909,26 +7185,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(35, (int)(short)0);
-    int i9 = classUnderTest0.add(0, 269);
-    int i12 = classUnderTest0.add(1431, 2459);
-    int i15 = classUnderTest0.add(946, 2950);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(307, 1241);
+    int i18 = classUnderTest0.add(543, 222);
+    int i21 = classUnderTest0.add(879, 468);
+    int i24 = classUnderTest0.add(368, 922);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 35);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 269);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 3890);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3896);
+    org.junit.Assert.assertTrue(i15 == 1548);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 765);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 1347);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1290);
 
   }
 
@@ -8939,34 +7227,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(205, 298);
-    int i12 = classUnderTest0.add(243, 0);
-    int i15 = classUnderTest0.add(1763, 1594);
-    int i18 = classUnderTest0.add(706, 2693);
-    int i21 = classUnderTest0.add(328, 8821);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add(130, 619);
+    int i21 = classUnderTest0.add(2398, 333);
+    int i24 = classUnderTest0.add(823, 125);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 503);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 243);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3357);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3399);
+    org.junit.Assert.assertTrue(i18 == 749);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9149);
+    org.junit.Assert.assertTrue(i21 == 2731);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 948);
 
   }
 
@@ -8977,34 +7269,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 635);
-    int i15 = classUnderTest0.add(772, 36);
-    int i18 = classUnderTest0.add(1083, 332);
-    int i21 = classUnderTest0.add(17104, 270);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(0, 0);
+    int i9 = classUnderTest0.add((int)(byte)100, 1357);
+    int i12 = classUnderTest0.add(156, 177);
+    int i15 = classUnderTest0.add(33, 687);
+    int i18 = classUnderTest0.add(1236, 1622);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
+    org.junit.Assert.assertTrue(i9 == 1457);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 940);
+    org.junit.Assert.assertTrue(i12 == 333);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 808);
+    org.junit.Assert.assertTrue(i15 == 720);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1415);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 17374);
+    org.junit.Assert.assertTrue(i18 == 2858);
 
   }
 
@@ -9015,46 +7303,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)'4', 643);
-    int i18 = classUnderTest0.add(0, 1091);
-    int i21 = classUnderTest0.add(135, 227);
-    int i24 = classUnderTest0.add(2267, 451);
-    int i27 = classUnderTest0.add(1242, 753);
-    int i30 = classUnderTest0.add(5018, 8856);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(161, 394);
+    int i15 = classUnderTest0.add(340, 960);
+    int i18 = classUnderTest0.add(584, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
+    org.junit.Assert.assertTrue(i12 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 695);
+    org.junit.Assert.assertTrue(i15 == 1300);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 362);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2718);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1995);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13874);
+    org.junit.Assert.assertTrue(i18 == 584);
 
   }
 
@@ -9065,58 +7337,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add((int)(short)10, 205);
-    int i27 = classUnderTest0.add(1077, 173);
-    int i30 = classUnderTest0.add(552, 1791);
-    int i33 = classUnderTest0.add(1156, 208);
-    int i36 = classUnderTest0.add(603, 609);
-    int i39 = classUnderTest0.add(6074, 1314);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(161, 394);
+    int i15 = classUnderTest0.add(165, 678);
+    int i18 = classUnderTest0.add(249, 1360);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
+    org.junit.Assert.assertTrue(i15 == 843);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1364);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1212);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 7388);
+    org.junit.Assert.assertTrue(i18 == 1609);
 
   }
 
@@ -9127,42 +7371,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(118, 1052);
-    int i21 = classUnderTest0.add(568, 12533);
-    int i24 = classUnderTest0.add(1761, 3569);
-    int i27 = classUnderTest0.add(366, 695);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(0, 161);
+    int i15 = classUnderTest0.add(553, 281);
+    int i18 = classUnderTest0.add((int)(short)1, 1300);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 161);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 834);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1170);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 13101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5330);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1061);
+    org.junit.Assert.assertTrue(i18 == 1301);
 
   }
 
@@ -9173,50 +7405,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(short)1, 269);
-    int i15 = classUnderTest0.add(100, 298);
-    int i18 = classUnderTest0.add(332, 1246);
-    int i21 = classUnderTest0.add(1401, 4312);
-    int i24 = classUnderTest0.add(2120, 8951);
-    int i27 = classUnderTest0.add(4545, 0);
-    int i30 = classUnderTest0.add(1700, 11780);
-    int i33 = classUnderTest0.add(2693, 2381);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(1221, 109);
+    int i30 = classUnderTest0.add(1723, 107);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 270);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 398);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1578);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5713);
+    org.junit.Assert.assertTrue(i21 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11071);
+    org.junit.Assert.assertTrue(i24 == 482);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4545);
+    org.junit.Assert.assertTrue(i27 == 1330);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13480);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5074);
+    org.junit.Assert.assertTrue(i30 == 1830);
 
   }
 
@@ -9227,38 +7455,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add((int)(short)-1, 150);
-    int i24 = classUnderTest0.add(4352, 4479);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add(161, 876);
+    int i18 = classUnderTest0.add(62, 579);
+    int i21 = classUnderTest0.add(1116, 469);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
+    org.junit.Assert.assertTrue(i15 == 1037);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
+    org.junit.Assert.assertTrue(i18 == 641);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8831);
+    org.junit.Assert.assertTrue(i21 == 1585);
 
   }
 
@@ -9269,42 +7493,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(4019, 9727);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(161, 394);
+    int i15 = classUnderTest0.add(340, 960);
+    int i18 = classUnderTest0.add(1349, 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 1300);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 13746);
+    org.junit.Assert.assertTrue(i18 == 1451);
 
   }
 
@@ -9315,54 +7527,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(403, 107);
-    int i33 = classUnderTest0.add(720, 643);
-    int i36 = classUnderTest0.add(625, 3019);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(69, (-1));
+    int i12 = classUnderTest0.add(1196, 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 510);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1363);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 3644);
+    org.junit.Assert.assertTrue(i12 == 1371);
 
   }
 
@@ -9373,50 +7553,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(982, 0);
-    int i30 = classUnderTest0.add(1529, 954);
-    int i33 = classUnderTest0.add(11, 6091);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(452, 124);
+    int i18 = classUnderTest0.add(219, 703);
+    int i21 = classUnderTest0.add(0, 1336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 576);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
+    org.junit.Assert.assertTrue(i18 == 922);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 982);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2483);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 6102);
+    org.junit.Assert.assertTrue(i21 == 1336);
 
   }
 
@@ -9427,34 +7591,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(1163, 366);
-    int i15 = classUnderTest0.add(267, 0);
-    int i18 = classUnderTest0.add(118, 787);
-    int i21 = classUnderTest0.add(3062, 3160);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(42, 218);
+    int i15 = classUnderTest0.add(1094, 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1529);
+    org.junit.Assert.assertTrue(i12 == 260);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 267);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 905);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6222);
+    org.junit.Assert.assertTrue(i15 == 1126);
 
   }
 
@@ -9465,26 +7621,54 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(410, 198);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(438, 265);
+    int i18 = classUnderTest0.add(222, 218);
+    int i21 = classUnderTest0.add(567, 12);
+    int i24 = classUnderTest0.add(114, 108);
+    int i27 = classUnderTest0.add(3302, 107);
+    int i30 = classUnderTest0.add(1689, 33);
+    int i33 = classUnderTest0.add(157, 3181);
+    int i36 = classUnderTest0.add(703, 1301);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 608);
+    org.junit.Assert.assertTrue(i15 == 703);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 440);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 579);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 222);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 3409);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 1722);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i33 == 3338);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i36 == 2004);
 
   }
 
@@ -9495,46 +7679,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(940, 42);
-    int i27 = classUnderTest0.add(1791, (int)(short)100);
-    int i30 = classUnderTest0.add(17245, 7822);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(6153, 2062);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 982);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1891);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 25067);
+    org.junit.Assert.assertTrue(i15 == 8215);
 
   }
 
@@ -9545,50 +7709,38 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add(34, 298);
-    int i24 = classUnderTest0.add(502, 234);
-    int i27 = classUnderTest0.add(1248, 3009);
-    int i30 = classUnderTest0.add(754, 0);
-    int i33 = classUnderTest0.add(16968, 202);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add((int)' ', 132);
+    int i15 = classUnderTest0.add(0, 34);
+    int i18 = classUnderTest0.add(404, 130);
+    int i21 = classUnderTest0.add(438, 249);
+    int i24 = classUnderTest0.add(440, 2676);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 164);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
+    org.junit.Assert.assertTrue(i15 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
+    org.junit.Assert.assertTrue(i18 == 534);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
+    org.junit.Assert.assertTrue(i21 == 687);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 736);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4257);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 754);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 17170);
+    org.junit.Assert.assertTrue(i24 == 3116);
 
   }
 
@@ -9599,50 +7751,14 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(147, 1296);
-    int i24 = classUnderTest0.add(94, 241);
-    int i27 = classUnderTest0.add(2247, 0);
-    int i30 = classUnderTest0.add(4453, 1270);
-    int i33 = classUnderTest0.add(1249, 7300);
+    int i3 = classUnderTest0.add(162, 175);
+    int i6 = classUnderTest0.add(780, 1084);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 337);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1443);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 335);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2247);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5723);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 8549);
+    org.junit.Assert.assertTrue(i6 == 1864);
 
   }
 
@@ -9653,46 +7769,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add(197, 10);
-    int i24 = classUnderTest0.add((int)(short)0, 149);
-    int i27 = classUnderTest0.add(681, 3569);
-    int i30 = classUnderTest0.add(4568, 9446);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(0, 132);
+    int i18 = classUnderTest0.add(770, 154);
+    int i21 = classUnderTest0.add(341, 133);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
+    org.junit.Assert.assertTrue(i15 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
+    org.junit.Assert.assertTrue(i18 == 924);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 14014);
+    org.junit.Assert.assertTrue(i21 == 474);
 
   }
 
@@ -9703,34 +7807,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add(950, 517);
-    int i15 = classUnderTest0.add(398, 6404);
-    int i18 = classUnderTest0.add(20225, 781);
-    int i21 = classUnderTest0.add(2262, 2446);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((int)'#', 119);
+    int i18 = classUnderTest0.add(413, 3396);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1467);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6802);
+    org.junit.Assert.assertTrue(i15 == 154);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 21006);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4708);
+    org.junit.Assert.assertTrue(i18 == 3809);
 
   }
 
@@ -9741,26 +7841,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(1700, 3983);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(9, (int)(byte)100);
+    int i9 = classUnderTest0.add(394, 482);
+    int i12 = classUnderTest0.add((int)(short)1, (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 109);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 876);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 5683);
+    org.junit.Assert.assertTrue(i12 == 0);
 
   }
 
@@ -9771,38 +7867,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(410, 0);
-    int i24 = classUnderTest0.add(1673, 7958);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(42, (int)(byte)10);
+    int i15 = classUnderTest0.add(336, 98);
+    int i18 = classUnderTest0.add(9, 283);
+    int i21 = classUnderTest0.add(1647, 865);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 52);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
+    org.junit.Assert.assertTrue(i15 == 434);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
+    org.junit.Assert.assertTrue(i18 == 292);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 410);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9631);
+    org.junit.Assert.assertTrue(i21 == 2512);
 
   }
 
@@ -9813,54 +7905,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add((int)(short)10, 760);
-    int i30 = classUnderTest0.add(0, 463);
-    int i33 = classUnderTest0.add(3220, 3684);
-    int i36 = classUnderTest0.add(1518, 633);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(1, 1);
+    int i12 = classUnderTest0.add(101, 337);
+    int i15 = classUnderTest0.add(0, 129);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 2);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 438);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 770);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 463);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 6904);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2151);
+    org.junit.Assert.assertTrue(i15 == 129);
 
   }
 
@@ -9871,46 +7935,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(1077, 486);
-    int i30 = classUnderTest0.add(1350, 17374);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(232, (-1));
+    int i12 = classUnderTest0.add(401, 277);
+    int i15 = classUnderTest0.add(1, 156);
+    int i18 = classUnderTest0.add(634, 1126);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 231);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 678);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 157);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 18724);
+    org.junit.Assert.assertTrue(i18 == 1760);
 
   }
 
@@ -9921,34 +7969,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(635, 303);
-    int i18 = classUnderTest0.add(4019, 760);
-    int i21 = classUnderTest0.add(3828, 20);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(122, 2);
+    int i12 = classUnderTest0.add(196, 438);
+    int i15 = classUnderTest0.add(154, 970);
+    int i18 = classUnderTest0.add(231, 2332);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 634);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 938);
+    org.junit.Assert.assertTrue(i15 == 1124);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4779);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3848);
+    org.junit.Assert.assertTrue(i18 == 2563);
 
   }
 
@@ -9959,42 +8003,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(1891, 51);
-    int i27 = classUnderTest0.add(2290, 3834);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add(35, 394);
+    int i18 = classUnderTest0.add(622, 33);
+    int i21 = classUnderTest0.add(1578, 151);
+    int i24 = classUnderTest0.add(10, 1071);
+    int i27 = classUnderTest0.add(1457, 149);
+    int i30 = classUnderTest0.add(736, 1373);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 429);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
+    org.junit.Assert.assertTrue(i21 == 1729);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1942);
+    org.junit.Assert.assertTrue(i24 == 1081);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6124);
+    org.junit.Assert.assertTrue(i27 == 1606);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 2109);
 
   }
 
@@ -10005,46 +8053,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(10, (int)(byte)10);
-    int i30 = classUnderTest0.add(11800, 21270);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add((int)(byte)100, 524);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 33070);
+    org.junit.Assert.assertTrue(i12 == 624);
 
   }
 
@@ -10055,42 +8079,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(205, 10);
-    int i18 = classUnderTest0.add(1, 791);
-    int i21 = classUnderTest0.add(1626, 533);
-    int i24 = classUnderTest0.add(1315, 154);
-    int i27 = classUnderTest0.add(5018, 209);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add(84, (int)(byte)10);
+    int i9 = classUnderTest0.add(67, (int)(byte)100);
+    int i12 = classUnderTest0.add(1057, 975);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == 94);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 167);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 792);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2159);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1469);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5227);
+    org.junit.Assert.assertTrue(i12 == 2032);
 
   }
 
@@ -10101,42 +8105,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(151, 197);
-    int i21 = classUnderTest0.add(703, 95);
-    int i24 = classUnderTest0.add(892, 2005);
-    int i27 = classUnderTest0.add(23812, 1995);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(164, 175);
+    int i12 = classUnderTest0.add(153, 31);
+    int i15 = classUnderTest0.add(0, 152);
+    int i18 = classUnderTest0.add(521, (int)(short)10);
+    int i21 = classUnderTest0.add(434, 53);
+    int i24 = classUnderTest0.add(1221, 1111);
+    int i27 = classUnderTest0.add(232, 583);
+    int i30 = classUnderTest0.add(31, 1317);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 339);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 184);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 152);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 348);
+    org.junit.Assert.assertTrue(i18 == 531);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 798);
+    org.junit.Assert.assertTrue(i21 == 487);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2897);
+    org.junit.Assert.assertTrue(i24 == 2332);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 25807);
+    org.junit.Assert.assertTrue(i27 == 815);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i30 == 1348);
 
   }
 
@@ -10147,42 +8155,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add(34, 298);
-    int i24 = classUnderTest0.add(517, 1834);
-    int i27 = classUnderTest0.add(15994, 307);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(452, 222);
+    int i15 = classUnderTest0.add(1463, 2224);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
+    org.junit.Assert.assertTrue(i12 == 674);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2351);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 16301);
+    org.junit.Assert.assertTrue(i15 == 3687);
 
   }
 
@@ -10193,42 +8185,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add((int)'#', (int)(byte)-1);
-    int i21 = classUnderTest0.add(786, 206);
-    int i24 = classUnderTest0.add(0, 147);
-    int i27 = classUnderTest0.add(3440, 4480);
+    int i3 = classUnderTest0.add((int)(short)10, 0);
+    int i6 = classUnderTest0.add((int)(short)0, 69);
+    int i9 = classUnderTest0.add(119, 1241);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 69);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7920);
+    org.junit.Assert.assertTrue(i9 == 1360);
 
   }
 
@@ -10239,54 +8207,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(323, 2104);
-    int i24 = classUnderTest0.add(145, 97);
-    int i27 = classUnderTest0.add(1762, 1777);
-    int i30 = classUnderTest0.add(2288, 1609);
-    int i33 = classUnderTest0.add(7405, 9699);
-    int i36 = classUnderTest0.add(6389, 517);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(493, 549);
+    int i18 = classUnderTest0.add(567, 585);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
+    org.junit.Assert.assertTrue(i15 == 1042);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2427);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3897);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 17104);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6906);
+    org.junit.Assert.assertTrue(i18 == 1152);
 
   }
 
@@ -10297,42 +8241,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(7284, 3277);
-    int i27 = classUnderTest0.add(5371, 7861);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(0, 101);
+    int i15 = classUnderTest0.add(3410, 865);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 10561);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 13232);
+    org.junit.Assert.assertTrue(i15 == 4275);
 
   }
 
@@ -10343,34 +8271,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)-1, 197);
-    int i18 = classUnderTest0.add((int)(byte)0, 549);
-    int i21 = classUnderTest0.add(3220, 3337);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(100, 2);
+    int i15 = classUnderTest0.add(101, 0);
+    int i18 = classUnderTest0.add(728, 655);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 102);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 196);
+    org.junit.Assert.assertTrue(i15 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 549);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6557);
+    org.junit.Assert.assertTrue(i18 == 1383);
 
   }
 
@@ -10381,58 +8305,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add((int)(short)10, 205);
-    int i27 = classUnderTest0.add(1077, 173);
-    int i30 = classUnderTest0.add(552, 1791);
-    int i33 = classUnderTest0.add(1156, 208);
-    int i36 = classUnderTest0.add(603, 609);
-    int i39 = classUnderTest0.add(1140, 1792);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)(short)0, 98);
+    int i9 = classUnderTest0.add(69, 84);
+    int i12 = classUnderTest0.add(151, 185);
+    int i15 = classUnderTest0.add(132, 2224);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1364);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1212);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 2932);
+    org.junit.Assert.assertTrue(i15 == 2356);
 
   }
 
@@ -10443,42 +8335,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(2511, 3009);
-    int i24 = classUnderTest0.add(411, 214);
-    int i27 = classUnderTest0.add(968, 8663);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add((-1), 3633);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5520);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 625);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9631);
+    org.junit.Assert.assertTrue(i21 == 3632);
 
   }
 
@@ -10489,50 +8373,26 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(992, 118);
-    int i27 = classUnderTest0.add(2572, 3347);
-    int i30 = classUnderTest0.add(3355, 4306);
-    int i33 = classUnderTest0.add(4568, 1887);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(549, 1071);
+    int i15 = classUnderTest0.add(490, 8215);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 394);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 1620);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1110);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5919);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7661);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 6455);
+    org.junit.Assert.assertTrue(i15 == 8705);
 
   }
 
@@ -10543,26 +8403,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(1511, 6421);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)' ', (-1));
+    int i12 = classUnderTest0.add((int)(byte)100, 52);
+    int i15 = classUnderTest0.add((int)(byte)100, 162);
+    int i18 = classUnderTest0.add(1108, 1116);
+    int i21 = classUnderTest0.add(109, 262);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 152);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 7932);
+    org.junit.Assert.assertTrue(i15 == 262);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 2224);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 371);
 
   }
 
@@ -10573,38 +8441,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)0, (int)'4');
-    int i18 = classUnderTest0.add(52, 796);
-    int i21 = classUnderTest0.add(1163, 197);
-    int i24 = classUnderTest0.add(151, 2555);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(122, 53);
+    int i12 = classUnderTest0.add(0, 63);
+    int i15 = classUnderTest0.add(780, 67);
+    int i18 = classUnderTest0.add(924, 1632);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 175);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 52);
+    org.junit.Assert.assertTrue(i15 == 847);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 848);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1360);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2706);
+    org.junit.Assert.assertTrue(i18 == 2556);
 
   }
 
@@ -10615,38 +8475,34 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add((int)(short)100, (int)(byte)0);
-    int i21 = classUnderTest0.add(410, (int)(byte)0);
-    int i24 = classUnderTest0.add(9480, 786);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(53, 69);
+    int i12 = classUnderTest0.add(69, 394);
+    int i15 = classUnderTest0.add(1373, 1081);
+    int i18 = classUnderTest0.add(68, (int)(byte)-1);
+    int i21 = classUnderTest0.add(824, 555);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 463);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
+    org.junit.Assert.assertTrue(i15 == 2454);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 100);
+    org.junit.Assert.assertTrue(i18 == 67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 410);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 10266);
+    org.junit.Assert.assertTrue(i21 == 1379);
 
   }
 
@@ -10657,54 +8513,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)(byte)10, 197);
-    int i24 = classUnderTest0.add(105, 34);
-    int i27 = classUnderTest0.add(98, 150);
-    int i30 = classUnderTest0.add(770, 564);
-    int i33 = classUnderTest0.add(205, 206);
-    int i36 = classUnderTest0.add(14245, 706);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add((int)(short)0, (int)'a');
+    int i12 = classUnderTest0.add(10, 53);
+    int i15 = classUnderTest0.add(69, 1689);
+    int i18 = classUnderTest0.add(281, 1057);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
+    org.junit.Assert.assertTrue(i9 == 97);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
+    org.junit.Assert.assertTrue(i12 == 63);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
+    org.junit.Assert.assertTrue(i15 == 1758);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 139);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 248);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 411);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 14951);
+    org.junit.Assert.assertTrue(i18 == 1338);
 
   }
 
@@ -10715,34 +8547,18 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)' ', 106);
-    int i18 = classUnderTest0.add(0, 145);
-    int i21 = classUnderTest0.add(1534, 8856);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add(296, 285);
+    int i9 = classUnderTest0.add(811, 690);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 581);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 138);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 145);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10390);
+    org.junit.Assert.assertTrue(i9 == 1501);
 
   }
 
@@ -10753,46 +8569,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(517, 269);
-    int i27 = classUnderTest0.add(898, 879);
-    int i30 = classUnderTest0.add(13191, 1940);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(53, 100);
+    int i12 = classUnderTest0.add(102, 63);
+    int i15 = classUnderTest0.add(438, 265);
+    int i18 = classUnderTest0.add(222, 218);
+    int i21 = classUnderTest0.add(567, 12);
+    int i24 = classUnderTest0.add(53, 0);
+    int i27 = classUnderTest0.add(4275, 167);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
+    org.junit.Assert.assertTrue(i12 == 165);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
+    org.junit.Assert.assertTrue(i15 == 703);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
+    org.junit.Assert.assertTrue(i18 == 440);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
+    org.junit.Assert.assertTrue(i21 == 579);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 786);
+    org.junit.Assert.assertTrue(i24 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1777);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 15131);
+    org.junit.Assert.assertTrue(i27 == 4442);
 
   }
 
@@ -10803,18 +8615,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(3177, 502);
-    int i9 = classUnderTest0.add(1572, 4627);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', (int)'4');
+    int i9 = classUnderTest0.add(98, 296);
+    int i12 = classUnderTest0.add(549, 1071);
+    int i15 = classUnderTest0.add(0, 583);
+    int i18 = classUnderTest0.add(980, 2122);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 3679);
+    org.junit.Assert.assertTrue(i6 == 84);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 6199);
+    org.junit.Assert.assertTrue(i9 == 394);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 1620);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 583);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 3102);
 
   }
 
@@ -10825,38 +8649,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add((int)(short)100, (int)(byte)0);
-    int i21 = classUnderTest0.add(0, 241);
-    int i24 = classUnderTest0.add(3543, 781);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add(67, 52);
+    int i12 = classUnderTest0.add(521, 98);
+    int i15 = classUnderTest0.add(3015, 345);
+    int i18 = classUnderTest0.add(5661, 2880);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 119);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
+    org.junit.Assert.assertTrue(i12 == 619);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
+    org.junit.Assert.assertTrue(i15 == 3360);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4324);
+    org.junit.Assert.assertTrue(i18 == 8541);
 
   }
 
@@ -10867,46 +8683,46 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(940, 42);
-    int i27 = classUnderTest0.add(605, 2340);
-    int i30 = classUnderTest0.add(847, 17525);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add((int)(short)1, 97);
+    int i15 = classUnderTest0.add((int)'4', 101);
+    int i18 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i21 = classUnderTest0.add(132, (int)(short)0);
+    int i24 = classUnderTest0.add(175, 307);
+    int i27 = classUnderTest0.add(553, 167);
+    int i30 = classUnderTest0.add(8541, 1360);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
+    org.junit.Assert.assertTrue(i12 == 98);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
+    org.junit.Assert.assertTrue(i15 == 153);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
+    org.junit.Assert.assertTrue(i18 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
+    org.junit.Assert.assertTrue(i21 == 132);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 982);
+    org.junit.Assert.assertTrue(i24 == 482);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2945);
+    org.junit.Assert.assertTrue(i27 == 720);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 18372);
+    org.junit.Assert.assertTrue(i30 == 9901);
 
   }
 
@@ -10917,34 +8733,42 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(197, 151);
-    int i18 = classUnderTest0.add((int)(short)100, 914);
-    int i21 = classUnderTest0.add(9727, 2340);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(34, (int)(short)0);
+    int i12 = classUnderTest0.add((int)(short)1, (int)(short)100);
+    int i15 = classUnderTest0.add((-1), 32);
+    int i18 = classUnderTest0.add((int)' ', (int)(byte)-1);
+    int i21 = classUnderTest0.add(100, (int)(byte)0);
+    int i24 = classUnderTest0.add((int)(short)0, 534);
+    int i27 = classUnderTest0.add(757, 1008);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
+    org.junit.Assert.assertTrue(i12 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 348);
+    org.junit.Assert.assertTrue(i15 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1014);
+    org.junit.Assert.assertTrue(i18 == 31);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 12067);
+    org.junit.Assert.assertTrue(i21 == 100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 534);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 1765);
 
   }
 
@@ -10955,46 +8779,22 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(736, 0);
-    int i27 = classUnderTest0.add(1763, 913);
-    int i30 = classUnderTest0.add(466, 410);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add(1, (int)'4');
+    int i9 = classUnderTest0.add(0, 32);
+    int i12 = classUnderTest0.add(834, 770);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
+    org.junit.Assert.assertTrue(i6 == 53);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 736);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2676);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 876);
+    org.junit.Assert.assertTrue(i12 == 1604);
 
   }
 
@@ -11005,38 +8805,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(197, 1109);
-    int i24 = classUnderTest0.add(1990, 2867);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)(byte)0);
+    int i6 = classUnderTest0.add((-1), (int)(byte)0);
+    int i9 = classUnderTest0.add(69, (-1));
+    int i12 = classUnderTest0.add(482, 133);
+    int i15 = classUnderTest0.add(281, 960);
+    int i18 = classUnderTest0.add(2062, 1094);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
+    org.junit.Assert.assertTrue(i6 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
+    org.junit.Assert.assertTrue(i9 == 68);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
+    org.junit.Assert.assertTrue(i12 == 615);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
+    org.junit.Assert.assertTrue(i15 == 1241);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1306);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4857);
+    org.junit.Assert.assertTrue(i18 == 3156);
 
   }
 
@@ -11047,11020 +8839,30 @@ public class RegressionTest0 {
 
 
     ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(323, 2104);
-    int i24 = classUnderTest0.add(145, 97);
-    int i27 = classUnderTest0.add(3160, 0);
-    int i30 = classUnderTest0.add(1932, 0);
-    int i33 = classUnderTest0.add(4041, 14639);
+    int i3 = classUnderTest0.add((int)(byte)-1, (int)'#');
+    int i6 = classUnderTest0.add((int)' ', 0);
+    int i9 = classUnderTest0.add((int)(short)1, 31);
+    int i12 = classUnderTest0.add(0, 189);
+    int i15 = classUnderTest0.add(615, 970);
+    int i18 = classUnderTest0.add(1357, 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
+    org.junit.Assert.assertTrue(i6 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
+    org.junit.Assert.assertTrue(i9 == 32);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
+    org.junit.Assert.assertTrue(i12 == 189);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
+    org.junit.Assert.assertTrue(i15 == 1585);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2427);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3160);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1932);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 18680);
-
-  }
-
-  @Test
-  public void test260() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test260"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(179, 549);
-    int i21 = classUnderTest0.add(1443, 448);
-    int i24 = classUnderTest0.add(1563, 451);
-    int i27 = classUnderTest0.add(857, 6220);
-    int i30 = classUnderTest0.add(53, 4755);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1891);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2014);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7077);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4808);
-
-  }
-
-  @Test
-  public void test261() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test261"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(205, 10);
-    int i18 = classUnderTest0.add(1, 791);
-    int i21 = classUnderTest0.add(0, 1932);
-    int i24 = classUnderTest0.add(1827, 6116);
-    int i27 = classUnderTest0.add(954, 150);
-    int i30 = classUnderTest0.add(0, 8679);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 792);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1932);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7943);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1104);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 8679);
-
-  }
-
-  @Test
-  public void test262() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test262"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(97, 0);
-    int i30 = classUnderTest0.add(533, 796);
-    int i33 = classUnderTest0.add(2887, 2717);
-    int i36 = classUnderTest0.add(2080, 1424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1329);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5604);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 3504);
-
-  }
-
-  @Test
-  public void test263() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test263"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(147, 564);
-    int i21 = classUnderTest0.add(0, 298);
-    int i24 = classUnderTest0.add(2706, 2066);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 711);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 298);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4772);
-
-  }
-
-  @Test
-  public void test264() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test264"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(147, 1296);
-    int i24 = classUnderTest0.add(94, 241);
-    int i27 = classUnderTest0.add(1026, 8539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1443);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 335);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9565);
-
-  }
-
-  @Test
-  public void test265() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test265"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add((int)(byte)1, 786);
-    int i21 = classUnderTest0.add(549, 1594);
-    int i24 = classUnderTest0.add(3983, (int)(short)10);
-    int i27 = classUnderTest0.add(1363, 3287);
-    int i30 = classUnderTest0.add(1956, 2693);
-    int i33 = classUnderTest0.add(8483, 179);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 787);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2143);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3993);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4650);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4649);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 8662);
-
-  }
-
-  @Test
-  public void test266() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test266"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(261, 1529);
-    int i33 = classUnderTest0.add(236, 214);
-    int i36 = classUnderTest0.add(1791, 633);
-    int i39 = classUnderTest0.add(1932, 5548);
-    int i42 = classUnderTest0.add(982, 5077);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1790);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 450);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 7480);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 6059);
-
-  }
-
-  @Test
-  public void test267() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test267"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(952, 139);
-    int i24 = classUnderTest0.add(533, 202);
-    int i27 = classUnderTest0.add(1026, 1054);
-    int i30 = classUnderTest0.add(1903, 2557);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 735);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2080);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4460);
-
-  }
-
-  @Test
-  public void test268() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test268"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(4898, 303);
-    int i27 = classUnderTest0.add(2610, 5018);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5201);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7628);
-
-  }
-
-  @Test
-  public void test269() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test269"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add((int)(short)10, 331);
-    int i27 = classUnderTest0.add(197, 2980);
-    int i30 = classUnderTest0.add(3357, 3285);
-    int i33 = classUnderTest0.add(3873, 6571);
-    int i36 = classUnderTest0.add(1631, 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 341);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3177);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6642);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 10444);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1997);
-
-  }
-
-  @Test
-  public void test270() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test270"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(323, 3220);
-    int i27 = classUnderTest0.add(574, 0);
-    int i30 = classUnderTest0.add(198, 5518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3543);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 574);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5716);
-
-  }
-
-  @Test
-  public void test271() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test271"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add((int)'#', (int)(byte)-1);
-    int i21 = classUnderTest0.add(786, 206);
-    int i24 = classUnderTest0.add(0, 147);
-    int i27 = classUnderTest0.add(182, 5259);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5441);
-
-  }
-
-  @Test
-  public void test272() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test272"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(635, 303);
-    int i18 = classUnderTest0.add(4019, 760);
-    int i21 = classUnderTest0.add(486, 2104);
-    int i24 = classUnderTest0.add(10, 301);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 938);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4779);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2590);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 311);
-
-  }
-
-  @Test
-  public void test273() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test273"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(261, 1529);
-    int i33 = classUnderTest0.add(236, 214);
-    int i36 = classUnderTest0.add(1907, 5069);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1790);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 450);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6976);
-
-  }
-
-  @Test
-  public void test274() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test274"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(651, 301);
-    int i12 = classUnderTest0.add(4660, 398);
-    int i15 = classUnderTest0.add(1891, 217);
-    int i18 = classUnderTest0.add(1972, 1130);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 952);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 5058);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3102);
-
-  }
-
-  @Test
-  public void test275() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test275"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(512, 97);
-    int i21 = classUnderTest0.add(318, 3310);
-    int i24 = classUnderTest0.add(4041, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3628);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4041);
-
-  }
-
-  @Test
-  public void test276() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test276"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add((int)'#', (int)(byte)-1);
-    int i21 = classUnderTest0.add(786, 206);
-    int i24 = classUnderTest0.add(611, 703);
-    int i27 = classUnderTest0.add(819, 8614);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9433);
-
-  }
-
-  @Test
-  public void test277() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test277"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add(52, 209);
-    int i21 = classUnderTest0.add(331, 1897);
-    int i24 = classUnderTest0.add(635, 3648);
-    int i27 = classUnderTest0.add(17245, 2980);
-    int i30 = classUnderTest0.add(6091, 1026);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 261);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2228);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4283);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20225);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7117);
-
-  }
-
-  @Test
-  public void test278() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test278"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(651, 301);
-    int i12 = classUnderTest0.add(331, 117);
-    int i15 = classUnderTest0.add(4283, 16968);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 952);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 448);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 21251);
-
-  }
-
-  @Test
-  public void test279() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test279"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(1963, 4789);
-    int i18 = classUnderTest0.add(4366, 6948);
-    int i21 = classUnderTest0.add(180, 2343);
-    int i24 = classUnderTest0.add(898, 7641);
-    int i27 = classUnderTest0.add(5430, 849);
-    int i30 = classUnderTest0.add(1975, 242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2523);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6279);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2217);
-
-  }
-
-  @Test
-  public void test280() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test280"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(512, 97);
-    int i21 = classUnderTest0.add(105, 298);
-    int i24 = classUnderTest0.add(3009, 53);
-    int i27 = classUnderTest0.add(269, 0);
-    int i30 = classUnderTest0.add(4366, 7924);
-    int i33 = classUnderTest0.add(706, 6920);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 403);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3062);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 12290);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 7626);
-
-  }
-
-  @Test
-  public void test281() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test281"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(968, 202);
-    int i27 = classUnderTest0.add(0, 4904);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1170);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4904);
-
-  }
-
-  @Test
-  public void test282() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test282"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add(3150, 502);
-    int i27 = classUnderTest0.add(914, 510);
-    int i30 = classUnderTest0.add(11720, 1953);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3652);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13673);
-
-  }
-
-  @Test
-  public void test283() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test283"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(736, 0);
-    int i27 = classUnderTest0.add(138, 996);
-    int i30 = classUnderTest0.add(6112, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 736);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1134);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6112);
-
-  }
-
-  @Test
-  public void test284() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test284"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add(197, 10);
-    int i24 = classUnderTest0.add((int)(short)0, 149);
-    int i27 = classUnderTest0.add(681, 3569);
-    int i30 = classUnderTest0.add(8619, 10810);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 19429);
-
-  }
-
-  @Test
-  public void test285() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test285"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(53, 512);
-    int i24 = classUnderTest0.add(564, 2294);
-    int i27 = classUnderTest0.add(7237, 5161);
-    int i30 = classUnderTest0.add(3094, 12699);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2858);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 12398);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 15793);
-
-  }
-
-  @Test
-  public void test286() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test286"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(269, 233);
-    int i21 = classUnderTest0.add(2873, 7808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 502);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10681);
-
-  }
-
-  @Test
-  public void test287() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test287"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(635, 348);
-    int i24 = classUnderTest0.add(2427, 4098);
-    int i27 = classUnderTest0.add(736, 2057);
-    int i30 = classUnderTest0.add(2590, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 983);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6525);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2793);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2590);
-
-  }
-
-  @Test
-  public void test288() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test288"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 52);
-    int i21 = classUnderTest0.add(2966, 4257);
-    int i24 = classUnderTest0.add(0, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 564);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7223);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 0);
-
-  }
-
-  @Test
-  public void test289() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test289"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(237, 1103);
-    int i21 = classUnderTest0.add(633, 3766);
-    int i24 = classUnderTest0.add(549, 3941);
-    int i27 = classUnderTest0.add(3858, 1442);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1340);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4399);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4490);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5300);
-
-  }
-
-  @Test
-  public void test290() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test290"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(3334, 17104);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 20438);
-
-  }
-
-  @Test
-  public void test291() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test291"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(808, 237);
-    int i24 = classUnderTest0.add(2607, 5493);
-    int i27 = classUnderTest0.add(3679, 1295);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1045);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4974);
-
-  }
-
-  @Test
-  public void test292() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test292"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(byte)1, 448);
-    int i21 = classUnderTest0.add(309, 1687);
-    int i24 = classUnderTest0.add(1953, 5319);
-    int i27 = classUnderTest0.add(906, 4838);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 449);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1996);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7272);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5744);
-
-  }
-
-  @Test
-  public void test293() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test293"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(197, 611);
-    int i15 = classUnderTest0.add(835, 197);
-    int i18 = classUnderTest0.add(5945, 2108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1032);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 8053);
-
-  }
-
-  @Test
-  public void test294() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test294"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(347, 1037);
-    int i24 = classUnderTest0.add(2162, 1270);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1384);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3432);
-
-  }
-
-  @Test
-  public void test295() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test295"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(97, 1529);
-    int i21 = classUnderTest0.add(311, 253);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1626);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 564);
-
-  }
-
-  @Test
-  public void test296() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test296"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(1887, 7077);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 8964);
-
-  }
-
-  @Test
-  public void test297() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test297"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 635);
-    int i15 = classUnderTest0.add(772, 36);
-    int i18 = classUnderTest0.add(1827, 7223);
-    int i21 = classUnderTest0.add(18213, 8663);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 9050);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 26876);
-
-  }
-
-  @Test
-  public void test298() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test298"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add((int)' ', 205);
-    int i18 = classUnderTest0.add(0, 2741);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 237);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2741);
-
-  }
-
-  @Test
-  public void test299() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test299"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(3854, 4635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 8489);
-
-  }
-
-  @Test
-  public void test300() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test300"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(4257, 217);
-    int i24 = classUnderTest0.add(8943, 3440);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4474);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 12383);
-
-  }
-
-  @Test
-  public void test301() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test301"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add((int)'#', (int)(byte)-1);
-    int i21 = classUnderTest0.add(786, 206);
-    int i24 = classUnderTest0.add(611, 703);
-    int i27 = classUnderTest0.add(643, 24171);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 24814);
-
-  }
-
-  @Test
-  public void test302() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test302"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(3060, 1541);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4601);
-
-  }
-
-  @Test
-  public void test303() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test303"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'#', 633);
-    int i24 = classUnderTest0.add(728, 711);
-    int i27 = classUnderTest0.add(205, 3357);
-    int i30 = classUnderTest0.add(1481, 1942);
-    int i33 = classUnderTest0.add(202, 770);
-    int i36 = classUnderTest0.add(7653, 6592);
-    int i39 = classUnderTest0.add(4957, 2080);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 668);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1439);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3562);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3423);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 972);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 14245);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 7037);
-
-  }
-
-  @Test
-  public void test304() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test304"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(1296, 479);
-    int i9 = classUnderTest0.add(1260, 2728);
-    int i12 = classUnderTest0.add(410, 323);
-    int i15 = classUnderTest0.add(0, 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 1775);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 3988);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 733);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-
-  }
-
-  @Test
-  public void test305() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test305"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 552);
-    int i15 = classUnderTest0.add(118, 84);
-    int i18 = classUnderTest0.add(1110, 343);
-    int i21 = classUnderTest0.add(512, 300);
-    int i24 = classUnderTest0.add(2563, 234);
-    int i27 = classUnderTest0.add(0, 1572);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 202);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1453);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 812);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2797);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1572);
-
-  }
-
-  @Test
-  public void test306() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test306"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(6081, 98);
-    int i21 = classUnderTest0.add(3966, 8508);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 6179);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 12474);
-
-  }
-
-  @Test
-  public void test307() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test307"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(3399, 2717);
-    int i18 = classUnderTest0.add(5545, 2267);
-    int i21 = classUnderTest0.add(3263, 1990);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 7812);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5253);
-
-  }
-
-  @Test
-  public void test308() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test308"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(1110, 796);
-    int i33 = classUnderTest0.add(1401, 1156);
-    int i36 = classUnderTest0.add(1065, 1223);
-    int i39 = classUnderTest0.add(1995, 6948);
-    int i42 = classUnderTest0.add(12067, 4769);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1906);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2557);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2288);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 8943);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 16836);
-
-  }
-
-  @Test
-  public void test309() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test309"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(651, 301);
-    int i12 = classUnderTest0.add(331, 117);
-    int i15 = classUnderTest0.add(1127, 668);
-    int i18 = classUnderTest0.add(7920, 3150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 952);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 448);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1795);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11070);
-
-  }
-
-  @Test
-  public void test310() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test310"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(2057, 1220);
-    int i18 = classUnderTest0.add(105, 145);
-    int i21 = classUnderTest0.add(0, 2572);
-    int i24 = classUnderTest0.add(405, 298);
-    int i27 = classUnderTest0.add(914, 14656);
-    int i30 = classUnderTest0.add(3017, 13714);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3277);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2572);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 703);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 15570);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 16731);
-
-  }
-
-  @Test
-  public void test311() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test311"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(347, 1037);
-    int i24 = classUnderTest0.add(267, 414);
-    int i27 = classUnderTest0.add(6275, 1582);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1384);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 681);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7857);
-
-  }
-
-  @Test
-  public void test312() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test312"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(179, 549);
-    int i21 = classUnderTest0.add(1443, 448);
-    int i24 = classUnderTest0.add(1563, 451);
-    int i27 = classUnderTest0.add(2288, 1309);
-    int i30 = classUnderTest0.add(1235, 3941);
-    int i33 = classUnderTest0.add(16836, 2980);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1891);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2014);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3597);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5176);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 19816);
-
-  }
-
-  @Test
-  public void test313() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test313"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add((int)(byte)10, 502);
-    int i21 = classUnderTest0.add(850, 2343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 512);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3193);
-
-  }
-
-  @Test
-  public void test314() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test314"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(53, 42);
-    int i24 = classUnderTest0.add(236, 772);
-    int i27 = classUnderTest0.add(568, 433);
-    int i30 = classUnderTest0.add(4019, 1052);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 95);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1008);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5071);
-
-  }
-
-  @Test
-  public void test315() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test315"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(209, 1);
-    int i15 = classUnderTest0.add(10875, 12022);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 210);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 22897);
-
-  }
-
-  @Test
-  public void test316() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test316"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1432, 1394);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2826);
-
-  }
-
-  @Test
-  public void test317() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test317"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(1291, 3525);
-    int i18 = classUnderTest0.add(3280, 510);
-    int i21 = classUnderTest0.add(1948, 2544);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 4816);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3790);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4492);
-
-  }
-
-  @Test
-  public void test318() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test318"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(1329, 1891);
-    int i18 = classUnderTest0.add(237, 2557);
-    int i21 = classUnderTest0.add(0, 2344);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3220);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2794);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2344);
-
-  }
-
-  @Test
-  public void test319() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test319"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(20, 153);
-    int i6 = classUnderTest0.add(4452, 8247);
-    int i9 = classUnderTest0.add(14245, 1660);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 173);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 12699);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 15905);
-
-  }
-
-  @Test
-  public void test320() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test320"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(2057, 1220);
-    int i18 = classUnderTest0.add(105, 145);
-    int i21 = classUnderTest0.add(0, 2572);
-    int i24 = classUnderTest0.add(405, 298);
-    int i27 = classUnderTest0.add(304, 217);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3277);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2572);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 703);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 521);
-
-  }
-
-  @Test
-  public void test321() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test321"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add((int)(byte)100, 98);
-    int i18 = classUnderTest0.add(206, 97);
-    int i21 = classUnderTest0.add(2381, 899);
-    int i24 = classUnderTest0.add(12383, 3277);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 198);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 303);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 15660);
-
-  }
-
-  @Test
-  public void test322() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test322"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(325, 17104);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 17429);
-
-  }
-
-  @Test
-  public void test323() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test323"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(1296, 2563);
-    int i24 = classUnderTest0.add(17874, 3518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3859);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 21392);
-
-  }
-
-  @Test
-  public void test324() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test324"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'#', 633);
-    int i24 = classUnderTest0.add(728, 711);
-    int i27 = classUnderTest0.add(1223, 611);
-    int i30 = classUnderTest0.add(4426, 53);
-    int i33 = classUnderTest0.add(4322, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 668);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1439);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1834);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4322);
-
-  }
-
-  @Test
-  public void test325() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test325"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'#', 633);
-    int i24 = classUnderTest0.add(728, 711);
-    int i27 = classUnderTest0.add(1223, 611);
-    int i30 = classUnderTest0.add(3808, 3145);
-    int i33 = classUnderTest0.add(4015, 1593);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 668);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1439);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1834);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6953);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5608);
-
-  }
-
-  @Test
-  public void test326() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test326"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add((int)(byte)100, 53);
-    int i24 = classUnderTest0.add(217, 366);
-    int i27 = classUnderTest0.add(370, 1007);
-    int i30 = classUnderTest0.add(9446, 3899);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 583);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1377);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13345);
-
-  }
-
-  @Test
-  public void test327() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test327"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add((int)(short)10, 331);
-    int i27 = classUnderTest0.add(197, 2980);
-    int i30 = classUnderTest0.add(3357, 3285);
-    int i33 = classUnderTest0.add(3873, 6571);
-    int i36 = classUnderTest0.add(7237, 756);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 341);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3177);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6642);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 10444);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 7993);
-
-  }
-
-  @Test
-  public void test328() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test328"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)'a', 100);
-    int i12 = classUnderTest0.add(772, 107);
-    int i15 = classUnderTest0.add(1401, 6028);
-    int i18 = classUnderTest0.add(5000, 5000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 879);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 7429);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 10000);
-
-  }
-
-  @Test
-  public void test329() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test329"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(4312, 4586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 8898);
-
-  }
-
-  @Test
-  public void test330() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test330"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(479, 433);
-    int i15 = classUnderTest0.add(6336, 4384);
-    int i18 = classUnderTest0.add(463, 1442);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 912);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 10720);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1905);
-
-  }
-
-  @Test
-  public void test331() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test331"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(448, 720);
-    int i30 = classUnderTest0.add(513, 1163);
-    int i33 = classUnderTest0.add(3040, 476);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1168);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1676);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3516);
-
-  }
-
-  @Test
-  public void test332() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test332"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(486, 370);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 856);
-
-  }
-
-  @Test
-  public void test333() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test333"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)-1, 197);
-    int i18 = classUnderTest0.add((int)(byte)0, 549);
-    int i21 = classUnderTest0.add(0, 819);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 196);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 549);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 819);
-
-  }
-
-  @Test
-  public void test334() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test334"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(2486, 1777);
-    int i30 = classUnderTest0.add(1395, 0);
-    int i33 = classUnderTest0.add(1220, 1007);
-    int i36 = classUnderTest0.add(1360, 13040);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4263);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1395);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 14400);
-
-  }
-
-  @Test
-  public void test335() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test335"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(1296, 2563);
-    int i24 = classUnderTest0.add(2980, 1178);
-    int i27 = classUnderTest0.add(13101, 2728);
-    int i30 = classUnderTest0.add(4755, 0);
-    int i33 = classUnderTest0.add(1109, 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3859);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4158);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 15829);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4755);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1441);
-
-  }
-
-  @Test
-  public void test336() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test336"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(1077, 486);
-    int i30 = classUnderTest0.add(208, 835);
-    int i33 = classUnderTest0.add(1334, 405);
-    int i36 = classUnderTest0.add(15994, 3526);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1043);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1739);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 19520);
-
-  }
-
-  @Test
-  public void test337() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test337"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(5071, 4322);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9393);
-
-  }
-
-  @Test
-  public void test338() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test338"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(688, 370);
-    int i27 = classUnderTest0.add(135, 195);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1058);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 330);
-
-  }
-
-  @Test
-  public void test339() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test339"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(1429, 645);
-    int i27 = classUnderTest0.add(3896, 4704);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2074);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8600);
-
-  }
-
-  @Test
-  public void test340() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test340"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(0, 84);
-    int i21 = classUnderTest0.add(9324, 2025);
-    int i24 = classUnderTest0.add(9530, 9505);
-    int i27 = classUnderTest0.add(0, 4001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11349);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 19035);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4001);
-
-  }
-
-  @Test
-  public void test341() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test341"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add((int)(short)10, 331);
-    int i27 = classUnderTest0.add(197, 2980);
-    int i30 = classUnderTest0.add(3357, 3285);
-    int i33 = classUnderTest0.add(1392, 147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 341);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3177);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6642);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1539);
-
-  }
-
-  @Test
-  public void test342() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test342"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1401, 479);
-    int i30 = classUnderTest0.add(248, (int)(byte)0);
-    int i33 = classUnderTest0.add(1629, 0);
-    int i36 = classUnderTest0.add(334, 4568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1880);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 248);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1629);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 4902);
-
-  }
-
-  @Test
-  public void test343() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test343"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add(52, 209);
-    int i21 = classUnderTest0.add(331, 1897);
-    int i24 = classUnderTest0.add(635, 3648);
-    int i27 = classUnderTest0.add(17245, 2980);
-    int i30 = classUnderTest0.add(4957, 6802);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 261);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2228);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4283);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 20225);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 11759);
-
-  }
-
-  @Test
-  public void test344() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test344"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(209, (int)(byte)100);
-    int i21 = classUnderTest0.add(214, 700);
-    int i24 = classUnderTest0.add(532, 1154);
-    int i27 = classUnderTest0.add(26876, 4099);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 309);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 914);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1686);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 30975);
-
-  }
-
-  @Test
-  public void test345() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test345"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(197, 1109);
-    int i24 = classUnderTest0.add(2722, 0);
-    int i27 = classUnderTest0.add(7881, 3337);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1306);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2722);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 11218);
-
-  }
-
-  @Test
-  public void test346() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test346"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(108, 206);
-    int i30 = classUnderTest0.add(857, 517);
-    int i33 = classUnderTest0.add(200, 332);
-    int i36 = classUnderTest0.add(3150, 2343);
-    int i39 = classUnderTest0.add(251, 3337);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1374);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 532);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 5493);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 3588);
-
-  }
-
-  @Test
-  public void test347() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test347"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(323, 2104);
-    int i24 = classUnderTest0.add(145, 97);
-    int i27 = classUnderTest0.add(3160, 0);
-    int i30 = classUnderTest0.add(4352, 4303);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2427);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3160);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 8655);
-
-  }
-
-  @Test
-  public void test348() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test348"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(503, 217);
-    int i24 = classUnderTest0.add(1250, 149);
-    int i27 = classUnderTest0.add(2306, 6336);
-    int i30 = classUnderTest0.add(4055, 5352);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 720);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1399);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8642);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 9407);
-
-  }
-
-  @Test
-  public void test349() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test349"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(9581, 5278);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 14859);
-
-  }
-
-  @Test
-  public void test350() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test350"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(1453, 2702);
-    int i27 = classUnderTest0.add(7451, 5223);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4155);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 12674);
-
-  }
-
-  @Test
-  public void test351() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test351"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add((int)(short)10, 97);
-    int i21 = classUnderTest0.add(0, 1399);
-    int i24 = classUnderTest0.add(6220, 2876);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1399);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9096);
-
-  }
-
-  @Test
-  public void test352() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test352"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add((int)(short)10, 760);
-    int i30 = classUnderTest0.add(0, 463);
-    int i33 = classUnderTest0.add(3220, 3684);
-    int i36 = classUnderTest0.add(1739, 1674);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 770);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 463);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 6904);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 3413);
-
-  }
-
-  @Test
-  public void test353() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test353"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(2057, 1220);
-    int i18 = classUnderTest0.add(105, 145);
-    int i21 = classUnderTest0.add(3357, 403);
-    int i24 = classUnderTest0.add(19035, 5791);
-    int i27 = classUnderTest0.add(906, 4288);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3277);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3760);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 24826);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5194);
-
-  }
-
-  @Test
-  public void test354() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test354"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(2074, 645);
-    int i18 = classUnderTest0.add(202, 5493);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2719);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5695);
-
-  }
-
-  @Test
-  public void test355() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test355"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(3177, 502);
-    int i9 = classUnderTest0.add(248, 1011);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 3679);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 1259);
-
-  }
-
-  @Test
-  public void test356() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test356"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(512, 97);
-    int i21 = classUnderTest0.add(318, 3310);
-    int i24 = classUnderTest0.add(3821, 4060);
-    int i27 = classUnderTest0.add(4646, 1561);
-    int i30 = classUnderTest0.add(202, 9719);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3628);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7881);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 9921);
-
-  }
-
-  @Test
-  public void test357() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test357"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add(753, 400);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1153);
-
-  }
-
-  @Test
-  public void test358() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test358"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(217, 486);
-    int i27 = classUnderTest0.add(25807, 6074);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 703);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 31881);
-
-  }
-
-  @Test
-  public void test359() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test359"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(197, 611);
-    int i15 = classUnderTest0.add(205, 898);
-    int i18 = classUnderTest0.add((int)'#', 633);
-    int i21 = classUnderTest0.add(645, 1453);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1103);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 668);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2098);
-
-  }
-
-  @Test
-  public void test360() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test360"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(8619, 5176);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 13795);
-
-  }
-
-  @Test
-  public void test361() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test361"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(35, (int)(short)0);
-    int i9 = classUnderTest0.add(0, 269);
-    int i12 = classUnderTest0.add(3897, 1586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 5483);
-
-  }
-
-  @Test
-  public void test362() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test362"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(996, (int)(short)0);
-    int i15 = classUnderTest0.add(3093, 857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 996);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3950);
-
-  }
-
-  @Test
-  public void test363() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test363"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(305, 635);
-    int i15 = classUnderTest0.add(772, 36);
-    int i18 = classUnderTest0.add(898, 448);
-    int i21 = classUnderTest0.add(1479, 24246);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1346);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 25725);
-
-  }
-
-  @Test
-  public void test364() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test364"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(1897, 1993);
-    int i24 = classUnderTest0.add(6156, 738);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3890);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6894);
-
-  }
-
-  @Test
-  public void test365() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test365"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(0, 8247);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 8247);
-
-  }
-
-  @Test
-  public void test366() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test366"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(241, 2487);
-    int i18 = classUnderTest0.add(5406, 1593);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 6999);
-
-  }
-
-  @Test
-  public void test367() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test367"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(1963, 4789);
-    int i18 = classUnderTest0.add(4366, 6948);
-    int i21 = classUnderTest0.add(180, 2343);
-    int i24 = classUnderTest0.add(7812, 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2523);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7918);
-
-  }
-
-  @Test
-  public void test368() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test368"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(short)1, 269);
-    int i15 = classUnderTest0.add(100, 298);
-    int i18 = classUnderTest0.add(332, 1246);
-    int i21 = classUnderTest0.add(1401, 4312);
-    int i24 = classUnderTest0.add(2120, 8951);
-    int i27 = classUnderTest0.add(946, 625);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 270);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 398);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1578);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5713);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11071);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1571);
-
-  }
-
-  @Test
-  public void test369() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test369"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(209, (int)(byte)100);
-    int i21 = classUnderTest0.add(0, 781);
-    int i24 = classUnderTest0.add(1891, 706);
-    int i27 = classUnderTest0.add(2794, 6199);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 309);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 781);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2597);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8993);
-
-  }
-
-  @Test
-  public void test370() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test370"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(117, 0);
-    int i30 = classUnderTest0.add(1242, 7641);
-    int i33 = classUnderTest0.add(1687, 347);
-    int i36 = classUnderTest0.add(1382, 4152);
-    int i39 = classUnderTest0.add(6074, 10262);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 8883);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2034);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 5534);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 16336);
-
-  }
-
-  @Test
-  public void test371() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test371"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add((int)(short)0, 118);
-    int i15 = classUnderTest0.add(95, (int)(short)10);
-    int i18 = classUnderTest0.add(118, 4206);
-    int i21 = classUnderTest0.add(1065, 8539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 105);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4324);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9604);
-
-  }
-
-  @Test
-  public void test372() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test372"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)0, (int)'4');
-    int i18 = classUnderTest0.add(52, 796);
-    int i21 = classUnderTest0.add(611, 1791);
-    int i24 = classUnderTest0.add(4152, 2802);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 848);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2402);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6954);
-
-  }
-
-  @Test
-  public void test373() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test373"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(94, (int)(short)1);
-    int i18 = classUnderTest0.add(6366, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 95);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 6366);
-
-  }
-
-  @Test
-  public void test374() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test374"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(280, 940);
-    int i18 = classUnderTest0.add(12013, 695);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1220);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 12708);
-
-  }
-
-  @Test
-  public void test375() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test375"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)'a', 100);
-    int i12 = classUnderTest0.add(772, 107);
-    int i15 = classUnderTest0.add(1401, 6028);
-    int i18 = classUnderTest0.add(8884, 574);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 879);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 7429);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 9458);
-
-  }
-
-  @Test
-  public void test376() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test376"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(short)10, 32);
-    int i21 = classUnderTest0.add(503, 217);
-    int i24 = classUnderTest0.add(983, 914);
-    int i27 = classUnderTest0.add(0, 1109);
-    int i30 = classUnderTest0.add(2306, 1178);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 720);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1897);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1109);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3484);
-
-  }
-
-  @Test
-  public void test377() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test377"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(517, 5726);
-    int i27 = classUnderTest0.add(2104, 6379);
-    int i30 = classUnderTest0.add(2741, 4496);
-    int i33 = classUnderTest0.add(2632, 5176);
-    int i36 = classUnderTest0.add(405, 7943);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8483);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7237);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 7808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 8348);
-
-  }
-
-  @Test
-  public void test378() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test378"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(403, 107);
-    int i33 = classUnderTest0.add(2074, 643);
-    int i36 = classUnderTest0.add(2290, 4140);
-    int i39 = classUnderTest0.add(2557, 466);
-    int i42 = classUnderTest0.add(5924, 2990);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 510);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6430);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 3023);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 8914);
-
-  }
-
-  @Test
-  public void test379() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test379"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(2486, 1777);
-    int i30 = classUnderTest0.add(1561, 10810);
-    int i33 = classUnderTest0.add(3899, 9676);
-    int i36 = classUnderTest0.add(8898, 3116);
-    int i39 = classUnderTest0.add(4671, 1554);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4263);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 12371);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 13575);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 12014);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 6225);
-
-  }
-
-  @Test
-  public void test380() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test380"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(565, 348);
-    int i24 = classUnderTest0.add(992, 118);
-    int i27 = classUnderTest0.add(2572, 3347);
-    int i30 = classUnderTest0.add(1990, 1065);
-    int i33 = classUnderTest0.add(4250, 961);
-    int i36 = classUnderTest0.add(801, 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 913);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1110);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5919);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3055);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5211);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1044);
-
-  }
-
-  @Test
-  public void test381() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test381"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add(197, 10);
-    int i24 = classUnderTest0.add((int)(short)0, 149);
-    int i27 = classUnderTest0.add((-1), 3764);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3763);
-
-  }
-
-  @Test
-  public void test382() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test382"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(198, 100);
-    int i21 = classUnderTest0.add(996, 4257);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 298);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5253);
-
-  }
-
-  @Test
-  public void test383() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test383"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(205, 10);
-    int i18 = classUnderTest0.add(1, 791);
-    int i21 = classUnderTest0.add(0, 1932);
-    int i24 = classUnderTest0.add(1827, 6116);
-    int i27 = classUnderTest0.add(10000, 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 792);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1932);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7943);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 16752);
-
-  }
-
-  @Test
-  public void test384() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test384"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(0, 218);
-    int i27 = classUnderTest0.add(4545, 532);
-    int i30 = classUnderTest0.add(974, 5535);
-    int i33 = classUnderTest0.add(1929, 303);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5077);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 6509);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2232);
-
-  }
-
-  @Test
-  public void test385() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test385"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add((int)' ', 209);
-    int i21 = classUnderTest0.add(952, 139);
-    int i24 = classUnderTest0.add(533, 202);
-    int i27 = classUnderTest0.add(1476, 1554);
-    int i30 = classUnderTest0.add(1429, 2718);
-    int i33 = classUnderTest0.add(3440, 208);
-    int i36 = classUnderTest0.add(19411, 1285);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 735);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3030);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3648);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 20696);
-
-  }
-
-  @Test
-  public void test386() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test386"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(2308, 1314);
-    int i24 = classUnderTest0.add(3279, 5159);
-    int i27 = classUnderTest0.add(7953, 1007);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 3622);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8438);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8960);
-
-  }
-
-  @Test
-  public void test387() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test387"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add((int)(short)0, 118);
-    int i15 = classUnderTest0.add(95, (int)(short)10);
-    int i18 = classUnderTest0.add(3983, 36);
-    int i21 = classUnderTest0.add(9096, 8600);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 105);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4019);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 17696);
-
-  }
-
-  @Test
-  public void test388() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test388"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(100, (int)'a');
-    int i15 = classUnderTest0.add(10, (int)' ');
-    int i18 = classUnderTest0.add(154, 325);
-    int i21 = classUnderTest0.add(2487, 206);
-    int i24 = classUnderTest0.add(3828, 2228);
-    int i27 = classUnderTest0.add(1065, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 197);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 42);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 479);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2693);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6056);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1065);
-
-  }
-
-  @Test
-  public void test389() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test389"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(200, 34);
-    int i12 = classUnderTest0.add(533, 100);
-    int i15 = classUnderTest0.add(11146, 36);
-    int i18 = classUnderTest0.add(4496, 599);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 633);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 11182);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5095);
-
-  }
-
-  @Test
-  public void test390() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test390"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(1329, 1891);
-    int i18 = classUnderTest0.add(1431, 1609);
-    int i21 = classUnderTest0.add(4943, 738);
-    int i24 = classUnderTest0.add(4187, 61);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3220);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3040);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5681);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4248);
-
-  }
-
-  @Test
-  public void test391() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test391"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add(651, 301);
-    int i12 = classUnderTest0.add(331, 117);
-    int i15 = classUnderTest0.add(0, 1003);
-    int i18 = classUnderTest0.add(4767, 4660);
-    int i21 = classUnderTest0.add(33070, 279);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 952);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 448);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1003);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 9427);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 33349);
-
-  }
-
-  @Test
-  public void test392() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test392"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(793, 2187);
-    int i18 = classUnderTest0.add(3009, 2093);
-    int i21 = classUnderTest0.add(3561, 961);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2980);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5102);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4522);
-
-  }
-
-  @Test
-  public void test393() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test393"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(0, 12327);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 12327);
-
-  }
-
-  @Test
-  public void test394() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test394"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(241, 2487);
-    int i18 = classUnderTest0.add(0, 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1037);
-
-  }
-
-  @Test
-  public void test395() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test395"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add((int)(short)10, 97);
-    int i21 = classUnderTest0.add(347, 4324);
-    int i24 = classUnderTest0.add(907, 7958);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4671);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8865);
-
-  }
-
-  @Test
-  public void test396() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test396"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(305, 612);
-    int i21 = classUnderTest0.add(2632, 20225);
-    int i24 = classUnderTest0.add(6492, 938);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 917);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 22857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7430);
-
-  }
-
-  @Test
-  public void test397() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test397"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(486, 100);
-    int i27 = classUnderTest0.add(1077, 486);
-    int i30 = classUnderTest0.add(208, 835);
-    int i33 = classUnderTest0.add(1394, 3622);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1043);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5016);
-
-  }
-
-  @Test
-  public void test398() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test398"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add((int)(byte)0, 100);
-    int i18 = classUnderTest0.add((int)(byte)1, 208);
-    int i21 = classUnderTest0.add(215, 108);
-    int i24 = classUnderTest0.add(787, 205);
-    int i27 = classUnderTest0.add(2424, 208);
-    int i30 = classUnderTest0.add(4660, 10681);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 209);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 323);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 992);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2632);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 15341);
-
-  }
-
-  @Test
-  public void test399() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test399"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add((int)(short)-1, 151);
-    int i21 = classUnderTest0.add((int)(byte)100, (int)(byte)1);
-    int i24 = classUnderTest0.add(4335, 8662);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 12997);
-
-  }
-
-  @Test
-  public void test400() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test400"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, 84);
-    int i12 = classUnderTest0.add(898, 503);
-    int i15 = classUnderTest0.add(720, 348);
-    int i18 = classUnderTest0.add(305, 480);
-    int i21 = classUnderTest0.add(34135, 4661);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 94);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1401);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 785);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 38796);
-
-  }
-
-  @Test
-  public void test401() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test401"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(147, 1296);
-    int i24 = classUnderTest0.add(94, 241);
-    int i27 = classUnderTest0.add(0, 635);
-    int i30 = classUnderTest0.add(6446, 2847);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1443);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 335);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 9293);
-
-  }
-
-  @Test
-  public void test402() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test402"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'#', 633);
-    int i24 = classUnderTest0.add(728, 711);
-    int i27 = classUnderTest0.add(205, 3357);
-    int i30 = classUnderTest0.add(1481, 1942);
-    int i33 = classUnderTest0.add(202, 770);
-    int i36 = classUnderTest0.add(4997, 5253);
-    int i39 = classUnderTest0.add(2483, 87);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 668);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1439);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3562);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3423);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 972);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 10250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 2570);
-
-  }
-
-  @Test
-  public void test403() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test403"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(635, 303);
-    int i18 = classUnderTest0.add(4019, 760);
-    int i21 = classUnderTest0.add(486, 2104);
-    int i24 = classUnderTest0.add(3277, 4140);
-    int i27 = classUnderTest0.add(420, 314);
-    int i30 = classUnderTest0.add(138, 218);
-    int i33 = classUnderTest0.add(2483, 9505);
-    int i36 = classUnderTest0.add(2663, 6005);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 938);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4779);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2590);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7417);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 734);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 356);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 11988);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 8668);
-
-  }
-
-  @Test
-  public void test404() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test404"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(118, 1052);
-    int i21 = classUnderTest0.add((int)(byte)100, 314);
-    int i24 = classUnderTest0.add(2632, 4418);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1170);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 414);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7050);
-
-  }
-
-  @Test
-  public void test405() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test405"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(198, 100);
-    int i21 = classUnderTest0.add(1037, 0);
-    int i24 = classUnderTest0.add(1429, 3116);
-    int i27 = classUnderTest0.add(269, 791);
-    int i30 = classUnderTest0.add(5430, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 298);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4545);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1060);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5430);
-
-  }
-
-  @Test
-  public void test406() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test406"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 97);
-    int i15 = classUnderTest0.add(205, 10);
-    int i18 = classUnderTest0.add(1, 791);
-    int i21 = classUnderTest0.add(1626, 533);
-    int i24 = classUnderTest0.add(946, 961);
-    int i27 = classUnderTest0.add(1052, 3256);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 792);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2159);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1907);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4308);
-
-  }
-
-  @Test
-  public void test407() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test407"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(703, 1260);
-    int i18 = classUnderTest0.add(0, 411);
-    int i21 = classUnderTest0.add(1045, 10720);
-    int i24 = classUnderTest0.add(2711, 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1963);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 411);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11765);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3276);
-
-  }
-
-  @Test
-  public void test408() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test408"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(635, 303);
-    int i18 = classUnderTest0.add(4019, 760);
-    int i21 = classUnderTest0.add(8835, 1629);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 938);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4779);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10464);
-
-  }
-
-  @Test
-  public void test409() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test409"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(34, 309);
-    int i21 = classUnderTest0.add(736, 798);
-    int i24 = classUnderTest0.add(2483, 6306);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1534);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8789);
-
-  }
-
-  @Test
-  public void test410() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test410"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(151, 197);
-    int i21 = classUnderTest0.add(703, 95);
-    int i24 = classUnderTest0.add(892, 2005);
-    int i27 = classUnderTest0.add((int)'#', 3446);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 348);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 798);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2897);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3481);
-
-  }
-
-  @Test
-  public void test411() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test411"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)0, (int)'4');
-    int i18 = classUnderTest0.add((int)(short)-1, 197);
-    int i21 = classUnderTest0.add(1880, (int)(short)1);
-    int i24 = classUnderTest0.add(10241, 1511);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 196);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1881);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11752);
-
-  }
-
-  @Test
-  public void test412() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test412"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add(4155, 549);
-    int i21 = classUnderTest0.add(4629, 8508);
-    int i24 = classUnderTest0.add(8619, 1857);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4704);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 13137);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 10476);
-
-  }
-
-  @Test
-  public void test413() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test413"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)'4', 643);
-    int i18 = classUnderTest0.add(0, 1091);
-    int i21 = classUnderTest0.add(135, 227);
-    int i24 = classUnderTest0.add(470, 4817);
-    int i27 = classUnderTest0.add(1747, 5211);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 695);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 362);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5287);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6958);
-
-  }
-
-  @Test
-  public void test414() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test414"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add((int)' ', (int)(byte)0);
-    int i15 = classUnderTest0.add((int)(short)-1, 207);
-    int i18 = classUnderTest0.add(173, 470);
-    int i21 = classUnderTest0.add(946, 6156);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 206);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 643);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7102);
-
-  }
-
-  @Test
-  public void test415() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test415"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(11772, 102);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 11874);
-
-  }
-
-  @Test
-  public void test416() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test416"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(1963, 4789);
-    int i18 = classUnderTest0.add(4366, 6948);
-    int i21 = classUnderTest0.add(19520, 9458);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 28978);
-
-  }
-
-  @Test
-  public void test417() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test417"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add(52, 645);
-    int i24 = classUnderTest0.add(665, 1052);
-    int i27 = classUnderTest0.add(982, 16941);
-    int i30 = classUnderTest0.add(7223, 4140);
-    int i33 = classUnderTest0.add(8056, 433);
-    int i36 = classUnderTest0.add(13874, 1110);
-    int i39 = classUnderTest0.add(3896, 2821);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 697);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 17923);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 11363);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 8489);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 14984);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 6717);
-
-  }
-
-  @Test
-  public void test418() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test418"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)(byte)10, 197);
-    int i24 = classUnderTest0.add(105, 34);
-    int i27 = classUnderTest0.add(98, 150);
-    int i30 = classUnderTest0.add((int)(byte)0, 3285);
-    int i33 = classUnderTest0.add(2474, 14512);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 139);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 248);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3285);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 16986);
-
-  }
-
-  @Test
-  public void test419() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test419"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(179, 549);
-    int i21 = classUnderTest0.add(414, 1432);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1846);
-
-  }
-
-  @Test
-  public void test420() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test420"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(479, 1312);
-    int i24 = classUnderTest0.add(1153, 753);
-    int i27 = classUnderTest0.add(940, 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1906);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1147);
-
-  }
-
-  @Test
-  public void test421() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test421"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add((int)(byte)-1, (int)(short)1);
-    int i21 = classUnderTest0.add(98, 0);
-    int i24 = classUnderTest0.add(1906, 4206);
-    int i27 = classUnderTest0.add(2308, 4018);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6112);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6326);
-
-  }
-
-  @Test
-  public void test422() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test422"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add((int)(short)-1, 151);
-    int i21 = classUnderTest0.add((int)(byte)100, (int)(byte)1);
-    int i24 = classUnderTest0.add(207, 2459);
-    int i27 = classUnderTest0.add(469, 1993);
-    int i30 = classUnderTest0.add(5081, 238);
-    int i33 = classUnderTest0.add(7628, 4041);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2666);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2462);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 5319);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 11669);
-
-  }
-
-  @Test
-  public void test423() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test423"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add((int)'#', 502);
-    int i24 = classUnderTest0.add(217, 348);
-    int i27 = classUnderTest0.add(3790, 1795);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 537);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5585);
-
-  }
-
-  @Test
-  public void test424() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test424"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(323, 703);
-    int i15 = classUnderTest0.add(1314, 10488);
-    int i18 = classUnderTest0.add(1315, 3150);
-    int i21 = classUnderTest0.add(0, 13101);
-    int i24 = classUnderTest0.add(614, 2108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1026);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 11802);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4465);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 13101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2722);
-
-  }
-
-  @Test
-  public void test425() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test425"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(414, 3347);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3761);
-
-  }
-
-  @Test
-  public void test426() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test426"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(1329, 1891);
-    int i18 = classUnderTest0.add(6324, 10810);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3220);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 17134);
-
-  }
-
-  @Test
-  public void test427() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test427"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(100, 433);
-    int i24 = classUnderTest0.add(118, 207);
-    int i27 = classUnderTest0.add(512, (int)(short)100);
-    int i30 = classUnderTest0.add(907, 202);
-    int i33 = classUnderTest0.add(1065, 668);
-    int i36 = classUnderTest0.add(84, 9506);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 325);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 612);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1109);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1733);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 9590);
-
-  }
-
-  @Test
-  public void test428() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test428"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(448, 954);
-    int i27 = classUnderTest0.add(517, 906);
-    int i30 = classUnderTest0.add(135, 1432);
-    int i33 = classUnderTest0.add(517, 625);
-    int i36 = classUnderTest0.add(5726, 549);
-    int i39 = classUnderTest0.add(3561, 4997);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1402);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1423);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1567);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1142);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6275);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 8558);
-
-  }
-
-  @Test
-  public void test429() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test429"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(703, 1260);
-    int i18 = classUnderTest0.add(0, 411);
-    int i21 = classUnderTest0.add(118, 906);
-    int i24 = classUnderTest0.add(34, 309);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1963);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 411);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1024);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 343);
-
-  }
-
-  @Test
-  public void test430() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test430"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(502, (int)'a');
-    int i12 = classUnderTest0.add(479, 433);
-    int i15 = classUnderTest0.add(6336, 4384);
-    int i18 = classUnderTest0.add(2523, 2446);
-    int i21 = classUnderTest0.add(17235, 1791);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 599);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 912);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 10720);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 4969);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 19026);
-
-  }
-
-  @Test
-  public void test431() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test431"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(448, 954);
-    int i27 = classUnderTest0.add(2272, 1975);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1402);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4247);
-
-  }
-
-  @Test
-  public void test432() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test432"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(992, 3009);
-    int i30 = classUnderTest0.add(753, 14804);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 15557);
-
-  }
-
-  @Test
-  public void test433() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test433"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(1, 52);
-    int i18 = classUnderTest0.add(270, 10);
-    int i21 = classUnderTest0.add(197, 10);
-    int i24 = classUnderTest0.add((int)(short)0, 149);
-    int i27 = classUnderTest0.add(2120, 906);
-    int i30 = classUnderTest0.add(3993, 3648);
-    int i33 = classUnderTest0.add(548, 7405);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 280);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 149);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3026);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7641);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 7953);
-
-  }
-
-  @Test
-  public void test434() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test434"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(847, 2162);
-    int i27 = classUnderTest0.add(1399, 173);
-    int i30 = classUnderTest0.add(304, 565);
-    int i33 = classUnderTest0.add(5352, 479);
-    int i36 = classUnderTest0.add(1083, 1340);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3009);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1572);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 869);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 5831);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2423);
-
-  }
-
-  @Test
-  public void test435() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test435"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(7102, 6565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 13667);
-
-  }
-
-  @Test
-  public void test436() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test436"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(150, 300);
-    int i27 = classUnderTest0.add(938, 303);
-    int i30 = classUnderTest0.add(632, 564);
-    int i33 = classUnderTest0.add(1626, 3009);
-    int i36 = classUnderTest0.add(4283, 1975);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 450);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1196);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6258);
-
-  }
-
-  @Test
-  public void test437() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test437"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)'4', 643);
-    int i18 = classUnderTest0.add(420, 450);
-    int i21 = classUnderTest0.add(0, 8489);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 695);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 870);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 8489);
-
-  }
-
-  @Test
-  public void test438() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test438"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add(3299, 940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 4239);
-
-  }
-
-  @Test
-  public void test439() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test439"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(847, 2162);
-    int i27 = classUnderTest0.add(1399, 173);
-    int i30 = classUnderTest0.add(3556, 905);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3009);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1572);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4461);
-
-  }
-
-  @Test
-  public void test440() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test440"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(250, 1077);
-    int i33 = classUnderTest0.add(4008, 234);
-    int i36 = classUnderTest0.add(0, 5919);
-    int i39 = classUnderTest0.add(1235, 1534);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1327);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 4242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 5919);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 2769);
-
-  }
-
-  @Test
-  public void test441() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test441"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(612, (int)' ');
-    int i9 = classUnderTest0.add(1142, 100);
-    int i12 = classUnderTest0.add(551, 2718);
-    int i15 = classUnderTest0.add(1431, 4660);
-    int i18 = classUnderTest0.add(1429, 1493);
-    int i21 = classUnderTest0.add(3185, 1309);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 644);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 1242);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 3269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2922);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 4494);
-
-  }
-
-  @Test
-  public void test442() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test442"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(138, 332);
-    int i24 = classUnderTest0.add(1940, 438);
-    int i27 = classUnderTest0.add(2179, 2980);
-    int i30 = classUnderTest0.add(2290, 118);
-    int i33 = classUnderTest0.add(1529, 728);
-    int i36 = classUnderTest0.add(913, 2693);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 470);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2378);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5159);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2408);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2257);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 3606);
-
-  }
-
-  @Test
-  public void test443() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test443"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(0, 105);
-    int i18 = classUnderTest0.add(2104, 234);
-    int i21 = classUnderTest0.add(197, 738);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 105);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2338);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 935);
-
-  }
-
-  @Test
-  public void test444() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test444"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(793, 135);
-    int i18 = classUnderTest0.add(8355, 234);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 928);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 8589);
-
-  }
-
-  @Test
-  public void test445() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test445"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(2180, 154);
-    int i24 = classUnderTest0.add(154, 97);
-    int i27 = classUnderTest0.add(3220, 298);
-    int i30 = classUnderTest0.add(3644, 3821);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 251);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7465);
-
-  }
-
-  @Test
-  public void test446() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test446"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(151, 0);
-    int i21 = classUnderTest0.add(697, 138);
-    int i24 = classUnderTest0.add(5726, 4001);
-    int i27 = classUnderTest0.add(52, 974);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 835);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 9727);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1026);
-
-  }
-
-  @Test
-  public void test447() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test447"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(52, 95);
-    int i21 = classUnderTest0.add(17245, 12290);
-    int i24 = classUnderTest0.add(9458, 1739);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 147);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 29535);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 11197);
-
-  }
-
-  @Test
-  public void test448() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test448"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add(433, 323);
-    int i24 = classUnderTest0.add(760, 3808);
-    int i27 = classUnderTest0.add(6156, 3464);
-    int i30 = classUnderTest0.add(907, 940);
-    int i33 = classUnderTest0.add(18767, 3897);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 756);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 4568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9620);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1847);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 22664);
-
-  }
-
-  @Test
-  public void test449() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test449"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(34, 309);
-    int i21 = classUnderTest0.add(1140, 1729);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2869);
-
-  }
-
-  @Test
-  public void test450() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test450"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add(635, 348);
-    int i24 = classUnderTest0.add(2427, 4098);
-    int i27 = classUnderTest0.add(3031, 2487);
-    int i30 = classUnderTest0.add(267, 4024);
-    int i33 = classUnderTest0.add(5548, 7157);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 983);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6525);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4291);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 12705);
-
-  }
-
-  @Test
-  public void test451() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test451"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add((int)(short)0, 218);
-    int i21 = classUnderTest0.add(243, 368);
-    int i24 = classUnderTest0.add(147, (int)' ');
-    int i27 = classUnderTest0.add(2343, 7451);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 218);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 611);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 179);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9794);
-
-  }
-
-  @Test
-  public void test452() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test452"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1401, 479);
-    int i30 = classUnderTest0.add(1940, 1220);
-    int i33 = classUnderTest0.add(845, 1529);
-    int i36 = classUnderTest0.add(3160, 2990);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1880);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3160);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2374);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 6150);
-
-  }
-
-  @Test
-  public void test453() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test453"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add((int)'#', 502);
-    int i24 = classUnderTest0.add(0, 1270);
-    int i27 = classUnderTest0.add(820, 6464);
-    int i30 = classUnderTest0.add(2302, 1700);
-    int i33 = classUnderTest0.add(305, 348);
-    int i36 = classUnderTest0.add(1506, 9505);
-    int i39 = classUnderTest0.add(4635, 3100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 537);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1270);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 7284);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4002);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 653);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 11011);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 7735);
-
-  }
-
-  @Test
-  public void test454() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test454"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(798, 633);
-    int i24 = classUnderTest0.add(19411, 1586);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1431);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 20997);
-
-  }
-
-  @Test
-  public void test455() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test455"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(0, 84);
-    int i21 = classUnderTest0.add(9324, 2025);
-    int i24 = classUnderTest0.add(9530, 9505);
-    int i27 = classUnderTest0.add(6796, 2374);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11349);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 19035);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9170);
-
-  }
-
-  @Test
-  public void test456() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test456"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(107, 0);
-    int i21 = classUnderTest0.add(10, 217);
-    int i24 = classUnderTest0.add((int)(byte)1, 695);
-    int i27 = classUnderTest0.add(32, 3652);
-    int i30 = classUnderTest0.add(796, 53);
-    int i33 = classUnderTest0.add(1925, 151);
-    int i36 = classUnderTest0.add(4769, 588);
-    int i39 = classUnderTest0.add(1298, 5287);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 227);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 696);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3684);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 849);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2076);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 5357);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 6585);
-
-  }
-
-  @Test
-  public void test457() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test457"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add((int)(short)10, 97);
-    int i21 = classUnderTest0.add(469, 668);
-    int i24 = classUnderTest0.add(502, 1059);
-    int i27 = classUnderTest0.add(9726, 4755);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 107);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1137);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1561);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 14481);
-
-  }
-
-  @Test
-  public void test458() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test458"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(269, 233);
-    int i21 = classUnderTest0.add(0, 5739);
-    int i24 = classUnderTest0.add(29535, 2338);
-    int i27 = classUnderTest0.add(1013, 9433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 502);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5739);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 31873);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 10446);
-
-  }
-
-  @Test
-  public void test459() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test459"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(331, 138);
-    int i30 = classUnderTest0.add(12267, 202);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 469);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 12469);
-
-  }
-
-  @Test
-  public void test460() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test460"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(218, (int)(short)-1);
-    int i9 = classUnderTest0.add(298, 7812);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 217);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 8110);
-
-  }
-
-  @Test
-  public void test461() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test461"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add((int)(byte)100, 98);
-    int i18 = classUnderTest0.add(792, 1312);
-    int i21 = classUnderTest0.add(2074, 906);
-    int i24 = classUnderTest0.add(2711, 3481);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 198);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2104);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2980);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6192);
-
-  }
-
-  @Test
-  public void test462() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test462"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add((int)(short)-1, 151);
-    int i21 = classUnderTest0.add((int)(byte)100, (int)(byte)1);
-    int i24 = classUnderTest0.add(207, 2459);
-    int i27 = classUnderTest0.add(469, 1993);
-    int i30 = classUnderTest0.add(3963, 328);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2666);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2462);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 4291);
-
-  }
-
-  @Test
-  public void test463() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test463"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(2922, 7710);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10632);
-
-  }
-
-  @Test
-  public void test464() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test464"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(233, 665);
-    int i15 = classUnderTest0.add(241, 2487);
-    int i18 = classUnderTest0.add(269, 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 2728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 269);
-
-  }
-
-  @Test
-  public void test465() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test465"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(179, 549);
-    int i21 = classUnderTest0.add(1443, 448);
-    int i24 = classUnderTest0.add(1563, 451);
-    int i27 = classUnderTest0.add(1295, 899);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 728);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1891);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2014);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2194);
-
-  }
-
-  @Test
-  public void test466() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test466"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(1220, 1037);
-    int i21 = classUnderTest0.add(6368, 5211);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2257);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11579);
-
-  }
-
-  @Test
-  public void test467() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test467"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add((int)(byte)-1, 35);
-    int i12 = classUnderTest0.add(149, 217);
-    int i15 = classUnderTest0.add(200, 233);
-    int i18 = classUnderTest0.add(118, 1052);
-    int i21 = classUnderTest0.add(0, 7157);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 366);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 433);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1170);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 7157);
-
-  }
-
-  @Test
-  public void test468() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test468"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(305, 612);
-    int i21 = classUnderTest0.add(586, 5159);
-    int i24 = classUnderTest0.add(1563, 2374);
-    int i27 = classUnderTest0.add(7924, 695);
-    int i30 = classUnderTest0.add(3094, 10561);
-    int i33 = classUnderTest0.add(1360, 0);
-    int i36 = classUnderTest0.add(4383, 10266);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 917);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 5745);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3937);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8619);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 13655);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1360);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 14649);
-
-  }
-
-  @Test
-  public void test469() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test469"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(100, 53);
-    int i21 = classUnderTest0.add(611, 100);
-    int i24 = classUnderTest0.add(173, 502);
-    int i27 = classUnderTest0.add(706, 5287);
-    int i30 = classUnderTest0.add(1153, 2057);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 153);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 711);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 675);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5993);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3210);
-
-  }
-
-  @Test
-  public void test470() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test470"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(703, 1260);
-    int i18 = classUnderTest0.add(3421, 1660);
-    int i21 = classUnderTest0.add(9324, 1314);
-    int i24 = classUnderTest0.add(6867, 9699);
-    int i27 = classUnderTest0.add(0, 3137);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1963);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 5081);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10638);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 16566);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3137);
-
-  }
-
-  @Test
-  public void test471() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test471"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(217, 486);
-    int i27 = classUnderTest0.add(1763, 1110);
-    int i30 = classUnderTest0.add(1137, 820);
-    int i33 = classUnderTest0.add(1274, 218);
-    int i36 = classUnderTest0.add(633, 1054);
-    int i39 = classUnderTest0.add(198, 1572);
-    int i42 = classUnderTest0.add(972, 7875);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 703);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2873);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1957);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1492);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1687);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 1770);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 8847);
-
-  }
-
-  @Test
-  public void test472() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test472"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add(368, 118);
-    int i18 = classUnderTest0.add(52, 209);
-    int i21 = classUnderTest0.add(180, 1096);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 486);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 261);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1276);
-
-  }
-
-  @Test
-  public void test473() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test473"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(118, 118);
-    int i18 = classUnderTest0.add(100, 1925);
-    int i21 = classUnderTest0.add(8100, 16986);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 236);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 2025);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 25086);
-
-  }
-
-  @Test
-  public void test474() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test474"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)0, (int)'4');
-    int i18 = classUnderTest0.add(52, 796);
-    int i21 = classUnderTest0.add(3993, 2343);
-    int i24 = classUnderTest0.add(603, 480);
-    int i27 = classUnderTest0.add(0, 6455);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 848);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6336);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1083);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 6455);
-
-  }
-
-  @Test
-  public void test475() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test475"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add((int)(byte)-1, (int)(short)1);
-    int i21 = classUnderTest0.add(98, 0);
-    int i24 = classUnderTest0.add(1906, 4206);
-    int i27 = classUnderTest0.add(233, 5563);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6112);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5796);
-
-  }
-
-  @Test
-  public void test476() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test476"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(261, 1529);
-    int i33 = classUnderTest0.add(236, 214);
-    int i36 = classUnderTest0.add(1791, 633);
-    int i39 = classUnderTest0.add(2187, 2081);
-    int i42 = classUnderTest0.add(1790, 10932);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1790);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 450);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 4268);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 12722);
-
-  }
-
-  @Test
-  public void test477() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test477"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add(770, 1170);
-    int i18 = classUnderTest0.add(2120, 996);
-    int i21 = classUnderTest0.add(2180, 154);
-    int i24 = classUnderTest0.add((int)(short)100, 1453);
-    int i27 = classUnderTest0.add(0, 2423);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1940);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3116);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2334);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1553);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2423);
-
-  }
-
-  @Test
-  public void test478() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test478"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(512, 97);
-    int i21 = classUnderTest0.add(105, 298);
-    int i24 = classUnderTest0.add(3009, 53);
-    int i27 = classUnderTest0.add(3753, 4494);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 403);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3062);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 8247);
-
-  }
-
-  @Test
-  public void test479() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test479"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, (int)(short)-1);
-    int i15 = classUnderTest0.add((int)(byte)0, (int)'4');
-    int i18 = classUnderTest0.add(52, 796);
-    int i21 = classUnderTest0.add(3993, 2343);
-    int i24 = classUnderTest0.add(603, 480);
-    int i27 = classUnderTest0.add(3966, 8056);
-    int i30 = classUnderTest0.add(4187, 3637);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 848);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 6336);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1083);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 12022);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 7824);
-
-  }
-
-  @Test
-  public void test480() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test480"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)1, (int)'#');
-    int i15 = classUnderTest0.add((int)'4', 643);
-    int i18 = classUnderTest0.add(0, 1091);
-    int i21 = classUnderTest0.add(469, 9631);
-    int i24 = classUnderTest0.add(6324, 1241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 36);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 695);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1091);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 10100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7565);
-
-  }
-
-  @Test
-  public void test481() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test481"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(1963, 4789);
-    int i18 = classUnderTest0.add(4366, 6948);
-    int i21 = classUnderTest0.add(180, 2343);
-    int i24 = classUnderTest0.add(898, 7641);
-    int i27 = classUnderTest0.add(0, 5642);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 2523);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 8539);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5642);
-
-  }
-
-  @Test
-  public void test482() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test482"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add((int)(short)10, 205);
-    int i27 = classUnderTest0.add(1077, 173);
-    int i30 = classUnderTest0.add(552, 1791);
-    int i33 = classUnderTest0.add(1156, 208);
-    int i36 = classUnderTest0.add(603, 609);
-    int i39 = classUnderTest0.add(2273, 7478);
-    int i42 = classUnderTest0.add(20225, 21006);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 215);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2343);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1364);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 1212);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 9751);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 41231);
-
-  }
-
-  @Test
-  public void test483() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test483"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(207, 36);
-    int i18 = classUnderTest0.add(772, 368);
-    int i21 = classUnderTest0.add((int)(byte)-1, (int)(byte)10);
-    int i24 = classUnderTest0.add(3150, 502);
-    int i27 = classUnderTest0.add(914, 510);
-    int i30 = classUnderTest0.add(0, 3093);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 1140);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 3652);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1424);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3093);
-
-  }
-
-  @Test
-  public void test484() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test484"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(703, 609);
-    int i18 = classUnderTest0.add(9, (int)'a');
-    int i21 = classUnderTest0.add(147, 1296);
-    int i24 = classUnderTest0.add(300, 796);
-    int i27 = classUnderTest0.add(243, 3431);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 1312);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 106);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1443);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1096);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3674);
-
-  }
-
-  @Test
-  public void test485() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test485"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(34, 3116);
-    int i15 = classUnderTest0.add(95, 9581);
-    int i18 = classUnderTest0.add(3341, 150);
-    int i21 = classUnderTest0.add(7875, 551);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 3150);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 9676);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 3491);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 8426);
-
-  }
-
-  @Test
-  public void test486() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test486"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(433, 84);
-    int i27 = classUnderTest0.add((int)(short)0, 207);
-    int i30 = classUnderTest0.add(1110, 796);
-    int i33 = classUnderTest0.add(1401, 1156);
-    int i36 = classUnderTest0.add(1065, 1223);
-    int i39 = classUnderTest0.add(1995, 6948);
-    int i42 = classUnderTest0.add(11071, 5518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 517);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 207);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1906);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2557);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2288);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 8943);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 16589);
-
-  }
-
-  @Test
-  public void test487() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test487"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add((int)(byte)100, 100);
-    int i15 = classUnderTest0.add(200, 0);
-    int i18 = classUnderTest0.add(10, 108);
-    int i21 = classUnderTest0.add(720, 52);
-    int i24 = classUnderTest0.add(720, 100);
-    int i27 = classUnderTest0.add(1881, 1794);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 118);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 772);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 820);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3675);
-
-  }
-
-  @Test
-  public void test488() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test488"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)(byte)-1, 234);
-    int i15 = classUnderTest0.add(98, 53);
-    int i18 = classUnderTest0.add(1, (int)(short)-1);
-    int i21 = classUnderTest0.add((int)'a', 0);
-    int i24 = classUnderTest0.add(151, 217);
-    int i27 = classUnderTest0.add(778, 3030);
-    int i30 = classUnderTest0.add(1897, 270);
-    int i33 = classUnderTest0.add(1763, 2030);
-    int i36 = classUnderTest0.add(2543, 41231);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 233);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 151);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 368);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3808);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2167);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 3793);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 43774);
-
-  }
-
-  @Test
-  public void test489() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test489"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(1068, 0);
-    int i24 = classUnderTest0.add(808, 801);
-    int i27 = classUnderTest0.add(2486, 1777);
-    int i30 = classUnderTest0.add(1395, 0);
-    int i33 = classUnderTest0.add(1077, 31881);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1068);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1609);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 4263);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1395);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 32958);
-
-  }
-
-  @Test
-  public void test490() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test490"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(26876, 666);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 27542);
-
-  }
-
-  @Test
-  public void test491() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test491"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(2702, 2476);
-    int i27 = classUnderTest0.add(3357, 9446);
-    int i30 = classUnderTest0.add(18464, 6430);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5178);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 12803);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 24894);
-
-  }
-
-  @Test
-  public void test492() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test492"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add(0, (int)' ');
-    int i18 = classUnderTest0.add(234, (int)'a');
-    int i21 = classUnderTest0.add(32, (int)'4');
-    int i24 = classUnderTest0.add(139, 898);
-    int i27 = classUnderTest0.add(992, 258);
-    int i30 = classUnderTest0.add(403, 107);
-    int i33 = classUnderTest0.add(2074, 643);
-    int i36 = classUnderTest0.add(1629, 1298);
-    int i39 = classUnderTest0.add(1609, 820);
-    int i42 = classUnderTest0.add(7886, 1335);
-    int i45 = classUnderTest0.add(0, 251);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 32);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 331);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 1037);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1250);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 510);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 2717);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2927);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 2429);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i42 == 9221);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i45 == 251);
-
-  }
-
-  @Test
-  public void test493() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test493"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add((int)(short)100, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 269);
-    int i15 = classUnderTest0.add(10, 198);
-    int i18 = classUnderTest0.add(512, 153);
-    int i21 = classUnderTest0.add(135, 433);
-    int i24 = classUnderTest0.add(517, 5726);
-    int i27 = classUnderTest0.add(3399, 5874);
-    int i30 = classUnderTest0.add(633, 2402);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 208);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 665);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 568);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 6243);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 9273);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 3035);
-
-  }
-
-  @Test
-  public void test494() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test494"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)0, 52);
-    int i15 = classUnderTest0.add(1963, 4789);
-    int i18 = classUnderTest0.add(4366, 6948);
-    int i21 = classUnderTest0.add(3150, 20225);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 6752);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11314);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 23375);
-
-  }
-
-  @Test
-  public void test495() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test495"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(234, 331);
-    int i15 = classUnderTest0.add(2632, 3287);
-    int i18 = classUnderTest0.add((int)(short)10, 1);
-    int i21 = classUnderTest0.add(5462, 3784);
-    int i24 = classUnderTest0.add(441, 6947);
-    int i27 = classUnderTest0.add(1785, 4152);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 565);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 5919);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 11);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 9246);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 7388);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 5937);
-
-  }
-
-  @Test
-  public void test496() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test496"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(20, 153);
-    int i6 = classUnderTest0.add(4452, 8247);
-    int i9 = classUnderTest0.add(0, 11600);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 173);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 12699);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 11600);
-
-  }
-
-  @Test
-  public void test497() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test497"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'4', (int)(short)1);
-    int i9 = classUnderTest0.add((int)(byte)10, 98);
-    int i12 = classUnderTest0.add(53, 0);
-    int i15 = classUnderTest0.add(153, (int)(byte)1);
-    int i18 = classUnderTest0.add(118, (int)(byte)-1);
-    int i21 = classUnderTest0.add((int)(byte)-1, 565);
-    int i24 = classUnderTest0.add(612, 303);
-    int i27 = classUnderTest0.add(0, 268);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 108);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 154);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 117);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 564);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 915);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 268);
-
-  }
-
-  @Test
-  public void test498() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test498"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add((int)'a', 1);
-    int i9 = classUnderTest0.add(35, (int)(byte)-1);
-    int i12 = classUnderTest0.add((int)'#', 234);
-    int i15 = classUnderTest0.add(366, 269);
-    int i18 = classUnderTest0.add(0, 84);
-    int i21 = classUnderTest0.add(9324, 2025);
-    int i24 = classUnderTest0.add(1309, 3821);
-    int i27 = classUnderTest0.add(1401, 0);
-    int i30 = classUnderTest0.add(0, 2015);
-    int i33 = classUnderTest0.add(9631, 2219);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 98);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 269);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 635);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 84);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 11349);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 5130);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 1401);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 2015);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 11850);
-
-  }
-
-  @Test
-  public void test499() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test499"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add((int)(byte)-1, 1);
-    int i15 = classUnderTest0.add(98, (int)(byte)-1);
-    int i18 = classUnderTest0.add(791, 107);
-    int i21 = classUnderTest0.add(35, (int)(byte)-1);
-    int i24 = classUnderTest0.add(1686, 688);
-    int i27 = classUnderTest0.add(2057, 1298);
-    int i30 = classUnderTest0.add(6074, 18213);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 898);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 2374);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 3355);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 24287);
-
-  }
-
-  @Test
-  public void test500() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test500"); }
-
-
-    ClassUnderTest classUnderTest0 = new ClassUnderTest();
-    int i3 = classUnderTest0.add(0, (int)'#');
-    int i6 = classUnderTest0.add(0, (int)(short)10);
-    int i9 = classUnderTest0.add(10, (int)(short)0);
-    int i12 = classUnderTest0.add(0, 35);
-    int i15 = classUnderTest0.add((int)(short)-1, 35);
-    int i18 = classUnderTest0.add(0, 533);
-    int i21 = classUnderTest0.add(0, 332);
-    int i24 = classUnderTest0.add(35, 206);
-    int i27 = classUnderTest0.add(547, 1940);
-    int i30 = classUnderTest0.add(668, 808);
-    int i33 = classUnderTest0.add(568, 1402);
-    int i36 = classUnderTest0.add(2718, 0);
-    int i39 = classUnderTest0.add(1554, 11979);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 34);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 533);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 332);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 241);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 2487);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1476);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i33 == 1970);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i36 == 2718);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i39 == 13533);
+    org.junit.Assert.assertTrue(i18 == 1357);
 
   }
 

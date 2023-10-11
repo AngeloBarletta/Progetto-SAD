@@ -14,11 +14,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test001"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa4#4", (int)(short)10, ' ');
+    java.lang.String str2 = StringParser.escapeString("44", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4444"+ "'", str2.equals("4444"));
 
   }
 
@@ -28,10 +27,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test002"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #i# ", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa", 52, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #i# a"+ "'", str2.equals("a #i# a"));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -41,11 +41,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test003"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa4#4", (int)'a', '#');
+    java.lang.String str2 = StringParser.escapeString("aia", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaiaa"+ "'", str2.equals("aaiaa"));
 
   }
 
@@ -55,10 +54,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test004"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#4#4", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4aaa4", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4#4#4 "+ "'", str2.equals(" 4#4#4 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaa"+ "'", str2.equals("aaa"));
 
   }
 
@@ -69,16 +68,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#aaiaa#a", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ", 1, ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 1);
 
   }
 
@@ -88,10 +81,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test006"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a#aia#a", '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4##ahi!a##4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#aia#a4"+ "'", str2.equals("4a#aia#a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##ahi!a##4"+ "'", str2.equals("4##ahi!a##4"));
 
   }
 
@@ -101,10 +94,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test007"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("    ", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aaiaa", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a    a"+ "'", str2.equals("a    a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaiaa"+ "'", str2.equals("aaiaa"));
 
   }
 
@@ -114,11 +107,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test008"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" i ", (int)'#', '4');
+    java.lang.String str2 = StringParser.escapeString(" a4aaa4a ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a a4aaa4a a"+ "'", str2.equals("a a4aaa4a a"));
 
   }
 
@@ -128,10 +120,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test009"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#4#a i a#4#", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #4#a i a#4# "+ "'", str2.equals(" #4#a i a#4# "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" # ", (int)(byte)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -141,10 +140,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test010"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4#  #4", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #", (int)' ', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#  #4"+ "'", str2.equals("4#  #4"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -154,10 +154,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test011"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a  #aia#  a", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4#", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  #aia#  a"+ "'", str2.equals("a  #aia#  a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
 
   }
 
@@ -167,49 +167,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test012"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a"+ "'", str2.equals(" a"));
-
-  }
-
-  @Test
-  public void test013() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test013"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #aa4## ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa4##"+ "'", str2.equals("#aa4##"));
-
-  }
-
-  @Test
-  public void test014() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test014"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("   4i4   ", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a   4i4   a"+ "'", str2.equals("a   4i4   a"));
-
-  }
-
-  @Test
-  public void test015() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test015"); }
-
-
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaaaahi!aaaaa", 0, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4##4aa", (int)(short)0, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -221,16 +182,55 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test013() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test013"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  #  ", (int)(byte)10, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test014() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test014"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#i#", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#i#a"+ "'", str2.equals("a#i#a"));
+
+  }
+
+  @Test
+  public void test015() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test015"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4#4##4", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#4##4a"+ "'", str2.equals("a4#4##4a"));
+
+  }
+
+  @Test
   public void test016() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test016"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aa4## ", (int)(byte)100, '#');
+    java.lang.String str2 = StringParser.escapeString("#4####4#", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4####4#a"+ "'", str2.equals("a#4####4#a"));
 
   }
 
@@ -240,10 +240,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test017"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#aia#a", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4##4aa", (int)' ', 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#aia#a"+ "'", str2.equals("a#aia#a"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -253,10 +254,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test018"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#a#a i a#a#4", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4#", (int)(short)100, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#a#a i a#a#4a"+ "'", str2.equals("a4#a#a i a#a#4a"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -266,11 +268,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test019"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a#aia#a#", (int)'#', '4');
+    java.lang.String str2 = StringParser.escapeString("a #### a", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a #### a#"+ "'", str2.equals("#a #### a#"));
 
   }
 
@@ -281,16 +282,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #4aahi!aa4# a", 10, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a4#a##4", (int)'4', '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -300,17 +295,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test021"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aa4## ", (int)(byte)-1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a #### a4", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a #### a4"+ "'", str2.equals("4a #### a4"));
 
   }
 
@@ -320,17 +308,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test022"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# hi! #", (int)(short)-1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("4a# ", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a#  "+ "'", str2.equals(" 4a#  "));
 
   }
 
@@ -341,10 +322,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#44aahi!aa44#", (int)(short)100, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4aaa4#", (int)(short)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -354,10 +341,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test024"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#aa4#i#4aa#", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" hi! ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##aa4#i#4aa##"+ "'", str2.equals("##aa4#i#4aa##"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "hi!"+ "'", str2.equals("hi!"));
 
   }
 
@@ -367,10 +354,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test025"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4hi!4", false);
+    java.lang.String str2 = StringParser.escapeString("4a ahi!a a4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4hi!4"+ "'", str2.equals("4hi!4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44a ahi!a a44"+ "'", str2.equals("44a ahi!a a44"));
 
   }
 
@@ -380,10 +367,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test026"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a i a", 'a');
+    java.lang.String str2 = StringParser.escapeString("44a ahi!a a44", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa i aa"+ "'", str2.equals("aa i aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44a ahi!a a44 "+ "'", str2.equals(" 44a ahi!a a44 "));
 
   }
 
@@ -393,11 +380,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test027"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4aahi!aa4#", (int)'4', '4');
+    java.lang.String str2 = StringParser.escapeString("#4#4##4#", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##4#4##4##"+ "'", str2.equals("##4#4##4##"));
 
   }
 
@@ -407,10 +393,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test028"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 4#i#4 4", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 #4####4# 4", (int)(byte)100, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4"+ "'", str2.equals(" 4"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -420,10 +407,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test029"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  ahi!a  ", 'a');
+    java.lang.String str2 = StringParser.escapeString(" i ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  ahi!a  a"+ "'", str2.equals("a  ahi!a  a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 i 4"+ "'", str2.equals("4 i 4"));
 
   }
 
@@ -433,10 +420,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test030"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#  #4", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4#  #4 "+ "'", str2.equals(" 4#  #4 "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4  4####4  4#4", 1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -446,10 +440,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test031"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a", '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44aaa44", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a4"+ "'", str2.equals("4a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44aaa44"+ "'", str2.equals("44aaa44"));
 
   }
 
@@ -459,10 +453,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test032"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a ##4 aia 4## a", '4');
+    java.lang.String str2 = StringParser.escapeString("4#4#4##4#4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a ##4 aia 4## a4"+ "'", str2.equals("4a ##4 aia 4## a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44#4#4##4#44"+ "'", str2.equals("44#4#4##4#44"));
 
   }
 
@@ -472,10 +466,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test033"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4  i  4 ", '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4444", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 4  i  4 4"+ "'", str2.equals("4 4  i  4 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4444"+ "'", str2.equals("4444"));
 
   }
 
@@ -485,10 +479,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test034"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#a", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#aa"+ "'", str2.equals("a#aa"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"######", (int)(byte)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -499,9 +500,23 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4", 10, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test036() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test036"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# i #", (int)(byte)0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4##4", 0, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -513,29 +528,15 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test036() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test036"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4aa", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4aa"+ "'", str2.equals("a 4aa"));
-
-  }
-
-  @Test
   public void test037() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test037"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #a4#i#4a# ", 97, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a #### a#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a #### a#"+ "'", str2.equals("#a #### a#"));
 
   }
 
@@ -545,10 +546,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test038"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a#a i a#a ", true);
+    java.lang.String str2 = StringParser.escapeString("# #4####4# #", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a "+ "'", str2.equals("a#a "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "## #4####4# ##"+ "'", str2.equals("## #4####4# ##"));
 
   }
 
@@ -559,10 +560,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #ahi!a# ", 100, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4a #### a4 ", 32, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -572,10 +573,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test040"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aaaiaaa", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4 aa 4 ", (int)(byte)10, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a"+ "'", str2.equals("a"));
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -585,10 +587,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test041"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#aaiaa#", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"##ahi!a##", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aaiaa#"+ "'", str2.equals("#aaiaa#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##ahi!a##"+ "'", str2.equals("##ahi!a##"));
 
   }
 
@@ -598,24 +600,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test042"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("44  44", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#44  44#"+ "'", str2.equals("#44  44#"));
-
-  }
-
-  @Test
-  public void test043() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test043"); }
-
-
     java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(short)10, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a", (int)(short)0, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -627,15 +615,35 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test043() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test043"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4##ahi!a##4a", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##a"+ "'", str2.equals("4##a"));
+
+  }
+
+  @Test
   public void test044() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test044"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4 aia 4 ", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4 aia 4 #"+ "'", str2.equals("# 4 aia 4 #"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #### a", 0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -646,10 +654,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#  #4#", 35, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##ahi!a##4", 0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -659,11 +673,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test046"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a    a", 32, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #### ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #### "+ "'", str2.equals(" #### "));
 
   }
 
@@ -673,10 +686,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test047"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a  ahi!a  a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #"+ "'", str2.equals(" #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  ahi!a  a"+ "'", str2.equals("a  ahi!a  a"));
 
   }
 
@@ -686,10 +699,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test048"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a#a i a#a", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #4####4# #", 35, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#a i a#a4"+ "'", str2.equals("4a#a i a#a4"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -699,10 +713,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test049"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" ##4  ", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4##4#", 52, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " ##4  "+ "'", str2.equals(" ##4  "));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -712,10 +727,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test050"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a44#i#44a", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa44#i#44aa"+ "'", str2.equals("aa44#i#44aa"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44aaa44", (int)(byte)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -725,10 +747,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test051"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" a", ' ');
+    java.lang.String str2 = StringParser.escapeString("4 ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  a "+ "'", str2.equals("  a "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 a"+ "'", str2.equals("a4 a"));
 
   }
 
@@ -738,10 +760,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test052"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4#4#4 ", '#');
+    java.lang.String str2 = StringParser.escapeString("  44  ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4#4#4 #"+ "'", str2.equals("# 4#4#4 #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  44  a"+ "'", str2.equals("a  44  a"));
 
   }
 
@@ -752,10 +774,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a#ahi!a#a ", 52, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a ahi!a a4", (int)(byte)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -766,10 +794,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#  #4#", (int)'#', '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4##ahi!a##4a", (int)(byte)10, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -779,10 +813,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test055"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# 4 aia 4 #", true);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 aia 4 "+ "'", str2.equals(" 4 aia 4 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  "+ "'", str2.equals("  "));
 
   }
 
@@ -793,9 +827,77 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4a#  #a4a", 10, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test057() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test057"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#hi!#", (int)(short)100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test058() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test058"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("aa #### aa", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaa #### aaa"+ "'", str2.equals("aaa #### aaa"));
+
+  }
+
+  @Test
+  public void test059() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test059"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  #4####4#  ", (int)(byte)100, ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test060() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test060"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4444", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
+
+  }
+
+  @Test
+  public void test061() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test061"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa 4aaahi!aaa4 aa", (int)(byte)-1, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4#4#4##4#4 ", (-1), '4');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -807,15 +909,15 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test057() throws Throwable {
+  public void test062() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test057"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test062"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4#", (int)(byte)0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4a#  #a4a", (int)(short)1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -823,72 +925,6 @@ public class RegressionTest1 {
         org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
       }
     }
-
-  }
-
-  @Test
-  public void test058() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test058"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("##a i a##", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##a i a##4"+ "'", str2.equals("4##a i a##4"));
-
-  }
-
-  @Test
-  public void test059() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test059"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aahi!aa4", 10, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test060() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test060"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a #i# a", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a #i# a4"+ "'", str2.equals("4a #i# a4"));
-
-  }
-
-  @Test
-  public void test061() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test061"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a#ahi!a#a#", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#ahi!a#a#"+ "'", str2.equals("#a#ahi!a#a#"));
-
-  }
-
-  @Test
-  public void test062() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test062"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("# a#i#a #", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "## a#i#a ##"+ "'", str2.equals("## a#i#a ##"));
 
   }
 
@@ -898,10 +934,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test063"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  i  ", ' ');
+    java.lang.String str2 = StringParser.escapeString("  4####4  ", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   i   "+ "'", str2.equals("   i   "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   4####4   "+ "'", str2.equals("   4####4   "));
 
   }
 
@@ -911,17 +947,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test064"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a i a#", 0, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("4  44  4", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4  44  4a"+ "'", str2.equals("a4  44  4a"));
 
   }
 
@@ -932,9 +961,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a", 0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(byte)10, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -951,11 +981,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test066"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"        ", (int)(short)100, '4');
+    java.lang.String str2 = StringParser.escapeString("44a ahi!a a44", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44a ahi!a a44a"+ "'", str2.equals("a44a ahi!a a44a"));
 
   }
 
@@ -965,10 +994,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test067"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44  i  44", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#", 97, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44  i  44"+ "'", str2.equals("44  i  44"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -978,10 +1008,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test068"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# 4 aia 4 #", 'a');
+    java.lang.String str2 = StringParser.escapeString(" #a ahi!a a# ", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a# 4 aia 4 #a"+ "'", str2.equals("a# 4 aia 4 #a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# #a ahi!a a# #"+ "'", str2.equals("# #a ahi!a a# #"));
 
   }
 
@@ -992,16 +1022,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# a#i#a #", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4##4", (int)'4', '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1011,10 +1035,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test070"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4aa4#4", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#4#4##4#a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4#4"+ "'", str2.equals("4aa4#4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4#4##4#a"+ "'", str2.equals("a#4#4##4#a"));
 
   }
 
@@ -1024,10 +1048,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test071"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("aa ##4 aia 4## aa", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4  a hi! a  4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa ##4 aia 4## aa#"+ "'", str2.equals("#aa ##4 aia 4## aa#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  a hi! a  4"+ "'", str2.equals("4  a hi! a  4"));
 
   }
 
@@ -1037,10 +1061,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test072"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4aaahi!aaa4 a", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a#a ahi!a a#a4", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4aaahi!aaa4 a"+ "'", str2.equals("a 4aaahi!aaa4 a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a ahi!a a#a"+ "'", str2.equals("a#a ahi!a a#a"));
 
   }
 
@@ -1051,10 +1075,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a#a i a#a#", (int)(short)100, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4####4 ", (int)(short)0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -1064,10 +1094,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test074"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#4#", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 a", 97, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4#a"+ "'", str2.equals("a#4#a"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -1078,10 +1109,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   4i4   ", (int)' ', '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  44  ", (int)(byte)1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -1091,11 +1128,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test076"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aia# ", (int)'a', 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 44 a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 44 a"+ "'", str2.equals("a 44 a"));
 
   }
 
@@ -1105,10 +1141,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test077"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a #aia# a", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   4####4   ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a #aia# a#"+ "'", str2.equals("#a #aia# a#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   4####4   "+ "'", str2.equals("   4####4   "));
 
   }
 
@@ -1119,16 +1155,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" # #4aahi!aa4# # ", (int)(short)-1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #4## ", (int)'a', '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -1138,10 +1168,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test079"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#ahi!a#a", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aia", (int)'#', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a"+ "'", str2.equals("#a"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -1152,16 +1183,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#  #a#i#a#  #", (int)(short)10, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a a ahi!a a a", (int)(short)100, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -1171,17 +1196,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test081"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #i# ", (int)(short)-1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ### a", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " ### "+ "'", str2.equals(" ### "));
 
   }
 
@@ -1191,10 +1209,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test082"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#ahi!a#", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" # ", (int)' ', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#ahi!a#4"+ "'", str2.equals("4#ahi!a#4"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -1204,17 +1223,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test083"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aa ##4 aia 4## aa#", 1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("  4#  ", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  4#  #"+ "'", str2.equals("#  4#  #"));
 
   }
 
@@ -1224,10 +1236,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test084"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a  ahi!a  a", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  ahi!a  ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  ahi!a  a"+ "'", str2.equals("a  ahi!a  a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
 
   }
 
@@ -1238,10 +1250,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a 4aa", (int)(byte)10, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"", (int)(byte)0, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue(i4 == 0);
 
   }
 
@@ -1251,10 +1263,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test086"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("    ", '#');
+    java.lang.String str2 = StringParser.escapeString("aaiaa", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#    #"+ "'", str2.equals("#    #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aaiaa#"+ "'", str2.equals("#aaiaa#"));
 
   }
 
@@ -1264,122 +1276,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test087"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#aa4##", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#aa4##4"+ "'", str2.equals("4#aa4##4"));
-
-  }
-
-  @Test
-  public void test088() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test088"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("#", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a"+ "'", str2.equals("a#a"));
-
-  }
-
-  @Test
-  public void test089() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test089"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#a", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a"+ "'", str2.equals("a#a"));
-
-  }
-
-  @Test
-  public void test090() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test090"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("4aa4#4", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44aa4#44"+ "'", str2.equals("44aa4#44"));
-
-  }
-
-  @Test
-  public void test091() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test091"); }
-
-
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4aaiaa4 ", (int)(short)0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test092() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test092"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("# i #", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " # i # "+ "'", str2.equals(" # i # "));
-
-  }
-
-  @Test
-  public void test093() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test093"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa44#i#44aa", (int)(short)100, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test094() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test094"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("#4#a i a#4#", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##4#a i a#4##"+ "'", str2.equals("##4#a i a#4##"));
-
-  }
-
-  @Test
-  public void test095() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test095"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a i a##4", (int)(byte)-1, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#", (int)(short)-1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -1391,15 +1291,143 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test088() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test088"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    java.lang.CharSequence charSequence1 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, charSequence1, 100, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test089() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test089"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##ahi!a##4", (int)'#', '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
+
+  }
+
+  @Test
+  public void test090() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test090"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4##4a", (int)(short)0, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test091() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test091"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# #4##4# #", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# #4##4# #"+ "'", str2.equals("# #4##4# #"));
+
+  }
+
+  @Test
+  public void test092() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test092"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4##4aa", (int)(short)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test093() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test093"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a44a ahi!a a44a", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a44a ahi!a a44a "+ "'", str2.equals(" a44a ahi!a a44a "));
+
+  }
+
+  @Test
+  public void test094() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test094"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 "+ "'", str2.equals(" 4 "));
+
+  }
+
+  @Test
+  public void test095() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test095"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4#4##4#", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#"+ "'", str2.equals("4#"));
+
+  }
+
+  @Test
   public void test096() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test096"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a#4 aia 4#a#", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 aa 4", 52, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#4 aia 4#a#"+ "'", str2.equals("#a#4 aia 4#a#"));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1409,17 +1437,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test097"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 i 4a", (int)(short)0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4#4#4##4#4#", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#4#4##4#4#"+ "'", str2.equals("#4#4#4##4#4#"));
 
   }
 
@@ -1430,10 +1451,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#  #", (int)'4', ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44#4#4##4#44", (int)(byte)1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -1443,10 +1470,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test099"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#  #a#i#a#  #", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#i#", 32, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  #a#i#a#  #"+ "'", str2.equals("#  #a#i#a#  #"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -1456,17 +1484,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test100"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #4aahi!aa4# #", (int)(byte)0, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a #", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #"+ "'", str2.equals("a #"));
 
   }
 
@@ -1476,17 +1497,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test101"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#ahi!a#4", (int)(short)1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("ahi!a", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aahi!aa"+ "'", str2.equals("aahi!aa"));
 
   }
 
@@ -1496,17 +1510,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test102"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"      ", 1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("  #  ", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  #  #"+ "'", str2.equals("#  #  #"));
 
   }
 
@@ -1517,16 +1524,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#  #4#", 1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aaiaa#", (int)'4', '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1536,11 +1537,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test104"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#a i a#4#", (int)'#', ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#  4#  #", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  4#  #"+ "'", str2.equals("#  4#  #"));
 
   }
 
@@ -1550,11 +1550,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test105"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaahi!aaa", 100, 'a');
+    java.lang.String str2 = StringParser.escapeString("  #4##4#  ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  #4##4#  a"+ "'", str2.equals("a  #4##4#  a"));
 
   }
 
@@ -1565,10 +1564,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaa", 10, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4  4####4  4#4", (int)'4', ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1578,10 +1577,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test107"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a#a i a#a#", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a44####44a#", 52, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#a i a#a#"+ "'", str2.equals("#a#a i a#a#"));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1591,10 +1591,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test108"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#aahi!aa#", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 #", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #aahi!aa# "+ "'", str2.equals(" #aahi!aa# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
 
   }
 
@@ -1604,10 +1604,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test109"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#a ", true);
+    java.lang.String str2 = StringParser.escapeString("4 4a#  #a4 4", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a"+ "'", str2.equals("#a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 4a#  #a4 4a"+ "'", str2.equals("a4 4a#  #a4 4a"));
 
   }
 
@@ -1617,18 +1617,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test110"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(byte)-1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString(" #ahi!a# ", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #ahi!a#  "+ "'", str2.equals("  #ahi!a#  "));
 
   }
 
@@ -1638,11 +1630,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test111"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#  #4#", (int)(byte)10, '4');
+    java.lang.String str2 = StringParser.escapeString("aa4#aa", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4#aa4"+ "'", str2.equals("4aa4#aa4"));
 
   }
 
@@ -1652,10 +1643,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test112"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a  #aia#  a", 'a');
+    java.lang.String str2 = StringParser.escapeString("# #a ahi!a a# #", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa  #aia#  aa"+ "'", str2.equals("aa  #aia#  aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "## #a ahi!a a# ##"+ "'", str2.equals("## #a ahi!a a# ##"));
 
   }
 
@@ -1665,10 +1656,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test113"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#ahi!a#4", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  44  ", (int)' ', '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#ahi!a#4#"+ "'", str2.equals("#4#ahi!a#4#"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -1678,10 +1670,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test114"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #aa4## ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #aa4## "+ "'", str2.equals(" #aa4## "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#4#4##4#a", 1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -1692,16 +1691,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aahi!aa4", (int)(short)-1, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4#a", 52, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -1712,10 +1705,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  #a#i#a#  ", 100, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#i#a", (int)(short)0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -1725,10 +1724,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test117"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  a ", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a####a4", (int)'#', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -1738,10 +1738,82 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test118"); }
 
 
+    java.lang.String str2 = StringParser.escapeString("4 #", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 #a"+ "'", str2.equals("a4 #a"));
+
+  }
+
+  @Test
+  public void test119() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test119"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4 ahi!a 4", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4 ahi!a 4#"+ "'", str2.equals("#4 ahi!a 4#"));
+
+  }
+
+  @Test
+  public void test120() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test120"); }
+
+
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #i# ", (int)(byte)-1, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  ahi!a  a", (int)(byte)10, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test121() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test121"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + ""+ "'", str2.equals(""));
+
+  }
+
+  @Test
+  public void test122() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test122"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ### a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a ### a"+ "'", str2.equals("a ### a"));
+
+  }
+
+  @Test
+  public void test123() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test123"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #", (int)(short)-1, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -1753,94 +1825,20 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test119() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test119"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a #aia# a#", (int)(byte)100, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test120() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test120"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" 4#i#4 ", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4#i#4 a"+ "'", str2.equals("a 4#i#4 a"));
-
-  }
-
-  @Test
-  public void test121() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test121"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# a#i#a #", 0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test122() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test122"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" #a4#i#4a# ", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #a4#i#4a# a"+ "'", str2.equals("a #a4#i#4a# a"));
-
-  }
-
-  @Test
-  public void test123() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test123"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  a ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  a "+ "'", str2.equals("  a "));
-
-  }
-
-  @Test
   public void test124() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test124"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, 0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a #### a#", (int)(short)-1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
       }
     }
 
@@ -1852,10 +1850,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test125"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #4aahi!aa4# ", ' ');
+    java.lang.String str2 = StringParser.escapeString("#  #  #", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #4aahi!aa4#  "+ "'", str2.equals("  #4aahi!aa4#  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#  #  #a"+ "'", str2.equals("a#  #  #a"));
 
   }
 
@@ -1866,16 +1864,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4aaahi!aaa4a", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #", 10, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -1885,10 +1877,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test127"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# 4#4#4 #", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#  #a", (int)(byte)100, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4# 4#4#4 #4"+ "'", str2.equals("4# 4#4#4 #4"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -1899,270 +1892,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a4", (int)(short)100, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test129() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test129"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" #", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #a"+ "'", str2.equals("a #a"));
-
-  }
-
-  @Test
-  public void test130() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test130"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 a  a 4", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a  a 4"+ "'", str2.equals("4 a  a 4"));
-
-  }
-
-  @Test
-  public void test131() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test131"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("4aa4#4", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4aa4#4 "+ "'", str2.equals(" 4aa4#4 "));
-
-  }
-
-  @Test
-  public void test132() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test132"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" a#ahi!a#a ", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a a#ahi!a#a a"+ "'", str2.equals("a a#ahi!a#a a"));
-
-  }
-
-  @Test
-  public void test133() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test133"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a#4aahi!aa4#a", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa#4aahi!aa4#aa"+ "'", str2.equals("aa#4aahi!aa4#aa"));
-
-  }
-
-  @Test
-  public void test134() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test134"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#  #4", (int)(byte)10, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test135() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test135"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("#a#4 aia 4#a#", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #a#4 aia 4#a# "+ "'", str2.equals(" #a#4 aia 4#a# "));
-
-  }
-
-  @Test
-  public void test136() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test136"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# a#i#a #", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a#"+ "'", str2.equals(" a#"));
-
-  }
-
-  @Test
-  public void test137() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test137"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#aa", 0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test138() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test138"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# hi! #", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test139() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test139"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4aaahi!aaa4a", (int)(short)10, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test140() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test140"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("aa#4aahi!aa4#aa", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa#4aahi!aa4#aa4"+ "'", str2.equals("4aa#4aahi!aa4#aa4"));
-
-  }
-
-  @Test
-  public void test141() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test141"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 aia 4", 10, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test142() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test142"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aahi!aa", (int)(short)10, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test143() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test143"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aa4#i#4aa#", (int)'a', '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
-
-  }
-
-  @Test
-  public void test144() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test144"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4i4 ", (int)(short)100, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test145() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test145"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("  a ", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   a  "+ "'", str2.equals("   a  "));
-
-  }
-
-  @Test
-  public void test146() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test146"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a aaaiaaa a", (-1), '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4", (-1), ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -2174,108 +1906,26 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test147() throws Throwable {
+  public void test129() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test147"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test129"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#  #", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##  ##"+ "'", str2.equals("##  ##"));
+
+  }
+
+  @Test
+  public void test130() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test130"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #i# a", 52, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test148() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test148"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4#ahi!a#4#", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#ahi!a#4#"+ "'", str2.equals("#4#ahi!a#4#"));
-
-  }
-
-  @Test
-  public void test149() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test149"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   i   ", (int)(short)10, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test150() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test150"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4  i  4", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  i  "+ "'", str2.equals("  i  "));
-
-  }
-
-  @Test
-  public void test151() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test151"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44  44", (int)(byte)100, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test152() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test152"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##4 aia 4##", 52, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test153() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test153"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a #a", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a #a#"+ "'", str2.equals("#a #a#"));
-
-  }
-
-  @Test
-  public void test154() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test154"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##a i a##", 32, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 a", (int)' ', 'a');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 32);
@@ -2283,28 +1933,75 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test155() throws Throwable {
+  public void test131() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test155"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test131"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#  #a#i#a#  #", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4 ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#  #a#i#a#  #a"+ "'", str2.equals("a#  #a#i#a#  #a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
 
   }
 
   @Test
-  public void test156() throws Throwable {
+  public void test132() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test156"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test132"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##4 ", 0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 ahi!a 4a", (int)(byte)-1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test133() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test133"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" aia ", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  aia  "+ "'", str2.equals("  aia  "));
+
+  }
+
+  @Test
+  public void test134() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test134"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 aa 4", (int)'a', '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 97);
+
+  }
+
+  @Test
+  public void test135() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test135"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a", (int)(byte)0, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -2316,15 +2013,320 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test136() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test136"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   #4####4#   ", 1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test137() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test137"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" #4## ", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# #4## #"+ "'", str2.equals("# #4## #"));
+
+  }
+
+  @Test
+  public void test138() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test138"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#4#", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4#4"+ "'", str2.equals("4#4#4"));
+
+  }
+
+  @Test
+  public void test139() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test139"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4  4####4  4", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4  4####4  4a"+ "'", str2.equals("a4  4####4  4a"));
+
+  }
+
+  @Test
+  public void test140() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test140"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #ahi!a# ", (int)(short)-1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test141() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test141"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" 4 ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4 a"+ "'", str2.equals("a 4 a"));
+
+  }
+
+  @Test
+  public void test142() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test142"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44####44a", (-1), '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test143() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test143"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("   4####4   ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a   4####4   a"+ "'", str2.equals("a   4####4   a"));
+
+  }
+
+  @Test
+  public void test144() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test144"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a44a ahi!a a44a", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa44a ahi!a a44aa"+ "'", str2.equals("aa44a ahi!a a44aa"));
+
+  }
+
+  @Test
+  public void test145() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test145"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a44a ahi!a a44a ", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44a "+ "'", str2.equals("a44a "));
+
+  }
+
+  @Test
+  public void test146() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test146"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a #", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa #a"+ "'", str2.equals("aa #a"));
+
+  }
+
+  @Test
+  public void test147() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test147"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   4####4   ", (int)'#', 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
+
+  }
+
+  @Test
+  public void test148() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test148"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4 a", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 "+ "'", str2.equals("4 "));
+
+  }
+
+  @Test
+  public void test149() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test149"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44#4##44", 0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test150() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test150"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4 #a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 #a"+ "'", str2.equals("a4 #a"));
+
+  }
+
+  @Test
+  public void test151() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test151"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44a ahi!a a44", 32, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
+
+  }
+
+  @Test
+  public void test152() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test152"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#a #4####4# a#", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a #4####4# a#a"+ "'", str2.equals("a#a #4####4# a#a"));
+
+  }
+
+  @Test
+  public void test153() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test153"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("44#4#4##4#44", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44#4#4##4#44a"+ "'", str2.equals("a44#4#4##4#44a"));
+
+  }
+
+  @Test
+  public void test154() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test154"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" a", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  a "+ "'", str2.equals("  a "));
+
+  }
+
+  @Test
+  public void test155() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test155"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a4#a#", (int)(short)100, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test156() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test156"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"## #a ahi!a a# ##", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "## #a ahi!a a# ##"+ "'", str2.equals("## #a ahi!a a# ##"));
+
+  }
+
+  @Test
   public void test157() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test157"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a  a  a", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4##", 100, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a  a  a#"+ "'", str2.equals("#a  a  a#"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -2334,10 +2336,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test158"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  ahi!a  ", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4  4####4  4#4", (int)(byte)100, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  ahi!a  #"+ "'", str2.equals("#  ahi!a  #"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -2347,10 +2350,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test159"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a#aia#a", 'a');
+    java.lang.String str2 = StringParser.escapeString("4 ", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa#aia#aa"+ "'", str2.equals("aa#aia#aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4  "+ "'", str2.equals(" 4  "));
 
   }
 
@@ -2360,10 +2363,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test160"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" a  a ", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4####4 ", (int)(byte)10, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a a  a a"+ "'", str2.equals("a a  a a"));
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -2373,11 +2377,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test161"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"", 0, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 #4####4# 4", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 0);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #4"+ "'", str2.equals(" #4"));
 
   }
 
@@ -2387,11 +2390,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test162"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a 4#i#4 a", 35, ' ');
+    java.lang.String str2 = StringParser.escapeString("4 #4####4# 4", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 #4####4# 4a"+ "'", str2.equals("a4 #4####4# 4a"));
 
   }
 
@@ -2401,10 +2403,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test163"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a#aaiaa#a", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #4####4# ", (int)' ', ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#aaiaa#a4"+ "'", str2.equals("4a#aaiaa#a4"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -2417,7 +2420,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaiaa", 0, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4  44  4a", (int)(short)1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -2434,17 +2437,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test165"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4aaiaa4  ", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("  a hi! a  ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  a hi! a  a"+ "'", str2.equals("a  a hi! a  a"));
 
   }
 
@@ -2454,10 +2450,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test166"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  a ", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44#4#4##4#44a", 35, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  a 4"+ "'", str2.equals("4  a 4"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -2467,10 +2464,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test167"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aa  #aia#  aa", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4aaa4aa", 97, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa  #aia#  aa"+ "'", str2.equals("aa  #aia#  aa"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -2480,10 +2478,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test168"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" ahi!a ", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4  4####4  4", 97, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# ahi!a #"+ "'", str2.equals("# ahi!a #"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -2493,10 +2492,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test169"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #4#a i a#4# ", false);
+    java.lang.String str2 = StringParser.escapeString("#a #4####4# a#", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #4#a i a#4# "+ "'", str2.equals(" #4#a i a#4# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##a #4####4# a##"+ "'", str2.equals("##a #4####4# a##"));
 
   }
 
@@ -2506,102 +2505,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test170"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a44aa", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa44aaa"+ "'", str2.equals("aa44aaa"));
-
-  }
-
-  @Test
-  public void test171() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test171"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a#aaiaa#a4", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#aaiaa#a4"+ "'", str2.equals("4a#aaiaa#a4"));
-
-  }
-
-  @Test
-  public void test172() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test172"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("4##4 aia 4##4", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44##4 aia 4##44"+ "'", str2.equals("44##4 aia 4##44"));
-
-  }
-
-  @Test
-  public void test173() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test173"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44  i  44", 52, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test174() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test174"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("  #", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  #4"+ "'", str2.equals("4  #4"));
-
-  }
-
-  @Test
-  public void test175() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test175"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a a i a a", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a"+ "'", str2.equals(" a"));
-
-  }
-
-  @Test
-  public void test176() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test176"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a 4aa", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a 4aa4"+ "'", str2.equals("4a 4aa4"));
-
-  }
-
-  @Test
-  public void test177() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test177"); }
-
-
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"i", (int)(byte)0, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a", (int)(short)0, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -2613,15 +2520,115 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test171() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test171"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa4#aa4", (int)(short)0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test172() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test172"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  4", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+
+  }
+
+  @Test
+  public void test173() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test173"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" a hi! a ", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a hi! a 4"+ "'", str2.equals("4 a hi! a 4"));
+
+  }
+
+  @Test
+  public void test174() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test174"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4##a", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4##a#"+ "'", str2.equals("#4##a#"));
+
+  }
+
+  @Test
+  public void test175() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test175"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4  4####4  4#", (int)' ', 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
+
+  }
+
+  @Test
+  public void test176() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test176"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4##4a", (int)(short)100, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test177() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test177"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a#  #  #a", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a#  #  #a "+ "'", str2.equals(" a#  #  #a "));
+
+  }
+
+  @Test
   public void test178() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test178"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4aaiaa4 ", true);
+    java.lang.String str2 = StringParser.escapeString("  #4##4#  ", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aaiaa4"+ "'", str2.equals("4aaiaa4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  #4##4#  #"+ "'", str2.equals("#  #4##4#  #"));
 
   }
 
@@ -2631,10 +2638,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test179"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a##a ", true);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a4#a#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##a"+ "'", str2.equals("a##a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a4#a#"+ "'", str2.equals("#a4#a#"));
 
   }
 
@@ -2644,10 +2651,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test180"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44##4 aia 4##44", true);
+    java.lang.String str2 = StringParser.escapeString("# #4##4# #", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "## #4##4# ##"+ "'", str2.equals("## #4##4# ##"));
 
   }
 
@@ -2657,10 +2664,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test181"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("   i   ", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4 aa 4 ", 97, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#   i   #"+ "'", str2.equals("#   i   #"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -2670,10 +2678,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test182"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# a#i#a #", ' ');
+    java.lang.String str2 = StringParser.escapeString("4  4####4  4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " # a#i#a # "+ "'", str2.equals(" # a#i#a # "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44  4####4  44"+ "'", str2.equals("44  4####4  44"));
 
   }
 
@@ -2683,11 +2691,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test183"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"        ", 35, 'a');
+    java.lang.String str2 = StringParser.escapeString("a hi! a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a hi! a4"+ "'", str2.equals("4a hi! a4"));
 
   }
 
@@ -2698,9 +2705,36 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ", 10, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test185() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test185"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a# #4####4# #a", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a# #4####4# #a#"+ "'", str2.equals("#a# #4####4# #a#"));
+
+  }
+
+  @Test
+  public void test186() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test186"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa", 0, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #4## ", 0, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -2712,42 +2746,16 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test185() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test185"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##4 aia 4##4", 100, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test186() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test186"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#aia#", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aia"+ "'", str2.equals("aia"));
-
-  }
-
-  @Test
   public void test187() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test187"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4#i#4 ", ' ');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a ahi!a a", 10, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  4#i#4  "+ "'", str2.equals("  4#i#4  "));
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -2757,11 +2765,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test188"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a i a##4", 32, '4');
+    java.lang.String str2 = StringParser.escapeString("a ### a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a ### a4"+ "'", str2.equals("4a ### a4"));
 
   }
 
@@ -2771,10 +2778,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test189"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4 aaaiaaa 4", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 aaaiaaa 4 "+ "'", str2.equals(" 4 aaaiaaa 4 "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"## #4##4# ##", (int)(short)1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -2784,11 +2798,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test190"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a 4aa4", 35, '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4 aa 4#", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 aa 4"+ "'", str2.equals("4 aa 4"));
 
   }
 
@@ -2798,11 +2811,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test191"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# ahi!a #", 32, 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  aa  ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  aa  "+ "'", str2.equals("  aa  "));
 
   }
 
@@ -2812,10 +2824,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test192"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  a  ", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4aaa4a", 100, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -2825,10 +2838,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test193"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# 4#4#4 #", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " # 4#4#4 # "+ "'", str2.equals(" # 4#4#4 # "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #a ahi!a a# ", 0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -2838,10 +2858,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test194"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" ##4  ", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #4## ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a ##4  a"+ "'", str2.equals("a ##4  a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4##"+ "'", str2.equals("#4##"));
 
   }
 
@@ -2851,11 +2871,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test195"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a #4aahi!aa4# a4", (int)'4', '4');
+    java.lang.String str2 = StringParser.escapeString("44#4#4##4#44", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44#4#4##4#44 "+ "'", str2.equals(" 44#4#4##4#44 "));
 
   }
 
@@ -2866,7 +2885,7 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4#", (int)(byte)100, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#4##4#", 100, 'a');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 100);
@@ -2879,10 +2898,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test197"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#a #a#", ' ');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 a hi! a 4", 100, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #a #a# "+ "'", str2.equals(" #a #a# "));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -2892,10 +2912,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test198"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ##4 aia 4## a", false);
+    java.lang.String str2 = StringParser.escapeString("4a# ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a ##4 aia 4## a"+ "'", str2.equals("a ##4 aia 4## a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44a# 4"+ "'", str2.equals("44a# 4"));
 
   }
 
@@ -2906,16 +2926,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4aahi!aa4 ", 1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #### ", (int)(short)100, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -2925,10 +2939,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test200"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("   i   ", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   4####4   ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "    i    "+ "'", str2.equals("    i    "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
 
   }
 
@@ -2938,10 +2952,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test201"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#  #4", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   #4####4#   ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#  #4a"+ "'", str2.equals("a4#  #4a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
 
   }
 
@@ -2951,10 +2965,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test202"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#aia#", '4');
+    java.lang.String str2 = StringParser.escapeString(" #a ahi!a a# ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#aia#4"+ "'", str2.equals("4#aia#4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 #a ahi!a a# 4"+ "'", str2.equals("4 #a ahi!a a# 4"));
 
   }
 
@@ -2965,49 +2979,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aia# ", 32, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test204() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test204"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" #aa4## ", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# #aa4## #"+ "'", str2.equals("# #aa4## #"));
-
-  }
-
-  @Test
-  public void test205() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test205"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a 44aahi!aa44 a", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a 44aahi!aa44 a#"+ "'", str2.equals("#a 44aahi!aa44 a#"));
-
-  }
-
-  @Test
-  public void test206() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test206"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a#aia#a4", (int)(byte)-1, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a aa a", (int)(byte)-1, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -3019,56 +2993,15 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test207() throws Throwable {
+  public void test204() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test207"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   a  ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   a  "+ "'", str2.equals("   a  "));
-
-  }
-
-  @Test
-  public void test208() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test208"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test204"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a 44aahi!aa44 a", 100, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test209() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test209"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" 4#4#4 ", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  4#4#4  "+ "'", str2.equals("  4#4#4  "));
-
-  }
-
-  @Test
-  public void test210() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test210"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, 97, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  #4##4#  a", (int)(short)1, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3080,15 +3013,123 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test205() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test205"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa#aa", 0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test206() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test206"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  44  a", (int)'#', ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
+
+  }
+
+  @Test
+  public void test207() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test207"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4 ahi!a 4#", (int)(short)-1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test208() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test208"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 4", 0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test209() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test209"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#a44####44a#", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#a44####44a#4"+ "'", str2.equals("4#a44####44a#4"));
+
+  }
+
+  @Test
+  public void test210() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test210"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #4", (int)(byte)-1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
   public void test211() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test211"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#a ", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a ### a", 35, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a "+ "'", str2.equals("a#a "));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3098,10 +3139,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test212"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a #i# a4", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #i# a"+ "'", str2.equals("a #i# a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4####4  ", (int)(short)0, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3111,10 +3159,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test213"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("444#i#444", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4##a4#a##4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 444#i#444 "+ "'", str2.equals(" 444#i#444 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##a4#a##4"+ "'", str2.equals("4##a4#a##4"));
 
   }
 
@@ -3124,10 +3172,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test214"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("aa4", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa44"+ "'", str2.equals("4aa44"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4 aa 4 ", (int)(short)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3140,7 +3195,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ##4 aia 4## ", (int)(short)10, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa ahi!a aa", (int)(byte)1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3157,11 +3212,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test216"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aa4#i#4aa# ", 52, 'a');
+    java.lang.String str2 = StringParser.escapeString("aa4##4aa", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4##4aa4"+ "'", str2.equals("4aa4##4aa4"));
 
   }
 
@@ -3172,16 +3226,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 i 4a", (-1), '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 #4##4# 4", 35, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3191,11 +3239,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test218"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 aia 4", 52, '#');
+    java.lang.String str2 = StringParser.escapeString("##4aaa4##", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##4aaa4##a"+ "'", str2.equals("a##4aaa4##a"));
 
   }
 
@@ -3206,10 +3253,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aaaahi!aaaa4", (int)'4', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44", (int)(byte)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3222,7 +3275,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#ahi!a#4", (int)(byte)0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a44####44a#", (int)(short)1, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3240,16 +3293,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4aahi!aa4#", 1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##4", 35, ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3262,7 +3309,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 4#i#4 4", 0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#a ahi!a a#a", (int)(short)0, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3279,11 +3326,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test223"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4i4 ", 52, 'a');
+    java.lang.String str2 = StringParser.escapeString(" 4 #4##4# 4 ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4 #4##4# 4 a"+ "'", str2.equals("a 4 #4##4# 4 a"));
 
   }
 
@@ -3293,10 +3339,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test224"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a #a", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a4####4a#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa #aa"+ "'", str2.equals("aa #aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a4####4a#"+ "'", str2.equals("#a4####4a#"));
 
   }
 
@@ -3306,10 +3352,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test225"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#a#i#a#", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaa", (int)'a', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a#i#a#a"+ "'", str2.equals("a#a#i#a#a"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -3319,10 +3366,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test226"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ##4  a", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a ### a4", (int)'#', '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " ##4  "+ "'", str2.equals(" ##4  "));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3332,10 +3380,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test227"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#  #", 'a');
+    java.lang.String str2 = StringParser.escapeString("  4####4  ", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#  #a"+ "'", str2.equals("a#  #a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  4####4  #"+ "'", str2.equals("#  4####4  #"));
 
   }
 
@@ -3345,10 +3393,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test228"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4#4#4 ", true);
+    java.lang.String str2 = StringParser.escapeString("4 #4##4# 4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4#4"+ "'", str2.equals("4#4#4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 #4##4# 44"+ "'", str2.equals("44 #4##4# 44"));
 
   }
 
@@ -3359,10 +3407,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ##4  ", (int)'4', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa #a", (int)(byte)1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3372,17 +3426,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test230"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a#ahi!a#a ", 1, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("a4  44  4a", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a4  44  4a "+ "'", str2.equals(" a4  44  4a "));
 
   }
 
@@ -3392,10 +3439,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test231"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" a#a i a#a ", '4');
+    java.lang.String str2 = StringParser.escapeString("4##a4#a##4", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a#a i a#a 4"+ "'", str2.equals("4 a#a i a#a 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4##a4#a##4#"+ "'", str2.equals("#4##a4#a##4#"));
 
   }
 
@@ -3405,18 +3452,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test232"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(byte)1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("aa#aa", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa#aa4"+ "'", str2.equals("4aa#aa4"));
 
   }
 
@@ -3427,9 +3466,43 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a# #4####4# #a#", 35, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
+
+  }
+
+  @Test
+  public void test234() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test234"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #4aahi!aa4# a", 1, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##a4#a##", (int)(byte)-1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test235() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test235"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4  44  4a", 1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3441,41 +3514,15 @@ public class RegressionTest1 {
   }
 
   @Test
-  public void test234() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test234"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  4#i#4  ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
-
-  }
-
-  @Test
-  public void test235() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test235"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("# a#i#a #", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4# a#i#a #4"+ "'", str2.equals("4# a#i#a #4"));
-
-  }
-
-  @Test
   public void test236() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test236"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a a#ahi!a#a a", true);
+    java.lang.String str2 = StringParser.escapeString("a44a ahi!a a44a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a"+ "'", str2.equals(" a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a44a ahi!a a44a4"+ "'", str2.equals("4a44a ahi!a a44a4"));
 
   }
 
@@ -3488,12 +3535,12 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"    ", 0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4##a4#a##4#", (int)(short)-1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
       }
     }
 
@@ -3505,10 +3552,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test238"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4#i#4 ", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"## #4##4# ##", 32, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#i#4"+ "'", str2.equals("4#i#4"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -3518,11 +3566,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test239"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaaiaaa", 97, 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a4aaa4a ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a4aaa4a "+ "'", str2.equals(" a4aaa4a "));
 
   }
 
@@ -3532,10 +3579,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test240"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a4#i#4a#", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 i 4", (int)'#', 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#"+ "'", str2.equals("a4#"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3545,10 +3593,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test241"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"    i    ", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##  ##", 32, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "    i    "+ "'", str2.equals("    i    "));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -3558,17 +3607,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test242"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" hi! ", 0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString(" 4a#  ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4a#  a"+ "'", str2.equals("a 4a#  a"));
 
   }
 
@@ -3579,10 +3621,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ##4 aia 4## ", 52, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##", (int)(byte)-1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3592,10 +3640,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test244"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" a i a ", '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4a#  ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a i a 4"+ "'", str2.equals("4 a i a 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a#  "+ "'", str2.equals(" 4a#  "));
 
   }
 
@@ -3605,10 +3653,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test245"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("        ", 'a');
+    java.lang.String str2 = StringParser.escapeString(" # ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a        a"+ "'", str2.equals("a        a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a # a"+ "'", str2.equals("a # a"));
 
   }
 
@@ -3621,7 +3669,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa#4aahi!aa4#aa4", (int)(byte)0, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#ahi!a#4", 1, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3638,11 +3686,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test247"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a 4aa4", (int)(short)100, '#');
+    java.lang.String str2 = StringParser.escapeString("44a####a44", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44a####a44 "+ "'", str2.equals(" 44a####a44 "));
 
   }
 
@@ -3652,10 +3699,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test248"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#4aahi!aa4#a", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a hi! a4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4aahi!aa4#a"+ "'", str2.equals("a#4aahi!aa4#a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a hi! a4"+ "'", str2.equals("4a hi! a4"));
 
   }
 
@@ -3665,10 +3712,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test249"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("44aa4#44", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a ### a4", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44aa4#44 "+ "'", str2.equals(" 44aa4#44 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a ### a"+ "'", str2.equals("a ### a"));
 
   }
 
@@ -3678,10 +3725,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test250"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a  a ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a "+ "'", str2.equals("a "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4aaa4a", (int)(short)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3691,10 +3745,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test251"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ##4 aia 4## a", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " ##4 a"+ "'", str2.equals(" ##4 a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#i#a", 0, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3707,7 +3768,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a#aia#a#", 0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ", (int)(short)0, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -3724,11 +3785,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test253"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 a i a 4", (int)'4', '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#  #  #a", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  #  #"+ "'", str2.equals("#  #  #"));
 
   }
 
@@ -3738,17 +3798,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test254"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aia", (int)(byte)0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("44#4##44", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44#4##44a"+ "'", str2.equals("a44#4##44a"));
 
   }
 
@@ -3758,11 +3811,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test255"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44aa", (int)(short)100, 'a');
+    java.lang.String str2 = StringParser.escapeString("4a####a4", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4a####a4#"+ "'", str2.equals("#4a####a4#"));
 
   }
 
@@ -3772,10 +3824,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test256"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#   i   #", false);
+    java.lang.String str2 = StringParser.escapeString("a4 #a", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#   i   #"+ "'", str2.equals("#   i   #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa4 #aa"+ "'", str2.equals("aa4 #aa"));
 
   }
 
@@ -3785,11 +3837,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test257"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#aa4##4", (int)(byte)10, '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4aa4#aa4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4#aa4"+ "'", str2.equals("4aa4#aa4"));
 
   }
 
@@ -3799,11 +3850,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test258"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4aaiaa4 ", (int)(short)100, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44a####a44", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
 
   }
 
@@ -3813,10 +3863,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test259"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4aaaiaaa4", true);
+    java.lang.String str2 = StringParser.escapeString("## #4##4# ##", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaaiaaa"+ "'", str2.equals("aaaiaaa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " ## #4##4# ## "+ "'", str2.equals(" ## #4##4# ## "));
 
   }
 
@@ -3826,10 +3876,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test260"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a#aia#a4", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#aia#a4"+ "'", str2.equals("4a#aia#a4"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a  a#", 0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3842,7 +3899,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#  #4#", (-1), ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 hi! 4", (-1), '#');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -3859,10 +3916,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test262"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("##aa4#i#4aa##", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##aa4#i#4aa##a"+ "'", str2.equals("a##aa4#i#4aa##a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4", 0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3872,10 +3936,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test263"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aaaahi!aaaa", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#hi!#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaaahi!aaaa"+ "'", str2.equals("aaaahi!aaaa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#hi!#"+ "'", str2.equals("#hi!#"));
 
   }
 
@@ -3885,10 +3949,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test264"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4aa4#4 ", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4# ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  4aa4#4  "+ "'", str2.equals("  4aa4#4  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#"+ "'", str2.equals("4#"));
 
   }
 
@@ -3898,10 +3962,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test265"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" a#", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# a##"+ "'", str2.equals("# a##"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#ahi!a#4", (int)(short)1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3911,11 +3982,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test266"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"ahi!a", 10, '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a# #4####4# #a#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a# #4####4# #a#"+ "'", str2.equals("#a# #4####4# #a#"));
 
   }
 
@@ -3925,10 +3995,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test267"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aa i aa", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa i aa"+ "'", str2.equals("aa i aa"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aaa4", 1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3938,10 +4015,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test268"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  4aa4#4  ", true);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4  4####4  4#", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  4#"+ "'", str2.equals("4  4#"));
 
   }
 
@@ -3951,10 +4028,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test269"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" ##4  ", ' ');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaiaa", 100, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  ##4   "+ "'", str2.equals("  ##4   "));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -3964,10 +4042,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test270"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a#aia#a4", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#aia#a"+ "'", str2.equals("a#aia#a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4####4", (int)(short)-1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -3978,10 +4063,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #aa4## #", (int)(short)100, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4####4  ", (int)'#', ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -3991,11 +4076,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test272"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a ##4 aia 4## a", 32, '#');
+    java.lang.String str2 = StringParser.escapeString("4 ahi!a 4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 ahi!a 44"+ "'", str2.equals("44 ahi!a 44"));
 
   }
 
@@ -4005,10 +4089,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test273"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a #i# a", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #i# "+ "'", str2.equals(" #i# "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a ahi!a a", (-1), '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -4018,10 +4109,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test274"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aa #aa", true);
+    java.lang.String str2 = StringParser.escapeString("#4", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a"+ "'", str2.equals("a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4a"+ "'", str2.equals("a#4a"));
 
   }
 
@@ -4032,10 +4123,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  #aia#  ", (int)(short)10, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4####4#", 100, '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4045,10 +4136,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test276"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#44#i#44#", '#');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4 #4####4# 4#", (int)(short)100, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##44#i#44##"+ "'", str2.equals("##44#i#44##"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4058,11 +4150,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test277"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  a  ", (int)' ', ' ');
+    java.lang.String str2 = StringParser.escapeString(" a4  44  4a ", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# a4  44  4a #"+ "'", str2.equals("# a4  44  4a #"));
 
   }
 
@@ -4072,18 +4163,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test278"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, 35, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44 ahi!a 44", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 ahi!a 44"+ "'", str2.equals("44 ahi!a 44"));
 
   }
 
@@ -4093,10 +4176,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test279"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#aa ##4 aia 4## aa#", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa ##4 aia 4## aa#"+ "'", str2.equals("#aa ##4 aia 4## aa#"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#i#", (int)(byte)1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -4106,10 +4196,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test280"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a a  a a", true);
+    java.lang.String str2 = StringParser.escapeString("44 ahi!a 44", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a"+ "'", str2.equals(" a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#44 ahi!a 44#"+ "'", str2.equals("#44 ahi!a 44#"));
 
   }
 
@@ -4119,17 +4209,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test281"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a i a", (int)(short)1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString(" #ahi!a# ", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# #ahi!a# #"+ "'", str2.equals("# #ahi!a# #"));
 
   }
 
@@ -4139,10 +4222,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test282"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  i  ", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"## #4####4# ##", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  i  "+ "'", str2.equals("  i  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#"+ "'", str2.equals("#"));
 
   }
 
@@ -4152,10 +4235,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test283"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" # i # ", true);
+    java.lang.String str2 = StringParser.escapeString("aa4#aa", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# "+ "'", str2.equals("# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " aa4#aa "+ "'", str2.equals(" aa4#aa "));
 
   }
 
@@ -4165,11 +4248,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test284"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a##aa4#i#4aa##a", 97, '4');
+    java.lang.String str2 = StringParser.escapeString("a # a", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a # a "+ "'", str2.equals(" a # a "));
 
   }
 
@@ -4179,11 +4261,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test285"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a##aa4#i#4aa##a", (int)'#', '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a4  44  4a ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 "+ "'", str2.equals("a4 "));
 
   }
 
@@ -4193,10 +4274,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test286"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a ", ' ');
+    java.lang.String str2 = StringParser.escapeString("# #4## #", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a  "+ "'", str2.equals(" a  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a# #4## #a"+ "'", str2.equals("a# #4## #a"));
 
   }
 
@@ -4206,11 +4287,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test287"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4  a 4", (int)(byte)100, 'a');
+    java.lang.String str2 = StringParser.escapeString("a  ahi!a  a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a  ahi!a  a4"+ "'", str2.equals("4a  ahi!a  a4"));
 
   }
 
@@ -4220,17 +4300,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test288"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa", (int)(byte)0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 #4##4# 4", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #4"+ "'", str2.equals(" #4"));
 
   }
 
@@ -4241,16 +4314,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##a i a##4", 10, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #ahi!a# #", (int)(byte)100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4261,10 +4328,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44aa", 52, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa4##4aa4", (int)'#', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -4275,16 +4342,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  a  ", (-1), 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##4#4##4##", 10, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -4295,23 +4356,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#aa", (int)'4', '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test293() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test293"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa4#", (-1), 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a # a", (int)(short)-1, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -4323,84 +4370,28 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test293() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test293"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#aaiaa#", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#aaiaa#4"+ "'", str2.equals("4#aaiaa#4"));
+
+  }
+
+  @Test
   public void test294() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test294"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"          ", 35, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
-
-  }
-
-  @Test
-  public void test295() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test295"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"ahi!a", 32, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test296() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test296"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #a4#i#4a# ", (int)' ', ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test297() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test297"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4aahi!aa4#", 97, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
-
-  }
-
-  @Test
-  public void test298() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test298"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a #a4#i#4a# a", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a #a4#i#4a# a4"+ "'", str2.equals("4a #a4#i#4a# a4"));
-
-  }
-
-  @Test
-  public void test299() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test299"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#44aahi!aa44#", 0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4a####a4#", (int)(byte)1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -4412,15 +4403,87 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test295() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test295"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#4#4#4##4#4#", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4#4#4##4#4#4"+ "'", str2.equals("4#4#4#4##4#4#4"));
+
+  }
+
+  @Test
+  public void test296() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test296"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a44####44a", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa44####44aa"+ "'", str2.equals("aa44####44aa"));
+
+  }
+
+  @Test
+  public void test297() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test297"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a##4aaa4##a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##4aaa4##a"+ "'", str2.equals("a##4aaa4##a"));
+
+  }
+
+  @Test
+  public void test298() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test298"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4#4##4#4", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#4##4#4#"+ "'", str2.equals("#4#4##4#4#"));
+
+  }
+
+  @Test
+  public void test299() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test299"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4a", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a "+ "'", str2.equals(" 4a "));
+
+  }
+
+  @Test
   public void test300() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test300"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4#i#4 a", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4#i#4 a"+ "'", str2.equals("a 4#i#4 a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4#  ", (int)(short)0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -4430,10 +4493,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test301"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" # #4aahi!aa4# # ", '4');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa", (int)(short)100, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 # #4aahi!aa4# # 4"+ "'", str2.equals("4 # #4aahi!aa4# # 4"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4446,7 +4510,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#aia#4", 0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44a ahi!a a44 ", (int)(short)10, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -4463,23 +4527,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test303"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a ##4  a", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a ##4  a"+ "'", str2.equals("a ##4  a"));
-
-  }
-
-  @Test
-  public void test304() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test304"); }
-
-
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a44aahi!aa44a ", (int)(byte)-1, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a4#a#", (-1), ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -4491,15 +4542,30 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test304() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test304"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa", 52, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
+
+  }
+
+  @Test
   public void test305() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test305"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a  #aia#  a", ' ');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  aia  ", 52, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a  #aia#  a "+ "'", str2.equals(" a  #aia#  a "));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -4509,11 +4575,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test306"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#aia#a", (int)'a', '4');
+    java.lang.String str2 = StringParser.escapeString("4 aa 4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 aa 44"+ "'", str2.equals("44 aa 44"));
 
   }
 
@@ -4523,10 +4588,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test307"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" hi! ", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" hi! ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a hi! a"+ "'", str2.equals("a hi! a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " hi! "+ "'", str2.equals(" hi! "));
 
   }
 
@@ -4536,10 +4601,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test308"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a  a  a", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa  a  aa"+ "'", str2.equals("aa  a  aa"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#4##a", (int)(short)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -4549,10 +4621,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test309"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#a#a i a#a#4", '4');
+    java.lang.String str2 = StringParser.escapeString("4a#  #a4", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44#a#a i a#a#44"+ "'", str2.equals("44#a#a i a#a#44"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4a#  #a4#"+ "'", str2.equals("#4a#  #a4#"));
 
   }
 
@@ -4563,16 +4635,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aia", (int)(byte)1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# a4aaa4a #", (int)(short)100, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4583,50 +4649,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  ahi!a  a", 97, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
-
-  }
-
-  @Test
-  public void test312() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test312"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#a ", (int)'4', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test313() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test313"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a ", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a #"+ "'", str2.equals("#a #"));
-
-  }
-
-  @Test
-  public void test314() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test314"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aahi!aa#", (int)(short)0, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4##4#", 0, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -4638,16 +4663,54 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test312() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test312"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" 44a####a44 ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 44a####a44 a"+ "'", str2.equals("a 44a####a44 a"));
+
+  }
+
+  @Test
+  public void test313() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test313"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44#4##44", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44#4##44"+ "'", str2.equals("44#4##44"));
+
+  }
+
+  @Test
+  public void test314() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test314"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#a #### a#", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #a #### a# "+ "'", str2.equals(" #a #### a# "));
+
+  }
+
+  @Test
   public void test315() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test315"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44#a#a i a#a#44", 52, '#');
+    java.lang.String str2 = StringParser.escapeString("a 4 #4##4# 4 a", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa 4 #4##4# 4 aa"+ "'", str2.equals("aa 4 #4##4# 4 aa"));
 
   }
 
@@ -4657,11 +4720,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test316"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #aia# a", 32, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4 a", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 "+ "'", str2.equals(" 4 "));
 
   }
 
@@ -4671,10 +4733,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test317"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#    #", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#    #"+ "'", str2.equals("#    #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a"+ "'", str2.equals("4a"));
 
   }
 
@@ -4687,7 +4749,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" ", 0, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #4####4# a", (int)(short)0, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -4705,10 +4767,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a  a  a#", (int)(short)100, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  ahi!a  ", (int)'4', '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -4721,7 +4783,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a 44aahi!aa44 a", (int)(short)1, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44a####a44 ", 1, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -4738,10 +4800,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test321"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a ##4  a", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4 #4##4# 4 ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a ##4  a#"+ "'", str2.equals("#a ##4  a#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 #4##4# 4 "+ "'", str2.equals(" 4 #4##4# 4 "));
 
   }
 
@@ -4752,16 +4814,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44#a#a i a#a#44", (int)(short)10, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4####4a", 100, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -4771,10 +4827,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test323"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("aa 4aaahi!aaa4 aa", 'a');
+    java.lang.String str2 = StringParser.escapeString(" a44a ahi!a a44a ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaa 4aaahi!aaa4 aaa"+ "'", str2.equals("aaa 4aaahi!aaa4 aaa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a44a ahi!a a44a 4"+ "'", str2.equals("4 a44a ahi!a a44a 4"));
 
   }
 
@@ -4785,7 +4841,7 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aa4##", (int)(short)10, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a #### a4", (int)(short)10, '4');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 10);
@@ -4798,10 +4854,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test325"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4##a i a##4", '4');
+    java.lang.String str2 = StringParser.escapeString("44a# 4", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44##a i a##44"+ "'", str2.equals("44##a i a##44"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44a# 4 "+ "'", str2.equals(" 44a# 4 "));
 
   }
 
@@ -4811,10 +4867,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test326"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4  #4", true);
+    java.lang.String str2 = StringParser.escapeString("aa4aaa4aa", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #"+ "'", str2.equals("  #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa4aaa4aa#"+ "'", str2.equals("#aa4aaa4aa#"));
 
   }
 
@@ -4825,16 +4881,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a    a", (int)(byte)0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 ahi!a 4a", 32, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -4845,7 +4895,7 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##4 aia 4##4", 100, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44a####a44 ", 100, '4');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 100);
@@ -4858,10 +4908,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test329"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" ##4 aia 4## ", '4');
+    java.lang.String str2 = StringParser.escapeString("4aa4##4aa4", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 ##4 aia 4## 4"+ "'", str2.equals("4 ##4 aia 4## 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4aa4##4aa4 "+ "'", str2.equals(" 4aa4##4aa4 "));
 
   }
 
@@ -4871,11 +4921,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test330"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"    i    ", (int)' ', '4');
+    java.lang.String str2 = StringParser.escapeString("#a44####44a#", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##a44####44a##"+ "'", str2.equals("##a44####44a##"));
 
   }
 
@@ -4885,10 +4934,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test331"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4 aaaiaaa 4 ", '4');
+    java.lang.String str2 = StringParser.escapeString("a  #4##4#  a", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 4 aaaiaaa 4 4"+ "'", str2.equals("4 4 aaaiaaa 4 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a  #4##4#  a "+ "'", str2.equals(" a  #4##4#  a "));
 
   }
 
@@ -4899,7 +4948,7 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#44  44#", 97, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a ### a4", (int)'a', '#');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 97);
@@ -4913,445 +4962,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, 32, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test334() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test334"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("4i4", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4i4a"+ "'", str2.equals("a4i4a"));
-
-  }
-
-  @Test
-  public void test335() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test335"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4 aia 4#", 10, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test336() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test336"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" # 4#4#4 # ", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a # 4#4#4 # a"+ "'", str2.equals("a # 4#4#4 # a"));
-
-  }
-
-  @Test
-  public void test337() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test337"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#  #4", 10, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test338() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test338"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a#aia#a4", (int)' ', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test339() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test339"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("aa", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4"+ "'", str2.equals("4aa4"));
-
-  }
-
-  @Test
-  public void test340() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test340"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 i 4", (int)(short)0, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test341() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test341"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("# a##", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " # a## "+ "'", str2.equals(" # a## "));
-
-  }
-
-  @Test
-  public void test342() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test342"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a##aa4#i#4aa##a", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a##aa4#i#4aa##a#"+ "'", str2.equals("#a##aa4#i#4aa##a#"));
-
-  }
-
-  @Test
-  public void test343() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test343"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4  i  4 ", (int)(short)100, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test344() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test344"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#a", 1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test345() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test345"); }
-
-
-    java.lang.String str2 = StringParser.escapeString(" #aia# ", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 #aia# 4"+ "'", str2.equals("4 #aia# 4"));
-
-  }
-
-  @Test
-  public void test346() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test346"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a #aia# a#", (int)(short)1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test347() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test347"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4#i#4  ", (int)'a', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
-
-  }
-
-  @Test
-  public void test348() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test348"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# "+ "'", str2.equals("# "));
-
-  }
-
-  @Test
-  public void test349() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test349"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#ahi!a#", 52, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test350() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test350"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("444#i#444", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a444#i#444a"+ "'", str2.equals("a444#i#444a"));
-
-  }
-
-  @Test
-  public void test351() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test351"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" i ", 32, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test352() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test352"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("4  4", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4  4 "+ "'", str2.equals(" 4  4 "));
-
-  }
-
-  @Test
-  public void test353() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test353"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4##4 aia 4##4", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##4"+ "'", str2.equals("##4"));
-
-  }
-
-  @Test
-  public void test354() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test354"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" aaaiaaa ", (int)'#', ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
-
-  }
-
-  @Test
-  public void test355() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test355"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   i   ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   i   "+ "'", str2.equals("   i   "));
-
-  }
-
-  @Test
-  public void test356() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test356"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a4#", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa4#a"+ "'", str2.equals("aa4#a"));
-
-  }
-
-  @Test
-  public void test357() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test357"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44aa4#44", (int)'4', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test358() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test358"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("# 44aahi!aa44 #", 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a# 44aahi!aa44 #a"+ "'", str2.equals("a# 44aahi!aa44 #a"));
-
-  }
-
-  @Test
-  public void test359() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test359"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aaa", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a"+ "'", str2.equals("a"));
-
-  }
-
-  @Test
-  public void test360() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test360"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4aaaiaaa4 ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4aaaiaaa4 "+ "'", str2.equals(" 4aaaiaaa4 "));
-
-  }
-
-  @Test
-  public void test361() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test361"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    java.lang.CharSequence charSequence1 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(byte)1, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test362() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test362"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a aaaiaaa a", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a aaaiaaa a"+ "'", str2.equals("a aaaiaaa a"));
-
-  }
-
-  @Test
-  public void test363() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test363"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aia#", (-1), '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a44####44a#", (-1), '4');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -5363,15 +4976,452 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test334() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test334"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa ahi!a aa4", (int)(byte)100, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test335() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test335"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##  ##", (int)'a', '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 97);
+
+  }
+
+  @Test
+  public void test336() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test336"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    java.lang.CharSequence charSequence1 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, charSequence1, (int)(short)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test337() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test337"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4  44  4a", (int)(short)100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test338() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test338"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" aa ahi!a aa ", (-1), ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test339() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test339"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"##4#4##4##", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##4#4##4##"+ "'", str2.equals("##4#4##4##"));
+
+  }
+
+  @Test
+  public void test340() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test340"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  #4##4#  a", 100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test341() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test341"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a44####44a#", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44#"+ "'", str2.equals("a44#"));
+
+  }
+
+  @Test
+  public void test342() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test342"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("  a ", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  a #"+ "'", str2.equals("#  a #"));
+
+  }
+
+  @Test
+  public void test343() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test343"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa ahi!a aa", (int)'#', '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 35);
+
+  }
+
+  @Test
+  public void test344() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test344"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4 a hi! a 4", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 a hi! a 4 "+ "'", str2.equals(" 4 a hi! a 4 "));
+
+  }
+
+  @Test
+  public void test345() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test345"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4a  ahi!a  a4", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4a  ahi!a  a4a"+ "'", str2.equals("a4a  ahi!a  a4a"));
+
+  }
+
+  @Test
+  public void test346() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test346"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("#4 aa 4#", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4 aa 4#a"+ "'", str2.equals("a#4 aa 4#a"));
+
+  }
+
+  @Test
+  public void test347() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test347"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4 a hi! a 4 ", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 "+ "'", str2.equals("4 "));
+
+  }
+
+  @Test
+  public void test348() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test348"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a####a4", (int)(byte)0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test349() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test349"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a  ahi!a  a4", 100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
+
+  }
+
+  @Test
+  public void test350() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test350"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a4#a#", (int)(short)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test351() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test351"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4i4", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4i4"+ "'", str2.equals("4i4"));
+
+  }
+
+  @Test
+  public void test352() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test352"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4#4#4##4#4 ", (int)(byte)1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test353() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test353"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4#4#4##4#4", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4#4##4#4"+ "'", str2.equals("4#4#4##4#4"));
+
+  }
+
+  @Test
+  public void test354() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test354"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  4####4  ", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  4####4  "+ "'", str2.equals("  4####4  "));
+
+  }
+
+  @Test
+  public void test355() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test355"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4##4#", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4##4#"+ "'", str2.equals("#4##4#"));
+
+  }
+
+  @Test
+  public void test356() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test356"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a hi! a ", (int)(byte)10, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test357() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test357"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" 4#4#4##4#4 ", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 4#4#4##4#4 4"+ "'", str2.equals("4 4#4#4##4#4 4"));
+
+  }
+
+  @Test
+  public void test358() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test358"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 ", 52, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 52);
+
+  }
+
+  @Test
+  public void test359() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test359"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44a# 4 ", (int)(byte)10, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test360() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test360"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aaa #### aaa", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a"+ "'", str2.equals("a"));
+
+  }
+
+  @Test
+  public void test361() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test361"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#i#", (int)'a', ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 97);
+
+  }
+
+  @Test
+  public void test362() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test362"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aahi!aa", 10, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
+
+  }
+
+  @Test
+  public void test363() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test363"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4  ", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4  "+ "'", str2.equals(" 4  "));
+
+  }
+
+  @Test
   public void test364() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test364"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 a i a 4", true);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4#4#4#4##4#4#4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a i a "+ "'", str2.equals(" a i a "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4#4#4##4#4#4"+ "'", str2.equals("4#4#4#4##4#4#4"));
 
   }
 
@@ -5382,10 +5432,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #aa4## #", 32, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aaiaa#", (int)(byte)1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -5395,10 +5451,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test366"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a hi! a", false);
+    java.lang.String str2 = StringParser.escapeString("##4aaa4##", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a hi! a"+ "'", str2.equals("a hi! a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##4aaa4##4"+ "'", str2.equals("4##4aaa4##4"));
 
   }
 
@@ -5408,10 +5464,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test367"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a 44aahi!aa44 a#", true);
+    java.lang.String str2 = StringParser.escapeString(" ### ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 44aahi!aa44 a"+ "'", str2.equals("a 44aahi!aa44 a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 ### 4"+ "'", str2.equals("4 ### 4"));
 
   }
 
@@ -5421,10 +5477,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test368"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#aa4##", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#44 ahi!a 44#", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa4##"+ "'", str2.equals("#aa4##"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 ahi!a 44"+ "'", str2.equals("44 ahi!a 44"));
 
   }
 
@@ -5434,10 +5490,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test369"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4a ##4 aia 4## a4", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4a #### a4 ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4a ##4 aia 4## a4a"+ "'", str2.equals("a4a ##4 aia 4## a4a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a #### a4 "+ "'", str2.equals(" 4a #### a4 "));
 
   }
 
@@ -5448,23 +5504,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a#4 aia 4#a ", (int)'4', '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
-
-  }
-
-  @Test
-  public void test371() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test371"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   i   ", (int)(short)0, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# a4  44  4a #", 1, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -5476,16 +5518,28 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test371() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test371"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("  #  ", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   #   "+ "'", str2.equals("   #   "));
+
+  }
+
+  @Test
   public void test372() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test372"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aaiaa4", (int)' ', 'a');
+    java.lang.String str2 = StringParser.escapeString("##  ##", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##  ##a"+ "'", str2.equals("a##  ##a"));
 
   }
 
@@ -5496,50 +5550,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 i 4", 10, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
-
-  }
-
-  @Test
-  public void test374() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test374"); }
-
-
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 a i a 4", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a i a 4"+ "'", str2.equals("4 a i a 4"));
-
-  }
-
-  @Test
-  public void test375() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test375"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##aa4#i#4aa##", (int)(short)100, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test376() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test376"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# 4 aia 4 #", (int)(byte)1, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 a4aaa4a 4", 1, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -5551,16 +5564,61 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test374() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test374"); }
+
+
+    java.lang.String str2 = StringParser.escapeString(" a4aaa4a ", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  a4aaa4a  "+ "'", str2.equals("  a4aaa4a  "));
+
+  }
+
+  @Test
+  public void test375() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test375"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a4  44  4a ", (int)(byte)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test376() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test376"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a4a  ahi!a  a4a", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a4a  ahi!a  a4a#"+ "'", str2.equals("#a4a  ahi!a  a4a#"));
+
+  }
+
+  @Test
   public void test377() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test377"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aahi!aa# ", 100, 'a');
+    java.lang.String str2 = StringParser.escapeString("44  44  44", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "444  44  444"+ "'", str2.equals("444  44  444"));
 
   }
 
@@ -5571,9 +5629,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
+    java.lang.CharSequence charSequence1 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 444#i#444 ", (int)(short)1, 'a');
+    int i4 = StringParser.readString(stringBuilder0, charSequence1, 1, 'a');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -5593,7 +5652,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4aaahi!aaa4 ", (int)(byte)10, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4  44  4a", (int)(short)1, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -5613,27 +5672,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4hi!4", (int)(short)1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
-
-  }
-
-  @Test
-  public void test381() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test381"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  4i4  ", (int)(byte)-1, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#4#4##4#4#", (int)(short)-1, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
     } catch (java.lang.StringIndexOutOfBoundsException e) {
       // Expected exception.
@@ -5645,16 +5684,29 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test381() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test381"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 44a ahi!a a44 ", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44a ahi!a a44 "+ "'", str2.equals(" 44a ahi!a a44 "));
+
+  }
+
+  @Test
   public void test382() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test382"); }
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa i aa", 32, '4');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a ahi!a a4", (int)'4', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -5664,10 +5716,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test383"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a444#i#444a", 'a');
+    java.lang.String str2 = StringParser.escapeString("aa", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa444#i#444aa"+ "'", str2.equals("aa444#i#444aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaaa"+ "'", str2.equals("aaaa"));
 
   }
 
@@ -5677,11 +5729,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test384"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4aa", 35, 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#a #4####4# a#a", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a"+ "'", str2.equals("#a"));
 
   }
 
@@ -5691,10 +5742,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test385"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#  #", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #  # "+ "'", str2.equals(" #  # "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  ahi!a  a", (int)(byte)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -5704,10 +5762,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test386"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# #a4#i#4a# #", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4 aa 4 ", (int)(short)10, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a# #a4#i#4a# #a"+ "'", str2.equals("a# #a4#i#4a# #a"));
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -5717,10 +5776,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test387"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #", ' ');
+    java.lang.String str2 = StringParser.escapeString("44  4####4  44", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  # "+ "'", str2.equals("  # "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44  4####4  44a"+ "'", str2.equals("a44  4####4  44a"));
 
   }
 
@@ -5730,11 +5789,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test388"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa  a  aa", 10, '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aa #### aa", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa #### aa"+ "'", str2.equals("aa #### aa"));
 
   }
 
@@ -5744,10 +5802,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test389"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a ##4  a#", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4##4", (int)(byte)100, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a ##4  a#"+ "'", str2.equals("#a ##4  a#"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -5757,10 +5816,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test390"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   i   ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4##", (int)(byte)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -5770,17 +5836,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test391"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 4#i#4 4", 1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4####4a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4####4a"+ "'", str2.equals("a4####4a"));
 
   }
 
@@ -5793,12 +5852,12 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4#", (int)(byte)-1, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a 44a####a44 a", (int)(short)10, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
       // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
       }
     }
 
@@ -5811,16 +5870,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##4 aia 4##4", 10, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44  44  44", 32, ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -5830,10 +5883,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test394"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a4#a#", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4#"+ "'", str2.equals("# 4#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#"+ "'", str2.equals("a4#"));
 
   }
 
@@ -5843,10 +5896,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test395"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4#", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 #", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#"+ "'", str2.equals("#4#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 #"+ "'", str2.equals("4 #"));
 
   }
 
@@ -5856,10 +5909,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test396"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# 4 aia 4 #", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4 aia 4 #"+ "'", str2.equals("# 4 aia 4 #"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##a4#a##", (int)(byte)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -5869,10 +5929,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test397"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"###4 aia 4###", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"", (int)' ', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#"+ "'", str2.equals("#"));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -5883,16 +5944,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa  #aia#  aa", 0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44#4##44", 32, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -5902,10 +5957,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test399"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("##44#i#44##", '4');
+    java.lang.String str2 = StringParser.escapeString("###", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##44#i#44##4"+ "'", str2.equals("4##44#i#44##4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4###4"+ "'", str2.equals("4###4"));
 
   }
 
@@ -5915,10 +5970,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test400"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #aia# ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aia#"+ "'", str2.equals("#aia#"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4#", (-1), '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -5928,10 +5990,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test401"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("aa#aia#aa", ' ');
+    java.lang.String str2 = StringParser.escapeString("a  a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " aa#aia#aa "+ "'", str2.equals(" aa#aia#aa "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a  a4"+ "'", str2.equals("4a  a4"));
 
   }
 
@@ -5941,17 +6003,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test402"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44aaaiaaa44", (int)(short)1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a  a hi! a  a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a  a hi! a  a"+ "'", str2.equals("a  a hi! a  a"));
 
   }
 
@@ -5961,10 +6016,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test403"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4aa", false);
+    java.lang.String str2 = StringParser.escapeString("a 4 #4##4# 4 a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4aa"+ "'", str2.equals("a4aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a 4 #4##4# 4 a4"+ "'", str2.equals("4a 4 #4##4# 4 a4"));
 
   }
 
@@ -5974,10 +6029,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test404"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("44##4 aia 4##44", 'a');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#4#4##4#a", 97, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44##4 aia 4##44a"+ "'", str2.equals("a44##4 aia 4##44a"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -5987,10 +6043,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test405"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  #4aahi!aa4#  ", '4');
+    java.lang.String str2 = StringParser.escapeString("a ### a", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  #4aahi!aa4#  4"+ "'", str2.equals("4  #4aahi!aa4#  4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a ### a "+ "'", str2.equals(" a ### a "));
 
   }
 
@@ -6000,11 +6056,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test406"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4  4", 32, ' ');
+    java.lang.String str2 = StringParser.escapeString("4 ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 4"+ "'", str2.equals("44 4"));
 
   }
 
@@ -6014,17 +6069,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test407"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#    #", (int)(byte)1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("a44#", ' ');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a44# "+ "'", str2.equals(" a44# "));
 
   }
 
@@ -6035,7 +6083,7 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#  ahi!a  #", (int)(byte)100, '#');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaaa", 100, '4');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i4 == 100);
@@ -6048,10 +6096,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test409"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("aaiaa", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"##a44####44a##", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " aaiaa "+ "'", str2.equals(" aaiaa "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##a44####44a##"+ "'", str2.equals("##a44####44a##"));
 
   }
 
@@ -6061,10 +6109,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test410"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4 ##4 aia 4## 4", ' ');
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44#4#4##4#44a", (int)'4', ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 ##4 aia 4## 4 "+ "'", str2.equals(" 4 ##4 aia 4## 4 "));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -6074,10 +6123,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test411"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 44aahi!aa44 a", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 44a"+ "'", str2.equals(" 44a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#", (int)(short)1, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6087,17 +6143,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test412"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aa#4aahi!aa4#aa4", (int)(byte)0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("a aa a", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a aa a4"+ "'", str2.equals("4a aa a4"));
 
   }
 
@@ -6108,10 +6157,17 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"i", 10, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    java.lang.CharSequence charSequence1 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, charSequence1, 32, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6121,10 +6177,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test414"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# 4#", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4#"+ "'", str2.equals("# 4#"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 ", (-1), 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6134,10 +6197,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test415"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# ahi!a #", 'a');
+    java.lang.String str2 = StringParser.escapeString("#a", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a# ahi!a #a"+ "'", str2.equals("a# ahi!a #a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#aa"+ "'", str2.equals("a#aa"));
 
   }
 
@@ -6147,11 +6210,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test416"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #i# ", (int)' ', '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #4"+ "'", str2.equals(" #4"));
 
   }
 
@@ -6161,10 +6223,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test417"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4  #4", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4  #4#"+ "'", str2.equals("#4  #4#"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a a4aaa4a a", (int)(byte)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6175,10 +6244,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aaaahi!aaaa", 52, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4a ", (int)(short)1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6188,10 +6263,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test419"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("   a  ", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "    a   "+ "'", str2.equals("    a   "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#", 0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6201,10 +6283,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test420"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("# 4#", '4');
+    java.lang.String str2 = StringParser.escapeString("4  4#", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4# 4#4"+ "'", str2.equals("4# 4#4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44  4#4"+ "'", str2.equals("44  4#4"));
 
   }
 
@@ -6214,10 +6296,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test421"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#44  44#", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a#  #  #a ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #44  44# "+ "'", str2.equals(" #44  44# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a#  #  #a "+ "'", str2.equals(" a#  #  #a "));
 
   }
 
@@ -6227,10 +6309,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test422"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4#aa4##4", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4 #4##4# 4 a", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#aa4##4"+ "'", str2.equals("4#aa4##4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4 #4##4# 4 "+ "'", str2.equals(" 4 #4##4# 4 "));
 
   }
 
@@ -6240,11 +6322,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test423"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a", (int)(short)10, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4aaa4#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4aaa4#"+ "'", str2.equals("#4aaa4#"));
 
   }
 
@@ -6254,10 +6335,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test424"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 444#i#444 ", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#ahi!a#", 52, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "444#i#444"+ "'", str2.equals("444#i#444"));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -6267,10 +6349,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test425"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"# ahi!a #", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# ahi!a #"+ "'", str2.equals("# ahi!a #"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# a4  44  4a #", (int)(short)0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6280,11 +6369,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test426"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  i  ", (int)(byte)100, '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4  4####4  4", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  4####4  4"+ "'", str2.equals("4  4####4  4"));
 
   }
 
@@ -6294,10 +6382,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test427"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a#a", '#');
+    java.lang.String str2 = StringParser.escapeString("4 4", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#a#"+ "'", str2.equals("#a#a#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 4a"+ "'", str2.equals("a4 4a"));
 
   }
 
@@ -6308,16 +6396,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"    i    ", (-1), '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 #4####4# 4", 32, '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -6327,11 +6409,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test429"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a#4 aia 4#a#", (int)'4', 'a');
+    java.lang.String str2 = StringParser.escapeString("aa #### aa", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa #### aa#"+ "'", str2.equals("#aa #### aa#"));
 
   }
 
@@ -6341,10 +6422,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test430"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  #4aahi!aa4#  ", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4", (int)' ', ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #4aahi!aa4#  "+ "'", str2.equals("  #4aahi!aa4#  "));
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -6354,10 +6436,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test431"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" 4aaiaa4 ", '#');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a44####44a#", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# 4aaiaa4 #"+ "'", str2.equals("# 4aaiaa4 #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a44####44a#"+ "'", str2.equals("#a44####44a#"));
 
   }
 
@@ -6368,16 +6450,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#aa", (int)(short)-1, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4aaa4", 100, 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -6387,10 +6463,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test433"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a a#ahi!a#a a", '#');
+    java.lang.String str2 = StringParser.escapeString("a4 4a#  #a4 4a", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a a#ahi!a#a a#"+ "'", str2.equals("#a a#ahi!a#a a#"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a4 4a#  #a4 4a4"+ "'", str2.equals("4a4 4a#  #a4 4a4"));
 
   }
 
@@ -6400,10 +6476,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test434"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" a  #aia#  a ", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a "+ "'", str2.equals("a "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a# #4####4# #a#", 0, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6413,11 +6496,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test435"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a##aa4#i#4aa##a", 97, 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#  #  #", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  #  #"+ "'", str2.equals("#  #  #"));
 
   }
 
@@ -6427,10 +6509,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test436"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a  ahi!a  a", '4');
+    java.lang.String str2 = StringParser.escapeString("aa #### aa", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a  ahi!a  a4"+ "'", str2.equals("4a  ahi!a  a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa #### aa4"+ "'", str2.equals("4aa #### aa4"));
 
   }
 
@@ -6440,10 +6522,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test437"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4  4 ", true);
+    java.lang.String str2 = StringParser.escapeString("#4a####a4#", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 "+ "'", str2.equals("4 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#4a####a4#4"+ "'", str2.equals("4#4a####a4#4"));
 
   }
 
@@ -6453,10 +6535,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test438"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4aaahi!aaa4", '4');
+    java.lang.String str2 = StringParser.escapeString("aa4aaa4aa", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44aaahi!aaa44"+ "'", str2.equals("44aaahi!aaa44"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4aaa4aa4"+ "'", str2.equals("4aa4aaa4aa4"));
 
   }
 
@@ -6466,10 +6548,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test439"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#44#i#44#", ' ');
+    java.lang.String str2 = StringParser.escapeString("44  44  44", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #44#i#44# "+ "'", str2.equals(" #44#i#44# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#44  44  44#"+ "'", str2.equals("#44  44  44#"));
 
   }
 
@@ -6479,10 +6561,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test440"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#a4", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a4 ahi!a 4a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4#a4 "+ "'", str2.equals(" 4#a4 "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 ahi!a 4a"+ "'", str2.equals("a4 ahi!a 4a"));
 
   }
 
@@ -6492,10 +6574,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test441"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #a#4 aia 4#a# ", ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  a hi! a  ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #a#4 aia 4#a#  "+ "'", str2.equals("  #a#4 aia 4#a#  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  a hi! a  "+ "'", str2.equals("  a hi! a  "));
 
   }
 
@@ -6505,10 +6587,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test442"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  #a#4 aia 4#a#  ", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#a #4####4# a#a", 52, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -6518,10 +6601,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test443"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" # a## ", true);
+    java.lang.String str2 = StringParser.escapeString(" #4", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "# "+ "'", str2.equals("# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 #44"+ "'", str2.equals("4 #44"));
 
   }
 
@@ -6531,10 +6614,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test444"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4#ahi!a#4", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4#a", 100, '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#ahi!a#"+ "'", str2.equals("#ahi!a#"));
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -6545,77 +6629,9 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#  #4", 97, ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
-
-  }
-
-  @Test
-  public void test446() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test446"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a ##4 aia 4## a4", 32, 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 32);
-
-  }
-
-  @Test
-  public void test447() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test447"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("a#aaiaa#a", '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#aaiaa#a#"+ "'", str2.equals("#a#aaiaa#a#"));
-
-  }
-
-  @Test
-  public void test448() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test448"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 4 aaaiaaa 4 4", 100, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
-
-  }
-
-  @Test
-  public void test449() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test449"); }
-
-
-    java.lang.String str2 = StringParser.escapeString("   4i4   ", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "    4i4    "+ "'", str2.equals("    4i4    "));
-
-  }
-
-  @Test
-  public void test450() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest1.test450"); }
-
-
-    java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#  #a#i#a#  #a", (int)(short)0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#4a####a4#", (int)(short)0, ' ');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -6627,16 +6643,87 @@ public class RegressionTest1 {
   }
 
   @Test
+  public void test446() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test446"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a44  4####4  44a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a44  4####4  44a"+ "'", str2.equals("a44  4####4  44a"));
+
+  }
+
+  @Test
+  public void test447() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test447"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("4 hi! 4", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 hi! 44"+ "'", str2.equals("44 hi! 44"));
+
+  }
+
+  @Test
+  public void test448() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test448"); }
+
+
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 a44a ahi!a a44a 4", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a4"+ "'", str2.equals(" a4"));
+
+  }
+
+  @Test
+  public void test449() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test449"); }
+
+
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   #4####4#   ", 1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
+
+  }
+
+  @Test
+  public void test450() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest1.test450"); }
+
+
+    java.lang.String str2 = StringParser.escapeString("a#4##a", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a#4##a4"+ "'", str2.equals("4a#4##a4"));
+
+  }
+
+  @Test
   public void test451() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test451"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 ahi!a 4", 100, ' ');
+    java.lang.String str2 = StringParser.escapeString("#  4####4  #", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 100);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "##  4####4  ##"+ "'", str2.equals("##  4####4  ##"));
 
   }
 
@@ -6646,10 +6733,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test452"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"aa444#i#444aa", true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a"+ "'", str2.equals("a"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a44a ahi!a a44a4", 1, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6659,10 +6753,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test453"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4a", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #### a", (int)'#', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a"+ "'", str2.equals(" 4a"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -6672,10 +6767,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test454"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #a4#i#4a# ", '4');
+    java.lang.String str2 = StringParser.escapeString("a#a", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 #a4#i#4a# 4"+ "'", str2.equals("4 #a4#i#4a# 4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a#a#"+ "'", str2.equals("#a#a#"));
 
   }
 
@@ -6685,10 +6780,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test455"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4a #a4#i#4a# a4", 'a');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"##  4####4  ##", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4a #a4#i#4a# a4a"+ "'", str2.equals("a4a #a4#i#4a# a4a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#"+ "'", str2.equals("#"));
 
   }
 
@@ -6698,10 +6793,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test456"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a##aa4#i#4aa##a", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a##aa4#i#4aa##a4"+ "'", str2.equals("4a##aa4#i#4aa##a4"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#hi!#", 1, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6711,10 +6813,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test457"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("#  ahi!a  #", '4');
+    java.lang.String str2 = StringParser.escapeString("a 44 a", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#  ahi!a  #4"+ "'", str2.equals("4#  ahi!a  #4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa 44 aa"+ "'", str2.equals("aa 44 aa"));
 
   }
 
@@ -6725,10 +6827,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a##aa4#i#4aa##a", (int)'4', 'a');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 52);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4 #4####4# 4a", (-1), '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6738,10 +6846,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test459"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" #4#a i a#4# ", ' ');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #4#a i a#4#  "+ "'", str2.equals("  #4#a i a#4#  "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"aa44####44aa", 0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6751,10 +6866,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test460"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#4 aia 4#a", false);
+    java.lang.String str2 = StringParser.escapeString("a #", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#4 aia 4#a"+ "'", str2.equals("a#4 aia 4#a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a ##"+ "'", str2.equals("#a ##"));
 
   }
 
@@ -6764,17 +6879,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test461"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  # ", (int)(short)1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("a#i#a", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa#i#aa"+ "'", str2.equals("aa#i#aa"));
 
   }
 
@@ -6784,17 +6892,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test462"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# ", 0, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#a# #4####4# #a#", true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#"+ "'", str2.equals("a#"));
 
   }
 
@@ -6804,10 +6905,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test463"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" 4  4 ", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4  4 "+ "'", str2.equals(" 4  4 "));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #4## #", (int)(byte)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6817,10 +6925,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test464"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  4aaiaa4  ", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" aa ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  4aaiaa4  "+ "'", str2.equals("  4aaiaa4  "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa"+ "'", str2.equals("aa"));
 
   }
 
@@ -6830,17 +6938,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test465"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a  a  a#", (int)(short)-1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a #4####4# a", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a #4####4# a"+ "'", str2.equals("a #4####4# a"));
 
   }
 
@@ -6853,7 +6954,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" # #4aahi!aa4# # ", 0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#4#4##4#4", 0, '#');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -6870,10 +6971,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test467"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("##4", 'a');
+    java.lang.String str2 = StringParser.escapeString("#a#a#", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a##4a"+ "'", str2.equals("a##4a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #a#a# "+ "'", str2.equals(" #a#a# "));
 
   }
 
@@ -6883,10 +6984,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test468"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)" #44  44# ", false);
+    java.lang.String str2 = StringParser.escapeString(" a # a ", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #44  44# "+ "'", str2.equals(" #44  44# "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4 a # a 4"+ "'", str2.equals("4 a # a 4"));
 
   }
 
@@ -6896,10 +6997,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test469"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4aa4", false);
+    java.lang.String str2 = StringParser.escapeString("4a# ", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4aa4"+ "'", str2.equals("4aa4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4a# a"+ "'", str2.equals("a4a# a"));
 
   }
 
@@ -6912,7 +7013,7 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"  #", (int)(byte)0, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" a#  #  #a ", (int)(short)10, '4');
       org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
     } catch (java.lang.NullPointerException e) {
       // Expected exception.
@@ -6929,10 +7030,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test471"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4a##aa4#i#4aa##a4", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 #a ahi!a a# 4", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a##aa4#i#4aa##a4"+ "'", str2.equals("4a##aa4#i#4aa##a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " #a ahi!a a# "+ "'", str2.equals(" #a ahi!a a# "));
 
   }
 
@@ -6942,10 +7043,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test472"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#44  44#", true);
+    java.lang.String str2 = StringParser.escapeString("  44  ", ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44  44"+ "'", str2.equals("44  44"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "   44   "+ "'", str2.equals("   44   "));
 
   }
 
@@ -6956,10 +7057,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4#a i a#4", 35, '#');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a", (-1), '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -6972,12 +7079,12 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   i   ", (int)(byte)-1, 'a');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44#4#4##4#44 ", (int)(byte)0, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
       // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
       }
     }
 
@@ -6990,10 +7097,16 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" #aa4#i#4aa# ", 97, '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##", (int)(short)0, '#');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -7003,10 +7116,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test476"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("##aa4#i#4aa##", '4');
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4##aa4#i#4aa##4"+ "'", str2.equals("4##aa4#i#4aa##4"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  ahi!a  a", (int)(short)-1, '4');
+      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
+    } catch (java.lang.StringIndexOutOfBoundsException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -7016,10 +7136,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test477"); }
 
 
-    java.lang.String str2 = StringParser.escapeString(" # a#i#a # ", 'a');
+    java.lang.String str2 = StringParser.escapeString("aa4 #aa", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a # a#i#a # a"+ "'", str2.equals("a # a#i#a # a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aaa4 #aaa"+ "'", str2.equals("aaa4 #aaa"));
 
   }
 
@@ -7029,10 +7149,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test478"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"4 a#a i a#a 4", true);
+    java.lang.String str2 = StringParser.escapeString("4 #4##4# 4", 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " a#a i a#a "+ "'", str2.equals(" a#a i a#a "));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4 #4##4# 4a"+ "'", str2.equals("a4 #4##4# 4a"));
 
   }
 
@@ -7042,10 +7162,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test479"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("  4i4  ", '4');
+    java.lang.String str2 = StringParser.escapeString("a4 4a#  #a4 4a", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4  4i4  4"+ "'", str2.equals("4  4i4  4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#a4 4a#  #a4 4a#"+ "'", str2.equals("#a4 4a#  #a4 4a#"));
 
   }
 
@@ -7055,10 +7175,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test480"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4#ahi!a#4", 'a');
+    java.lang.String str2 = StringParser.escapeString("44  4#4", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a4#ahi!a#4a"+ "'", str2.equals("a4#ahi!a#4a"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#44  4#4#"+ "'", str2.equals("#44  4#4#"));
 
   }
 
@@ -7068,10 +7188,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test481"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a 4aahi!aa4 a", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"   #4####4#   ", 52, 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " 4a"+ "'", str2.equals(" 4a"));
+    org.junit.Assert.assertTrue(i4 == 52);
 
   }
 
@@ -7081,10 +7202,17 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test482"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#44  44#", false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#44  44#"+ "'", str2.equals("#44  44#"));
+    java.lang.StringBuilder stringBuilder0 = null;
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 44#4#4##4#44 ", 10, 'a');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
+      }
+    }
 
   }
 
@@ -7095,10 +7223,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a #a", 10, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a#a #4####4# a#a", 100, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue(i4 == 100);
 
   }
 
@@ -7108,11 +7236,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test484"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"    i    ", (int)(short)10, ' ');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"   #   ", true);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 10);
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + " "+ "'", str2.equals(" "));
 
   }
 
@@ -7125,12 +7252,12 @@ public class RegressionTest1 {
     java.lang.StringBuilder stringBuilder0 = null;
     // The following exception was thrown during execution in test generation
     try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#aa4##", (int)(byte)-1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"# #a ahi!a a# #", (int)(byte)0, ' ');
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
       // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
+      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
       }
     }
 
@@ -7142,17 +7269,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test486"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a  a  a#", (int)(short)-1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString(" 4#4#4##4#4 ", 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a 4#4#4##4#4 a"+ "'", str2.equals("a 4#4#4##4#4 a"));
 
   }
 
@@ -7162,10 +7282,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test487"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44aaahi!aaa44", true);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a44#4##44a", (int)'a', '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4"+ "'", str2.equals("4"));
+    org.junit.Assert.assertTrue(i4 == 97);
 
   }
 
@@ -7175,10 +7296,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test488"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#  ahi!a  #", false);
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"a#a #4####4# a#a", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#  ahi!a  #"+ "'", str2.equals("#  ahi!a  #"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "a#a #4####4# a#a"+ "'", str2.equals("a#a #4####4# a#a"));
 
   }
 
@@ -7188,17 +7309,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test489"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"#a#aaiaa#a#", (int)(short)-1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException");
-    } catch (java.lang.StringIndexOutOfBoundsException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.StringIndexOutOfBoundsException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.StringIndexOutOfBoundsException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("aa ahi!a aa", '#');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aa ahi!a aa#"+ "'", str2.equals("#aa ahi!a aa#"));
 
   }
 
@@ -7209,16 +7323,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)" 4", (int)(short)1, '4');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4a", (int)(byte)10, '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 10);
 
   }
 
@@ -7229,10 +7337,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a  a  a", 35, 'a');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"44  4####4  44", (int)' ', '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 35);
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -7242,17 +7350,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test492"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4##44#i#44##4", (int)(byte)1, ' ');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"#4#4##4#4#", false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#4#4##4#4#"+ "'", str2.equals("#4#4##4#4#"));
 
   }
 
@@ -7263,16 +7364,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a aia a", (int)(short)0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 ", (int)' ', 'a');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -7282,17 +7377,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test494"); }
 
 
-    java.lang.StringBuilder stringBuilder0 = null;
-    // The following exception was thrown during execution in test generation
-    try {
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"##aa4#i#4aa##", 0, '#');
-      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
-    } catch (java.lang.NullPointerException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.NullPointerException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException, got " + e.getClass().getCanonicalName());
-      }
-    }
+    java.lang.String str2 = StringParser.escapeString("a #4####4# a", '4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a #4####4# a4"+ "'", str2.equals("4a #4####4# a4"));
 
   }
 
@@ -7302,10 +7390,11 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test495"); }
 
 
-    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"44#a#a i a#a#44", false);
+    java.lang.StringBuilder stringBuilder0 = null;
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4 #a ahi!a a# 4", 35, ' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44#a#a i a#a#44"+ "'", str2.equals("44#a#a i a#a#44"));
+    org.junit.Assert.assertTrue(i4 == 35);
 
   }
 
@@ -7316,10 +7405,10 @@ public class RegressionTest1 {
 
 
     java.lang.StringBuilder stringBuilder0 = null;
-    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"a4a ##4 aia 4## a4a", 97, ' ');
+    int i4 = StringParser.readString(stringBuilder0, (java.lang.CharSequence)"4  a hi! a  4", (int)' ', 'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i4 == 97);
+    org.junit.Assert.assertTrue(i4 == 32);
 
   }
 
@@ -7329,10 +7418,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test497"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("4 #a4#i#4a# 4", '4');
+    java.lang.String str2 = StringParser.escapeString("## #4##4# ##", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "44 #a4#i#4a# 44"+ "'", str2.equals("44 #a4#i#4a# 44"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4## #4##4# ##4"+ "'", str2.equals("4## #4##4# ##4"));
 
   }
 
@@ -7342,10 +7431,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test498"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a a  a a", '4');
+    java.lang.String str2 = StringParser.escapeString("aahi!aa", '#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a a  a a4"+ "'", str2.equals("4a a  a a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "#aahi!aa#"+ "'", str2.equals("#aahi!aa#"));
 
   }
 
@@ -7355,10 +7444,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test499"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a4#ahi!a#4a", 'a');
+    java.lang.String str2 = StringParser.escapeString("#a #4####4# a#", '4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "aa4#ahi!a#4aa"+ "'", str2.equals("aa4#ahi!a#4aa"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4#a #4####4# a#4"+ "'", str2.equals("4#a #4####4# a#4"));
 
   }
 
@@ -7368,10 +7457,10 @@ public class RegressionTest1 {
     if (debug) { System.out.format("%n%s%n","RegressionTest1.test500"); }
 
 
-    java.lang.String str2 = StringParser.escapeString("a # 4#4#4 # a", '4');
+    java.lang.String str2 = StringParser.buildString((java.lang.CharSequence)"  #  ", false);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "4a # 4#4#4 # a4"+ "'", str2.equals("4a # 4#4#4 # a4"));
+    org.junit.Assert.assertTrue("'" + str2 + "' != '" + "  #  "+ "'", str2.equals("  #  "));
 
   }
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 14:05:32 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 14:33:33 GMT 2023 -->
 
 <report>
   <stats>
@@ -11,37 +11,42 @@
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (2/2)"/>
-      <coverage type="method, %" value="84%  (21/25)"/>
-      <coverage type="block, %" value="71%  (438/615)"/>
-      <coverage type="line, %" value="72%  (106.5/148)"/>
+      <coverage type="method, %" value="80%  (20/25)"/>
+      <coverage type="block, %" value="67%  (412/615)"/>
+      <coverage type="line, %" value="65%  (96/148)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (2/2)"/>
-        <coverage type="method, %" value="84%  (21/25)"/>
-        <coverage type="block, %" value="71%  (438/615)"/>
-        <coverage type="line, %" value="72%  (106.5/148)"/>
+        <coverage type="method, %" value="80%  (20/25)"/>
+        <coverage type="block, %" value="67%  (412/615)"/>
+        <coverage type="line, %" value="65%  (96/148)"/>
 
         <srcfile name="ByteArrayHashMap.java">
           <coverage type="class, %" value="100% (2/2)"/>
-          <coverage type="method, %" value="84%  (21/25)"/>
-          <coverage type="block, %" value="71%  (438/615)"/>
-          <coverage type="line, %" value="72%  (106.5/148)"/>
+          <coverage type="method, %" value="80%  (20/25)"/>
+          <coverage type="block, %" value="67%  (412/615)"/>
+          <coverage type="line, %" value="65%  (96/148)"/>
 
           <class name="ByteArrayHashMap">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="91%  (20/22)"/>
-            <coverage type="block, %" value="71%  (423/594)"/>
-            <coverage type="line, %" value="72%  (100.5/140)"/>
+            <coverage type="method, %" value="86%  (19/22)"/>
+            <coverage type="block, %" value="67%  (397/594)"/>
+            <coverage type="line, %" value="64%  (90/140)"/>
 
             <method name="createEntry (int, byte [], Object, int): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/21)"/>
               <coverage type="line, %" value="0%   (0/3)"/>
             </method>
-            <method name="eq (byte [], byte []): boolean">
+            <method name="resize (int): void">
               <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/32)"/>
-              <coverage type="line, %" value="0%   (0/9)"/>
+              <coverage type="block, %" value="0%   (0/31)"/>
+              <coverage type="line, %" value="0%   (0/10)"/>
+            </method>
+            <method name="transfer (ByteArrayHashMap$Entry []): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/46)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="removeEntryForKey (byte []): ByteArrayHashMap$Entry">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -53,40 +58,40 @@
               <coverage type="block, %" value="53%  (18/34)"/>
               <coverage type="line, %" value="62%  (5/8)"/>
             </method>
-            <method name="put (byte [], Object): Object">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="53%  (24/45)"/>
-              <coverage type="line, %" value="53%  (4.8/9)"/>
-            </method>
-            <method name="containsKey (byte []): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="55%  (18/33)"/>
-              <coverage type="line, %" value="62%  (5/8)"/>
-            </method>
             <method name="duplicate (): ByteArrayHashMap">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="70%  (26/37)"/>
               <coverage type="line, %" value="71%  (5/7)"/>
             </method>
-            <method name="values (): List">
+            <method name="keys (): List">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="71%  (22/31)"/>
               <coverage type="line, %" value="71%  (5/7)"/>
+            </method>
+            <method name="isEmpty (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="71%  (5/7)"/>
+              <coverage type="line, %" value="71%  (0.7/1)"/>
+            </method>
+            <method name="addEntry (int, byte [], Object, int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="78%  (25/32)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
+            <method name="containsKey (byte []): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="79%  (26/33)"/>
+              <coverage type="line, %" value="80%  (6.4/8)"/>
+            </method>
+            <method name="eq (byte [], byte []): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="81%  (26/32)"/>
+              <coverage type="line, %" value="67%  (6/9)"/>
             </method>
             <method name="remove (byte []): Object">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="82%  (9/11)"/>
               <coverage type="line, %" value="90%  (1.8/2)"/>
-            </method>
-            <method name="isEmpty (): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="86%  (6/7)"/>
-              <coverage type="line, %" value="85%  (0.8/1)"/>
-            </method>
-            <method name="resize (int): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="87%  (27/31)"/>
-              <coverage type="line, %" value="80%  (8/10)"/>
             </method>
             <method name="ByteArrayHashMap (int, float): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -102,11 +107,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (5/5)"/>
               <coverage type="line, %" value="100% (2/2)"/>
-            </method>
-            <method name="addEntry (int, byte [], Object, int): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (32/32)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
             </method>
             <method name="clear (): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -128,20 +128,20 @@
               <coverage type="block, %" value="100% (6/6)"/>
               <coverage type="line, %" value="100% (1/1)"/>
             </method>
-            <method name="keys (): List">
+            <method name="put (byte [], Object): Object">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (31/31)"/>
-              <coverage type="line, %" value="100% (7/7)"/>
+              <coverage type="block, %" value="100% (45/45)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
             </method>
             <method name="size (): int">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (3/3)"/>
               <coverage type="line, %" value="100% (1/1)"/>
             </method>
-            <method name="transfer (ByteArrayHashMap$Entry []): void">
+            <method name="values (): List">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (46/46)"/>
-              <coverage type="line, %" value="100% (13/13)"/>
+              <coverage type="block, %" value="100% (31/31)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
             </method>
           </class>
           <class name="ByteArrayHashMap$Entry">

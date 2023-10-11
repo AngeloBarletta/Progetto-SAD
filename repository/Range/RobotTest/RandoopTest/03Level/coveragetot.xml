@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:40:52 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 15:07:43 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,20 +12,20 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (2/2)"/>
       <coverage type="method, %" value="93%  (27/29)"/>
-      <coverage type="block, %" value="88%  (415/474)"/>
-      <coverage type="line, %" value="90%  (85.5/95)"/>
+      <coverage type="block, %" value="88%  (418/474)"/>
+      <coverage type="line, %" value="85%  (81.1/95)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (2/2)"/>
         <coverage type="method, %" value="93%  (27/29)"/>
-        <coverage type="block, %" value="88%  (415/474)"/>
-        <coverage type="line, %" value="90%  (85.5/95)"/>
+        <coverage type="block, %" value="88%  (418/474)"/>
+        <coverage type="line, %" value="85%  (81.1/95)"/>
 
         <srcfile name="Range.java">
           <coverage type="class, %" value="100% (2/2)"/>
           <coverage type="method, %" value="93%  (27/29)"/>
-          <coverage type="block, %" value="88%  (415/474)"/>
-          <coverage type="line, %" value="90%  (85.5/95)"/>
+          <coverage type="block, %" value="88%  (418/474)"/>
+          <coverage type="line, %" value="85%  (81.1/95)"/>
 
           <class name="Range$ComparableComparator">
             <coverage type="class, %" value="100% (1/1)"/>
@@ -62,18 +62,33 @@
           <class name="Range">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (24/24)"/>
-            <coverage type="block, %" value="89%  (391/441)"/>
-            <coverage type="line, %" value="90%  (81.9/91)"/>
+            <coverage type="block, %" value="89%  (394/441)"/>
+            <coverage type="line, %" value="85%  (77.5/91)"/>
 
-            <method name="intersectionWith (Range): Range">
+            <method name="isOverlappedBy (Range): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="39%  (22/56)"/>
-              <coverage type="line, %" value="57%  (4/7)"/>
+              <coverage type="block, %" value="65%  (15/23)"/>
+              <coverage type="line, %" value="55%  (2.8/5)"/>
             </method>
             <method name="elementCompareTo (Object): int">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="76%  (16/21)"/>
-              <coverage type="line, %" value="86%  (6/7)"/>
+              <coverage type="block, %" value="67%  (14/21)"/>
+              <coverage type="line, %" value="71%  (5/7)"/>
+            </method>
+            <method name="intersectionWith (Range): Range">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="73%  (41/56)"/>
+              <coverage type="line, %" value="84%  (5.8/7)"/>
+            </method>
+            <method name="isAfterRange (Range): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="78%  (7/9)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="isBeforeRange (Range): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="78%  (7/9)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
             </method>
             <method name="isAfter (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -100,6 +115,11 @@
               <coverage type="block, %" value="88%  (7/8)"/>
               <coverage type="line, %" value="87%  (0.9/1)"/>
             </method>
+            <method name="containsRange (Range): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="89%  (16/18)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
             <method name="contains (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="92%  (22/24)"/>
@@ -119,11 +139,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (7/7)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="containsRange (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (18/18)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
             </method>
             <method name="equals (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -159,21 +174,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (5/5)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="isAfterRange (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-            <method name="isBeforeRange (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-            <method name="isOverlappedBy (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (23/23)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
             </method>
             <method name="toString (): String">
               <coverage type="method, %" value="100% (1/1)"/>

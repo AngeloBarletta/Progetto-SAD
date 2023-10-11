@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 18:40:58 GMT 2023 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="14"/>
+    <srcfiles value="1"/>
+    <srclines value="181"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (1/1)"/>
+      <coverage type="method, %" value="100% (14/14)"/>
+      <coverage type="block, %" value="28%  (132/477)"/>
+      <coverage type="line, %" value="30%  (54/181)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (14/14)"/>
+        <coverage type="block, %" value="28%  (132/477)"/>
+        <coverage type="line, %" value="30%  (54/181)"/>
+
+        <srcfile name="ResultSetHelper.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (14/14)"/>
+          <coverage type="block, %" value="28%  (132/477)"/>
+          <coverage type="line, %" value="30%  (54/181)"/>
+
+          <class name="ResultSetHelper">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (14/14)"/>
+            <coverage type="block, %" value="28%  (132/477)"/>
+            <coverage type="line, %" value="30%  (54/181)"/>
+
+            <method name="initialize (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="3%   (5/166)"/>
+              <coverage type="line, %" value="8%   (3/39)"/>
+            </method>
+            <method name="typeToClass (int): Class">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="22%  (15/69)"/>
+              <coverage type="line, %" value="20%  (9/45)"/>
+            </method>
+            <method name="typeIsNumeric (int): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="22%  (15/68)"/>
+              <coverage type="line, %" value="20%  (9/44)"/>
+            </method>
+            <method name="getCells (): Object [][]">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="24%  (24/101)"/>
+              <coverage type="line, %" value="26%  (7/27)"/>
+            </method>
+            <method name="ResultSetHelper (ResultSet): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="ResultSetHelper (ResultSet, int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (30/30)"/>
+              <coverage type="line, %" value="100% (11/11)"/>
+            </method>
+            <method name="getColumnClasses (): Class []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getColumnCount (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getColumnNames (): String []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getMaxRows (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getNumericColumns (): boolean []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getResultSet (): ResultSet">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getRowCount (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="hasMaxRows (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

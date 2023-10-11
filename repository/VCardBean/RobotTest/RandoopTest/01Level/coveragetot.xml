@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 10:04:13 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 15:33:35 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,26 +12,26 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (1/1)"/>
       <coverage type="method, %" value="86%  (25/29)"/>
-      <coverage type="block, %" value="26%  (157/609)"/>
-      <coverage type="line, %" value="31%  (48/153)"/>
+      <coverage type="block, %" value="24%  (149/609)"/>
+      <coverage type="line, %" value="30%  (46.5/153)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="86%  (25/29)"/>
-        <coverage type="block, %" value="26%  (157/609)"/>
-        <coverage type="line, %" value="31%  (48/153)"/>
+        <coverage type="block, %" value="24%  (149/609)"/>
+        <coverage type="line, %" value="30%  (46.5/153)"/>
 
         <srcfile name="VCardBean.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="86%  (25/29)"/>
-          <coverage type="block, %" value="26%  (157/609)"/>
-          <coverage type="line, %" value="31%  (48/153)"/>
+          <coverage type="block, %" value="24%  (149/609)"/>
+          <coverage type="line, %" value="30%  (46.5/153)"/>
 
           <class name="VCardBean">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="86%  (25/29)"/>
-            <coverage type="block, %" value="26%  (157/609)"/>
-            <coverage type="line, %" value="31%  (48/153)"/>
+            <coverage type="block, %" value="24%  (149/609)"/>
+            <coverage type="line, %" value="30%  (46.5/153)"/>
 
             <method name="addBackslashes (String): String">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -60,8 +60,8 @@
             </method>
             <method name="generateVCard (VCardBean): String">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="11%  (18/169)"/>
-              <coverage type="line, %" value="12%  (3/26)"/>
+              <coverage type="block, %" value="6%   (10/169)"/>
+              <coverage type="line, %" value="6%   (1.5/26)"/>
             </method>
             <method name="VCardBean (): void">
               <coverage type="method, %" value="100% (1/1)"/>
