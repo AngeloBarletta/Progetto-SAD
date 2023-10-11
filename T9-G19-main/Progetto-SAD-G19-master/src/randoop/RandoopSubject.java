@@ -23,7 +23,7 @@ public class RandoopSubject implements ISubject {
     private int cov;
     private int ex_cov;
     private int timelimit;
-    private static int max_iter = 5;
+    private static int max_iter = 7;
     private int iter;
     private int sat;
     private static int max_sat = 10;
@@ -52,7 +52,7 @@ public class RandoopSubject implements ISubject {
 
         cov = 0;
         ex_cov = 0;
-        timelimit = 5;       
+        timelimit = 2;       
         iter = 0;
         sat = 0;
         livello = 0;
@@ -71,13 +71,16 @@ public class RandoopSubject implements ISubject {
         director.mkdir();
 
         do {
-
+            System.out.println("timelimit: "+timelimit);
+            System.out.println("iter: "+iter);
+            System.out.println("sat: "+sat);
 
             result = RunRandoop.Run(class_file, timelimit, iter-1, iter);
             notifyObservers();
 
 
             cov = EmmaCoverage.LineCoverage(result[1]);
+            System.out.println("cov: "+cov);
             if(ex_cov >= cov) {
                 sat++;
 
@@ -157,7 +160,7 @@ public class RandoopSubject implements ISubject {
             }
 
             iter++;
-            timelimit = timelimit +2;
+            timelimit = timelimit + 2;
         }
         while(iter < max_iter && sat < max_sat && livello < maxlevel);
 

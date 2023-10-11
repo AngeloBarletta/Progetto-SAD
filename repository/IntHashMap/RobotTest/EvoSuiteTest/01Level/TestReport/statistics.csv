@@ -1,9 +1,0 @@
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-IntHashMapSourceCode.IntHashMap,LINE,0.7052631578947368,95,67
-IntHashMapSourceCode.IntHashMap,BRANCH,0.6382978723404256,47,30
-IntHashMapSourceCode.IntHashMap,EXCEPTION,1.0,0,0
-IntHashMapSourceCode.IntHashMap,WEAKMUTATION,0.5989847715736041,394,236
-IntHashMapSourceCode.IntHashMap,OUTPUT,0.0,17,0
-IntHashMapSourceCode.IntHashMap,METHOD,0.0,13,0
-IntHashMapSourceCode.IntHashMap,METHODNOEXCEPTION,0.0,13,0
-IntHashMapSourceCode.IntHashMap,CBRANCH,0.6382978723404256,47,30

@@ -1,0 +1,2 @@
+IntHashMap e NewGroupsOrNewsQuery non vanno su randoop
+Range non va su evosuite per la sandbox
