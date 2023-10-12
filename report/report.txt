@@ -1,2 +1,0 @@
-IntHashMap e NewGroupsOrNewsQuery non vanno su randoop
-ChunkedLongArray non vanno su EvoSuite

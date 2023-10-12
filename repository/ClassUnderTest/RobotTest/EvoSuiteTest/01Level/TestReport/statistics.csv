@@ -1,9 +1,0 @@
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-ClassUnderTestSourceCode.ClassUnderTest,LINE,1.0,2,2
-ClassUnderTestSourceCode.ClassUnderTest,BRANCH,1.0,2,2
-ClassUnderTestSourceCode.ClassUnderTest,EXCEPTION,1.0,0,0
-ClassUnderTestSourceCode.ClassUnderTest,WEAKMUTATION,0.8333333333333334,12,10
-ClassUnderTestSourceCode.ClassUnderTest,OUTPUT,0.0,3,0
-ClassUnderTestSourceCode.ClassUnderTest,METHOD,0.0,2,0
-ClassUnderTestSourceCode.ClassUnderTest,METHODNOEXCEPTION,0.0,2,0
-ClassUnderTestSourceCode.ClassUnderTest,CBRANCH,1.0,2,2

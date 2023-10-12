@@ -1,0 +1,4 @@
+IntHashMap e NewGroupsOrNewsQuery non vanno su randoop
+ChunkedLongArray non vanno su EvoSuite:
+    Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<..., Heap memory used: [266]MB, Max memory: 0MB> but was:<..., Heap memory used: [454]MB, Max memory: 0MB
+    java.lang.OutOfMemoryError: GC overhead limit exceeded

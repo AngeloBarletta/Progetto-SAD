@@ -1,7 +1,7 @@
 import os
 import csv
 
-REPO_PATH = ".\\repository"
+REPO_PATH = "..\\repository"
 
 classes = [f for f in os.listdir(REPO_PATH) if not f.endswith(".txt")]
 
@@ -26,9 +26,9 @@ for class_name in classes:
                 csv_reader = csv.DictReader(csv_file)
                 for row in csv_reader:
                     if (row['criterion'] == "WEAKMUTATION"):
-                        weak_mutations.append(float(row['Coverage']))
+                        weak_mutations.append(round(float(row['Coverage']), 4))
                     elif (row['criterion'] == "CBRANCH"):
-                        cbranches.append(float(row['Coverage'])) 
+                        cbranches.append(round(float(row['Coverage']), 4)) 
         
         if is_ascending(weak_mutations) and is_ascending(cbranches):
             print(f"{class_name}: TEST PASSED")
