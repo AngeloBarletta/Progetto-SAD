@@ -15,18 +15,29 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.add(0, (int)'a');
-    int i9 = calcolatrice0.subtract((int)(byte)0, (int)(short)10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide((double)1000, (double)(short)1);
+    // The following exception was thrown during execution in test generation
+    try {
+    double d11 = calcolatrice0.divide(100.0d, (double)0L);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-10));
+    org.junit.Assert.assertTrue(d8 == 1000.0d);
 
   }
 
@@ -37,10 +48,12 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
     // The following exception was thrown during execution in test generation
     try {
-    double d6 = calcolatrice0.divide((double)(byte)1, 0.0d);
+    int i10 = calcolatrice0.factorial((int)(byte)-1);
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -51,7 +64,13 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
 
   }
 
@@ -62,11 +81,10 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.add(0, (int)'a');
+    int i2 = calcolatrice0.factorial((int)(byte)1);
     // The following exception was thrown during execution in test generation
     try {
-    int i8 = calcolatrice0.factorial((-1260));
+    int i4 = calcolatrice0.factorial((int)(byte)-1);
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -77,10 +95,7 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i2 == 1);
 
   }
 
@@ -91,22 +106,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.add(97, (int)(byte)100);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)'a', 1000);
+    int i11 = calcolatrice0.multiply((int)(short)10, (int)(byte)10);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == 1097);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 197);
+    org.junit.Assert.assertTrue(i11 == 100);
 
   }
 
@@ -117,14 +132,21 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    int i6 = calcolatrice0.subtract((-126000000), (-36));
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i4 = calcolatrice0.factorial((int)(short)-1);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == (-125999964));
+    org.junit.Assert.assertTrue(i2 == 1);
 
   }
 
@@ -135,22 +157,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i12 = calcolatrice0.add(10001, (-1260));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i11 = calcolatrice0.multiply((int)(short)1, 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(d8 == 0.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 8741);
+    org.junit.Assert.assertTrue(i11 == 1);
 
   }
 
@@ -161,22 +183,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.add(10297, 10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide((double)1000, (double)(short)1);
+    int i11 = calcolatrice0.subtract(0, 101);
+    double d14 = calcolatrice0.divide((-0.10548523206751055d), (double)(-101));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(d8 == 1000.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 10307);
+    org.junit.Assert.assertTrue(i11 == (-101));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d14 == 0.0010444082382921837d);
 
   }
 
@@ -187,38 +213,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i17 = calcolatrice0.factorial((int)(short)100);
-    int i20 = calcolatrice0.multiply((-36), 100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.subtract((int)(short)10, (int)'4');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i13 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i20 == (-3600));
+    org.junit.Assert.assertTrue(i16 == (-42));
 
   }
 
@@ -229,26 +247,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.subtract((-36), (int)(short)0);
-    int i13 = calcolatrice0.factorial((int)'#');
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)100, 25);
+    int i8 = calcolatrice0.subtract(0, 90);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-36));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i8 == (-90));
 
   }
 
@@ -259,22 +269,33 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial(100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i13 = calcolatrice0.factorial((-4320));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
 
   }
 
@@ -285,22 +306,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.add(297, 53);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i7 = calcolatrice0.factorial(2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 350);
+    org.junit.Assert.assertTrue(i7 == 0);
 
   }
 
@@ -311,30 +328,25 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.subtract((-36), (int)(short)0);
-    int i13 = calcolatrice0.factorial((int)(byte)1);
-    int i16 = calcolatrice0.multiply(5200, 10297);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i7 = calcolatrice0.factorial((-1));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-36));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 53544400);
+    org.junit.Assert.assertTrue(i5 == 31433);
 
   }
 
@@ -345,14 +357,33 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.add((int)(short)100, 97);
-    int i6 = calcolatrice0.subtract(284905488, (int)(byte)10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    // The following exception was thrown during execution in test generation
+    try {
+    double d14 = calcolatrice0.divide((double)86, (double)0);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 197);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 284905478);
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
 
   }
 
@@ -363,33 +394,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i10 = calcolatrice0.factorial(10000);
-    // The following exception was thrown during execution in test generation
-    try {
-    double d13 = calcolatrice0.divide((double)0, 0.0d);
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.add((-101), 31433000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 31432899);
 
   }
 
@@ -400,18 +420,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply(53544400, 53544400);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide((double)' ', 1.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 432130304);
+    org.junit.Assert.assertTrue(d8 == 32.0d);
 
   }
 
@@ -422,30 +442,29 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.multiply((-125999964), 100);
-    int i17 = calcolatrice0.add(1970001, (int)(short)-1);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)913, (double)913);
+    int i7 = calcolatrice0.factorial(0);
+    // The following exception was thrown during execution in test generation
+    try {
+    double d10 = calcolatrice0.divide((double)0, 0.0d);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(d5 == 1.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 284905488);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 1970000);
+    org.junit.Assert.assertTrue(i7 == 1);
 
   }
 
@@ -456,26 +475,45 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial(1);
-    double d13 = calcolatrice0.divide((double)(-1225), (double)100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.multiply(0, 948);
+    int i15 = calcolatrice0.factorial(31433);
+    int i18 = calcolatrice0.multiply(1, 1000);
+    // The following exception was thrown during execution in test generation
+    try {
+    double d21 = calcolatrice0.divide(3.181369897878026E-4d, 0.0d);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 1);
+    org.junit.Assert.assertTrue(i10 == 2076180480);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d13 == (-12.25d));
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 1000);
 
   }
 
@@ -486,22 +524,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i12 = calcolatrice0.multiply((int)'#', (-10));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.add((int)(byte)1, 0);
+    int i19 = calcolatrice0.add((int)(byte)1, 90);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-350));
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 91);
 
   }
 
@@ -512,33 +562,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.add((int)' ', 53);
-    int i12 = calcolatrice0.multiply((-12600), 10000);
-    // The following exception was thrown during execution in test generation
-    try {
-    int i14 = calcolatrice0.factorial((-15));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.add((int)(byte)1, 0);
+    int i19 = calcolatrice0.multiply(0, 1097);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 85);
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-126000000));
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 0);
 
   }
 
@@ -549,26 +600,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.add(197, (int)(short)100);
-    int i13 = calcolatrice0.factorial(197);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i16 = calcolatrice0.factorial(1);
+    double d19 = calcolatrice0.divide((double)100L, (double)(-10));
+    double d22 = calcolatrice0.divide((double)250, (double)(short)1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 297);
+    org.junit.Assert.assertTrue(i11 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i14 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d19 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d22 == 250.0d);
 
   }
 
@@ -579,38 +642,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.add((int)'4', 10307);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(1, 2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 10359);
+    org.junit.Assert.assertTrue(i14 == 2500);
 
   }
 
@@ -621,30 +672,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial((int)(byte)10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i17 = calcolatrice0.add((-100), 2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i14 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 3628800);
+    org.junit.Assert.assertTrue(i17 == 2400);
 
   }
 
@@ -655,13 +706,11 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.multiply(1, (int)(short)10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
     // The following exception was thrown during execution in test generation
     try {
-    int i13 = calcolatrice0.factorial((-251999728));
+    int i7 = calcolatrice0.factorial((int)(byte)-1);
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -672,16 +721,10 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 10);
+    org.junit.Assert.assertTrue(i5 == 31433);
 
   }
 
@@ -692,26 +735,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.multiply(0, (-1260));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(101);
+    double d13 = calcolatrice0.divide((double)(byte)10, (double)(-1L));
+    int i16 = calcolatrice0.multiply((-10), (int)'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
+    org.junit.Assert.assertTrue(i10 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 0);
+    org.junit.Assert.assertTrue(d13 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == (-970));
 
   }
 
@@ -722,33 +769,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.add(0, (int)'a');
-    int i9 = calcolatrice0.subtract((-97), (int)'4');
-    int i11 = calcolatrice0.factorial(197);
-    // The following exception was thrown during execution in test generation
-    try {
-    double d14 = calcolatrice0.divide((double)(-36), (double)(byte)0);
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
+    double d8 = calcolatrice0.divide(0.0d, (double)(-90));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 31433);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-149));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
+    org.junit.Assert.assertTrue(d8 == (-0.0d));
 
   }
 
@@ -759,25 +791,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    double d6 = calcolatrice0.divide((double)100L, (double)(-1.0f));
-    // The following exception was thrown during execution in test generation
-    try {
-    int i8 = calcolatrice0.factorial((-149));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i12 = calcolatrice0.factorial(3628800);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == (-100.0d));
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i12 == 0);
 
   }
 
@@ -788,26 +821,29 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    double d14 = calcolatrice0.divide((double)53, (double)3628800);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)'a', 1000);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i10 = calcolatrice0.factorial((-51));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == 1.4605379188712522E-5d);
+    org.junit.Assert.assertTrue(i8 == 1097);
 
   }
 
@@ -818,22 +854,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    int i11 = calcolatrice0.multiply(8751, 53);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(3143300, (int)(short)10);
+    int i17 = calcolatrice0.add((-110), (-100));
+    double d20 = calcolatrice0.divide((double)(short)100, (double)'#');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 463803);
+    org.junit.Assert.assertTrue(i11 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 31433000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-210));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d20 == 2.857142857142857d);
 
   }
 
@@ -844,22 +892,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(0, (-125999964));
-    int i8 = calcolatrice0.add(10, 8741);
-    int i11 = calcolatrice0.multiply(2425, (-12610));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i20 = calcolatrice0.add(90, (int)(short)1);
+    int i23 = calcolatrice0.subtract((int)(short)10, 2400);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 8751);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-30579250));
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 91);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i23 == (-2390));
 
   }
 
@@ -870,18 +934,41 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add((int)(short)-1, 1970000);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i15 = calcolatrice0.factorial((int)(short)1);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i17 = calcolatrice0.factorial((int)(byte)-1);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 1969999);
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 1);
 
   }
 
@@ -892,26 +979,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    double d11 = calcolatrice0.divide((double)10296, (double)5200);
-    double d14 = calcolatrice0.divide((double)53544400, (double)284905478);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i15 = calcolatrice0.factorial((int)(short)1);
+    int i18 = calcolatrice0.subtract(1000, (int)(byte)0);
+    int i21 = calcolatrice0.add((int)(short)0, 2400);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 1.98d);
+    org.junit.Assert.assertTrue(i10 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == 0.18793741831808514d);
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 2400);
 
   }
 
@@ -922,30 +1021,41 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i10 = calcolatrice0.factorial(10000);
-    int i13 = calcolatrice0.add((-149), 10);
-    int i16 = calcolatrice0.subtract((int)(byte)10, (-125999864));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.add(90, (-90));
+    // The following exception was thrown during execution in test generation
+    try {
+    double d20 = calcolatrice0.divide((double)30336, (double)(short)0);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-139));
+    org.junit.Assert.assertTrue(i14 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 125999874);
+    org.junit.Assert.assertTrue(i17 == 0);
 
   }
 
@@ -956,22 +1066,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    int i11 = calcolatrice0.add(53, (-125999964));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i15 = calcolatrice0.factorial((int)(short)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-125999911));
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 0);
 
   }
 
@@ -982,33 +1100,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    double d9 = calcolatrice0.divide((double)197, (double)(-12600));
-    int i12 = calcolatrice0.subtract((-12600), (int)(byte)-1);
-    // The following exception was thrown during execution in test generation
-    try {
-    double d15 = calcolatrice0.divide(0.0d, (double)(short)0);
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i20 = calcolatrice0.add(90, (int)(short)1);
+    double d23 = calcolatrice0.divide((double)(-4320), (double)101);
+    int i26 = calcolatrice0.add((int)(short)0, (int)(short)1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d9 == (-0.015634920634920633d));
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-12599));
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 91);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d23 == (-42.772277227722775d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i26 == 1);
 
   }
 
@@ -1019,16 +1146,15 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.add((-1260), (int)'#');
-    int i16 = calcolatrice0.add((-125999864), (-125999864));
-    int i19 = calcolatrice0.add((-350), (int)(short)10);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
     // The following exception was thrown during execution in test generation
     try {
-    int i21 = calcolatrice0.factorial((int)(byte)-1);
+    int i19 = calcolatrice0.factorial((-101));
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -1039,25 +1165,22 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-1225));
+    org.junit.Assert.assertTrue(i14 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-251999728));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-340));
+    org.junit.Assert.assertTrue(d17 == 0.0d);
 
   }
 
@@ -1068,18 +1191,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i8 = calcolatrice0.factorial(350);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i7 = calcolatrice0.factorial((int)(byte)100);
+    int i10 = calcolatrice0.add(31463336, (-90));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i7 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 31463246);
 
   }
 
@@ -1090,426 +1217,15 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(0, (-125999964));
-    int i8 = calcolatrice0.add(10, 8741);
-    double d11 = calcolatrice0.divide((double)463803, (double)1000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 8751);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 463.803d);
-
-  }
-
-  @Test
-  public void test038() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test038"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply((int)' ', (-12610));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == (-403520));
-
-  }
-
-  @Test
-  public void test039() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test039"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i9 = calcolatrice0.subtract((-125999911), 2425);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-126002336));
-
-  }
-
-  @Test
-  public void test040() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test040"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i12 = calcolatrice0.add((-125999864), (-15));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-125999879));
-
-  }
-
-  @Test
-  public void test041() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test041"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.multiply(97, 1970001);
-    int i25 = calcolatrice0.subtract((int)(short)100, 0);
-    int i27 = calcolatrice0.factorial(97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 191090097);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i25 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == 0);
-
-  }
-
-  @Test
-  public void test042() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test042"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    double d11 = calcolatrice0.divide((double)(byte)0, (double)197);
-    int i14 = calcolatrice0.subtract((-10001), (-1));
-    double d17 = calcolatrice0.divide((double)'#', (double)3628800);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 0.0d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-10000));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d17 == 9.645061728395062E-6d);
-
-  }
-
-  @Test
-  public void test043() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test043"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    double d11 = calcolatrice0.divide((double)(byte)0, (double)197);
-    int i14 = calcolatrice0.multiply((-125999964), 10297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 0.0d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-341505916));
-
-  }
-
-  @Test
-  public void test044() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test044"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    double d11 = calcolatrice0.divide((double)10296, (double)5200);
-    int i14 = calcolatrice0.subtract((-1), 10296);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 1.98d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-10297));
-
-  }
-
-  @Test
-  public void test045() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test045"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.add((int)' ', 53);
-    int i12 = calcolatrice0.multiply((-12600), 10000);
-    double d15 = calcolatrice0.divide((-100.0d), (double)(-125999964));
-    int i17 = calcolatrice0.factorial(10297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 85);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-126000000));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d15 == 7.936510204082281E-7d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 0);
-
-  }
-
-  @Test
-  public void test046() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test046"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i17 = calcolatrice0.factorial(25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 2076180480);
-
-  }
-
-  @Test
-  public void test047() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test047"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i12 = calcolatrice0.multiply((int)' ', 10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 320);
-
-  }
-
-  @Test
-  public void test048() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test048"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.multiply((-125999911), (-12599));
-    int i19 = calcolatrice0.add(85, 297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-1665020831));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == 382);
-
-  }
-
-  @Test
-  public void test049() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test049"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.add((-1260), (int)'#');
-    int i16 = calcolatrice0.add((-125999864), (-125999864));
-    int i19 = calcolatrice0.subtract((int)(short)10, 1000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-1225));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-251999728));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-990));
-
-  }
-
-  @Test
-  public void test050() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test050"); }
-
-
-    Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i17 = calcolatrice0.factorial((int)(short)100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(3143300, (int)(short)10);
+    int i17 = calcolatrice0.multiply(25, (int)(short)-1);
     // The following exception was thrown during execution in test generation
     try {
-    int i19 = calcolatrice0.factorial((-10000));
+    int i19 = calcolatrice0.factorial((-42));
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -1520,22 +1236,515 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i14 == 31433000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
+    org.junit.Assert.assertTrue(i17 == (-25));
+
+  }
+
+  @Test
+  public void test038() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test038"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.add((int)(byte)1, 0);
+    int i18 = calcolatrice0.factorial(2500);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 0);
+
+  }
+
+  @Test
+  public void test039() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test039"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.add((int)'4', 34);
+    int i17 = calcolatrice0.multiply((-4320), (int)(short)-1);
+    double d20 = calcolatrice0.divide(4.0d, (double)1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 86);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 4320);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d20 == 0.004d);
+
+  }
+
+  @Test
+  public void test040() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test040"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(3143300, (int)(short)10);
+    int i17 = calcolatrice0.multiply(25, (int)(short)-1);
+    int i20 = calcolatrice0.add(0, 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 31433000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-25));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 0);
+
+  }
+
+  @Test
+  public void test041() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test041"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i11 = calcolatrice0.multiply((int)(short)1, (-1000));
+    int i14 = calcolatrice0.subtract(2076180480, 10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d8 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == (-1000));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 2076180470);
+
+  }
+
+  @Test
+  public void test042() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test042"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    // The following exception was thrown during execution in test generation
+    try {
+    double d22 = calcolatrice0.divide((double)35, 0.0d);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
+
+  }
+
+  @Test
+  public void test043() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test043"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.add((int)(byte)100, (int)(short)1);
+    int i16 = calcolatrice0.subtract(100, (-970));
+    int i19 = calcolatrice0.multiply((-42), 31433);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 2076180480);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1070);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == (-1320186));
+
+  }
+
+  @Test
+  public void test044() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test044"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i20 = calcolatrice0.add((int)(short)100, 90);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 190);
+
+  }
+
+  @Test
+  public void test045() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test045"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i16 = calcolatrice0.add((int)(short)0, (int)(short)0);
+    int i19 = calcolatrice0.add(0, 86);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i21 = calcolatrice0.factorial((-4320));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 86);
+
+  }
+
+  @Test
+  public void test046() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test046"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i7 = calcolatrice0.factorial((int)'4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i7 == 0);
+
+  }
+
+  @Test
+  public void test047() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test047"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i16 = calcolatrice0.factorial(1);
+    double d19 = calcolatrice0.divide((double)100L, (double)(-10));
+    int i22 = calcolatrice0.subtract(0, 25);
+    double d25 = calcolatrice0.divide((double)(short)1, (double)(-1.0f));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d19 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == (-25));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d25 == (-1.0d));
+
+  }
+
+  @Test
+  public void test048() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test048"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i20 = calcolatrice0.subtract(1070, 913);
+    double d23 = calcolatrice0.divide((double)2500, (double)948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 157);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d23 == 2.6371308016877637d);
+
+  }
+
+  @Test
+  public void test049() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test049"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.subtract(86, (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 186);
+
+  }
+
+  @Test
+  public void test050() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test050"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(948, 35);
+    int i17 = calcolatrice0.multiply(35, (int)(short)0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 913);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i17 == 0);
@@ -1549,38 +1758,14 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i10 = calcolatrice0.factorial(10000);
-    int i13 = calcolatrice0.add((-149), 10);
-    int i16 = calcolatrice0.add((-10), (-12600));
-    int i18 = calcolatrice0.factorial(10000);
-    int i21 = calcolatrice0.subtract((-403520), (int)'4');
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    int i5 = calcolatrice0.add(30336, (-20900));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-139));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-12610));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == (-403572));
+    org.junit.Assert.assertTrue(i5 == 9436);
 
   }
 
@@ -1591,10 +1776,41 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    double d3 = calcolatrice0.divide((double)(-36), (double)(-126000000));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i19 = calcolatrice0.factorial((-51));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d3 == 2.857142857142857E-7d);
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
 
   }
 
@@ -1605,26 +1821,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.multiply(1, (int)(short)10);
-    int i14 = calcolatrice0.add(320, 1000);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.multiply(0, 948);
+    int i15 = calcolatrice0.factorial(31433);
+    int i18 = calcolatrice0.multiply((-1320186), 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 10);
+    org.junit.Assert.assertTrue(i10 == 2076180480);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 1320);
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == (-44886324));
 
   }
 
@@ -1635,26 +1859,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.add(3628800, (-125999964));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide((double)1000, (double)(short)1);
+    int i11 = calcolatrice0.subtract(0, 101);
+    int i14 = calcolatrice0.subtract((int)(byte)1, 0);
+    int i17 = calcolatrice0.subtract((-20997), (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(d8 == 1000.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
+    org.junit.Assert.assertTrue(i11 == (-101));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-122371164));
+    org.junit.Assert.assertTrue(i14 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-20897));
 
   }
 
@@ -1665,42 +1893,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i18 = calcolatrice0.add(297, 10000);
-    double d21 = calcolatrice0.divide((double)(-126000000), (-12.25d));
-    double d24 = calcolatrice0.divide(1.98d, (double)1970000);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(31432899, (-4320));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 10297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d21 == 1.0285714285714285E7d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d24 == 1.0050761421319798E-6d);
+    org.junit.Assert.assertTrue(i14 == 1648829792);
 
   }
 
@@ -1711,18 +1923,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(0, (-125999964));
-    int i8 = calcolatrice0.multiply((int)(short)-1, 284905478);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.add(1, (int)(short)10);
+    int i10 = calcolatrice0.factorial((int)(byte)1);
+    double d13 = calcolatrice0.divide((double)(-2390), (double)(byte)10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == (-284905478));
+    org.junit.Assert.assertTrue(i8 == 11);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d13 == (-239.0d));
 
   }
 
@@ -1733,22 +1953,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i11 = calcolatrice0.multiply(1970001, 10307);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i16 = calcolatrice0.factorial(1);
+    double d19 = calcolatrice0.divide((double)100L, (double)(-10));
+    int i22 = calcolatrice0.subtract(0, 25);
+    int i25 = calcolatrice0.add(1070, 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-1170036173));
+    org.junit.Assert.assertTrue(i11 == 34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d19 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == (-25));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i25 == 2018);
 
   }
 
@@ -1759,30 +1999,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.add((int)' ', 53);
-    int i12 = calcolatrice0.multiply((-12600), 10000);
-    int i15 = calcolatrice0.subtract((-1225), 10000);
-    double d18 = calcolatrice0.divide((double)(-1225), (double)(-125999964));
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    int i5 = calcolatrice0.add((int)(byte)1, 100);
+    int i8 = calcolatrice0.multiply((-10), 31463336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 85);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-126000000));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == (-11225));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d18 == 9.722225000000794E-6d);
+    org.junit.Assert.assertTrue(i8 == (-314633360));
 
   }
 
@@ -1793,14 +2021,14 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.subtract((-36), (int)(short)0);
-    int i14 = calcolatrice0.multiply((int)(byte)-1, 10001);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.multiply((int)(short)10, 25);
+    int i13 = calcolatrice0.factorial(31433000);
     // The following exception was thrown during execution in test generation
     try {
-    int i16 = calcolatrice0.factorial((-12600));
+    int i15 = calcolatrice0.factorial((int)(byte)-1);
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -1811,19 +2039,19 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-36));
+    org.junit.Assert.assertTrue(i11 == 250);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-10001));
+    org.junit.Assert.assertTrue(i13 == 0);
 
   }
 
@@ -1834,18 +2062,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.subtract(10000, (-1));
-    double d9 = calcolatrice0.divide(9.722225000000794E-6d, (double)21);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.add(90, (-90));
+    int i19 = calcolatrice0.factorial(31463246);
+    int i22 = calcolatrice0.add((int)(byte)100, 157);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10001);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d9 == 4.6296309523813306E-7d);
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == 257);
 
   }
 
@@ -1856,30 +2104,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i13 = calcolatrice0.factorial(2076180480);
-    int i16 = calcolatrice0.add((-251999728), (-12599));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(958, 948);
+    int i17 = calcolatrice0.add(1000, 0);
+    int i19 = calcolatrice0.factorial((int)(byte)1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i14 == 10);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-252012327));
+    org.junit.Assert.assertTrue(i17 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
 
   }
 
@@ -1890,22 +2142,46 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    double d6 = calcolatrice0.divide((double)100L, (double)(-1.0f));
-    int i9 = calcolatrice0.multiply(197, 10000);
-    int i12 = calcolatrice0.subtract((-1665020831), (-10297));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    double d16 = calcolatrice0.divide((double)100L, (double)25);
+    int i18 = calcolatrice0.factorial((int)(byte)10);
+    int i21 = calcolatrice0.add(0, (int)(byte)-1);
+    double d24 = calcolatrice0.divide((double)(-51), (double)(byte)10);
+    int i27 = calcolatrice0.multiply((int)(short)1, 31463336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == (-100.0d));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 1970000);
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-1665010534));
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d16 == 4.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 3628800);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d24 == (-5.1d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 31463336);
 
   }
 
@@ -1916,18 +2192,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    double d9 = calcolatrice0.divide(0.18793741831808514d, 0.00942021948140235d);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)100, 25);
+    int i7 = calcolatrice0.factorial(0);
+    int i10 = calcolatrice0.multiply(86, (int)(byte)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d9 == 19.950428829085798d);
+    org.junit.Assert.assertTrue(i7 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 8600);
 
   }
 
@@ -1938,26 +2218,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.add((int)' ', 53);
-    int i12 = calcolatrice0.multiply((-12600), 10000);
-    int i14 = calcolatrice0.factorial(100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i10 = calcolatrice0.factorial((int)(byte)0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 85);
+    org.junit.Assert.assertTrue(d8 == 0.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-126000000));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 0);
+    org.junit.Assert.assertTrue(i10 == 1);
 
   }
 
@@ -1968,22 +2244,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    int i11 = calcolatrice0.multiply(0, 1970001);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i14 = calcolatrice0.multiply(100, 31433);
+    int i17 = calcolatrice0.subtract(2076180480, 31463246);
+    int i19 = calcolatrice0.factorial(25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 3143300);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 2044717234);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 2076180480);
 
   }
 
@@ -1994,30 +2282,41 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    double d11 = calcolatrice0.divide((double)(byte)0, (double)197);
-    int i14 = calcolatrice0.subtract(1970000, 0);
-    double d17 = calcolatrice0.divide((double)85, (double)(-10000));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.add(1, (int)(short)10);
+    int i11 = calcolatrice0.multiply((int)' ', (-135));
+    int i13 = calcolatrice0.factorial((int)(short)100);
+    int i16 = calcolatrice0.subtract((-20900), (int)'a');
+    // The following exception was thrown during execution in test generation
+    try {
+    int i18 = calcolatrice0.factorial((-90));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 11);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 0.0d);
+    org.junit.Assert.assertTrue(i11 == (-4320));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 1970000);
+    org.junit.Assert.assertTrue(i13 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d17 == (-0.0085d));
+    org.junit.Assert.assertTrue(i16 == (-20997));
 
   }
 
@@ -2028,26 +2327,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i11 = calcolatrice0.factorial((int)(short)100);
-    double d14 = calcolatrice0.divide((double)350, (-0.015634920634920633d));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    double d13 = calcolatrice0.divide(4.0d, (double)(-20900));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
+    org.junit.Assert.assertTrue(i10 == 2076180480);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == (-22385.78680203046d));
+    org.junit.Assert.assertTrue(d13 == (-1.9138755980861245E-4d));
 
   }
 
@@ -2058,34 +2357,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i10 = calcolatrice0.factorial(10000);
-    int i13 = calcolatrice0.add((-149), 10);
-    double d16 = calcolatrice0.divide((double)0L, (double)(-12599));
-    double d19 = calcolatrice0.divide((double)(-10297), (double)(-30579250));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.multiply((int)(short)10, 25);
+    int i13 = calcolatrice0.factorial(31433000);
+    int i16 = calcolatrice0.multiply((int)(byte)-1, 31433);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 250);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-139));
+    org.junit.Assert.assertTrue(i13 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d16 == (-0.0d));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d19 == 3.367316072173124E-4d);
+    org.junit.Assert.assertTrue(i16 == (-31433));
 
   }
 
@@ -2096,30 +2391,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.multiply((-125999964), 100);
-    int i17 = calcolatrice0.add((int)' ', 5200);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.add(31433000, 30336);
+    double d11 = calcolatrice0.divide((double)(-20900), (double)1648829792);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i8 == 31463336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 284905488);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 5232);
+    org.junit.Assert.assertTrue(d11 == (-1.2675656457328253E-5d));
 
   }
 
@@ -2130,26 +2417,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.add(0, (-1665020928));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.add((int)'4', 34);
+    int i17 = calcolatrice0.subtract(0, 86);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-1665020928));
+    org.junit.Assert.assertTrue(i14 == 86);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-86));
 
   }
 
@@ -2160,34 +2451,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.subtract((-1260), 0);
-    double d14 = calcolatrice0.divide((double)97, (double)10297);
-    int i17 = calcolatrice0.add((int)(byte)0, (-10297));
-    int i20 = calcolatrice0.subtract(100, (-125999964));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    double d8 = calcolatrice0.divide((-0.12306289881494986d), (double)(-135));
+    int i11 = calcolatrice0.subtract((-210), 34);
+    double d14 = calcolatrice0.divide((double)1000, (double)(byte)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
+    org.junit.Assert.assertTrue(d8 == 9.115770282588879E-4d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-1260));
+    org.junit.Assert.assertTrue(i11 == (-244));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == 0.00942021948140235d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == (-10297));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i20 == 126000064);
+    org.junit.Assert.assertTrue(d14 == 10.0d);
 
   }
 
@@ -2198,46 +2481,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.multiply(97, 1970001);
-    int i24 = calcolatrice0.factorial(8741);
-    int i27 = calcolatrice0.subtract((-36), 126000064);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    int i21 = calcolatrice0.factorial((int)'4');
+    int i24 = calcolatrice0.subtract(1, (int)(short)-1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i14 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
+    org.junit.Assert.assertTrue(d17 == 0.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
+    org.junit.Assert.assertTrue(i19 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 191090097);
+    org.junit.Assert.assertTrue(i21 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i24 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i27 == (-126000100));
+    org.junit.Assert.assertTrue(i24 == 2);
 
   }
 
@@ -2248,30 +2527,45 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial(1);
-    int i13 = calcolatrice0.multiply((-149), 0);
-    int i16 = calcolatrice0.multiply(382, (-3600));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i16 = calcolatrice0.add((int)(short)0, (int)(short)0);
+    int i19 = calcolatrice0.add(0, 86);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i21 = calcolatrice0.factorial((-31433));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i10 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i13 == (-10));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-1375200));
+    org.junit.Assert.assertTrue(i16 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 86);
 
   }
 
@@ -2282,26 +2576,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i11 = calcolatrice0.factorial((int)(short)100);
-    int i14 = calcolatrice0.add((int)(short)1, 126000064);
+    int i3 = calcolatrice0.add((int)'#', (-1));
+    int i6 = calcolatrice0.subtract((int)(short)100, (int)(byte)10);
+    double d9 = calcolatrice0.divide((-239.0d), (double)(-31432865));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i6 == 90);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 126000065);
+    org.junit.Assert.assertTrue(d9 == 7.603506711844434E-6d);
 
   }
 
@@ -2312,18 +2598,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.add((int)(short)100, 97);
-    int i6 = calcolatrice0.add(21, (-284905478));
-    int i8 = calcolatrice0.factorial(97);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
+    int i8 = calcolatrice0.multiply((-1), (int)(byte)-1);
+    int i10 = calcolatrice0.factorial(86);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 197);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == (-284905457));
+    org.junit.Assert.assertTrue(i5 == 31433);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 0);
 
   }
 
@@ -2334,18 +2624,33 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(0, (-125999964));
-    int i8 = calcolatrice0.subtract((-12599), (int)(short)1);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)'a', 1000);
+    double d11 = calcolatrice0.divide((double)(-10), (double)10.0f);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i13 = calcolatrice0.factorial((-42));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == (-12600));
+    org.junit.Assert.assertTrue(i8 == 1097);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-1.0d));
 
   }
 
@@ -2356,22 +2661,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i12 = calcolatrice0.subtract(10297, 284905478);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i16 = calcolatrice0.add((int)(short)0, (int)(short)0);
+    int i19 = calcolatrice0.add(0, 86);
+    int i22 = calcolatrice0.subtract(4320, (-10));
+    int i24 = calcolatrice0.factorial(0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-284895181));
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 86);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == 4330);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 1);
 
   }
 
@@ -2382,22 +2707,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i9 = calcolatrice0.subtract((-149), 0);
-    int i12 = calcolatrice0.subtract((-990), 109715800);
+    int i3 = calcolatrice0.add((int)'#', (-1));
+    double d6 = calcolatrice0.divide((double)(-10), (double)'4');
+    int i8 = calcolatrice0.factorial(34);
+    int i11 = calcolatrice0.subtract(9436, 9436);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(d6 == (-0.19230769230769232d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-149));
+    org.junit.Assert.assertTrue(i8 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-109716790));
+    org.junit.Assert.assertTrue(i11 == 0);
 
   }
 
@@ -2408,14 +2733,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    int i5 = calcolatrice0.factorial(1970001);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i16 = calcolatrice0.factorial(1);
+    double d19 = calcolatrice0.divide((double)100L, (double)(-10));
+    int i22 = calcolatrice0.multiply((int)'#', (int)(short)-1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d19 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == (-35));
 
   }
 
@@ -2426,38 +2775,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i18 = calcolatrice0.add(297, 10000);
-    int i21 = calcolatrice0.multiply((-122371164), (-122371164));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
+    int i8 = calcolatrice0.multiply((-1), (int)(byte)-1);
+    int i10 = calcolatrice0.factorial(0);
+    int i13 = calcolatrice0.subtract((int)(short)0, 186);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 31433);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i10 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 10297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i21 == 1948467472);
+    org.junit.Assert.assertTrue(i13 == (-186));
 
   }
 
@@ -2468,33 +2805,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i12 = calcolatrice0.subtract(85, 100);
-    // The following exception was thrown during execution in test generation
-    try {
-    int i14 = calcolatrice0.factorial((-126000000));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)913, (double)913);
+    int i7 = calcolatrice0.factorial(0);
+    double d10 = calcolatrice0.divide((double)186, (double)' ');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(d5 == 1.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i7 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-15));
+    org.junit.Assert.assertTrue(d10 == 5.8125d);
 
   }
 
@@ -2505,57 +2831,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.multiply(97, 1970001);
-    int i25 = calcolatrice0.subtract((int)(short)100, 0);
-    int i28 = calcolatrice0.multiply((-30579250), (-125999879));
-    // The following exception was thrown during execution in test generation
-    try {
-    int i30 = calcolatrice0.factorial((-251999728));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i14 = calcolatrice0.multiply(100, 31433);
+    int i17 = calcolatrice0.subtract(2076180480, 31463246);
+    int i20 = calcolatrice0.multiply(190, 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i14 == 3143300);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
+    org.junit.Assert.assertTrue(i17 == 2044717234);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 191090097);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i25 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i28 == 998407518);
+    org.junit.Assert.assertTrue(i20 == 190000);
 
   }
 
@@ -2566,54 +2869,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.subtract((-36), (int)(short)0);
-    int i13 = calcolatrice0.factorial((int)(byte)1);
-    int i16 = calcolatrice0.multiply((int)'a', 25);
-    int i19 = calcolatrice0.add((int)(byte)100, 1970001);
-    int i22 = calcolatrice0.multiply(125999874, (-340));
-    int i25 = calcolatrice0.multiply((-341505916), 125999874);
-    int i28 = calcolatrice0.multiply(998407518, 197);
-    int i31 = calcolatrice0.subtract(297, 0);
-    double d34 = calcolatrice0.divide((double)19100, (-22385.78680203046d));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i16 = calcolatrice0.add((int)(short)0, (int)(short)0);
+    int i19 = calcolatrice0.subtract((-135), 8600);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-36));
+    org.junit.Assert.assertTrue(i10 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 1);
+    org.junit.Assert.assertTrue(i13 == (-10));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 2425);
+    org.junit.Assert.assertTrue(i16 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == 1970101);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 109715800);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i25 == (-1300628216));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i28 == (-882214570));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i31 == 297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d34 == (-0.853219954648526d));
+    org.junit.Assert.assertTrue(i19 == (-8735));
 
   }
 
@@ -2624,18 +2907,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add((-11225), 0);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i16 = calcolatrice0.add((int)(short)0, (int)(short)0);
+    int i19 = calcolatrice0.subtract((-135), (int)(short)0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == (-11225));
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == (-135));
 
   }
 
@@ -2646,22 +2945,49 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.subtract(10000, (-1));
-    int i9 = calcolatrice0.subtract(284905478, 284905488);
-    double d12 = calcolatrice0.divide((double)(-30579250), (double)10296);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.multiply(0, 948);
+    int i15 = calcolatrice0.factorial(31433);
+    int i18 = calcolatrice0.multiply(1, 1000);
+    int i21 = calcolatrice0.add((int)' ', 35);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i23 = calcolatrice0.factorial((-210));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10001);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-10));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d12 == (-2970.0126262626263d));
+    org.junit.Assert.assertTrue(i10 == 2076180480);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 67);
 
   }
 
@@ -2672,26 +2998,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.add(197, (int)(short)100);
-    int i14 = calcolatrice0.subtract((int)(byte)1, 320);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide(9.115770282588879E-4d, (double)(short)10);
+    int i14 = calcolatrice0.multiply((-42), 913);
+    double d17 = calcolatrice0.divide(0.0d, (double)10L);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 297);
+    org.junit.Assert.assertTrue(d11 == 9.115770282588879E-5d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-319));
+    org.junit.Assert.assertTrue(i14 == (-38346));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
 
   }
 
@@ -2702,30 +3032,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    double d9 = calcolatrice0.divide((double)197, (double)(-12600));
-    int i12 = calcolatrice0.subtract((-12600), (int)(byte)-1);
-    int i15 = calcolatrice0.add(8741, 10359);
-    int i18 = calcolatrice0.add((int)'#', (-284905478));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.add((-20897), (-31432865));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d9 == (-0.015634920634920633d));
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-12599));
+    org.junit.Assert.assertTrue(i11 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 19100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == (-284905443));
+    org.junit.Assert.assertTrue(i14 == (-31453762));
 
   }
 
@@ -2736,14 +3062,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.add((int)(short)100, 97);
-    int i6 = calcolatrice0.subtract(5232, (int)(short)100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i11 = calcolatrice0.multiply(10, (-100));
+    int i14 = calcolatrice0.multiply(157, 35);
+    int i17 = calcolatrice0.multiply(3628811, 1070);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 197);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 5132);
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d8 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == (-1000));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 5495);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-412139526));
 
   }
 
@@ -2754,34 +3096,49 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial(1);
-    int i13 = calcolatrice0.multiply((-149), 0);
-    double d16 = calcolatrice0.divide((double)'a', (double)8741);
-    int i19 = calcolatrice0.add(85, (-350));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    int i11 = calcolatrice0.add((int)'#', (int)(byte)-1);
+    int i14 = calcolatrice0.multiply(1, (int)(short)1);
+    int i16 = calcolatrice0.factorial(1);
+    double d19 = calcolatrice0.divide((double)100L, (double)(-10));
+    int i22 = calcolatrice0.subtract(0, 25);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i24 = calcolatrice0.factorial((-250));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 1);
+    org.junit.Assert.assertTrue(i11 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i14 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d16 == 0.01109712847500286d);
+    org.junit.Assert.assertTrue(i16 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-265));
+    org.junit.Assert.assertTrue(d19 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == (-25));
 
   }
 
@@ -2792,22 +3149,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i11 = calcolatrice0.subtract((int)(byte)100, 0);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    int i5 = calcolatrice0.add((int)(byte)1, 100);
+    int i8 = calcolatrice0.multiply((-110), 190);
+    int i11 = calcolatrice0.multiply(250, 1);
+    int i14 = calcolatrice0.subtract((-90), (-35));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == (-20900));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 100);
+    org.junit.Assert.assertTrue(i11 == 250);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-55));
 
   }
 
@@ -2818,54 +3179,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.subtract((-36), (int)(short)0);
-    int i13 = calcolatrice0.factorial((int)(byte)1);
-    int i16 = calcolatrice0.multiply((int)'a', 25);
-    int i19 = calcolatrice0.add((int)(byte)100, 1970001);
-    int i22 = calcolatrice0.multiply(125999874, (-340));
-    int i25 = calcolatrice0.multiply((-341505916), 125999874);
-    int i28 = calcolatrice0.multiply(998407518, 197);
-    int i31 = calcolatrice0.subtract(297, 0);
-    double d34 = calcolatrice0.divide(1.0285714285714285E7d, (double)100L);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.multiply((int)(short)0, 0);
+    int i17 = calcolatrice0.multiply(1, 4320);
+    int i20 = calcolatrice0.subtract(0, 250);
+    int i23 = calcolatrice0.multiply(1648829792, 913);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-36));
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 1);
+    org.junit.Assert.assertTrue(i14 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 2425);
+    org.junit.Assert.assertTrue(i17 == 4320);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == 1970101);
+    org.junit.Assert.assertTrue(i20 == (-250));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 109715800);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i25 == (-1300628216));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i28 == (-882214570));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i31 == 297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d34 == 102857.14285714286d);
+    org.junit.Assert.assertTrue(i23 == 2143046496);
 
   }
 
@@ -2876,38 +3221,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract(53, (int)' ');
-    int i6 = calcolatrice0.subtract((int)'#', (int)(short)10);
-    int i8 = calcolatrice0.factorial(97);
-    int i10 = calcolatrice0.factorial(10000);
-    int i13 = calcolatrice0.add((-149), 10);
-    int i16 = calcolatrice0.add((-10), (-12600));
-    int i18 = calcolatrice0.factorial(10000);
-    int i20 = calcolatrice0.factorial(191090097);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(3143300, (int)(short)10);
+    int i17 = calcolatrice0.multiply((-244), (int)'a');
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 21);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 25);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 0);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == (-139));
+    org.junit.Assert.assertTrue(i14 == 31433000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == (-12610));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i20 == 0);
+    org.junit.Assert.assertTrue(i17 == (-23668));
 
   }
 
@@ -2918,22 +3255,34 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.add((int)(short)100, 97);
-    double d6 = calcolatrice0.divide((double)432130304, (double)(-12610));
-    int i9 = calcolatrice0.multiply((-125999911), (-403572));
-    int i12 = calcolatrice0.multiply(998407518, (-1));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.add((int)'4', 34);
+    int i17 = calcolatrice0.multiply((-4320), (int)(short)-1);
+    int i20 = calcolatrice0.subtract((-210), 11);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == 197);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == (-34268.85836637589d));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 1918264748);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == (-998407518));
+    org.junit.Assert.assertTrue(i11 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 86);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 4320);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == (-221));
 
   }
 
@@ -2944,26 +3293,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)10);
-    double d11 = calcolatrice0.divide((double)(-12610), 7.936510204082281E-7d);
-    int i13 = calcolatrice0.factorial(0);
+    int i3 = calcolatrice0.add((int)'#', (-1));
+    double d6 = calcolatrice0.divide((double)(-10), (double)'4');
+    int i8 = calcolatrice0.factorial(34);
+    double d11 = calcolatrice0.divide((double)(-31433), (double)1097);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(d6 == (-0.19230769230769232d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == 0.0d);
+    org.junit.Assert.assertTrue(i8 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == (-1.58885954604E10d));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 1);
+    org.junit.Assert.assertTrue(d11 == (-28.653600729261623d));
 
   }
 
@@ -2974,30 +3319,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    int i8 = calcolatrice0.add(0, 100);
-    int i11 = calcolatrice0.add(5200, (int)(byte)0);
-    double d14 = calcolatrice0.divide((double)(-10), (double)53544400);
-    int i17 = calcolatrice0.subtract(1969999, (-284905478));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.add((int)(byte)100, (int)(short)1);
+    double d16 = calcolatrice0.divide(0.0d, (double)(-35));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 100);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 5200);
+    org.junit.Assert.assertTrue(i10 == 2076180480);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == (-1.8676089376293319E-7d));
+    org.junit.Assert.assertTrue(i13 == 101);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 286875477);
+    org.junit.Assert.assertTrue(d16 == (-0.0d));
 
   }
 
@@ -3008,30 +3353,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial(1);
-    int i13 = calcolatrice0.multiply((-149), 0);
-    double d16 = calcolatrice0.divide(7.936510204082281E-7d, (-1.8676089376293319E-7d));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    int i21 = calcolatrice0.factorial((int)'4');
+    int i24 = calcolatrice0.subtract(250, (int)(byte)0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 1);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 0);
+    org.junit.Assert.assertTrue(i14 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d16 == (-4.249556769714633d));
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 250);
 
   }
 
@@ -3042,30 +3399,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.multiply((-125999964), 100);
-    double d17 = calcolatrice0.divide((double)(-265), (double)1.0f);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.add(3628800, 11);
+    int i17 = calcolatrice0.add((-186), (-110));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 284905488);
+    org.junit.Assert.assertTrue(i14 == 3628811);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d17 == (-265.0d));
+    org.junit.Assert.assertTrue(i17 == (-296));
 
   }
 
@@ -3076,34 +3433,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply((int)'a', (int)(byte)-1);
-    double d8 = calcolatrice0.divide(0.0d, (double)(byte)-1);
-    double d11 = calcolatrice0.divide((double)10296, (double)5200);
-    int i14 = calcolatrice0.subtract((-1665020831), 97);
-    int i17 = calcolatrice0.multiply(0, (-36));
-    int i20 = calcolatrice0.multiply((-125999864), (int)(byte)0);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.add((int)'4', 34);
+    int i16 = calcolatrice0.factorial(67);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == (-97));
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d8 == (-0.0d));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 1.98d);
+    org.junit.Assert.assertTrue(i11 == 35);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == (-1665020928));
+    org.junit.Assert.assertTrue(i14 == 86);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i20 == 0);
+    org.junit.Assert.assertTrue(i16 == 0);
 
   }
 
@@ -3114,30 +3467,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    int i11 = calcolatrice0.factorial((int)(byte)0);
-    int i14 = calcolatrice0.multiply((-125999964), 100);
-    int i17 = calcolatrice0.subtract((int)(byte)-1, (-350));
+    int i3 = calcolatrice0.add((int)'#', (-1));
+    int i6 = calcolatrice0.subtract(34, 31432899);
+    int i9 = calcolatrice0.add((-25), 9436);
+    int i12 = calcolatrice0.multiply(35, 2018);
+    int i14 = calcolatrice0.factorial(2400);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i6 == (-31432865));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
+    org.junit.Assert.assertTrue(i9 == 9411);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 1);
+    org.junit.Assert.assertTrue(i12 == 70630);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 284905488);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i17 == 349);
+    org.junit.Assert.assertTrue(i14 == 0);
 
   }
 
@@ -3148,18 +3497,42 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    double d6 = calcolatrice0.divide((double)100L, (double)(-1.0f));
-    int i9 = calcolatrice0.subtract((-125999879), (-10297));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.add(90, (-90));
+    int i19 = calcolatrice0.factorial(31463246);
+    double d22 = calcolatrice0.divide((double)2076180470, (double)1.0f);
+    int i25 = calcolatrice0.multiply((-244), 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == (-100.0d));
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125989582));
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d22 == 2.07618047E9d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i25 == (-231312));
 
   }
 
@@ -3170,37 +3543,26 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.subtract((-1260), 0);
-    double d14 = calcolatrice0.divide((double)97, (double)10297);
-    // The following exception was thrown during execution in test generation
-    try {
-    int i16 = calcolatrice0.factorial((-1));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.add(948, 10);
+    int i14 = calcolatrice0.add(70630, 86);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == (-1260));
+    org.junit.Assert.assertTrue(i11 == 958);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d14 == 0.00942021948140235d);
+    org.junit.Assert.assertTrue(i14 == 70716);
 
   }
 
@@ -3211,38 +3573,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i15 = calcolatrice0.factorial(100);
-    int i18 = calcolatrice0.add(297, 10000);
-    double d21 = calcolatrice0.divide((double)(-12599), (double)(-319));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)100, 25);
+    int i7 = calcolatrice0.factorial(0);
+    double d10 = calcolatrice0.divide((double)190, (double)31433);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 2500);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i7 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i18 == 10297);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d21 == 39.495297805642636d);
+    org.junit.Assert.assertTrue(d10 == 0.00604460280596825d);
 
   }
 
@@ -3253,38 +3599,38 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.subtract((-10), 197);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.add(1, (int)(short)10);
+    int i11 = calcolatrice0.multiply((int)' ', (-135));
+    int i13 = calcolatrice0.factorial((int)(short)100);
+    int i16 = calcolatrice0.subtract((-20900), (int)'a');
+    int i19 = calcolatrice0.multiply(9436, (-38346));
+    int i22 = calcolatrice0.add((-23668), (-31432865));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 11);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i10 == 0);
+    org.junit.Assert.assertTrue(i11 == (-4320));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(i13 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
+    org.junit.Assert.assertTrue(i16 == (-20997));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
+    org.junit.Assert.assertTrue(i19 == (-361832856));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == (-207));
+    org.junit.Assert.assertTrue(i22 == (-31456533));
 
   }
 
@@ -3295,50 +3641,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    int i10 = calcolatrice0.factorial((int)'4');
-    int i13 = calcolatrice0.multiply((int)'4', (int)(short)100);
-    int i16 = calcolatrice0.add((int)(short)1, 1970000);
-    int i19 = calcolatrice0.subtract(0, 10);
-    int i22 = calcolatrice0.multiply(97, 1970001);
-    int i25 = calcolatrice0.subtract((int)(short)100, 0);
-    int i28 = calcolatrice0.multiply((-30579250), (-125999879));
-    int i30 = calcolatrice0.factorial(0);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial(4330);
+    double d13 = calcolatrice0.divide((double)(-44886324), (double)190000);
+    int i16 = calcolatrice0.multiply(34, 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
+    org.junit.Assert.assertTrue(i8 == 30336);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i10 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i13 == 5200);
+    org.junit.Assert.assertTrue(d13 == (-236.2438105263158d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1970001);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i19 == (-10));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i22 == 191090097);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i25 == 100);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i28 == 998407518);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i30 == 1);
+    org.junit.Assert.assertTrue(i16 == 34);
 
   }
 
@@ -3349,30 +3675,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.add(1, (int)'4');
-    double d11 = calcolatrice0.divide((double)(byte)0, (double)197);
-    int i14 = calcolatrice0.subtract(1970000, 0);
-    int i16 = calcolatrice0.factorial(0);
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    int i4 = calcolatrice0.factorial((int)'#');
+    int i7 = calcolatrice0.subtract((int)(byte)100, (int)(short)10);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i2 == 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i4 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d11 == 0.0d);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 1970000);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i16 == 1);
+    org.junit.Assert.assertTrue(i7 == 90);
 
   }
 
@@ -3383,37 +3697,18 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)10, (-1260));
-    double d12 = calcolatrice0.divide((double)85, (double)(-1));
-    int i15 = calcolatrice0.subtract(10297, 1);
-    // The following exception was thrown during execution in test generation
-    try {
-    int i17 = calcolatrice0.factorial((-403520));
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
-        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
-      }
-    }
-    
+    int i3 = calcolatrice0.add(25, (-135));
+    int i6 = calcolatrice0.multiply((-186), (-20897));
+    int i8 = calcolatrice0.factorial((int)(short)100);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i3 == (-110));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i6 == 3886842);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-12600));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d12 == (-85.0d));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i15 == 10296);
+    org.junit.Assert.assertTrue(i8 == 0);
 
   }
 
@@ -3424,13 +3719,15 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.subtract((int)(short)-1, (int)'#');
-    double d6 = calcolatrice0.divide(0.0d, (double)10);
-    int i9 = calcolatrice0.multiply((int)(short)-1, (-3600));
-    int i12 = calcolatrice0.multiply(10, (int)(short)100);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.add((int)(byte)1, 0);
     // The following exception was thrown during execution in test generation
     try {
-    int i14 = calcolatrice0.factorial((-126000100));
+    int i18 = calcolatrice0.factorial((-44886324));
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -3441,16 +3738,22 @@ public class RegressionTest0 {
     
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-36));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d6 == 0.0d);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == 3600);
+    org.junit.Assert.assertTrue(i8 == 948);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 1000);
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
 
   }
 
@@ -3461,30 +3764,30 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i2 = calcolatrice0.factorial(1);
-    int i5 = calcolatrice0.multiply(1, 0);
-    int i8 = calcolatrice0.multiply((int)(short)100, (int)(byte)100);
-    int i11 = calcolatrice0.multiply(1, (int)(short)10);
-    int i14 = calcolatrice0.multiply(284905478, (-10));
-    double d17 = calcolatrice0.divide((double)350, (double)(-10297));
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.multiply(2500, 958);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i2 == 1);
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i5 == 0);
+    org.junit.Assert.assertTrue(i5 == (-100));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i8 == 10000);
+    org.junit.Assert.assertTrue(i8 == (-135));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 10);
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i14 == 1445912516);
+    org.junit.Assert.assertTrue(i14 == (-1));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(d17 == (-0.03399048266485384d));
+    org.junit.Assert.assertTrue(i17 == 2395000);
 
   }
 
@@ -3495,22 +3798,22 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.subtract(10000, (-1));
-    int i9 = calcolatrice0.multiply((int)(byte)-1, 10297);
-    int i12 = calcolatrice0.multiply(0, (-252012327));
+    int i3 = calcolatrice0.add((int)'#', (-1));
+    double d6 = calcolatrice0.divide((double)(-10), (double)'4');
+    double d9 = calcolatrice0.divide((double)250, 1.0d);
+    int i12 = calcolatrice0.subtract((int)'a', 1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i3 == 34);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 10001);
+    org.junit.Assert.assertTrue(d6 == (-0.19230769230769232d));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-10297));
+    org.junit.Assert.assertTrue(d9 == 250.0d);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i12 == 0);
+    org.junit.Assert.assertTrue(i12 == 96);
 
   }
 
@@ -3521,26 +3824,1083 @@ public class RegressionTest0 {
 
 
     Calcolatrice calcolatrice0 = new Calcolatrice();
-    int i3 = calcolatrice0.multiply((int)'#', (-36));
-    int i6 = calcolatrice0.multiply(97, 1);
-    int i9 = calcolatrice0.add((int)(short)100, (-125999964));
-    int i11 = calcolatrice0.factorial((int)(short)100);
-    int i13 = calcolatrice0.factorial(1918264748);
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.subtract((int)'#', 0);
+    int i14 = calcolatrice0.multiply(3143300, (int)(short)10);
+    int i17 = calcolatrice0.multiply(25, (int)(short)-1);
+    int i20 = calcolatrice0.multiply((-35), (-31453762));
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i3 == (-1260));
+    org.junit.Assert.assertTrue(i2 == 0);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i6 == 97);
+    org.junit.Assert.assertTrue(i5 == 1000);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i9 == (-125999864));
+    org.junit.Assert.assertTrue(i8 == 25);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i11 == 0);
+    org.junit.Assert.assertTrue(i11 == 35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 31433000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-25));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 1100881670);
+
+  }
+
+  @Test
+  public void test111() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test111"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)'a', 1000);
+    double d11 = calcolatrice0.divide((double)31433000, (double)(-51));
+    int i14 = calcolatrice0.subtract(1000, 958);
+    int i17 = calcolatrice0.multiply(0, (-1000));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 1097);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-616333.3333333334d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 42);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 0);
+
+  }
+
+  @Test
+  public void test112() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test112"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply(0, (-38346));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 0);
+
+  }
+
+  @Test
+  public void test113() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test113"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.add(1, (int)(short)10);
+    int i10 = calcolatrice0.factorial((int)(byte)1);
+    int i13 = calcolatrice0.subtract((int)(short)-1, (int)(byte)10);
+    int i16 = calcolatrice0.add(70716, 3143300);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 11);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-11));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 3214016);
+
+  }
+
+  @Test
+  public void test114() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test114"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i13 = calcolatrice0.factorial(10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 3628800);
+
+  }
+
+  @Test
+  public void test115() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test115"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    double d16 = calcolatrice0.divide((-0.10548523206751055d), (double)100);
+    int i19 = calcolatrice0.subtract(2395000, 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d16 == (-0.0010548523206751056d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 2394000);
+
+  }
+
+  @Test
+  public void test116() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test116"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    int i21 = calcolatrice0.factorial((int)'4');
+    int i24 = calcolatrice0.subtract((int)(short)100, (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i24 == 200);
+
+  }
+
+  @Test
+  public void test117() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test117"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide(9.115770282588879E-4d, (double)(short)10);
+    int i14 = calcolatrice0.multiply((-42), 913);
+    int i17 = calcolatrice0.subtract((-135), 913);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == 9.115770282588879E-5d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-38346));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-1048));
+
+  }
+
+  @Test
+  public void test118() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test118"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i11 = calcolatrice0.multiply((int)(short)1, (-1000));
+    int i14 = calcolatrice0.multiply((int)(short)1, 10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d8 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == (-1000));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 10);
+
+  }
+
+  @Test
+  public void test119() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test119"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    double d16 = calcolatrice0.divide((double)100L, (double)25);
+    int i18 = calcolatrice0.factorial((int)(byte)10);
+    int i21 = calcolatrice0.add(0, (int)(byte)-1);
+    double d24 = calcolatrice0.divide((double)(-51), (double)(byte)10);
+    int i27 = calcolatrice0.add(2076180480, 0);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i29 = calcolatrice0.factorial((-4320));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d16 == 4.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 3628800);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d24 == (-5.1d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i27 == 2076180480);
+
+  }
+
+  @Test
+  public void test120() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test120"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    double d8 = calcolatrice0.divide((double)3143300, (double)100.0f);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d8 == 31433.0d);
+
+  }
+
+  @Test
+  public void test121() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test121"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    int i21 = calcolatrice0.factorial((int)'4');
+    int i23 = calcolatrice0.factorial(86);
+    int i25 = calcolatrice0.factorial(67);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i23 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i25 == 0);
+
+  }
+
+  @Test
+  public void test122() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test122"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i14 = calcolatrice0.add(31463336, (-23668));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 31439668);
+
+  }
+
+  @Test
+  public void test123() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test123"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.add(90, (-90));
+    int i19 = calcolatrice0.factorial(31463246);
+    int i22 = calcolatrice0.add(157, (int)(short)-1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == 156);
+
+  }
+
+  @Test
+  public void test124() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test124"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)100, 25);
+    int i8 = calcolatrice0.multiply(70716, (-11));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 2500);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-777876));
+
+  }
+
+  @Test
+  public void test125() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test125"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    int i15 = calcolatrice0.factorial((int)(short)1);
+    int i18 = calcolatrice0.subtract(1000, (int)(byte)0);
+    double d21 = calcolatrice0.divide((double)(short)0, 3.181369897878026E-4d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i15 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i18 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d21 == 0.0d);
+
+  }
+
+  @Test
+  public void test126() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test126"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    int i5 = calcolatrice0.subtract((int)(byte)-1, (int)(short)100);
+    int i8 = calcolatrice0.multiply((int)(short)1, 2076180480);
+    int i10 = calcolatrice0.factorial(34);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-101));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 2076180480);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 0);
+
+  }
+
+  @Test
+  public void test127() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test127"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    double d17 = calcolatrice0.divide(0.0d, (double)250);
+    int i19 = calcolatrice0.factorial(0);
+    int i21 = calcolatrice0.factorial(101);
+    int i23 = calcolatrice0.factorial(101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i21 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i23 == 0);
+
+  }
+
+  @Test
+  public void test128() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test128"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)(byte)1, (-51));
+    int i11 = calcolatrice0.subtract((-20997), 3886842);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-50));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == (-3907839));
+
+  }
+
+  @Test
+  public void test129() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test129"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(10, 11);
+    int i17 = calcolatrice0.add(90, (-90));
+    int i19 = calcolatrice0.factorial(31463246);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i21 = calcolatrice0.factorial((int)(short)-1);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == (-1));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == 0);
+
+  }
+
+  @Test
+  public void test130() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test130"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.add(30336, 1097);
+    int i8 = calcolatrice0.subtract((-25), 67);
+    double d11 = calcolatrice0.divide((double)3886842, (double)(-31433));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 31433);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-92));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-123.65482136608023d));
+
+  }
+
+  @Test
+  public void test131() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test131"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(948, 35);
+    int i17 = calcolatrice0.multiply((-110), (-42));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 913);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == 4620);
+
+  }
+
+  @Test
+  public void test132() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test132"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i7 = calcolatrice0.factorial(91);
+    int i10 = calcolatrice0.multiply(70630, 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i7 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 0);
+
+  }
+
+  @Test
+  public void test133() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test133"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    double d8 = calcolatrice0.divide(0.0d, (double)100.0f);
+    int i11 = calcolatrice0.multiply(10, (-100));
+    int i14 = calcolatrice0.multiply(157, 35);
+    int i17 = calcolatrice0.subtract(3143300, 31432899);
+    int i20 = calcolatrice0.add(91, 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d8 == 0.0d);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == (-1000));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 5495);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i17 == (-28289599));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i20 == 91);
+
+  }
+
+  @Test
+  public void test134() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test134"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    double d11 = calcolatrice0.divide((double)(-100), (double)948);
+    int i13 = calcolatrice0.factorial(100);
+    int i16 = calcolatrice0.add((int)(byte)1, 0);
+    int i19 = calcolatrice0.subtract((int)(short)1, (int)'4');
+    int i22 = calcolatrice0.subtract(30336, (-231312));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.10548523206751055d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i19 == (-51));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i22 == 261648);
+
+  }
+
+  @Test
+  public void test135() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test135"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract(1000, (int)'4');
+    int i11 = calcolatrice0.subtract((int)'a', (-92));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 948);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 189);
+
+  }
+
+  @Test
+  public void test136() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test136"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.subtract((-100), (int)'#');
+    double d11 = calcolatrice0.divide((double)(-135), (double)1097);
+    int i14 = calcolatrice0.subtract(958, 948);
+    double d17 = calcolatrice0.divide((double)(-1000), (double)31433000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == (-135));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-0.12306289881494986d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d17 == (-3.181369897878026E-5d));
+
+  }
+
+  @Test
+  public void test137() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test137"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i10 = calcolatrice0.factorial(25);
+    int i13 = calcolatrice0.add((int)(byte)100, (int)(short)1);
+    int i16 = calcolatrice0.multiply((-186), (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 2076180480);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == 101);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 1860);
+
+  }
+
+  @Test
+  public void test138() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test138"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(short)10, 100);
+    int i8 = calcolatrice0.subtract((int)'#', 10);
+    int i11 = calcolatrice0.add(948, 10);
+    int i14 = calcolatrice0.multiply((-4320), (-1320186));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == 1000);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i11 == 958);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 1408236224);
+
+  }
+
+  @Test
+  public void test139() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test139"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial(100);
+    int i5 = calcolatrice0.multiply((int)(byte)100, (int)(byte)-1);
+    int i8 = calcolatrice0.multiply(948, (int)' ');
+    int i10 = calcolatrice0.factorial((int)(short)1);
+    int i13 = calcolatrice0.multiply((int)(byte)10, (int)(short)-1);
+    double d16 = calcolatrice0.divide((double)(short)10, (double)31433);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i18 = calcolatrice0.factorial((-210));
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+      if (! e.getClass().getCanonicalName().equals("java.lang.IllegalArgumentException")) {
+        org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException, got " + e.getClass().getCanonicalName());
+      }
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i5 == (-100));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 30336);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i10 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i13 == (-10));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d16 == 3.181369897878026E-4d);
+
+  }
+
+  @Test
+  public void test140() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test140"); }
+
+
+    Calcolatrice calcolatrice0 = new Calcolatrice();
+    int i2 = calcolatrice0.factorial((int)(byte)1);
+    double d5 = calcolatrice0.divide((double)10.0f, (-1.0d));
+    int i8 = calcolatrice0.add((int)'a', 1000);
+    double d11 = calcolatrice0.divide((double)31433000, (double)(-51));
+    int i14 = calcolatrice0.subtract(1000, 958);
+    int i16 = calcolatrice0.factorial(2076180480);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i2 == 1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d5 == (-10.0d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i8 == 1097);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(d11 == (-616333.3333333334d));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i14 == 42);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i16 == 0);
 
   }
 

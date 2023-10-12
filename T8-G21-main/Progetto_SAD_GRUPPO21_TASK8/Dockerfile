@@ -9,7 +9,7 @@ COPY ./robot ./robot
 
 COPY ./utente ./utente
 
-ENV EVOSUITE="java -jar /app/robot/evosuite-1.0.6.jar"
+ENV EVOSUITE="java -jar /app/robot/evosuite-1.0.6.jar -Dsandbox=false"
 
 WORKDIR /app/utente
 

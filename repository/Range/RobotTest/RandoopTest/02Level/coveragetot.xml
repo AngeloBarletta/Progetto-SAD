@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:40:17 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 15:07:14 GMT 2023 -->
 
 <report>
   <stats>
@@ -11,21 +11,21 @@
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (2/2)"/>
-      <coverage type="method, %" value="93%  (27/29)"/>
-      <coverage type="block, %" value="79%  (374/474)"/>
-      <coverage type="line, %" value="84%  (80.3/95)"/>
+      <coverage type="method, %" value="90%  (26/29)"/>
+      <coverage type="block, %" value="76%  (361/474)"/>
+      <coverage type="line, %" value="75%  (71.6/95)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (2/2)"/>
-        <coverage type="method, %" value="93%  (27/29)"/>
-        <coverage type="block, %" value="79%  (374/474)"/>
-        <coverage type="line, %" value="84%  (80.3/95)"/>
+        <coverage type="method, %" value="90%  (26/29)"/>
+        <coverage type="block, %" value="76%  (361/474)"/>
+        <coverage type="line, %" value="75%  (71.6/95)"/>
 
         <srcfile name="Range.java">
           <coverage type="class, %" value="100% (2/2)"/>
-          <coverage type="method, %" value="93%  (27/29)"/>
-          <coverage type="block, %" value="79%  (374/474)"/>
-          <coverage type="line, %" value="84%  (80.3/95)"/>
+          <coverage type="method, %" value="90%  (26/29)"/>
+          <coverage type="block, %" value="76%  (361/474)"/>
+          <coverage type="line, %" value="75%  (71.6/95)"/>
 
           <class name="Range$ComparableComparator">
             <coverage type="class, %" value="100% (1/1)"/>
@@ -61,10 +61,15 @@
           </class>
           <class name="Range">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (24/24)"/>
-            <coverage type="block, %" value="79%  (350/441)"/>
-            <coverage type="line, %" value="84%  (76.7/91)"/>
+            <coverage type="method, %" value="96%  (23/24)"/>
+            <coverage type="block, %" value="76%  (337/441)"/>
+            <coverage type="line, %" value="75%  (68/91)"/>
 
+            <method name="elementCompareTo (Object): int">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/21)"/>
+              <coverage type="line, %" value="0%   (0/7)"/>
+            </method>
             <method name="intersectionWith (Range): Range">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="18%  (10/56)"/>
@@ -72,53 +77,58 @@
             </method>
             <method name="isOverlappedBy (Range): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="52%  (12/23)"/>
-              <coverage type="line, %" value="56%  (2.8/5)"/>
+              <coverage type="block, %" value="43%  (10/23)"/>
+              <coverage type="line, %" value="36%  (1.8/5)"/>
             </method>
-            <method name="Range (Object, Object, Comparator): void">
+            <method name="isAfter (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="69%  (36/52)"/>
-              <coverage type="line, %" value="92%  (11/12)"/>
+              <coverage type="block, %" value="73%  (11/15)"/>
+              <coverage type="line, %" value="60%  (1.8/3)"/>
             </method>
-            <method name="elementCompareTo (Object): int">
+            <method name="isBefore (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="76%  (16/21)"/>
-              <coverage type="line, %" value="86%  (6/7)"/>
+              <coverage type="block, %" value="73%  (11/15)"/>
+              <coverage type="line, %" value="60%  (1.8/3)"/>
             </method>
             <method name="isAfterRange (Range): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="78%  (7/9)"/>
               <coverage type="line, %" value="67%  (2/3)"/>
             </method>
-            <method name="isAfter (Object): boolean">
+            <method name="isBeforeRange (Range): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="87%  (13/15)"/>
-              <coverage type="line, %" value="67%  (2/3)"/>
-            </method>
-            <method name="isBefore (Object): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="87%  (13/15)"/>
+              <coverage type="block, %" value="78%  (7/9)"/>
               <coverage type="line, %" value="67%  (2/3)"/>
             </method>
             <method name="isEndedBy (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="87%  (13/15)"/>
-              <coverage type="line, %" value="67%  (2/3)"/>
+              <coverage type="block, %" value="80%  (12/15)"/>
+              <coverage type="line, %" value="63%  (1.9/3)"/>
+            </method>
+            <method name="containsRange (Range): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="83%  (15/18)"/>
+              <coverage type="line, %" value="72%  (2.9/4)"/>
             </method>
             <method name="isStartedBy (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="87%  (13/15)"/>
               <coverage type="line, %" value="67%  (2/3)"/>
             </method>
+            <method name="contains (Object): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="88%  (21/24)"/>
+              <coverage type="line, %" value="65%  (1.9/3)"/>
+            </method>
             <method name="isNaturalOrdering (): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="88%  (7/8)"/>
               <coverage type="line, %" value="87%  (0.9/1)"/>
             </method>
-            <method name="contains (Object): boolean">
+            <method name="Range (Object, Object, Comparator): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="92%  (22/24)"/>
-              <coverage type="line, %" value="67%  (2/3)"/>
+              <coverage type="block, %" value="100% (52/52)"/>
+              <coverage type="line, %" value="100% (12/12)"/>
             </method>
             <method name="between (Comparable, Comparable): Range">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -129,11 +139,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (7/7)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="containsRange (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (18/18)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
             </method>
             <method name="equals (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -169,11 +174,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (5/5)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="isBeforeRange (Range): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
             </method>
             <method name="toString (): String">
               <coverage type="method, %" value="100% (1/1)"/>

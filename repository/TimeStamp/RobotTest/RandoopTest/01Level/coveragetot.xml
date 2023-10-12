@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 10:02:50 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 15:31:33 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,36 +12,31 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (1/1)"/>
       <coverage type="method, %" value="100% (22/22)"/>
-      <coverage type="block, %" value="95%  (316/334)"/>
-      <coverage type="line, %" value="94%  (67.9/72)"/>
+      <coverage type="block, %" value="97%  (323/334)"/>
+      <coverage type="line, %" value="97%  (70/72)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="100% (22/22)"/>
-        <coverage type="block, %" value="95%  (316/334)"/>
-        <coverage type="line, %" value="94%  (67.9/72)"/>
+        <coverage type="block, %" value="97%  (323/334)"/>
+        <coverage type="line, %" value="97%  (70/72)"/>
 
         <srcfile name="TimeStamp.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="100% (22/22)"/>
-          <coverage type="block, %" value="95%  (316/334)"/>
-          <coverage type="line, %" value="94%  (67.9/72)"/>
+          <coverage type="block, %" value="97%  (323/334)"/>
+          <coverage type="line, %" value="97%  (70/72)"/>
 
           <class name="TimeStamp">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (22/22)"/>
-            <coverage type="block, %" value="95%  (316/334)"/>
-            <coverage type="line, %" value="94%  (67.9/72)"/>
+            <coverage type="block, %" value="97%  (323/334)"/>
+            <coverage type="line, %" value="97%  (70/72)"/>
 
             <method name="decodeNtpHexString (String): long">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="69%  (29/42)"/>
-              <coverage type="line, %" value="67%  (6/9)"/>
-            </method>
-            <method name="toNtpTime (long): long">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="89%  (40/45)"/>
-              <coverage type="line, %" value="89%  (8.9/10)"/>
+              <coverage type="block, %" value="74%  (31/42)"/>
+              <coverage type="line, %" value="78%  (7/9)"/>
             </method>
             <method name="TimeStamp (Date): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -127,6 +122,11 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (22/22)"/>
               <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="toNtpTime (long): long">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (45/45)"/>
+              <coverage type="line, %" value="100% (10/10)"/>
             </method>
             <method name="toString (): String">
               <coverage type="method, %" value="100% (1/1)"/>

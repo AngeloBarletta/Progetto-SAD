@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:38:38 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 15:05:04 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,26 +12,26 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (1/1)"/>
       <coverage type="method, %" value="92%  (11/12)"/>
-      <coverage type="block, %" value="69%  (303/436)"/>
-      <coverage type="line, %" value="74%  (68/92)"/>
+      <coverage type="block, %" value="67%  (292/436)"/>
+      <coverage type="line, %" value="72%  (66/92)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="92%  (11/12)"/>
-        <coverage type="block, %" value="69%  (303/436)"/>
-        <coverage type="line, %" value="74%  (68/92)"/>
+        <coverage type="block, %" value="67%  (292/436)"/>
+        <coverage type="line, %" value="72%  (66/92)"/>
 
         <srcfile name="ParameterParser.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="92%  (11/12)"/>
-          <coverage type="block, %" value="69%  (303/436)"/>
-          <coverage type="line, %" value="74%  (68/92)"/>
+          <coverage type="block, %" value="67%  (292/436)"/>
+          <coverage type="line, %" value="72%  (66/92)"/>
 
           <class name="ParameterParser">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="92%  (11/12)"/>
-            <coverage type="block, %" value="69%  (303/436)"/>
-            <coverage type="line, %" value="74%  (68/92)"/>
+            <coverage type="block, %" value="67%  (292/436)"/>
+            <coverage type="line, %" value="72%  (66/92)"/>
 
             <method name="parseQuotedToken (char []): String">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -40,12 +40,17 @@
             </method>
             <method name="getToken (boolean): String">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="65%  (64/99)"/>
-              <coverage type="line, %" value="75%  (9/12)"/>
+              <coverage type="block, %" value="58%  (57/99)"/>
+              <coverage type="line, %" value="67%  (8/12)"/>
             </method>
             <method name="parse (String, char): Map">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="67%  (8/12)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="parse (char [], char): Map">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="71%  (10/14)"/>
               <coverage type="line, %" value="67%  (2/3)"/>
             </method>
             <method name="parse (char [], int, int, char): Map">
@@ -77,11 +82,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (20/20)"/>
               <coverage type="line, %" value="100% (6/6)"/>
-            </method>
-            <method name="parse (char [], char): Map">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (14/14)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
             </method>
             <method name="parseToken (char []): String">
               <coverage type="method, %" value="100% (1/1)"/>

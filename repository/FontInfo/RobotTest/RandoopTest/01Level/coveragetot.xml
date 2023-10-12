@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:21:22 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 14:44:17 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,26 +12,26 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (1/1)"/>
       <coverage type="method, %" value="100% (19/19)"/>
-      <coverage type="block, %" value="81%  (236/292)"/>
-      <coverage type="line, %" value="82%  (63.8/78)"/>
+      <coverage type="block, %" value="80%  (234/292)"/>
+      <coverage type="line, %" value="82%  (63.7/78)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="100% (19/19)"/>
-        <coverage type="block, %" value="81%  (236/292)"/>
-        <coverage type="line, %" value="82%  (63.8/78)"/>
+        <coverage type="block, %" value="80%  (234/292)"/>
+        <coverage type="line, %" value="82%  (63.7/78)"/>
 
         <srcfile name="FontInfo.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="100% (19/19)"/>
-          <coverage type="block, %" value="81%  (236/292)"/>
-          <coverage type="line, %" value="82%  (63.8/78)"/>
+          <coverage type="block, %" value="80%  (234/292)"/>
+          <coverage type="line, %" value="82%  (63.7/78)"/>
 
           <class name="FontInfo">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (19/19)"/>
-            <coverage type="block, %" value="81%  (236/292)"/>
-            <coverage type="line, %" value="82%  (63.8/78)"/>
+            <coverage type="block, %" value="80%  (234/292)"/>
+            <coverage type="line, %" value="82%  (63.7/78)"/>
 
             <method name="doesFontMatch (Font): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -58,15 +58,15 @@
               <coverage type="block, %" value="88%  (7/8)"/>
               <coverage type="line, %" value="94%  (1.9/2)"/>
             </method>
+            <method name="hashCode (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="91%  (42/46)"/>
+              <coverage type="line, %" value="97%  (5.8/6)"/>
+            </method>
             <method name="equals (Object): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="91%  (53/58)"/>
               <coverage type="line, %" value="89%  (17/19)"/>
-            </method>
-            <method name="hashCode (): int">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="96%  (44/46)"/>
-              <coverage type="line, %" value="98%  (5.9/6)"/>
             </method>
             <method name="&lt;static initializer&gt;">
               <coverage type="method, %" value="100% (1/1)"/>

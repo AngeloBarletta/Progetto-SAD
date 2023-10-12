@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+RangeSourceCode.Range,LINE,0.9891304347826086,92,91
+RangeSourceCode.Range,BRANCH,0.9425287356321839,87,82
+RangeSourceCode.Range,EXCEPTION,1.0,0,0
+RangeSourceCode.Range,WEAKMUTATION,0.908695652173913,230,209
+RangeSourceCode.Range,OUTPUT,0.0,52,0
+RangeSourceCode.Range,METHOD,0.0,24,0
+RangeSourceCode.Range,METHODNOEXCEPTION,0.0,24,0
+RangeSourceCode.Range,CBRANCH,0.9195402298850575,87,80

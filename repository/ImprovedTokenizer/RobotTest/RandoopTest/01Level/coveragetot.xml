@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 09:29:51 GMT 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 11 14:55:50 GMT 2023 -->
 
 <report>
   <stats>
@@ -12,36 +12,46 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (1/1)"/>
       <coverage type="method, %" value="93%  (13/14)"/>
-      <coverage type="block, %" value="88%  (335/379)"/>
-      <coverage type="line, %" value="88%  (94/107)"/>
+      <coverage type="block, %" value="82%  (310/379)"/>
+      <coverage type="line, %" value="82%  (88/107)"/>
 
       <package name="default package">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="93%  (13/14)"/>
-        <coverage type="block, %" value="88%  (335/379)"/>
-        <coverage type="line, %" value="88%  (94/107)"/>
+        <coverage type="block, %" value="82%  (310/379)"/>
+        <coverage type="line, %" value="82%  (88/107)"/>
 
         <srcfile name="ImprovedTokenizer.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="93%  (13/14)"/>
-          <coverage type="block, %" value="88%  (335/379)"/>
-          <coverage type="line, %" value="88%  (94/107)"/>
+          <coverage type="block, %" value="82%  (310/379)"/>
+          <coverage type="line, %" value="82%  (88/107)"/>
 
           <class name="ImprovedTokenizer">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="93%  (13/14)"/>
-            <coverage type="block, %" value="88%  (335/379)"/>
-            <coverage type="line, %" value="88%  (94/107)"/>
+            <coverage type="block, %" value="82%  (310/379)"/>
+            <coverage type="line, %" value="82%  (88/107)"/>
 
             <method name="initialize (InputStream, String): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/10)"/>
               <coverage type="line, %" value="0%   (0/3)"/>
             </method>
+            <method name="matchingToken (char): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="50%  (18/36)"/>
+              <coverage type="line, %" value="56%  (5/9)"/>
+            </method>
             <method name="advance (): boolean">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="69%  (53/77)"/>
               <coverage type="line, %" value="74%  (14/19)"/>
+            </method>
+            <method name="afterToken (char): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="81%  (29/36)"/>
+              <coverage type="line, %" value="78%  (7/9)"/>
             </method>
             <method name="next (): String">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -63,11 +73,6 @@
               <coverage type="block, %" value="100% (12/12)"/>
               <coverage type="line, %" value="100% (4/4)"/>
             </method>
-            <method name="afterToken (char): int">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (36/36)"/>
-              <coverage type="line, %" value="100% (9/9)"/>
-            </method>
             <method name="beforeToken (char): int">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (36/36)"/>
@@ -87,11 +92,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (13/13)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="matchingToken (char): int">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (36/36)"/>
-              <coverage type="line, %" value="100% (9/9)"/>
             </method>
             <method name="previousDelimiter (): String">
               <coverage type="method, %" value="100% (1/1)"/>

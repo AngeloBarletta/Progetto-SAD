@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+ResultSetHelperSourceCode.ResultSetHelper,LINE,0.3812154696132597,181,69
+ResultSetHelperSourceCode.ResultSetHelper,BRANCH,0.5419847328244275,131,71
+ResultSetHelperSourceCode.ResultSetHelper,EXCEPTION,1.0,0,0
+ResultSetHelperSourceCode.ResultSetHelper,WEAKMUTATION,0.3445378151260504,238,82
+ResultSetHelperSourceCode.ResultSetHelper,OUTPUT,0.0,43,0
+ResultSetHelperSourceCode.ResultSetHelper,METHOD,0.0,14,0
+ResultSetHelperSourceCode.ResultSetHelper,METHODNOEXCEPTION,0.0,14,0
+ResultSetHelperSourceCode.ResultSetHelper,CBRANCH,0.5419847328244275,131,71

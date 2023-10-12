@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,LINE,0.958904109589041,73,70
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,BRANCH,0.9625,80,77
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,EXCEPTION,1.0,0,0
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,WEAKMUTATION,0.944954128440367,109,103
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,OUTPUT,0.0,73,0
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,METHOD,0.0,11,0
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,METHODNOEXCEPTION,0.0,11,0
+ResultSetColumnReaderSourceCode.ResultSetColumnReader,CBRANCH,0.9625,80,77

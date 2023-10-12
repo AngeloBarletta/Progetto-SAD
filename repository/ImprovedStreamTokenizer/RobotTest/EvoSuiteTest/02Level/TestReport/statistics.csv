@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,LINE,1.0,95,95
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,BRANCH,1.0,49,49
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,EXCEPTION,1.0,0,0
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,WEAKMUTATION,0.9751552795031055,322,314
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,OUTPUT,0.0,58,0
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,METHOD,0.0,16,0
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,METHODNOEXCEPTION,0.0,16,0
+ImprovedStreamTokenizerSourceCode.ImprovedStreamTokenizer,CBRANCH,0.7959183673469388,49,39

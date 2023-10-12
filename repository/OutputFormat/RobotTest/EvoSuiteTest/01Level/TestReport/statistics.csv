@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+OutputFormatSourceCode.OutputFormat,LINE,0.832258064516129,155,129
+OutputFormatSourceCode.OutputFormat,BRANCH,0.5671641791044776,67,38
+OutputFormatSourceCode.OutputFormat,EXCEPTION,1.0,0,0
+OutputFormatSourceCode.OutputFormat,WEAKMUTATION,0.6727941176470589,272,183
+OutputFormatSourceCode.OutputFormat,OUTPUT,0.0,74,0
+OutputFormatSourceCode.OutputFormat,METHOD,0.0,35,0
+OutputFormatSourceCode.OutputFormat,METHODNOEXCEPTION,0.0,35,0
+OutputFormatSourceCode.OutputFormat,CBRANCH,0.5522388059701493,67,37
