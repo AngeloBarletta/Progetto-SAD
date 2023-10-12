@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+WeakHashtableSourceCode.WeakHashtable,LINE,0.8787878787878788,132,116
+WeakHashtableSourceCode.WeakHashtable,BRANCH,0.6455696202531646,79,51
+WeakHashtableSourceCode.WeakHashtable,EXCEPTION,1.0,0,0
+WeakHashtableSourceCode.WeakHashtable,WEAKMUTATION,0.7515527950310559,161,121
+WeakHashtableSourceCode.WeakHashtable,OUTPUT,0.0,34,0
+WeakHashtableSourceCode.WeakHashtable,METHOD,0.0,20,0
+WeakHashtableSourceCode.WeakHashtable,METHODNOEXCEPTION,0.0,20,0
+WeakHashtableSourceCode.WeakHashtable,CBRANCH,0.6329113924050633,79,50

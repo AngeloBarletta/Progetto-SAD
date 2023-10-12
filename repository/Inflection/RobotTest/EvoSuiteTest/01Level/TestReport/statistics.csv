@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+InflectionSourceCode.Inflection,LINE,0.9090909090909091,44,40
+InflectionSourceCode.Inflection,BRANCH,0.7407407407407407,27,20
+InflectionSourceCode.Inflection,EXCEPTION,1.0,0,0
+InflectionSourceCode.Inflection,WEAKMUTATION,0.9315068493150684,73,68
+InflectionSourceCode.Inflection,OUTPUT,0.0,13,0
+InflectionSourceCode.Inflection,METHOD,0.0,8,0
+InflectionSourceCode.Inflection,METHODNOEXCEPTION,0.0,8,0
+InflectionSourceCode.Inflection,CBRANCH,0.7407407407407407,27,20

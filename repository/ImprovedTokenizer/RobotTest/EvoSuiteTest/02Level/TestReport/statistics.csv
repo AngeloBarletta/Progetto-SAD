@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+ImprovedTokenizerSourceCode.ImprovedTokenizer,LINE,0.9813084112149533,107,105
+ImprovedTokenizerSourceCode.ImprovedTokenizer,BRANCH,1.0,81,81
+ImprovedTokenizerSourceCode.ImprovedTokenizer,EXCEPTION,1.0,0,0
+ImprovedTokenizerSourceCode.ImprovedTokenizer,WEAKMUTATION,0.9648711943793911,427,412
+ImprovedTokenizerSourceCode.ImprovedTokenizer,OUTPUT,0.0,27,0
+ImprovedTokenizerSourceCode.ImprovedTokenizer,METHOD,0.0,14,0
+ImprovedTokenizerSourceCode.ImprovedTokenizer,METHODNOEXCEPTION,0.0,14,0
+ImprovedTokenizerSourceCode.ImprovedTokenizer,CBRANCH,0.8271604938271605,81,67

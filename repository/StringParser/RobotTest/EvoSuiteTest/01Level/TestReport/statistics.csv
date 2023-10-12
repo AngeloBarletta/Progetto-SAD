@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+StringParserSourceCode.StringParser,LINE,0.35,80,28
+StringParserSourceCode.StringParser,BRANCH,0.358974358974359,78,28
+StringParserSourceCode.StringParser,EXCEPTION,1.0,0,0
+StringParserSourceCode.StringParser,WEAKMUTATION,0.2561247216035635,449,115
+StringParserSourceCode.StringParser,OUTPUT,0.0,9,0
+StringParserSourceCode.StringParser,METHOD,0.0,4,0
+StringParserSourceCode.StringParser,METHODNOEXCEPTION,0.0,4,0
+StringParserSourceCode.StringParser,CBRANCH,0.358974358974359,78,28

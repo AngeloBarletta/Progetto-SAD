@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+FontInfoSourceCode.FontInfo,LINE,0.9487179487179487,78,74
+FontInfoSourceCode.FontInfo,BRANCH,0.9333333333333333,60,56
+FontInfoSourceCode.FontInfo,EXCEPTION,1.0,0,0
+FontInfoSourceCode.FontInfo,WEAKMUTATION,0.9454545454545454,220,208
+FontInfoSourceCode.FontInfo,OUTPUT,0.0,44,0
+FontInfoSourceCode.FontInfo,METHOD,0.0,18,0
+FontInfoSourceCode.FontInfo,METHODNOEXCEPTION,0.0,18,0
+FontInfoSourceCode.FontInfo,CBRANCH,0.9,60,54

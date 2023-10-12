@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+XMLParserSourceCode.XMLParser,LINE,0.9224137931034483,116,107
+XMLParserSourceCode.XMLParser,BRANCH,0.925,40,37
+XMLParserSourceCode.XMLParser,EXCEPTION,1.0,0,0
+XMLParserSourceCode.XMLParser,WEAKMUTATION,0.9327731092436975,119,111
+XMLParserSourceCode.XMLParser,OUTPUT,0.0,18,0
+XMLParserSourceCode.XMLParser,METHOD,0.0,8,0
+XMLParserSourceCode.XMLParser,METHODNOEXCEPTION,0.0,8,0
+XMLParserSourceCode.XMLParser,CBRANCH,0.925,40,37

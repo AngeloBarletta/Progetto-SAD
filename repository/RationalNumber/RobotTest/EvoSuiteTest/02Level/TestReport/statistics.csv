@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+RationalNumberSourceCode.RationalNumber,LINE,0.9512195121951219,82,78
+RationalNumberSourceCode.RationalNumber,BRANCH,0.9558823529411765,68,65
+RationalNumberSourceCode.RationalNumber,EXCEPTION,1.0,0,0
+RationalNumberSourceCode.RationalNumber,WEAKMUTATION,0.9502262443438914,442,420
+RationalNumberSourceCode.RationalNumber,OUTPUT,0.0,75,0
+RationalNumberSourceCode.RationalNumber,METHOD,0.0,11,0
+RationalNumberSourceCode.RationalNumber,METHODNOEXCEPTION,0.0,11,0
+RationalNumberSourceCode.RationalNumber,CBRANCH,0.9264705882352942,68,63

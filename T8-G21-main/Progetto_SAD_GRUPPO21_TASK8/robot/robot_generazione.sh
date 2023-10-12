@@ -27,7 +27,7 @@ cp -n evosuite-standalone-runtime-1.0.6.jar Prototipo2.0
 
 cd $PERCORSO
 
-java -jar evosuite-1.0.6.jar
+java -jar evosuite-1.0.6.jar -Dsandbox=false
 
 cat  >>pom.txt << EOF
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -60,7 +60,7 @@ EOF
 
 mv pom.txt pom.xml
 
-export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar"
+export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar -Dsandbox=false"
 
 mvn compile
 

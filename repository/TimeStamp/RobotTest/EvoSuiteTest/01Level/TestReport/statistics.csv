@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+TimeStampSourceCode.TimeStamp,LINE,0.9861111111111112,72,71
+TimeStampSourceCode.TimeStamp,BRANCH,1.0,43,43
+TimeStampSourceCode.TimeStamp,EXCEPTION,1.0,0,0
+TimeStampSourceCode.TimeStamp,WEAKMUTATION,0.9041095890410958,511,462
+TimeStampSourceCode.TimeStamp,OUTPUT,0.0,79,0
+TimeStampSourceCode.TimeStamp,METHOD,0.0,21,0
+TimeStampSourceCode.TimeStamp,METHODNOEXCEPTION,0.0,21,0
+TimeStampSourceCode.TimeStamp,CBRANCH,0.9534883720930233,43,41
