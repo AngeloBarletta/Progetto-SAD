@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.TimeStamp,LINE,0.9722222222222222,72,70
+mypackage.TimeStamp,BRANCH,0.9302325581395349,43,40
+mypackage.TimeStamp,EXCEPTION,1.0,0,0
+mypackage.TimeStamp,WEAKMUTATION,0.9295499021526419,511,475
+mypackage.TimeStamp,OUTPUT,0.0,79,0
+mypackage.TimeStamp,METHOD,0.0,21,0
+mypackage.TimeStamp,METHODNOEXCEPTION,0.0,21,0
+mypackage.TimeStamp,CBRANCH,0.9302325581395349,43,40

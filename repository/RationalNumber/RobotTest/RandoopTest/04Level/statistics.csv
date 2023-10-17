@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.RationalNumber,LINE,0.8658536585365854,82,71
+mypackage.RationalNumber,BRANCH,0.6764705882352942,68,46
+mypackage.RationalNumber,EXCEPTION,1.0,0,0
+mypackage.RationalNumber,WEAKMUTATION,0.7918552036199095,442,350
+mypackage.RationalNumber,OUTPUT,0.0,75,0
+mypackage.RationalNumber,METHOD,0.0,11,0
+mypackage.RationalNumber,METHODNOEXCEPTION,0.0,11,0
+mypackage.RationalNumber,CBRANCH,0.6470588235294118,68,44

@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.FontInfo,LINE,0.8205128205128205,78,64
+mypackage.FontInfo,BRANCH,0.75,60,45
+mypackage.FontInfo,EXCEPTION,1.0,0,0
+mypackage.FontInfo,WEAKMUTATION,0.4590909090909091,220,101
+mypackage.FontInfo,OUTPUT,0.0,44,0
+mypackage.FontInfo,METHOD,0.0,18,0
+mypackage.FontInfo,METHODNOEXCEPTION,0.0,18,0
+mypackage.FontInfo,CBRANCH,0.7333333333333333,60,44

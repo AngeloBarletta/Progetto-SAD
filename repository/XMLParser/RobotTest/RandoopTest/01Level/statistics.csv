@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.XMLParser,LINE,0.4482758620689655,116,52
+mypackage.XMLParser,BRANCH,0.225,40,9
+mypackage.XMLParser,EXCEPTION,1.0,0,0
+mypackage.XMLParser,WEAKMUTATION,0.15966386554621848,119,19
+mypackage.XMLParser,OUTPUT,0.0,18,0
+mypackage.XMLParser,METHOD,0.0,8,0
+mypackage.XMLParser,METHODNOEXCEPTION,0.0,8,0
+mypackage.XMLParser,CBRANCH,0.225,40,9

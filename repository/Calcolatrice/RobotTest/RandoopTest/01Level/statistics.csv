@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.Calcolatrice,LINE,1.0,15,15
+mypackage.Calcolatrice,BRANCH,1.0,14,14
+mypackage.Calcolatrice,EXCEPTION,1.0,0,0
+mypackage.Calcolatrice,WEAKMUTATION,0.9908256880733946,109,108
+mypackage.Calcolatrice,OUTPUT,0.0,15,0
+mypackage.Calcolatrice,METHOD,0.0,6,0
+mypackage.Calcolatrice,METHODNOEXCEPTION,0.0,6,0
+mypackage.Calcolatrice,CBRANCH,1.0,14,14

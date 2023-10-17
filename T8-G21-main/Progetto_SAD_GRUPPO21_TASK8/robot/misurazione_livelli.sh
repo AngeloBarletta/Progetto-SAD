@@ -5,7 +5,7 @@ NOME_CLASSE=$(head -n 1 "output.txt")
 NOME_PACKAGE=$(tail -n 1 "output.txt")
 echo "nome classe :$NOME_CLASSE"
 echo "nome package :$NOME_PACKAGE"
-export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar -Dsandbox=false"
+# export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar -Dsandbox=false"
 filename="/app/robot/invio.txt"
 
 ##############################

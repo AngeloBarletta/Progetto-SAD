@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ResultSetHelper,LINE,0.30939226519337015,181,56
+mypackage.ResultSetHelper,BRANCH,0.4961832061068702,131,65
+mypackage.ResultSetHelper,EXCEPTION,1.0,0,0
+mypackage.ResultSetHelper,WEAKMUTATION,0.21428571428571427,238,51
+mypackage.ResultSetHelper,OUTPUT,0.0,43,0
+mypackage.ResultSetHelper,METHOD,0.0,14,0
+mypackage.ResultSetHelper,METHODNOEXCEPTION,0.0,14,0
+mypackage.ResultSetHelper,CBRANCH,0.4961832061068702,131,65

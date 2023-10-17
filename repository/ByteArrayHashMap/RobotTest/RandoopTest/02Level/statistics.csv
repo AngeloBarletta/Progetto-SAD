@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ByteArrayHashMap,LINE,0.8581081081081081,148,127
+mypackage.ByteArrayHashMap,BRANCH,0.7108433734939759,83,59
+mypackage.ByteArrayHashMap,EXCEPTION,1.0,0,0
+mypackage.ByteArrayHashMap,WEAKMUTATION,0.8485675306957708,733,622
+mypackage.ByteArrayHashMap,OUTPUT,0.0,35,0
+mypackage.ByteArrayHashMap,METHOD,0.0,22,0
+mypackage.ByteArrayHashMap,METHODNOEXCEPTION,0.0,22,0
+mypackage.ByteArrayHashMap,CBRANCH,0.7108433734939759,83,59

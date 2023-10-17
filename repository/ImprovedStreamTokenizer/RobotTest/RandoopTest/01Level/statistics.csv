@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ImprovedStreamTokenizer,LINE,0.12631578947368421,95,12
+mypackage.ImprovedStreamTokenizer,BRANCH,0.10204081632653061,49,5
+mypackage.ImprovedStreamTokenizer,EXCEPTION,1.0,0,0
+mypackage.ImprovedStreamTokenizer,WEAKMUTATION,0.3167701863354037,322,102
+mypackage.ImprovedStreamTokenizer,OUTPUT,0.0,58,0
+mypackage.ImprovedStreamTokenizer,METHOD,0.0,16,0
+mypackage.ImprovedStreamTokenizer,METHODNOEXCEPTION,0.0,16,0
+mypackage.ImprovedStreamTokenizer,CBRANCH,0.10204081632653061,49,5

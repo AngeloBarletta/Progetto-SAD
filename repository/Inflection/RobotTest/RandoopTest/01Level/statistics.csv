@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.Inflection,LINE,0.7272727272727273,44,32
+mypackage.Inflection,BRANCH,0.7037037037037037,27,19
+mypackage.Inflection,EXCEPTION,1.0,0,0
+mypackage.Inflection,WEAKMUTATION,0.547945205479452,73,40
+mypackage.Inflection,OUTPUT,0.0,13,0
+mypackage.Inflection,METHOD,0.0,8,0
+mypackage.Inflection,METHODNOEXCEPTION,0.0,8,0
+mypackage.Inflection,CBRANCH,0.7037037037037037,27,19

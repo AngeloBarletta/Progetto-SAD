@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ResultSetColumnReader,LINE,0.0410958904109589,73,3
+mypackage.ResultSetColumnReader,BRANCH,0.0125,80,1
+mypackage.ResultSetColumnReader,EXCEPTION,1.0,0,0
+mypackage.ResultSetColumnReader,WEAKMUTATION,0.01834862385321101,109,2
+mypackage.ResultSetColumnReader,OUTPUT,0.0,73,0
+mypackage.ResultSetColumnReader,METHOD,0.0,11,0
+mypackage.ResultSetColumnReader,METHODNOEXCEPTION,0.0,11,0
+mypackage.ResultSetColumnReader,CBRANCH,0.0125,80,1

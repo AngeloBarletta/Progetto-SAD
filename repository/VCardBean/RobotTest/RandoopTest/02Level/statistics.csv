@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.VCardBean,LINE,0.30718954248366015,153,47
+mypackage.VCardBean,BRANCH,0.2857142857142857,112,32
+mypackage.VCardBean,EXCEPTION,1.0,0,0
+mypackage.VCardBean,WEAKMUTATION,0.09523809523809523,126,12
+mypackage.VCardBean,OUTPUT,0.0,35,0
+mypackage.VCardBean,METHOD,0.0,23,0
+mypackage.VCardBean,METHODNOEXCEPTION,0.0,23,0
+mypackage.VCardBean,CBRANCH,0.2857142857142857,112,32

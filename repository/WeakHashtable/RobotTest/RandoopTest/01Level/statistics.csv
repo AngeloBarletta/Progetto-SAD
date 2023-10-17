@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.WeakHashtable,LINE,0.6287878787878788,132,83
+mypackage.WeakHashtable,BRANCH,0.3924050632911392,79,31
+mypackage.WeakHashtable,EXCEPTION,1.0,0,0
+mypackage.WeakHashtable,WEAKMUTATION,0.5714285714285714,161,92
+mypackage.WeakHashtable,OUTPUT,0.0,34,0
+mypackage.WeakHashtable,METHOD,0.0,20,0
+mypackage.WeakHashtable,METHODNOEXCEPTION,0.0,20,0
+mypackage.WeakHashtable,CBRANCH,0.3924050632911392,79,31

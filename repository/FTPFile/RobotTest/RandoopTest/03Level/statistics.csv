@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.FTPFile,LINE,0.7,110,77
+mypackage.FTPFile,BRANCH,0.676923076923077,65,44
+mypackage.FTPFile,EXCEPTION,1.0,0,0
+mypackage.FTPFile,WEAKMUTATION,0.9157303370786517,356,326
+mypackage.FTPFile,OUTPUT,0.0,54,0
+mypackage.FTPFile,METHOD,0.0,30,0
+mypackage.FTPFile,METHODNOEXCEPTION,0.0,30,0
+mypackage.FTPFile,CBRANCH,0.676923076923077,65,44

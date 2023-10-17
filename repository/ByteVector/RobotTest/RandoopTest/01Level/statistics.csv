@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ByteVector,LINE,0.6283185840707964,113,71
+mypackage.ByteVector,BRANCH,0.4782608695652174,46,22
+mypackage.ByteVector,EXCEPTION,1.0,0,0
+mypackage.ByteVector,WEAKMUTATION,0.6968553459119496,795,554
+mypackage.ByteVector,OUTPUT,0.0,16,0
+mypackage.ByteVector,METHOD,0.0,10,0
+mypackage.ByteVector,METHODNOEXCEPTION,0.0,10,0
+mypackage.ByteVector,CBRANCH,0.4782608695652174,46,22

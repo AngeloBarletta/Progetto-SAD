@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ParameterParser,LINE,0.717391304347826,92,66
+mypackage.ParameterParser,BRANCH,0.5185185185185185,81,42
+mypackage.ParameterParser,EXCEPTION,1.0,0,0
+mypackage.ParameterParser,WEAKMUTATION,0.5277108433734939,415,219
+mypackage.ParameterParser,OUTPUT,0.0,26,0
+mypackage.ParameterParser,METHOD,0.0,7,0
+mypackage.ParameterParser,METHODNOEXCEPTION,0.0,7,0
+mypackage.ParameterParser,CBRANCH,0.4567901234567901,81,37

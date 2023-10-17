@@ -1,0 +1,9 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+mypackage.ImprovedTokenizer,LINE,0.8785046728971962,107,94
+mypackage.ImprovedTokenizer,BRANCH,0.8271604938271605,81,67
+mypackage.ImprovedTokenizer,EXCEPTION,1.0,0,0
+mypackage.ImprovedTokenizer,WEAKMUTATION,0.9086651053864169,427,388
+mypackage.ImprovedTokenizer,OUTPUT,0.0,27,0
+mypackage.ImprovedTokenizer,METHOD,0.0,14,0
+mypackage.ImprovedTokenizer,METHODNOEXCEPTION,0.0,14,0
+mypackage.ImprovedTokenizer,CBRANCH,0.8024691358024691,81,65
