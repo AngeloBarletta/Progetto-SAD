@@ -10,7 +10,7 @@ filename="/app/robot/invio.txt"
 
 ##############################
 
-# Itera su tutti gli argomenti passati allo script
+## Itera su tutti gli argomenti passati allo script
 for var in "$@"; do
 	if [ $var -eq -1 ]; then
 		echo "trovato -1"

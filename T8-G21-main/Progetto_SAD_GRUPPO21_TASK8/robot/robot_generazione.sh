@@ -60,7 +60,7 @@ EOF
 
 mv pom.txt pom.xml
 
-# export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar -Dsandbox=false"
+## export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar -Dsandbox=false"
 
 mvn compile
 

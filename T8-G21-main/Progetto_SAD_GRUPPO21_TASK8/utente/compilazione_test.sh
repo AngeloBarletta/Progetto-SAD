@@ -10,7 +10,7 @@ NOME_PACKAGE="mypackage"
 # PERCORSO_CLASSE=$1  # ./prova/ClassUnderTest.java
 NOME_CLASSE=$1      # ClassUnderTest
 # PERCORSO_TEST=$3    # ./prova/AppTest.java
-NOME_TEST=$2        # AppTest
+NOME_TEST=$2        #AppTest
 PERCORSO_CSV="results"     # ./provacsv
 
 
