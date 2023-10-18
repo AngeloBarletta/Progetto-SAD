@@ -24,7 +24,7 @@ class Request:
 class Response:
     error: bool
     outCompile: str
-    coverage: str
+    coverageCSV: str
 
 def cleanup():
     try:
@@ -120,7 +120,7 @@ def evosuite():
             cleanup()
             return jsonify(response.__dict__), 500
 
-        response.coverage = csv
+        response.coverageCSV = csv
 
         return jsonify(response.__dict__), 200
     except Exception as e:

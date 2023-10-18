@@ -250,7 +250,13 @@ const Landing = () => {
 
       if(!data.error && data.robotCoverage!= -1){
         if (data.coverageMethod == "EvoSuite") {
-          userCoverage = parseEvoSuiteCoverage(data.coverage);
+          userCoverage = parseEvoSuiteCoverage(data.coverageCSV);
+
+          var parser = new DOMParser();
+          var xmlDoc = parser.parseFromString(data.coverageXML, 'text/xml');
+          console.log(xmlDoc);
+          parseJacocoCoverage(xmlDoc);
+
           setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n\n" + data.outCompile);
           //Per mostrare in output window tutto il csv decommentare questa stringa:
           //setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n" + data.coverage + "\n\n" + data.outCompile);
@@ -258,9 +264,9 @@ const Landing = () => {
         } 
         else {
           var parser = new DOMParser();
-          var xmlDoc = parser.parseFromString(data.coverage, 'text/xml');
+          var xmlDoc = parser.parseFromString(data.coverageXML, 'text/xml');
           console.log(xmlDoc);
-          parseJacocoCoverage(xmlDoc);
+          userCoverage = parseJacocoCoverage(xmlDoc);
           setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
           setCoverageDisplay(true);
         }
@@ -358,9 +364,10 @@ const Landing = () => {
           
         }
 
-        userCoverage = parseInt((coveredLines/totalLines)*100);
+        // userCoverage = parseInt((coveredLines/totalLines)*100);
         setDecorations(decs);
 
+        return parseInt((coveredLines/totalLines)*100);
       }
     };
 

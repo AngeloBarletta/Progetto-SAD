@@ -80,14 +80,14 @@ public class App {
             String retXmlJacoco = readFileToString(Config.getCoverageFolder());//zipSiteFolderToJSON(Config.getzipSiteFolderJSON()).toString();
             response.setError(false);
             response.setoutCompile(output_maven[0]);
-            response.setCoverage(retXmlJacoco);
+            response.setCoverageXML(retXmlJacoco);
 
         }else
         {
             System.out.println("SONO ARRIVATO FUORI l'IF");
             response.setError(true);
             response.setoutCompile(output_maven[0]);
-            response.setCoverage(null);            
+            response.setCoverageXML(null);            
         }
         deleteFile(underTestClassName, testingClassName);
         return response;
@@ -236,7 +236,7 @@ public class App {
 
         private Boolean error;
         private String outCompile;
-        private String coverage;
+        private String coverageXML;
 
 
         public Boolean getError(){
@@ -246,8 +246,8 @@ public class App {
         public String getOutCompile(){
             return outCompile;
         }
-        public String getCoverage(){
-            return coverage;
+        public String getCoverageXML(){
+            return coverageXML;
         }
 
         public void setError(boolean error)
@@ -260,9 +260,9 @@ public class App {
             this.outCompile = outCompile;
         }
 
-        public void setCoverage(String coverage)
+        public void setCoverageXML(String coverageXML)
         {
-            this.coverage = coverage;
+            this.coverageXML = coverageXML;
         }
 
 

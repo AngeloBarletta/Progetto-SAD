@@ -3,7 +3,8 @@ package G8.T6.EditorApp.Model;
 public class Coverage {
     private boolean Error;
     private String outCompile;
-    private String Coverage;
+    private String CoverageXML;
+    private String CoverageCSV;
 
     // coverage del robot (valore percentuale)
     private int RobotCoverage;
@@ -13,10 +14,11 @@ public class Coverage {
         
     }
 
-    public Coverage(boolean Error, String outCompile, String Coverage, int robotCoverage, String coverageMethod){
+    public Coverage(boolean Error, String outCompile, String CoverageXML, String CoverageCSV, int robotCoverage, String coverageMethod){
         this.Error = Error;
         this.outCompile = outCompile;
-        this.Coverage = Coverage;
+        this.CoverageXML = CoverageXML;
+        this.CoverageCSV = CoverageCSV;
         this.RobotCoverage = robotCoverage;
         this.CoverageMethod = coverageMethod;
     }
@@ -29,12 +31,20 @@ public class Coverage {
        return outCompile;
     }
 
-    public void setCoverage(String coverage){
-        this.Coverage=coverage;
+    public void setCoverageXML(String coverageXML){
+        this.CoverageXML=coverageXML;
     }
 
-    public String getCoverage(){
-        return Coverage;
+    public String getCoverageXML(){
+        return CoverageXML;
+    }
+
+    public void setCoverageCSV(String coverageCSV){
+        this.CoverageCSV=coverageCSV;
+    }
+
+    public String getCoverageCSV(){
+        return CoverageCSV;
     }
 
     public void setError(boolean error){

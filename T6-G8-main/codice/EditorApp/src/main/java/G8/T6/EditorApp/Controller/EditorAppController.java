@@ -188,23 +188,49 @@ public class AppTest{
 
             HttpEntity<String> requestEntity = new HttpEntity<>(json, headers);
             
-            
+            // ***************************** VERSIONE VECCHIA *****************************
+            /*
             String urlCoverage = "";
             if (partita.getCoverageMethod().equals("JaCoCo")) {
+                // in questo caso prendo solo il file xml prodotto dal task7 per misurare la coverage e vedere quali linee sono coperte per colorarle
                 urlCoverage = jacocoUrlCoverageServer;
             } else {
+                // se coverageMethod=EvoSuite allora mi prendo sia il csv che l'xml: dal csv mi prendo la coverage misurata con EvoSuite;
+                // l'xml invece mi serve per estrarre e colorare le linee di codice coperte (EvoSuite mi dise solo quante, non quali sono coperte)
                 urlCoverage = evosuiteUrlCoverageServer;
             }
             ResponseEntity<String> responseEntity = restTemplate.postForEntity(urlCoverage, requestEntity, String.class);
-
             String responseBody = responseEntity.getBody();
-            
-            objectMapper = new ObjectMapper();
-            Coverage coverageJson;
-            try {
-                coverageJson = objectMapper.readValue(responseBody, Coverage.class);
-//                coverageJson.parseCoverage();
+            */
 
+           // ***************************** VERSIONE NUOVA *****************************
+           String urlCoverage = "";
+           objectMapper = new ObjectMapper();
+           Coverage coverageJson;
+           ResponseEntity<String> responseEntity;
+
+            // richiesta ci compilazione e copertura al task 7, per ottenere il file di copertura xml
+            urlCoverage = jacocoUrlCoverageServer;
+            responseEntity = restTemplate.postForEntity(urlCoverage, requestEntity, String.class);
+            String responseBody_xml = responseEntity.getBody();
+            Coverage coverageXML = objectMapper.readValue(responseBody_xml, Coverage.class);
+            coverageXML.setCoverageCSV("");
+
+            // se coverageMethod=EvoSuite allora mi prendo sia il csv che l'xml: dal csv mi prendo la coverage misurata con EvoSuite;
+            // l'xml invece mi serve per estrarre e colorare le linee di codice coperte (EvoSuite mi dise solo quante, non quali sono coperte)
+            if(partita.getCoverageMethod().equals("EvoSuite")){
+                urlCoverage = evosuiteUrlCoverageServer;
+                responseEntity = restTemplate.postForEntity(urlCoverage, requestEntity, String.class);
+                String responseBody_csv = responseEntity.getBody();
+                Coverage coverageCSV = objectMapper.readValue(responseBody_csv, Coverage.class);
+                coverageCSV.setCoverageXML(coverageXML.getCoverageXML());
+                coverageJson = coverageCSV;
+            }
+            else{
+                coverageJson = coverageXML;
+            }
+
+            try {
                 if (coverageJson != null) {
                     if (partita.getCoverageMethod().equals("EvoSuite")) {
                         coverageJson.setCoverageMethod("EvoSuite");
@@ -221,11 +247,17 @@ public class AppTest{
                     int coverage = 0;
 
                     if (robot.equals("Randoop")) {
-                        String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
-                        coverage = Parser.parseXMLCoverage(filePath, partita.getNomeClasse());
-                        // System.out.println("Coverage: " +  parser.getLineCoverage(filePath, partita.getNomeClasse()));
+                        
+                        if(partita.getCoverageMethod().equals("EvoSuite")){     //in questo caso gioco contro i test randoop misurati da evosuite (se coverageMethod = EvoSuite)
+                            String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/statistics.csv";
+                            coverage = Parser.parseCSVCoverage(filePath);
+                        }
+                        else{                                                   //in questo caso gioco contro i test randoop misurati da emma (se coverageMethod = JaCoCo)
+                            String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
+                            coverage = Parser.parseXMLCoverage(filePath, partita.getNomeClasse());
+                        }
 
-                    } else if (robot.equals("EvoSuite")) {
+                    } else if (robot.equals("EvoSuite")) {                      // se robot=evosuite gioco sempre contro itest evosuite misurati con evosuite
                         String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/TestReport/statistics.csv";
                         coverage = Parser.parseCSVCoverage(filePath);
                     }
