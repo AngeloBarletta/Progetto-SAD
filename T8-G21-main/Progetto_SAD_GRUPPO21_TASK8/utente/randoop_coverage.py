@@ -60,7 +60,8 @@ def replace_classnames(paths):
             content = f.read()
 
         new_content = CLASS_REGEX.sub(f"public class {class_name}", content)
-        new_content = f"package mypackage;\n"+new_content
+        if "package mypackage;" not in new_content:
+            new_content = f"package mypackage;\n"+new_content
 
         with open(path, "w") as f:
             f.write(new_content)
