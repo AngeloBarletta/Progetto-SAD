@@ -1,10 +1,11 @@
+package mypackage;
 
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class RegressionTest2 {
+public class RegressionTest2_it4_livello3 {
 
   public static boolean debug = false;
 

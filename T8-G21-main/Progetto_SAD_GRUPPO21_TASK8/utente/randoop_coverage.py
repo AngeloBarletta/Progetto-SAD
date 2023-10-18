@@ -172,6 +172,9 @@ def main():
             compile_and_measure(class_name, csv_path)
 
             for file in os.listdir(TMP_PATH):
+                if file.endswith(".java"):
+                    # copia i test modificati nella repository
+                    shutil.copy(os.path.join(TMP_PATH, file), test_path)
                 os.remove(os.path.join(TMP_PATH, file))
 
         print(class_name, "DONE\n\n")

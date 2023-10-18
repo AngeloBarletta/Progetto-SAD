@@ -1,10 +1,11 @@
+package mypackage;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-RegressionTest0.class, 
-RegressionTest1.class
+RegressionTest0_it1_livello2_it2_livello3.class, 
+RegressionTest1_it1_livello2_it2_livello3.class
 })
-public class RegressionTest{ }
+public class RegressionTest_it1_livello2_it2_livello3{ }
