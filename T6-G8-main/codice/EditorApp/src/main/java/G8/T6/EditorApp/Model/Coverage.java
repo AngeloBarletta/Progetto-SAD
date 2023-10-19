@@ -7,14 +7,14 @@ public class Coverage {
     private String CoverageCSV;
 
     // coverage del robot (valore percentuale)
-    private int RobotCoverage;
+    private String RobotCoverage;
     private String CoverageMethod;
 
     public Coverage(){
         
     }
 
-    public Coverage(boolean Error, String outCompile, String CoverageXML, String CoverageCSV, int robotCoverage, String coverageMethod){
+    public Coverage(boolean Error, String outCompile, String CoverageXML, String CoverageCSV, String robotCoverage, String coverageMethod){
         this.Error = Error;
         this.outCompile = outCompile;
         this.CoverageXML = CoverageXML;
@@ -55,11 +55,11 @@ public class Coverage {
         return Error;
     }
 
-    public void setRobotCoverage(int robotCoverage){
+    public void setRobotCoverage(String robotCoverage){
         this.RobotCoverage=robotCoverage;
     }
 
-    public int getRobotCoverage(){
+    public String getRobotCoverage(){
         return RobotCoverage;
     }
 

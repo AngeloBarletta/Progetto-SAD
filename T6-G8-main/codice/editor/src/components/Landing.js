@@ -248,37 +248,48 @@ const Landing = () => {
       
       // console.log(errorCompile);
 
-      if(!data.error && data.robotCoverage!= -1){
+      if(!data.error && data.robotCoverage){
+
+        var robotCoverage = {"line": 0};
+
+
         if (data.coverageMethod == "EvoSuite") {
-          userCoverage = parseEvoSuiteCoverage(data.coverageCSV);
+          robotCoverage = parseEvoSuiteCoverage(data.robotCoverage);
+          var userCoverage = parseEvoSuiteCoverage(data.coverageCSV);
 
           var parser = new DOMParser();
           var xmlDoc = parser.parseFromString(data.coverageXML, 'text/xml');
           console.log(xmlDoc);
           parseJacocoCoverage(xmlDoc);
+          // parseXMLCoverage(xmlDoc);
+          
 
-          setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n\n" + data.outCompile);
+          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nWeakmutation: ${userCoverage.weakmutation}%\nCbranch: ${userCoverage.cbranch}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nWeakmutation: ${robotCoverage.weakmutation}%\nCbranch: ${robotCoverage.cbranch}%\n\n`);
           //Per mostrare in output window tutto il csv decommentare questa stringa:
           //setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n" + data.coverage + "\n\n" + data.outCompile);
           setCoverageDisplay(true);
         } 
         else {
           var parser = new DOMParser();
-          var xmlDoc = parser.parseFromString(data.coverageXML, 'text/xml');
+          var userXmlDoc = parser.parseFromString(data.coverageXML, 'text/xml');
+          var robotXmlDoc = parser.parseFromString(data.robotCoverage, 'text/xml');
           console.log(xmlDoc);
-          userCoverage = parseJacocoCoverage(xmlDoc);
-          setOutputString("\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%" + "\n\n" + data.outCompile);
+          userCoverage = parseJacocoCoverage(userXmlDoc);
+          robotCoverage = parseEmmaCoverage(robotXmlDoc);
+          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nMethod: ${userCoverage.method}%\nClass: ${userCoverage.class}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nMethod: ${robotCoverage.method}%\nClass: ${robotCoverage.class}%\n\n`);
           setCoverageDisplay(true);
         }
         // pop-up per mostrare il vincitore
-        if(data.robotCoverage > userCoverage){
-          alert("HAI PERSO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        
+
+        if(robotCoverage.line > userCoverage.line){
+          alert("HAI PERSO!\nUser coverage: " + userCoverage.line + "%\nRobot Coverage: "+ robotCoverage.line + "%");
         }
-        else if(data.robotCoverage < userCoverage){
-          alert("HAI VINTO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+        else if(robotCoverage.line < userCoverage.line){
+          alert("HAI VINTO!\nUser coverage: " + userCoverage.line + "%\nRobot Coverage: "+ robotCoverage.line + "%");
         }
         else{
-          alert("PAREGGIO!\nUser coverage: " + userCoverage + "%\nRobot Coverage: "+ data.robotCoverage + "%");
+          alert("PAREGGIO!\nUser coverage: " + userCoverage.line + "%\nRobot Coverage: "+ robotCoverage.line + "%");
         }
 
         // Puoi accedere al documento XML tramite xmlDoc e lavorare con i suoi elementi e attributi
@@ -310,6 +321,32 @@ const Landing = () => {
     });
 
     //setProcessing(false);
+
+    function parseEmmaCoverage(xmlDoc) {
+      // Find the class elements (excluding those ending with "$Entry")
+      const classElements = Array.from(xmlDoc.getElementsByTagName('class')).filter((element) => {
+          const className = element.getAttribute('name');
+          console.log(className);
+          return !className.includes('$Entry');
+      });
+
+      console.log(classElements);
+  
+      // Extract and format the coverage values
+      const coverageData = classElements.map((classElement) => {
+          const coverage = {
+              class: parseInt(classElement.getElementsByTagName('coverage')[0].getAttribute('value').match(/\d+/)[0]),
+              method: parseInt(classElement.getElementsByTagName('coverage')[1].getAttribute('value').match(/\d+/)[0]),
+              block: parseInt(classElement.getElementsByTagName('coverage')[2].getAttribute('value').match(/\d+/)[0]),
+              line: parseInt(classElement.getElementsByTagName('coverage')[3].getAttribute('value').match(/\d+/)[0]),
+          };
+  
+          return coverage;
+      });
+  
+      return coverageData[0];
+    }
+  
 
     // Funzione per analizzare il file XML di copertura Jacoco
     function parseJacocoCoverage(xml) {
@@ -365,16 +402,46 @@ const Landing = () => {
         }
 
         // userCoverage = parseInt((coveredLines/totalLines)*100);
+        var temp_coverage = {};
+        temp_coverage.line = parseInt((coveredLines/totalLines)*100);
+
+        var counters = classElement.getElementsByTagName('counter');
+        for (var i = 0; i < counters.length; i++) {
+          var counter = counters[i];
+          if (counter.getAttribute('type') == "BRANCH") {
+            var missed = parseInt(counter.getAttribute('missed'));
+            var covered = parseInt(counter.getAttribute('covered'));
+            var total = missed+covered;
+            temp_coverage.branch = parseInt((covered/total)*100);
+            
+          }
+          if (counter.getAttribute('type') == "METHOD") {
+            var missed = parseInt(counter.getAttribute('missed'));
+            var covered = parseInt(counter.getAttribute('covered'));
+            var total = missed+covered;
+            temp_coverage.method = parseInt((covered/total)*100);
+          }
+          if (counter.getAttribute('type') == "CLASS") {
+            var missed = parseInt(counter.getAttribute('missed'));
+            var covered = parseInt(counter.getAttribute('covered'));
+            var total = missed+covered;
+            temp_coverage.class = parseInt((covered/total)*100);
+          }
+        }
+
+
         setDecorations(decs);
 
-        return parseInt((coveredLines/totalLines)*100);
+        return temp_coverage;
       }
     };
+
 
     function parseEvoSuiteCoverage(inputString) {
       // Dividi la stringa in righe
       const lines = inputString.split('\n');
     
+      var results = {};
       // Itera attraverso le righe per trovare il valore di copertura LINE
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
@@ -385,13 +452,18 @@ const Landing = () => {
           // Verifica se il criterion è LINE
           if (fields[1] === 'LINE') {
             // Restituisci il valore di copertura LINE
-            return parseInt(fields[2]*100);
+            // return parseInt(fields[2]*100);
+            results.line = parseInt(fields[2]*100);
+          } else if (fields[1] === 'WEAKMUTATION') {
+            results.weakmutation = parseInt(fields[2]*100);
+          } else if (fields[1] === 'CBRANCH') {
+            results.cbranch = parseInt(fields[2]*100);
           }
         }
       }
     
+      return results;
       // Restituisci un valore predefinito se non trovi la riga corrispondente a LINE
-      return null;
     };
 
   // Funzione per ottenere l'output dal file XML di copertura Jacoco

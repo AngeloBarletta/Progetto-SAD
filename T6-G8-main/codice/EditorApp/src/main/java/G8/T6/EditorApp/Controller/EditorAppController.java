@@ -17,6 +17,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import G8.T6.EditorApp.Model.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 
  
 @RestController
@@ -244,22 +248,25 @@ public class AppTest{
                         robotLevel = "0"+partita.getLivello();
                     }
 
-                    int coverage = 0;
+                    String coverage = "";
 
                     if (robot.equals("Randoop")) {
                         
                         if(partita.getCoverageMethod().equals("EvoSuite")){     //in questo caso gioco contro i test randoop misurati da evosuite (se coverageMethod = EvoSuite)
                             String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/statistics.csv";
-                            coverage = Parser.parseCSVCoverage(filePath);
+                            coverage = new String(Files.readAllBytes(Paths.get(filePath)));
+                            // coverage = Parser.parseCSVCoverage(filePath);
                         }
                         else{                                                   //in questo caso gioco contro i test randoop misurati da emma (se coverageMethod = JaCoCo)
                             String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/coveragetot.xml";
-                            coverage = Parser.parseXMLCoverage(filePath, partita.getNomeClasse());
+                            // coverage = Parser.parseXMLCoverage(filePath, partita.getNomeClasse());
+                            coverage = new String(Files.readAllBytes(Paths.get(filePath)));
                         }
 
                     } else if (robot.equals("EvoSuite")) {                      // se robot=evosuite gioco sempre contro itest evosuite misurati con evosuite
                         String filePath = "./TestsResults/"+className+"/RobotTest/"+robot+"Test/"+robotLevel+"Level/TestReport/statistics.csv";
-                        coverage = Parser.parseCSVCoverage(filePath);
+                        // coverage = Parser.parseCSVCoverage(filePath);
+                        coverage = new String(Files.readAllBytes(Paths.get(filePath)));
                     }
 
                     coverageJson.setRobotCoverage(coverage);
@@ -273,6 +280,8 @@ public class AppTest{
             } catch (JsonMappingException e) {
                 e.printStackTrace();
             } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 
