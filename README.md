@@ -1,5 +1,5 @@
 # Progetto-SAD
-![image](https://github.com/AngeloBarletta/Progetto-SAD/assets/93737876/489f736d-e9f1-457a-8e9d-c413fa6f0272)
+![Compiling](https://github.com/AngeloBarletta/Progetto-SAD/assets/93767483/2172fe12-be07-4d8c-bae9-3045dddded41)
 
 ## Installazione
 L'intera installazione prevede l'utilizzo di docker. Nel caso si utilizzi Windows, fare attenzione all'EOL (End of line) settato da git automaticamente durante il clone: deve essere "LF".
