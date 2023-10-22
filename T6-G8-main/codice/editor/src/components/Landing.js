@@ -264,7 +264,7 @@ const Landing = () => {
           // parseXMLCoverage(xmlDoc);
           
 
-          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nWeakmutation: ${userCoverage.weakmutation}%\nCbranch: ${userCoverage.cbranch}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nWeakmutation: ${robotCoverage.weakmutation}%\nCbranch: ${robotCoverage.cbranch}%\n\n`);
+          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nWeakmutation: ${userCoverage.weakmutation}%\nCbranch: ${userCoverage.cbranch}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nWeakmutation: ${robotCoverage.weakmutation}%\nCbranch: ${robotCoverage.cbranch}%\n\n\n` + data.outCompile);
           //Per mostrare in output window tutto il csv decommentare questa stringa:
           //setOutputString("User coverage : " + userCoverage + "%\nRobot Coverage : " + data.robotCoverage + "%\n" + data.coverage + "\n\n" + data.outCompile);
           setCoverageDisplay(true);
@@ -276,7 +276,7 @@ const Landing = () => {
           console.log(xmlDoc);
           userCoverage = parseJacocoCoverage(userXmlDoc);
           robotCoverage = parseEmmaCoverage(robotXmlDoc);
-          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nMethod: ${userCoverage.method}%\nClass: ${userCoverage.class}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nMethod: ${robotCoverage.method}%\nClass: ${robotCoverage.class}%\n\n`);
+          setOutputString(`User coverage: \nLine: ${userCoverage.line}%\nMethod: ${userCoverage.method}%\nClass: ${userCoverage.class}%\n\n` + `Robot coverage: \nLine: ${robotCoverage.line}%\nMethod: ${robotCoverage.method}%\nClass: ${robotCoverage.class}%\n\n\n` + data.outCompile);
           setCoverageDisplay(true);
         }
         // pop-up per mostrare il vincitore
@@ -302,7 +302,7 @@ const Landing = () => {
           setDecorations(decs);
           setCoverageDisplay(true);
         }
-        if(data.robotCoverage == -1){
+        if(!data.robotCoverage){
           alert("Errore robot");
           setOutputString("ERROR");
           var decs = [];
