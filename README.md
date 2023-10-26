@@ -11,6 +11,10 @@ docker compose up --build -d
 
 Il frontend sarà accessibile su http://localhost/.
 
+Nel caso in cui l'installazione non sia locale ma su un server remoto, sarà necessario modificare due variabili con il dominio o IP corretto:
+  - `server_name` in `nginx/nginx.conf`
+  - `DOMAIN_NAME` in `T6-G8-main/codice/editor/src/components/Landing.js`
+
 ## Aggiunta nuove classi di test
 - l’admin deve inserire il file .java nel repository rispettando la struttura del Filesystem specificata in `repository/FolderTree_v1.txt`
 - Rilanciare il comando: `docker compose up --build -d`
