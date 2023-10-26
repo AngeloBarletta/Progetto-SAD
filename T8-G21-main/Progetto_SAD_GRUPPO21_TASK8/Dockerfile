@@ -1,7 +1,6 @@
 FROM maven:3.8-openjdk-8
 
-RUN apt-get update 
-RUN apt-get install git unzip wget python3.10 python3-pip -y
+RUN apt-get update -y && apt-get install git unzip wget python3.10 python3-pip -y
 
 WORKDIR /app
 
