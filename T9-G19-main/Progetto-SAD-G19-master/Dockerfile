@@ -26,7 +26,5 @@ COPY --from=build /usr/app/target/Task9-G19-0.0.1-SNAPSHOT-jar-with-dependencies
 
 COPY . .
 
-# ENTRYPOINT [ "bash", "./docker-entrypoint.sh" ]
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
 ENTRYPOINT /usr/lib/jvm/java-1.8-openjdk/bin/java -jar app.jar
-# ENTRYPOINT [ "bash", "robot.sh", "Lola", "5", "12312", "-1" ]
